@@ -1,0 +1,12 @@
+digraph {
+Node0x3155e20[label="  %scevgep14 = getelementptr [30 x i32]*..."];
+Node0x3155e20 -> Node0x3155e20[label="D:20.00ns L:0",color=blue];
+Node0x3155f40[label="  %68 = load i32* %scevgep14, align 4"];
+Node0x3155f40 -> Node0x3155f40[label="D:0.00ns L:1",color=blue];
+Node0x3157030[label="  %69 = mul nsw i32 %68, %61"];
+Node0x3157030 -> Node0x3157030[label="D:2.59ns L:1",color=blue];
+Node0x3157150[label="  %70 = ashr i32 %69, 15"];
+Node0x3157150 -> Node0x3157150[label="D:0.00ns L:0",color=blue];
+Node0x3157230[label="  %71 = icmp sgt i32 %., %70"];
+Node0x3157230 -> Node0x3157230[label="D:3.13ns L:0",color=blue];
+}

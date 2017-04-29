@@ -1,0 +1,9 @@
+digraph {
+Node0x418c1d0[label="  %65 = sub i32 0, %umax.i"];
+Node0x418c1d0 -> Node0x418c1d0[label="D:2.40ns L:0",color=blue];
+Node0x418c2b0[label="  %66 = sub i32 %k.012.i, %umax.i"];
+Node0x418c2b0 -> Node0x418c2b0[label="D:2.40ns L:0",color=blue];
+Node0x418c2b0 -> Node0x418c2b0[label="D:2.40ns L:0",color=blue];
+Node0x418c390[label="  %67 = icmp eq i32 %umax.i, 0"];
+Node0x418c390 -> Node0x418c390[label="D:2.49ns L:0",color=blue];
+}

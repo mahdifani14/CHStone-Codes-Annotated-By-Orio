@@ -1,0 +1,10 @@
+digraph {
+Node0x4191ba0[label="  %125 = add i32 %k.012.i, -5200"];
+Node0x4191ba0 -> Node0x4191ba0[label="D:2.50ns L:0",color=blue];
+Node0x4191c80[label="  %126 = icmp ugt i32 %125, -40"];
+Node0x4191c80 -> Node0x4191c80[label="D:3.12ns L:0",color=blue];
+Node0x4191d60[label="  %.op2 = sub i32 5200, %k.012.i"];
+Node0x4191d60 -> Node0x4191d60[label="D:2.40ns L:0",color=blue];
+Node0x4191e40[label="  %127 = select i1 %126, i32 %.op2, i32 ..."];
+Node0x4191e40 -> Node0x4191e40[label="D:3.99ns L:0",color=blue];
+}

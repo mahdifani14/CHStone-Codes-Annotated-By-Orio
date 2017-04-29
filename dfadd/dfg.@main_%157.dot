@@ -1,0 +1,12 @@
+digraph {
+Node0x311ed80[label="  %158 = phi i64 [ %z.0.i2.i.i, %shift64..."];
+Node0x311ed80 -> Node0x311ed80[label="D:0.00ns L:0",color=blue];
+Node0x311ee60[label="  %159 = phi i64 [ %156, %shift64RightJa..."];
+Node0x311ee60 -> Node0x311ee60[label="D:0.00ns L:0",color=blue];
+Node0x311ef40[label="  %bExp.1.i.i = phi i32 [ %12, %shift64R..."];
+Node0x311ef40 -> Node0x311ef40[label="D:0.00ns L:0",color=blue];
+Node0x311f020[label="  %160 = sub i64 %159, %158"];
+Node0x311f020 -> Node0x311f020[label="D:3.35ns L:0",color=blue];
+Node0x311f100[label="  %161 = xor i32 %5, 1"];
+Node0x311f100 -> Node0x311f100[label="D:0.91ns L:0",color=blue];
+}

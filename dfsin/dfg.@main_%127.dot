@@ -1,0 +1,8 @@
+digraph {
+Node0x333f730[label="  %128 = or i32 %124, 2"];
+Node0x333f730 -> Node0x333f730[label="D:0.00ns L:0",color=blue];
+Node0x333f930[label="  %129 = shl nuw i64 %44, 63"];
+Node0x333f930 -> Node0x333f930[label="D:0.00ns L:0",color=blue];
+Node0x333fa10[label="  %130 = or i64 %129, 921886843722740531..."];
+Node0x333fa10 -> Node0x333fa10[label="D:0.00ns L:0",color=blue];
+}

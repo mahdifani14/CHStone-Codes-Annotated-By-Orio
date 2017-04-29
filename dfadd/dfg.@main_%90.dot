@@ -1,0 +1,6 @@
+digraph {
+Node0x311fe70[label="  %91 = or i64 %16, 4611686018427387904"];
+Node0x311fe70 -> Node0x311fe70[label="D:0.00ns L:0",color=blue];
+Node0x311ff50[label="  %92 = add nuw i64 %91, %18"];
+Node0x311ff50 -> Node0x311ff50[label="D:3.16ns L:0",color=blue];
+}

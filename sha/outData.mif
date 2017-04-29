@@ -1,0 +1,12 @@
+Depth = 5;
+Width = 32;
+Address_radix = dec;
+Data_radix = hex;
+Content
+Begin
+0: 006A5A37;	-- outData[0] = 6969911
+1: 93DC9485;	-- outData[1] = -1814260603
+2: 2C412112;	-- outData[2] = 742465810
+3: 63F7BA43;	-- outData[3] = 1677179459
+4: AD73F922;	-- outData[4] = -1384908510
+End;

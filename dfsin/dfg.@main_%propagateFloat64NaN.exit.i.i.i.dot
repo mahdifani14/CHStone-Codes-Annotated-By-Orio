@@ -1,0 +1,8 @@
+digraph {
+Node0x3360ce0[label="  %.sink.i.i.i.i = phi i1 [ %514, %.thre..."];
+Node0x3360ce0 -> Node0x3360ce0[label="D:0.00ns L:0",color=blue];
+Node0x3360dc0[label="  %.mux2.v.i.i.i.i = select i1 %.sink.i...."];
+Node0x3360dc0 -> Node0x3360dc0[label="D:4.29ns L:0",color=blue];
+Node0x3360ea0[label="  %.mux2.i.i.i.i = or i64 %.mux2.v.i.i.i..."];
+Node0x3360ea0 -> Node0x3360ea0[label="D:0.00ns L:0",color=blue];
+}

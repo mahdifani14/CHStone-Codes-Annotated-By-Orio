@@ -1,0 +1,23 @@
+digraph {
+Node0x25fa130[label="  %62 = getelementptr inbounds [32 x i32..."];
+Node0x25fa130 -> Node0x25fa130[label="D:20.00ns L:0",color=blue];
+Node0x25fdb30[label="  %63 = load i32* %62, align 4"];
+Node0x25fdb30 -> Node0x25fdb30[label="D:0.00ns L:1",color=blue];
+Node0x25fdc10[label="  %64 = sext i32 %63 to i64"];
+Node0x25fdc10 -> Node0x25fdc10[label="D:0.00ns L:0",color=blue];
+Node0x25fdcf0[label="  %65 = getelementptr inbounds [32 x i32..."];
+Node0x25fdcf0 -> Node0x25fdcf0[label="D:20.00ns L:0",color=blue];
+Node0x25fddd0[label="  %66 = load i32* %65, align 4"];
+Node0x25fddd0 -> Node0x25fddd0[label="D:0.00ns L:1",color=blue];
+Node0x25fdeb0[label="  %67 = sext i32 %66 to i64"];
+Node0x25fdeb0 -> Node0x25fdeb0[label="D:0.00ns L:0",color=blue];
+Node0x25fdf90[label="  %68 = mul i64 %64, %67"];
+Node0x25fdf90 -> Node0x25fdf90[label="D:8.90ns L:1",color=blue];
+Node0x25fdf90 -> Node0x25fdf90[label="D:8.90ns L:1",color=blue];
+Node0x25fe070[label="  %69 = trunc i64 %68 to i32"];
+Node0x25fe070 -> Node0x25fe070[label="D:0.00ns L:0",color=blue];
+Node0x25fe150[label="  %70 = lshr i64 %68, 32"];
+Node0x25fe150 -> Node0x25fe150[label="D:0.00ns L:0",color=blue];
+Node0x25fe230[label="  %71 = trunc i64 %70 to i32"];
+Node0x25fe230 -> Node0x25fe230[label="D:0.00ns L:0",color=blue];
+}

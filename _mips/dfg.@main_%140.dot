@@ -1,0 +1,6 @@
+digraph {
+Node0x25fcc00[label="  %141 = shl i32 %23, 2"];
+Node0x25fcc00 -> Node0x25fcc00[label="D:0.00ns L:0",color=blue];
+Node0x25fcce0[label="  %142 = and i32 %141, 268435452"];
+Node0x25fcce0 -> Node0x25fcce0[label="D:0.00ns L:0",color=blue];
+}

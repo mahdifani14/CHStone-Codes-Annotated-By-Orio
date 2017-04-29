@@ -1,0 +1,7 @@
+NAME=_adpcm
+SRCS=_adpcm.c
+LOCAL_CONFIG = -legup-config=config.tcl
+NO_OPT=1
+LEVEL = ../../..
+include ../../Makefile.common
+include $(LEVEL)/Makefile.common

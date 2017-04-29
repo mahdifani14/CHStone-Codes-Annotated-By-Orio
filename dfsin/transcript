@@ -1,0 +1,60 @@
+# vsim -c -do "run 7000000000000000ns; exit;" work.main_tb 
+# Start time: 13:53:54 on Apr 25,2017
+# Loading work.main_tb
+# Loading work.top
+# Loading work.memory_controller
+# Loading work.ram_dual_port
+# Loading work.ALTERA_MF_MEMORY_INITIALIZATION
+# Loading work.rom_dual_port
+# Loading work.main
+# Loading work.lpm_divide
+# Loading work.LPM_HINT_EVALUATION
+# Loading work.float64_mul
+# Loading work.roundAndPackFloat64
+# ** Warning: Design size of 13461 statements exceeds ModelSim Altera Starter recommended capacity.
+# Expect performance to be adversely affected.
+# run 7000000000000000ns
+# input=0 expected=0 output=0
+# input=3fc65717fced55c1 expected=3fc63a1a335aadcd output=3fc63a1a335aadcd
+# input=3fd65717fced55c1 expected=3fd5e3a82b09bf3e output=3fd5e3a82b09bf3e
+# input=3fe0c151fdb20051 expected=3fdfffff91f9aa91 output=3fdfffff91f9aa91
+# input=3fe65717fced55c1 expected=3fe491b716c242e3 output=3fe491b716c242e3
+# input=3febecddfc28ab31 expected=3fe8836f672614a6 output=3fe8836f672614a6
+# input=3ff0c151fdb20051 expected=3febb67ac40b2bed output=3febb67ac40b2bed
+# input=3ff38c34fd4fab09 expected=3fee11f6127e28ad output=3fee11f6127e28ad
+# input=3ff65717fced55c1 expected=3fef838b6adffac0 output=3fef838b6adffac0
+# input=3ff921fafc8b0079 expected=3fefffffe1cbd7aa output=3fefffffe1cbd7aa
+# input=3ffbecddfc28ab31 expected=3fef838bb0147989 output=3fef838bb0147989
+# input=3ffeb7c0fbc655e9 expected=3fee11f692d962b4 output=3fee11f692d962b4
+# input=4000c151fdb20051 expected=3febb67b77c0142d output=3febb67b77c0142d
+# input=400226c37d80d5ad expected=3fe883709d4ea869 output=3fe883709d4ea869
+# input=40038c34fd4fab09 expected=3fe491b81d72d8e8 output=3fe491b81d72d8e8
+# input=4004f1a67d1e8065 expected=3fe00000ea5f43c8 output=3fe00000ea5f43c8
+# input=40065717fced55c1 expected=3fd5e3aa4e0590c5 output=3fd5e3aa4e0590c5
+# input=4007bc897cbc2b1d expected=3fc63a1d2189552c output=3fc63a1d2189552c
+# input=400921fafc8b0079 expected=3ea6aedffc454b91 output=3ea6aedffc454b91
+# input=400a876c7c59d5d5 expected=bfc63a1444ddb37c output=bfc63a1444ddb37c
+# input=400becddfc28ab31 expected=bfd5e3a4e68f8f3e output=bfd5e3a4e68f8f3e
+# input=400d524f7bf7808d expected=bfdffffd494cf96b output=bfdffffd494cf96b
+# input=400eb7c0fbc655e9 expected=bfe491b61cb9a3d3 output=bfe491b61cb9a3d3
+# input=40100e993dca95a3 expected=bfe8836eb2dcf815 output=bfe8836eb2dcf815
+# input=4010c151fdb20051 expected=bfebb67a740aae32 output=bfebb67a740aae32
+# input=4011740abd996aff expected=bfee11f5912d2157 output=bfee11f5912d2157
+# input=401226c37d80d5ad expected=bfef838b1ac64afc output=bfef838b1ac64afc
+# input=4012d97c3d68405b expected=bfefffffc2e5dc8f output=bfefffffc2e5dc8f
+# input=40138c34fd4fab09 expected=bfef838b5ea2e7ea output=bfef838b5ea2e7ea
+# input=40143eedbd3715b7 expected=bfee11f7112dae27 output=bfee11f7112dae27
+# input=4014f1a67d1e8065 expected=bfebb67c2c31cb4a output=bfebb67c2c31cb4a
+# input=4015a45f3d05eb13 expected=bfe883716e6fd781 output=bfe883716e6fd781
+# input=40165717fced55c1 expected=bfe491b9cd1b5d56 output=bfe491b9cd1b5d56
+# input=401709d0bcd4c06f expected=bfe000021d0ca30d output=bfe000021d0ca30d
+# input=4017bc897cbc2b1d expected=bfd5e3ad0a69caf7 output=bfd5e3ad0a69caf7
+# input=40186f423ca395cb expected=bfc63a23c48863dd output=bfc63a23c48863dd
+# Result:          36
+# RESULT: PASS
+# At t=          1134830000 clk=1 finish=1 return_val=        36
+# Cycles:                56739
+# ** Note: $finish    : dfsin.v(19909)
+#    Time: 1134830 ns  Iteration: 2  Instance: /main_tb
+# End time: 13:55:58 on Apr 25,2017, Elapsed time: 0:02:04
+# Errors: 0, Warnings: 1

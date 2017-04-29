@@ -1,0 +1,41 @@
+# vsim -c -do "run 7000000000000000ns; exit;" work.main_tb 
+# Start time: 11:37:32 on Apr 15,2017
+# Loading work.main_tb
+# Loading work.top
+# Loading work.memory_controller
+# Loading work.rom_dual_port
+# Loading work.ALTERA_MF_MEMORY_INITIALIZATION
+# Loading work.ram_dual_port
+# Loading work.main
+# Loading work.lpm_divide
+# Loading work.LPM_HINT_EVALUATION
+# Loading work.altfp_sitofp64_6
+# Loading work.altfp_sitofp64_altfp_convert_0jn
+# Loading work.altfp_sitofp64_altbarrel_shift_brf
+# Loading work.altfp_sitofp64_altpriority_encoder_qb6
+# Loading work.altfp_sitofp64_altpriority_encoder_r08
+# Loading work.altfp_sitofp64_altpriority_encoder_bv7
+# Loading work.altfp_sitofp64_altpriority_encoder_6v7
+# Loading work.altfp_sitofp64_altpriority_encoder_3v7
+# Loading work.altfp_sitofp64_altpriority_encoder_3e8
+# Loading work.altfp_sitofp64_altpriority_encoder_6e8
+# Loading work.altfp_sitofp64_altpriority_encoder_be8
+# Loading work.altfp_sitofp64_altpriority_encoder_rf8
+# Loading work.lpm_add_sub
+# Loading work.lpm_compare
+# Loading work.altfp_multiplier64_11
+# Loading work.altfp_multiplier64_altfp_mult_geo
+# Loading work.lpm_mult
+# Loading work.altfp_fptosi64_6
+# Loading work.altfp_fptosi64_altfp_convert_0jn
+# Loading work.altfp_fptosi64_altbarrel_shift_jrf
+# Loading work.encode
+# ** Warning: Design size of 14982 statements exceeds ModelSim Altera Starter recommended capacity.
+# Expect performance to be adversely affected.
+# run 7000000000000000ns
+# Result:         150 RESULT: PASS At t=           743410000 clk=1 finish=1 return_val=       150
+# Cycles:                37168
+# ** Note: $finish    : _adpcm.v(21072)
+#    Time: 743410 ns  Iteration: 2  Instance: /main_tb
+# End time: 11:39:19 on Apr 15,2017, Elapsed time: 0:01:47
+# Errors: 0, Warnings: 1

@@ -1,0 +1,14 @@
+digraph {
+Node0x32fb500[label="  %12 = load i32* @float_exception_flags..."];
+Node0x32fb500 -> Node0x32fb500[label="D:0.00ns L:2",color=blue];
+Node0x32fb6c0[label="  store i32 %13, i32* @float_exception_f..."];
+Node0x32fb500 -> Node0x32fb6c0[label="D:0.00ns L:2",color=red];
+Node0x32fb5e0[label="  %13 = or i32 %12, 9"];
+Node0x32fb5e0 -> Node0x32fb5e0[label="D:0.00ns L:0",color=blue];
+Node0x32fb7a0[label="  %14 = zext i32 %zSign to i64"];
+Node0x32fb7a0 -> Node0x32fb7a0[label="D:0.00ns L:0",color=blue];
+Node0x32fb880[label="  %15 = shl i64 %14, 63"];
+Node0x32fb880 -> Node0x32fb880[label="D:0.00ns L:0",color=blue];
+Node0x32fb960[label="  %16 = or i64 %15, 9218868437227405312"];
+Node0x32fb960 -> Node0x32fb960[label="D:0.00ns L:0",color=blue];
+}

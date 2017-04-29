@@ -1,0 +1,830 @@
+\documentclass[landscape]{article}
+\usepackage{gantt}
+\pagestyle{empty}
+\begin{document}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{379}{76}
+\begin{ganttitle}
+\numtitle{0}{1}{75}{1}
+\end{ganttitle}
+\ganttbar{  \%1 = load i32* \%data, align 4, !tbaa !1}{1}{2}
+\ganttcon{3}{1}{3}{6}
+\ganttbar{  \%2 = getelementptr inbounds i32* \%data, i32 1}{1}{1}
+\ganttcon{2}{2}{74}{376}
+\ganttcon{2}{2}{10}{35}
+\ganttbar{  \%4 = load i32* getelementptr inbounds ([18 x i32]* @key\_P, i32 0, i32 0), al...}{1}{2}
+\ganttcon{3}{3}{3}{6}
+\ganttbar{  \%6 = load i32* getelementptr inbounds ([18 x i32]* @key\_P, i32 0, i32 1), al...}{2}{2}
+\ganttcon{4}{4}{12}{39}
+\ganttbar{  \%29 = load i32* getelementptr inbounds ([18 x i32]* @key\_P, i32 0, i32 2), a...}{2}{2}
+\ganttcon{4}{5}{4}{22}
+\ganttbar{  \%5 = xor i32 \%4, \%1}{3}{1}
+\ganttcon{4}{6}{4}{22}
+\ganttcon{4}{6}{3}{14}
+\ganttcon{4}{6}{3}{11}
+\ganttcon{4}{6}{3}{8}
+\ganttcon{4}{6}{3}{7}
+\ganttbar{  \%8 = lshr i32 \%5, 24}{3}{1}
+\ganttcon{4}{7}{4}{18}
+\ganttbar{  \%11 = lshr i32 \%5, 16}{3}{1}
+\ganttcon{4}{8}{3}{9}
+\ganttbar{  \%12 = and i32 \%11, 255}{3}{1}
+\ganttcon{4}{9}{3}{10}
+\ganttbar{  \%13 = or i32 \%12, 256}{3}{1}
+\ganttcon{4}{10}{4}{19}
+\ganttbar{  \%17 = lshr i32 \%5, 8}{3}{1}
+\ganttcon{4}{11}{3}{12}
+\ganttbar{  \%18 = and i32 \%17, 255}{3}{1}
+\ganttcon{4}{12}{3}{13}
+\ganttbar{  \%19 = or i32 \%18, 512}{3}{1}
+\ganttcon{4}{13}{4}{20}
+\ganttbar{  \%23 = and i32 \%5, 255}{3}{1}
+\ganttcon{4}{14}{3}{15}
+\ganttbar{  \%24 = or i32 \%23, 768}{3}{1}
+\ganttcon{4}{15}{4}{21}
+\ganttbar{  \%52 = load i32* getelementptr inbounds ([18 x i32]* @key\_P, i32 0, i32 3), a...}{3}{2}
+\ganttcon{5}{16}{14}{55}
+\ganttbar{  \%75 = load i32* getelementptr inbounds ([18 x i32]* @key\_P, i32 0, i32 4), a...}{3}{2}
+\ganttcon{5}{17}{18}{77}
+\ganttbar{  \%9 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%8}{4}{1}
+\ganttcon{5}{18}{11}{37}
+\ganttbar{  \%14 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%13}{4}{1}
+\ganttcon{5}{19}{11}{38}
+\ganttbar{  \%20 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%19}{4}{1}
+\ganttcon{5}{20}{12}{40}
+\ganttbar{  \%25 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%24}{4}{1}
+\ganttcon{5}{21}{12}{41}
+\ganttbar{  \%30 = xor i32 \%29, \%5}{4}{1}
+\ganttcon{5}{22}{18}{67}
+\ganttbar{  \%98 = load i32* getelementptr inbounds ([18 x i32]* @key\_P, i32 0, i32 5), a...}{4}{2}
+\ganttcon{6}{23}{22}{99}
+\ganttbar{  \%121 = load i32* getelementptr inbounds ([18 x i32]* @key\_P, i32 0, i32 6), ...}{4}{2}
+\ganttcon{6}{24}{26}{121}
+\ganttbar{  \%144 = load i32* getelementptr inbounds ([18 x i32]* @key\_P, i32 0, i32 7), ...}{5}{2}
+\ganttcon{7}{25}{30}{143}
+\ganttbar{  \%167 = load i32* getelementptr inbounds ([18 x i32]* @key\_P, i32 0, i32 8), ...}{5}{2}
+\ganttcon{7}{26}{34}{165}
+\ganttbar{  \%190 = load i32* getelementptr inbounds ([18 x i32]* @key\_P, i32 0, i32 9), ...}{6}{2}
+\ganttcon{8}{27}{38}{187}
+\ganttbar{  \%213 = load i32* getelementptr inbounds ([18 x i32]* @key\_P, i32 0, i32 10),...}{6}{2}
+\ganttcon{8}{28}{42}{209}
+\ganttbar{  \%236 = load i32* getelementptr inbounds ([18 x i32]* @key\_P, i32 0, i32 11),...}{7}{2}
+\ganttcon{9}{29}{46}{231}
+\ganttbar{  \%259 = load i32* getelementptr inbounds ([18 x i32]* @key\_P, i32 0, i32 12),...}{7}{2}
+\ganttcon{9}{30}{50}{253}
+\ganttbar{  \%282 = load i32* getelementptr inbounds ([18 x i32]* @key\_P, i32 0, i32 13),...}{8}{2}
+\ganttcon{10}{31}{54}{275}
+\ganttbar{  \%305 = load i32* getelementptr inbounds ([18 x i32]* @key\_P, i32 0, i32 14),...}{8}{2}
+\ganttcon{10}{32}{58}{297}
+\ganttbar{  \%328 = load i32* getelementptr inbounds ([18 x i32]* @key\_P, i32 0, i32 15),...}{9}{2}
+\ganttcon{11}{33}{62}{319}
+\ganttbar{  \%351 = load i32* getelementptr inbounds ([18 x i32]* @key\_P, i32 0, i32 16),...}{9}{2}
+\ganttcon{11}{34}{66}{341}
+\ganttbar{  \%3 = load i32* \%2, align 4, !tbaa !1}{10}{2}
+\ganttcon{12}{35}{12}{39}
+\ganttbar{  \%374 = load i32* getelementptr inbounds ([18 x i32]* @key\_P, i32 0, i32 17),...}{10}{2}
+\ganttcon{12}{36}{70}{363}
+\ganttbar{  \%10 = load i32* \%9, align 4, !tbaa !1}{11}{2}
+\ganttcon{13}{37}{13}{42}
+\ganttbar{  \%15 = load i32* \%14, align 4, !tbaa !1}{11}{2}
+\ganttcon{13}{38}{13}{42}
+\ganttbar{  \%7 = xor i32 \%6, \%3}{12}{1}
+\ganttcon{13}{39}{14}{45}
+\ganttbar{  \%21 = load i32* \%20, align 4, !tbaa !1}{12}{2}
+\ganttcon{14}{40}{14}{43}
+\ganttbar{  \%26 = load i32* \%25, align 4, !tbaa !1}{12}{2}
+\ganttcon{14}{41}{14}{44}
+\ganttbar{  \%16 = add i32 \%15, \%10}{13}{1}
+\ganttcon{14}{42}{14}{43}
+\ganttbar{  \%22 = xor i32 \%16, \%21}{14}{1}
+\ganttcon{15}{43}{14}{44}
+\ganttbar{  \%27 = add i32 \%22, \%26}{14}{1}
+\ganttcon{15}{44}{14}{45}
+\ganttbar{  \%28 = xor i32 \%7, \%27}{14}{1}
+\ganttcon{15}{45}{14}{55}
+\ganttcon{15}{45}{14}{53}
+\ganttcon{15}{45}{14}{50}
+\ganttcon{15}{45}{14}{47}
+\ganttcon{15}{45}{14}{46}
+\ganttbar{  \%31 = lshr i32 \%28, 24}{14}{1}
+\ganttcon{15}{46}{15}{56}
+\ganttbar{  \%34 = lshr i32 \%28, 16}{14}{1}
+\ganttcon{15}{47}{14}{48}
+\ganttbar{  \%35 = and i32 \%34, 255}{14}{1}
+\ganttcon{15}{48}{14}{49}
+\ganttbar{  \%36 = or i32 \%35, 256}{14}{1}
+\ganttcon{15}{49}{15}{58}
+\ganttbar{  \%40 = lshr i32 \%28, 8}{14}{1}
+\ganttcon{15}{50}{14}{51}
+\ganttbar{  \%41 = and i32 \%40, 255}{14}{1}
+\ganttcon{15}{51}{14}{52}
+\ganttbar{  \%42 = or i32 \%41, 512}{14}{1}
+\ganttcon{15}{52}{15}{60}
+\ganttbar{  \%46 = and i32 \%28, 255}{14}{1}
+\ganttcon{15}{53}{14}{54}
+\ganttbar{  \%47 = or i32 \%46, 768}{14}{1}
+\ganttcon{15}{54}{15}{61}
+\ganttbar{  \%53 = xor i32 \%52, \%28}{14}{1}
+\ganttcon{15}{55}{22}{89}
+\ganttbar{  \%32 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%31}{15}{1}
+\ganttcon{16}{56}{15}{57}
+\ganttbar{  \%33 = load i32* \%32, align 4, !tbaa !1}{15}{2}
+\ganttcon{17}{57}{17}{64}
+\ganttbar{  \%37 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%36}{15}{1}
+\ganttcon{16}{58}{15}{59}
+\ganttbar{  \%38 = load i32* \%37, align 4, !tbaa !1}{15}{2}
+\ganttcon{17}{59}{17}{64}
+\ganttbar{  \%43 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%42}{15}{1}
+\ganttcon{16}{60}{16}{62}
+\ganttbar{  \%48 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%47}{15}{1}
+\ganttcon{16}{61}{16}{63}
+\ganttbar{  \%44 = load i32* \%43, align 4, !tbaa !1}{16}{2}
+\ganttcon{18}{62}{18}{65}
+\ganttbar{  \%49 = load i32* \%48, align 4, !tbaa !1}{16}{2}
+\ganttcon{18}{63}{18}{66}
+\ganttbar{  \%39 = add i32 \%38, \%33}{17}{1}
+\ganttcon{18}{64}{18}{65}
+\ganttbar{  \%45 = xor i32 \%39, \%44}{18}{1}
+\ganttcon{19}{65}{18}{66}
+\ganttbar{  \%50 = add i32 \%45, \%49}{18}{1}
+\ganttcon{19}{66}{18}{67}
+\ganttbar{  \%51 = xor i32 \%30, \%50}{18}{1}
+\ganttcon{19}{67}{18}{77}
+\ganttcon{19}{67}{18}{75}
+\ganttcon{19}{67}{18}{72}
+\ganttcon{19}{67}{18}{69}
+\ganttcon{19}{67}{18}{68}
+\ganttbar{  \%54 = lshr i32 \%51, 24}{18}{1}
+\ganttcon{19}{68}{19}{78}
+\ganttbar{  \%57 = lshr i32 \%51, 16}{18}{1}
+\ganttcon{19}{69}{18}{70}
+\ganttbar{  \%58 = and i32 \%57, 255}{18}{1}
+\ganttcon{19}{70}{18}{71}
+\ganttbar{  \%59 = or i32 \%58, 256}{18}{1}
+\ganttcon{19}{71}{19}{80}
+\ganttbar{  \%63 = lshr i32 \%51, 8}{18}{1}
+\ganttcon{19}{72}{18}{73}
+\ganttbar{  \%64 = and i32 \%63, 255}{18}{1}
+\ganttcon{19}{73}{18}{74}
+\ganttbar{  \%65 = or i32 \%64, 512}{18}{1}
+\ganttcon{19}{74}{19}{82}
+\ganttbar{  \%69 = and i32 \%51, 255}{18}{1}
+\ganttcon{19}{75}{18}{76}
+\ganttbar{  \%70 = or i32 \%69, 768}{18}{1}
+\ganttcon{19}{76}{19}{83}
+\ganttbar{  \%76 = xor i32 \%75, \%51}{18}{1}
+\ganttcon{19}{77}{26}{111}
+\ganttbar{  \%55 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%54}{19}{1}
+\ganttcon{20}{78}{19}{79}
+\ganttbar{  \%56 = load i32* \%55, align 4, !tbaa !1}{19}{2}
+\ganttcon{21}{79}{21}{86}
+\ganttbar{  \%60 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%59}{19}{1}
+\ganttcon{20}{80}{19}{81}
+\ganttbar{  \%61 = load i32* \%60, align 4, !tbaa !1}{19}{2}
+\ganttcon{21}{81}{21}{86}
+\ganttbar{  \%66 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%65}{19}{1}
+\ganttcon{20}{82}{20}{84}
+\ganttbar{  \%71 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%70}{19}{1}
+\ganttcon{20}{83}{20}{85}
+\ganttbar{  \%67 = load i32* \%66, align 4, !tbaa !1}{20}{2}
+\ganttcon{22}{84}{22}{87}
+\ganttbar{  \%72 = load i32* \%71, align 4, !tbaa !1}{20}{2}
+\ganttcon{22}{85}{22}{88}
+\ganttbar{  \%62 = add i32 \%61, \%56}{21}{1}
+\ganttcon{22}{86}{22}{87}
+\ganttbar{  \%68 = xor i32 \%62, \%67}{22}{1}
+\ganttcon{23}{87}{22}{88}
+\ganttbar{  \%73 = add i32 \%68, \%72}{22}{1}
+\ganttcon{23}{88}{22}{89}
+\ganttbar{  \%74 = xor i32 \%53, \%73}{22}{1}
+\ganttcon{23}{89}{22}{99}
+\ganttcon{23}{89}{22}{97}
+\ganttcon{23}{89}{22}{94}
+\ganttcon{23}{89}{22}{91}
+\ganttcon{23}{89}{22}{90}
+\ganttbar{  \%77 = lshr i32 \%74, 24}{22}{1}
+\ganttcon{23}{90}{23}{100}
+\ganttbar{  \%80 = lshr i32 \%74, 16}{22}{1}
+\ganttcon{23}{91}{22}{92}
+\ganttbar{  \%81 = and i32 \%80, 255}{22}{1}
+\ganttcon{23}{92}{22}{93}
+\ganttbar{  \%82 = or i32 \%81, 256}{22}{1}
+\ganttcon{23}{93}{23}{102}
+\ganttbar{  \%86 = lshr i32 \%74, 8}{22}{1}
+\ganttcon{23}{94}{22}{95}
+\ganttbar{  \%87 = and i32 \%86, 255}{22}{1}
+\ganttcon{23}{95}{22}{96}
+\ganttbar{  \%88 = or i32 \%87, 512}{22}{1}
+\ganttcon{23}{96}{23}{104}
+\ganttbar{  \%92 = and i32 \%74, 255}{22}{1}
+\ganttcon{23}{97}{22}{98}
+\ganttbar{  \%93 = or i32 \%92, 768}{22}{1}
+\ganttcon{23}{98}{23}{105}
+\ganttbar{  \%99 = xor i32 \%98, \%74}{22}{1}
+\ganttcon{23}{99}{30}{133}
+\ganttbar{  \%78 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%77}{23}{1}
+\ganttcon{24}{100}{23}{101}
+\ganttbar{  \%79 = load i32* \%78, align 4, !tbaa !1}{23}{2}
+\ganttcon{25}{101}{25}{108}
+\ganttbar{  \%83 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%82}{23}{1}
+\ganttcon{24}{102}{23}{103}
+\ganttbar{  \%84 = load i32* \%83, align 4, !tbaa !1}{23}{2}
+\ganttcon{25}{103}{25}{108}
+\ganttbar{  \%89 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%88}{23}{1}
+\ganttcon{24}{104}{24}{106}
+\ganttbar{  \%94 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%93}{23}{1}
+\ganttcon{24}{105}{24}{107}
+\ganttbar{  \%90 = load i32* \%89, align 4, !tbaa !1}{24}{2}
+\ganttcon{26}{106}{26}{109}
+\ganttbar{  \%95 = load i32* \%94, align 4, !tbaa !1}{24}{2}
+\ganttcon{26}{107}{26}{110}
+\ganttbar{  \%85 = add i32 \%84, \%79}{25}{1}
+\ganttcon{26}{108}{26}{109}
+\ganttbar{  \%91 = xor i32 \%85, \%90}{26}{1}
+\ganttcon{27}{109}{26}{110}
+\ganttbar{  \%96 = add i32 \%91, \%95}{26}{1}
+\ganttcon{27}{110}{26}{111}
+\ganttbar{  \%97 = xor i32 \%76, \%96}{26}{1}
+\ganttcon{27}{111}{26}{121}
+\ganttcon{27}{111}{26}{119}
+\ganttcon{27}{111}{26}{116}
+\ganttcon{27}{111}{26}{113}
+\ganttcon{27}{111}{26}{112}
+\ganttbar{  \%100 = lshr i32 \%97, 24}{26}{1}
+\ganttcon{27}{112}{27}{122}
+\ganttbar{  \%103 = lshr i32 \%97, 16}{26}{1}
+\ganttcon{27}{113}{26}{114}
+\ganttbar{  \%104 = and i32 \%103, 255}{26}{1}
+\ganttcon{27}{114}{26}{115}
+\ganttbar{  \%105 = or i32 \%104, 256}{26}{1}
+\ganttcon{27}{115}{27}{124}
+\ganttbar{  \%109 = lshr i32 \%97, 8}{26}{1}
+\ganttcon{27}{116}{26}{117}
+\ganttbar{  \%110 = and i32 \%109, 255}{26}{1}
+\ganttcon{27}{117}{26}{118}
+\ganttbar{  \%111 = or i32 \%110, 512}{26}{1}
+\ganttcon{27}{118}{27}{126}
+\ganttbar{  \%115 = and i32 \%97, 255}{26}{1}
+\ganttcon{27}{119}{26}{120}
+\ganttbar{  \%116 = or i32 \%115, 768}{26}{1}
+\ganttcon{27}{120}{27}{127}
+\ganttbar{  \%122 = xor i32 \%121, \%97}{26}{1}
+\ganttcon{27}{121}{34}{155}
+\ganttbar{  \%101 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%100}{27}{1}
+\ganttcon{28}{122}{27}{123}
+\ganttbar{  \%102 = load i32* \%101, align 4, !tbaa !1}{27}{2}
+\ganttcon{29}{123}{29}{130}
+\ganttbar{  \%106 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%105}{27}{1}
+\ganttcon{28}{124}{27}{125}
+\ganttbar{  \%107 = load i32* \%106, align 4, !tbaa !1}{27}{2}
+\ganttcon{29}{125}{29}{130}
+\ganttbar{  \%112 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%111}{27}{1}
+\ganttcon{28}{126}{28}{128}
+\ganttbar{  \%117 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%116}{27}{1}
+\ganttcon{28}{127}{28}{129}
+\ganttbar{  \%113 = load i32* \%112, align 4, !tbaa !1}{28}{2}
+\ganttcon{30}{128}{30}{131}
+\ganttbar{  \%118 = load i32* \%117, align 4, !tbaa !1}{28}{2}
+\ganttcon{30}{129}{30}{132}
+\ganttbar{  \%108 = add i32 \%107, \%102}{29}{1}
+\ganttcon{30}{130}{30}{131}
+\ganttbar{  \%114 = xor i32 \%108, \%113}{30}{1}
+\ganttcon{31}{131}{30}{132}
+\ganttbar{  \%119 = add i32 \%114, \%118}{30}{1}
+\ganttcon{31}{132}{30}{133}
+\ganttbar{  \%120 = xor i32 \%99, \%119}{30}{1}
+\ganttcon{31}{133}{30}{143}
+\ganttcon{31}{133}{30}{141}
+\ganttcon{31}{133}{30}{138}
+\ganttcon{31}{133}{30}{135}
+\ganttcon{31}{133}{30}{134}
+\ganttbar{  \%123 = lshr i32 \%120, 24}{30}{1}
+\ganttcon{31}{134}{31}{144}
+\ganttbar{  \%126 = lshr i32 \%120, 16}{30}{1}
+\ganttcon{31}{135}{30}{136}
+\ganttbar{  \%127 = and i32 \%126, 255}{30}{1}
+\ganttcon{31}{136}{30}{137}
+\ganttbar{  \%128 = or i32 \%127, 256}{30}{1}
+\ganttcon{31}{137}{31}{146}
+\ganttbar{  \%132 = lshr i32 \%120, 8}{30}{1}
+\ganttcon{31}{138}{30}{139}
+\ganttbar{  \%133 = and i32 \%132, 255}{30}{1}
+\ganttcon{31}{139}{30}{140}
+\ganttbar{  \%134 = or i32 \%133, 512}{30}{1}
+\ganttcon{31}{140}{31}{148}
+\ganttbar{  \%138 = and i32 \%120, 255}{30}{1}
+\ganttcon{31}{141}{30}{142}
+\ganttbar{  \%139 = or i32 \%138, 768}{30}{1}
+\ganttcon{31}{142}{31}{149}
+\ganttbar{  \%145 = xor i32 \%144, \%120}{30}{1}
+\ganttcon{31}{143}{38}{177}
+\ganttbar{  \%124 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%123}{31}{1}
+\ganttcon{32}{144}{31}{145}
+\ganttbar{  \%125 = load i32* \%124, align 4, !tbaa !1}{31}{2}
+\ganttcon{33}{145}{33}{152}
+\ganttbar{  \%129 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%128}{31}{1}
+\ganttcon{32}{146}{31}{147}
+\ganttbar{  \%130 = load i32* \%129, align 4, !tbaa !1}{31}{2}
+\ganttcon{33}{147}{33}{152}
+\ganttbar{  \%135 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%134}{31}{1}
+\ganttcon{32}{148}{32}{150}
+\ganttbar{  \%140 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%139}{31}{1}
+\ganttcon{32}{149}{32}{151}
+\ganttbar{  \%136 = load i32* \%135, align 4, !tbaa !1}{32}{2}
+\ganttcon{34}{150}{34}{153}
+\ganttbar{  \%141 = load i32* \%140, align 4, !tbaa !1}{32}{2}
+\ganttcon{34}{151}{34}{154}
+\ganttbar{  \%131 = add i32 \%130, \%125}{33}{1}
+\ganttcon{34}{152}{34}{153}
+\ganttbar{  \%137 = xor i32 \%131, \%136}{34}{1}
+\ganttcon{35}{153}{34}{154}
+\ganttbar{  \%142 = add i32 \%137, \%141}{34}{1}
+\ganttcon{35}{154}{34}{155}
+\ganttbar{  \%143 = xor i32 \%122, \%142}{34}{1}
+\ganttcon{35}{155}{34}{165}
+\ganttcon{35}{155}{34}{163}
+\ganttcon{35}{155}{34}{160}
+\ganttcon{35}{155}{34}{157}
+\ganttcon{35}{155}{34}{156}
+\ganttbar{  \%146 = lshr i32 \%143, 24}{34}{1}
+\ganttcon{35}{156}{35}{166}
+\ganttbar{  \%149 = lshr i32 \%143, 16}{34}{1}
+\ganttcon{35}{157}{34}{158}
+\ganttbar{  \%150 = and i32 \%149, 255}{34}{1}
+\ganttcon{35}{158}{34}{159}
+\ganttbar{  \%151 = or i32 \%150, 256}{34}{1}
+\ganttcon{35}{159}{35}{168}
+\ganttbar{  \%155 = lshr i32 \%143, 8}{34}{1}
+\ganttcon{35}{160}{34}{161}
+\ganttbar{  \%156 = and i32 \%155, 255}{34}{1}
+\ganttcon{35}{161}{34}{162}
+\ganttbar{  \%157 = or i32 \%156, 512}{34}{1}
+\ganttcon{35}{162}{35}{170}
+\ganttbar{  \%161 = and i32 \%143, 255}{34}{1}
+\ganttcon{35}{163}{34}{164}
+\ganttbar{  \%162 = or i32 \%161, 768}{34}{1}
+\ganttcon{35}{164}{35}{171}
+\ganttbar{  \%168 = xor i32 \%167, \%143}{34}{1}
+\ganttcon{35}{165}{42}{199}
+\ganttbar{  \%147 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%146}{35}{1}
+\ganttcon{36}{166}{35}{167}
+\ganttbar{  \%148 = load i32* \%147, align 4, !tbaa !1}{35}{2}
+\ganttcon{37}{167}{37}{174}
+\ganttbar{  \%152 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%151}{35}{1}
+\ganttcon{36}{168}{35}{169}
+\ganttbar{  \%153 = load i32* \%152, align 4, !tbaa !1}{35}{2}
+\ganttcon{37}{169}{37}{174}
+\ganttbar{  \%158 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%157}{35}{1}
+\ganttcon{36}{170}{36}{172}
+\ganttbar{  \%163 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%162}{35}{1}
+\ganttcon{36}{171}{36}{173}
+\ganttbar{  \%159 = load i32* \%158, align 4, !tbaa !1}{36}{2}
+\ganttcon{38}{172}{38}{175}
+\ganttbar{  \%164 = load i32* \%163, align 4, !tbaa !1}{36}{2}
+\ganttcon{38}{173}{38}{176}
+\ganttbar{  \%154 = add i32 \%153, \%148}{37}{1}
+\ganttcon{38}{174}{38}{175}
+\ganttbar{  \%160 = xor i32 \%154, \%159}{38}{1}
+\ganttcon{39}{175}{38}{176}
+\ganttbar{  \%165 = add i32 \%160, \%164}{38}{1}
+\ganttcon{39}{176}{38}{177}
+\ganttbar{  \%166 = xor i32 \%145, \%165}{38}{1}
+\ganttcon{39}{177}{38}{187}
+\ganttcon{39}{177}{38}{185}
+\ganttcon{39}{177}{38}{182}
+\ganttcon{39}{177}{38}{179}
+\ganttcon{39}{177}{38}{178}
+\ganttbar{  \%169 = lshr i32 \%166, 24}{38}{1}
+\ganttcon{39}{178}{39}{188}
+\ganttbar{  \%172 = lshr i32 \%166, 16}{38}{1}
+\ganttcon{39}{179}{38}{180}
+\ganttbar{  \%173 = and i32 \%172, 255}{38}{1}
+\ganttcon{39}{180}{38}{181}
+\ganttbar{  \%174 = or i32 \%173, 256}{38}{1}
+\ganttcon{39}{181}{39}{190}
+\ganttbar{  \%178 = lshr i32 \%166, 8}{38}{1}
+\ganttcon{39}{182}{38}{183}
+\ganttbar{  \%179 = and i32 \%178, 255}{38}{1}
+\ganttcon{39}{183}{38}{184}
+\ganttbar{  \%180 = or i32 \%179, 512}{38}{1}
+\ganttcon{39}{184}{39}{192}
+\ganttbar{  \%184 = and i32 \%166, 255}{38}{1}
+\ganttcon{39}{185}{38}{186}
+\ganttbar{  \%185 = or i32 \%184, 768}{38}{1}
+\ganttcon{39}{186}{39}{193}
+\ganttbar{  \%191 = xor i32 \%190, \%166}{38}{1}
+\ganttcon{39}{187}{46}{221}
+\ganttbar{  \%170 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%169}{39}{1}
+\ganttcon{40}{188}{39}{189}
+\ganttbar{  \%171 = load i32* \%170, align 4, !tbaa !1}{39}{2}
+\ganttcon{41}{189}{41}{196}
+\ganttbar{  \%175 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%174}{39}{1}
+\ganttcon{40}{190}{39}{191}
+\ganttbar{  \%176 = load i32* \%175, align 4, !tbaa !1}{39}{2}
+\ganttcon{41}{191}{41}{196}
+\ganttbar{  \%181 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%180}{39}{1}
+\ganttcon{40}{192}{40}{194}
+\ganttbar{  \%186 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%185}{39}{1}
+\ganttcon{40}{193}{40}{195}
+\ganttbar{  \%182 = load i32* \%181, align 4, !tbaa !1}{40}{2}
+\ganttcon{42}{194}{42}{197}
+\ganttbar{  \%187 = load i32* \%186, align 4, !tbaa !1}{40}{2}
+\ganttcon{42}{195}{42}{198}
+\ganttbar{  \%177 = add i32 \%176, \%171}{41}{1}
+\ganttcon{42}{196}{42}{197}
+\ganttbar{  \%183 = xor i32 \%177, \%182}{42}{1}
+\ganttcon{43}{197}{42}{198}
+\ganttbar{  \%188 = add i32 \%183, \%187}{42}{1}
+\ganttcon{43}{198}{42}{199}
+\ganttbar{  \%189 = xor i32 \%168, \%188}{42}{1}
+\ganttcon{43}{199}{42}{209}
+\ganttcon{43}{199}{42}{207}
+\ganttcon{43}{199}{42}{204}
+\ganttcon{43}{199}{42}{201}
+\ganttcon{43}{199}{42}{200}
+\ganttbar{  \%192 = lshr i32 \%189, 24}{42}{1}
+\ganttcon{43}{200}{43}{210}
+\ganttbar{  \%195 = lshr i32 \%189, 16}{42}{1}
+\ganttcon{43}{201}{42}{202}
+\ganttbar{  \%196 = and i32 \%195, 255}{42}{1}
+\ganttcon{43}{202}{42}{203}
+\ganttbar{  \%197 = or i32 \%196, 256}{42}{1}
+\ganttcon{43}{203}{43}{212}
+\ganttbar{  \%201 = lshr i32 \%189, 8}{42}{1}
+\ganttcon{43}{204}{42}{205}
+\ganttbar{  \%202 = and i32 \%201, 255}{42}{1}
+\ganttcon{43}{205}{42}{206}
+\ganttbar{  \%203 = or i32 \%202, 512}{42}{1}
+\ganttcon{43}{206}{43}{214}
+\ganttbar{  \%207 = and i32 \%189, 255}{42}{1}
+\ganttcon{43}{207}{42}{208}
+\ganttbar{  \%208 = or i32 \%207, 768}{42}{1}
+\ganttcon{43}{208}{43}{215}
+\ganttbar{  \%214 = xor i32 \%213, \%189}{42}{1}
+\ganttcon{43}{209}{50}{243}
+\ganttbar{  \%193 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%192}{43}{1}
+\ganttcon{44}{210}{43}{211}
+\ganttbar{  \%194 = load i32* \%193, align 4, !tbaa !1}{43}{2}
+\ganttcon{45}{211}{45}{218}
+\ganttbar{  \%198 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%197}{43}{1}
+\ganttcon{44}{212}{43}{213}
+\ganttbar{  \%199 = load i32* \%198, align 4, !tbaa !1}{43}{2}
+\ganttcon{45}{213}{45}{218}
+\ganttbar{  \%204 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%203}{43}{1}
+\ganttcon{44}{214}{44}{216}
+\ganttbar{  \%209 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%208}{43}{1}
+\ganttcon{44}{215}{44}{217}
+\ganttbar{  \%205 = load i32* \%204, align 4, !tbaa !1}{44}{2}
+\ganttcon{46}{216}{46}{219}
+\ganttbar{  \%210 = load i32* \%209, align 4, !tbaa !1}{44}{2}
+\ganttcon{46}{217}{46}{220}
+\ganttbar{  \%200 = add i32 \%199, \%194}{45}{1}
+\ganttcon{46}{218}{46}{219}
+\ganttbar{  \%206 = xor i32 \%200, \%205}{46}{1}
+\ganttcon{47}{219}{46}{220}
+\ganttbar{  \%211 = add i32 \%206, \%210}{46}{1}
+\ganttcon{47}{220}{46}{221}
+\ganttbar{  \%212 = xor i32 \%191, \%211}{46}{1}
+\ganttcon{47}{221}{46}{231}
+\ganttcon{47}{221}{46}{229}
+\ganttcon{47}{221}{46}{226}
+\ganttcon{47}{221}{46}{223}
+\ganttcon{47}{221}{46}{222}
+\ganttbar{  \%215 = lshr i32 \%212, 24}{46}{1}
+\ganttcon{47}{222}{47}{232}
+\ganttbar{  \%218 = lshr i32 \%212, 16}{46}{1}
+\ganttcon{47}{223}{46}{224}
+\ganttbar{  \%219 = and i32 \%218, 255}{46}{1}
+\ganttcon{47}{224}{46}{225}
+\ganttbar{  \%220 = or i32 \%219, 256}{46}{1}
+\ganttcon{47}{225}{47}{234}
+\ganttbar{  \%224 = lshr i32 \%212, 8}{46}{1}
+\ganttcon{47}{226}{46}{227}
+\ganttbar{  \%225 = and i32 \%224, 255}{46}{1}
+\ganttcon{47}{227}{46}{228}
+\ganttbar{  \%226 = or i32 \%225, 512}{46}{1}
+\ganttcon{47}{228}{47}{236}
+\ganttbar{  \%230 = and i32 \%212, 255}{46}{1}
+\ganttcon{47}{229}{46}{230}
+\ganttbar{  \%231 = or i32 \%230, 768}{46}{1}
+\ganttcon{47}{230}{47}{237}
+\ganttbar{  \%237 = xor i32 \%236, \%212}{46}{1}
+\ganttcon{47}{231}{54}{265}
+\ganttbar{  \%216 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%215}{47}{1}
+\ganttcon{48}{232}{47}{233}
+\ganttbar{  \%217 = load i32* \%216, align 4, !tbaa !1}{47}{2}
+\ganttcon{49}{233}{49}{240}
+\ganttbar{  \%221 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%220}{47}{1}
+\ganttcon{48}{234}{47}{235}
+\ganttbar{  \%222 = load i32* \%221, align 4, !tbaa !1}{47}{2}
+\ganttcon{49}{235}{49}{240}
+\ganttbar{  \%227 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%226}{47}{1}
+\ganttcon{48}{236}{48}{238}
+\ganttbar{  \%232 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%231}{47}{1}
+\ganttcon{48}{237}{48}{239}
+\ganttbar{  \%228 = load i32* \%227, align 4, !tbaa !1}{48}{2}
+\ganttcon{50}{238}{50}{241}
+\ganttbar{  \%233 = load i32* \%232, align 4, !tbaa !1}{48}{2}
+\ganttcon{50}{239}{50}{242}
+\ganttbar{  \%223 = add i32 \%222, \%217}{49}{1}
+\ganttcon{50}{240}{50}{241}
+\ganttbar{  \%229 = xor i32 \%223, \%228}{50}{1}
+\ganttcon{51}{241}{50}{242}
+\ganttbar{  \%234 = add i32 \%229, \%233}{50}{1}
+\ganttcon{51}{242}{50}{243}
+\ganttbar{  \%235 = xor i32 \%214, \%234}{50}{1}
+\ganttcon{51}{243}{50}{253}
+\ganttcon{51}{243}{50}{251}
+\ganttcon{51}{243}{50}{248}
+\ganttcon{51}{243}{50}{245}
+\ganttcon{51}{243}{50}{244}
+\ganttbar{  \%238 = lshr i32 \%235, 24}{50}{1}
+\ganttcon{51}{244}{51}{254}
+\ganttbar{  \%241 = lshr i32 \%235, 16}{50}{1}
+\ganttcon{51}{245}{50}{246}
+\ganttbar{  \%242 = and i32 \%241, 255}{50}{1}
+\ganttcon{51}{246}{50}{247}
+\ganttbar{  \%243 = or i32 \%242, 256}{50}{1}
+\ganttcon{51}{247}{51}{256}
+\ganttbar{  \%247 = lshr i32 \%235, 8}{50}{1}
+\ganttcon{51}{248}{50}{249}
+\ganttbar{  \%248 = and i32 \%247, 255}{50}{1}
+\ganttcon{51}{249}{50}{250}
+\ganttbar{  \%249 = or i32 \%248, 512}{50}{1}
+\ganttcon{51}{250}{51}{258}
+\ganttbar{  \%253 = and i32 \%235, 255}{50}{1}
+\ganttcon{51}{251}{50}{252}
+\ganttbar{  \%254 = or i32 \%253, 768}{50}{1}
+\ganttcon{51}{252}{51}{259}
+\ganttbar{  \%260 = xor i32 \%259, \%235}{50}{1}
+\ganttcon{51}{253}{58}{287}
+\ganttbar{  \%239 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%238}{51}{1}
+\ganttcon{52}{254}{51}{255}
+\ganttbar{  \%240 = load i32* \%239, align 4, !tbaa !1}{51}{2}
+\ganttcon{53}{255}{53}{262}
+\ganttbar{  \%244 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%243}{51}{1}
+\ganttcon{52}{256}{51}{257}
+\ganttbar{  \%245 = load i32* \%244, align 4, !tbaa !1}{51}{2}
+\ganttcon{53}{257}{53}{262}
+\ganttbar{  \%250 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%249}{51}{1}
+\ganttcon{52}{258}{52}{260}
+\ganttbar{  \%255 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%254}{51}{1}
+\ganttcon{52}{259}{52}{261}
+\ganttbar{  \%251 = load i32* \%250, align 4, !tbaa !1}{52}{2}
+\ganttcon{54}{260}{54}{263}
+\ganttbar{  \%256 = load i32* \%255, align 4, !tbaa !1}{52}{2}
+\ganttcon{54}{261}{54}{264}
+\ganttbar{  \%246 = add i32 \%245, \%240}{53}{1}
+\ganttcon{54}{262}{54}{263}
+\ganttbar{  \%252 = xor i32 \%246, \%251}{54}{1}
+\ganttcon{55}{263}{54}{264}
+\ganttbar{  \%257 = add i32 \%252, \%256}{54}{1}
+\ganttcon{55}{264}{54}{265}
+\ganttbar{  \%258 = xor i32 \%237, \%257}{54}{1}
+\ganttcon{55}{265}{54}{275}
+\ganttcon{55}{265}{54}{273}
+\ganttcon{55}{265}{54}{270}
+\ganttcon{55}{265}{54}{267}
+\ganttcon{55}{265}{54}{266}
+\ganttbar{  \%261 = lshr i32 \%258, 24}{54}{1}
+\ganttcon{55}{266}{55}{276}
+\ganttbar{  \%264 = lshr i32 \%258, 16}{54}{1}
+\ganttcon{55}{267}{54}{268}
+\ganttbar{  \%265 = and i32 \%264, 255}{54}{1}
+\ganttcon{55}{268}{54}{269}
+\ganttbar{  \%266 = or i32 \%265, 256}{54}{1}
+\ganttcon{55}{269}{55}{278}
+\ganttbar{  \%270 = lshr i32 \%258, 8}{54}{1}
+\ganttcon{55}{270}{54}{271}
+\ganttbar{  \%271 = and i32 \%270, 255}{54}{1}
+\ganttcon{55}{271}{54}{272}
+\ganttbar{  \%272 = or i32 \%271, 512}{54}{1}
+\ganttcon{55}{272}{55}{280}
+\ganttbar{  \%276 = and i32 \%258, 255}{54}{1}
+\ganttcon{55}{273}{54}{274}
+\ganttbar{  \%277 = or i32 \%276, 768}{54}{1}
+\ganttcon{55}{274}{55}{281}
+\ganttbar{  \%283 = xor i32 \%282, \%258}{54}{1}
+\ganttcon{55}{275}{62}{309}
+\ganttbar{  \%262 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%261}{55}{1}
+\ganttcon{56}{276}{55}{277}
+\ganttbar{  \%263 = load i32* \%262, align 4, !tbaa !1}{55}{2}
+\ganttcon{57}{277}{57}{284}
+\ganttbar{  \%267 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%266}{55}{1}
+\ganttcon{56}{278}{55}{279}
+\ganttbar{  \%268 = load i32* \%267, align 4, !tbaa !1}{55}{2}
+\ganttcon{57}{279}{57}{284}
+\ganttbar{  \%273 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%272}{55}{1}
+\ganttcon{56}{280}{56}{282}
+\ganttbar{  \%278 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%277}{55}{1}
+\ganttcon{56}{281}{56}{283}
+\ganttbar{  \%274 = load i32* \%273, align 4, !tbaa !1}{56}{2}
+\ganttcon{58}{282}{58}{285}
+\ganttbar{  \%279 = load i32* \%278, align 4, !tbaa !1}{56}{2}
+\ganttcon{58}{283}{58}{286}
+\ganttbar{  \%269 = add i32 \%268, \%263}{57}{1}
+\ganttcon{58}{284}{58}{285}
+\ganttbar{  \%275 = xor i32 \%269, \%274}{58}{1}
+\ganttcon{59}{285}{58}{286}
+\ganttbar{  \%280 = add i32 \%275, \%279}{58}{1}
+\ganttcon{59}{286}{58}{287}
+\ganttbar{  \%281 = xor i32 \%260, \%280}{58}{1}
+\ganttcon{59}{287}{58}{297}
+\ganttcon{59}{287}{58}{295}
+\ganttcon{59}{287}{58}{292}
+\ganttcon{59}{287}{58}{289}
+\ganttcon{59}{287}{58}{288}
+\ganttbar{  \%284 = lshr i32 \%281, 24}{58}{1}
+\ganttcon{59}{288}{59}{298}
+\ganttbar{  \%287 = lshr i32 \%281, 16}{58}{1}
+\ganttcon{59}{289}{58}{290}
+\ganttbar{  \%288 = and i32 \%287, 255}{58}{1}
+\ganttcon{59}{290}{58}{291}
+\ganttbar{  \%289 = or i32 \%288, 256}{58}{1}
+\ganttcon{59}{291}{59}{300}
+\ganttbar{  \%293 = lshr i32 \%281, 8}{58}{1}
+\ganttcon{59}{292}{58}{293}
+\ganttbar{  \%294 = and i32 \%293, 255}{58}{1}
+\ganttcon{59}{293}{58}{294}
+\ganttbar{  \%295 = or i32 \%294, 512}{58}{1}
+\ganttcon{59}{294}{59}{302}
+\ganttbar{  \%299 = and i32 \%281, 255}{58}{1}
+\ganttcon{59}{295}{58}{296}
+\ganttbar{  \%300 = or i32 \%299, 768}{58}{1}
+\ganttcon{59}{296}{59}{303}
+\ganttbar{  \%306 = xor i32 \%305, \%281}{58}{1}
+\ganttcon{59}{297}{66}{331}
+\ganttbar{  \%285 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%284}{59}{1}
+\ganttcon{60}{298}{59}{299}
+\ganttbar{  \%286 = load i32* \%285, align 4, !tbaa !1}{59}{2}
+\ganttcon{61}{299}{61}{306}
+\ganttbar{  \%290 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%289}{59}{1}
+\ganttcon{60}{300}{59}{301}
+\ganttbar{  \%291 = load i32* \%290, align 4, !tbaa !1}{59}{2}
+\ganttcon{61}{301}{61}{306}
+\ganttbar{  \%296 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%295}{59}{1}
+\ganttcon{60}{302}{60}{304}
+\ganttbar{  \%301 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%300}{59}{1}
+\ganttcon{60}{303}{60}{305}
+\ganttbar{  \%297 = load i32* \%296, align 4, !tbaa !1}{60}{2}
+\ganttcon{62}{304}{62}{307}
+\ganttbar{  \%302 = load i32* \%301, align 4, !tbaa !1}{60}{2}
+\ganttcon{62}{305}{62}{308}
+\ganttbar{  \%292 = add i32 \%291, \%286}{61}{1}
+\ganttcon{62}{306}{62}{307}
+\ganttbar{  \%298 = xor i32 \%292, \%297}{62}{1}
+\ganttcon{63}{307}{62}{308}
+\ganttbar{  \%303 = add i32 \%298, \%302}{62}{1}
+\ganttcon{63}{308}{62}{309}
+\ganttbar{  \%304 = xor i32 \%283, \%303}{62}{1}
+\ganttcon{63}{309}{62}{319}
+\ganttcon{63}{309}{62}{317}
+\ganttcon{63}{309}{62}{314}
+\ganttcon{63}{309}{62}{311}
+\ganttcon{63}{309}{62}{310}
+\ganttbar{  \%307 = lshr i32 \%304, 24}{62}{1}
+\ganttcon{63}{310}{63}{320}
+\ganttbar{  \%310 = lshr i32 \%304, 16}{62}{1}
+\ganttcon{63}{311}{62}{312}
+\ganttbar{  \%311 = and i32 \%310, 255}{62}{1}
+\ganttcon{63}{312}{62}{313}
+\ganttbar{  \%312 = or i32 \%311, 256}{62}{1}
+\ganttcon{63}{313}{63}{322}
+\ganttbar{  \%316 = lshr i32 \%304, 8}{62}{1}
+\ganttcon{63}{314}{62}{315}
+\ganttbar{  \%317 = and i32 \%316, 255}{62}{1}
+\ganttcon{63}{315}{62}{316}
+\ganttbar{  \%318 = or i32 \%317, 512}{62}{1}
+\ganttcon{63}{316}{63}{324}
+\ganttbar{  \%322 = and i32 \%304, 255}{62}{1}
+\ganttcon{63}{317}{62}{318}
+\ganttbar{  \%323 = or i32 \%322, 768}{62}{1}
+\ganttcon{63}{318}{63}{325}
+\ganttbar{  \%329 = xor i32 \%328, \%304}{62}{1}
+\ganttcon{63}{319}{70}{353}
+\ganttbar{  \%308 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%307}{63}{1}
+\ganttcon{64}{320}{63}{321}
+\ganttbar{  \%309 = load i32* \%308, align 4, !tbaa !1}{63}{2}
+\ganttcon{65}{321}{65}{328}
+\ganttbar{  \%313 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%312}{63}{1}
+\ganttcon{64}{322}{63}{323}
+\ganttbar{  \%314 = load i32* \%313, align 4, !tbaa !1}{63}{2}
+\ganttcon{65}{323}{65}{328}
+\ganttbar{  \%319 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%318}{63}{1}
+\ganttcon{64}{324}{64}{326}
+\ganttbar{  \%324 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%323}{63}{1}
+\ganttcon{64}{325}{64}{327}
+\ganttbar{  \%320 = load i32* \%319, align 4, !tbaa !1}{64}{2}
+\ganttcon{66}{326}{66}{329}
+\ganttbar{  \%325 = load i32* \%324, align 4, !tbaa !1}{64}{2}
+\ganttcon{66}{327}{66}{330}
+\ganttbar{  \%315 = add i32 \%314, \%309}{65}{1}
+\ganttcon{66}{328}{66}{329}
+\ganttbar{  \%321 = xor i32 \%315, \%320}{66}{1}
+\ganttcon{67}{329}{66}{330}
+\ganttbar{  \%326 = add i32 \%321, \%325}{66}{1}
+\ganttcon{67}{330}{66}{331}
+\ganttbar{  \%327 = xor i32 \%306, \%326}{66}{1}
+\ganttcon{67}{331}{66}{341}
+\ganttcon{67}{331}{66}{339}
+\ganttcon{67}{331}{66}{336}
+\ganttcon{67}{331}{66}{333}
+\ganttcon{67}{331}{66}{332}
+\ganttbar{  \%330 = lshr i32 \%327, 24}{66}{1}
+\ganttcon{67}{332}{67}{342}
+\ganttbar{  \%333 = lshr i32 \%327, 16}{66}{1}
+\ganttcon{67}{333}{66}{334}
+\ganttbar{  \%334 = and i32 \%333, 255}{66}{1}
+\ganttcon{67}{334}{66}{335}
+\ganttbar{  \%335 = or i32 \%334, 256}{66}{1}
+\ganttcon{67}{335}{67}{344}
+\ganttbar{  \%339 = lshr i32 \%327, 8}{66}{1}
+\ganttcon{67}{336}{66}{337}
+\ganttbar{  \%340 = and i32 \%339, 255}{66}{1}
+\ganttcon{67}{337}{66}{338}
+\ganttbar{  \%341 = or i32 \%340, 512}{66}{1}
+\ganttcon{67}{338}{67}{346}
+\ganttbar{  \%345 = and i32 \%327, 255}{66}{1}
+\ganttcon{67}{339}{66}{340}
+\ganttbar{  \%346 = or i32 \%345, 768}{66}{1}
+\ganttcon{67}{340}{67}{347}
+\ganttbar{  \%352 = xor i32 \%351, \%327}{66}{1}
+\ganttcon{67}{341}{74}{375}
+\ganttbar{  \%331 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%330}{67}{1}
+\ganttcon{68}{342}{67}{343}
+\ganttbar{  \%332 = load i32* \%331, align 4, !tbaa !1}{67}{2}
+\ganttcon{69}{343}{69}{350}
+\ganttbar{  \%336 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%335}{67}{1}
+\ganttcon{68}{344}{67}{345}
+\ganttbar{  \%337 = load i32* \%336, align 4, !tbaa !1}{67}{2}
+\ganttcon{69}{345}{69}{350}
+\ganttbar{  \%342 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%341}{67}{1}
+\ganttcon{68}{346}{68}{348}
+\ganttbar{  \%347 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%346}{67}{1}
+\ganttcon{68}{347}{68}{349}
+\ganttbar{  \%343 = load i32* \%342, align 4, !tbaa !1}{68}{2}
+\ganttcon{70}{348}{70}{351}
+\ganttbar{  \%348 = load i32* \%347, align 4, !tbaa !1}{68}{2}
+\ganttcon{70}{349}{70}{352}
+\ganttbar{  \%338 = add i32 \%337, \%332}{69}{1}
+\ganttcon{70}{350}{70}{351}
+\ganttbar{  \%344 = xor i32 \%338, \%343}{70}{1}
+\ganttcon{71}{351}{70}{352}
+\ganttbar{  \%349 = add i32 \%344, \%348}{70}{1}
+\ganttcon{71}{352}{70}{353}
+\ganttbar{  \%350 = xor i32 \%329, \%349}{70}{1}
+\ganttcon{71}{353}{70}{363}
+\ganttcon{71}{353}{70}{361}
+\ganttcon{71}{353}{70}{358}
+\ganttcon{71}{353}{70}{355}
+\ganttcon{71}{353}{70}{354}
+\ganttbar{  \%353 = lshr i32 \%350, 24}{70}{1}
+\ganttcon{71}{354}{71}{364}
+\ganttbar{  \%356 = lshr i32 \%350, 16}{70}{1}
+\ganttcon{71}{355}{70}{356}
+\ganttbar{  \%357 = and i32 \%356, 255}{70}{1}
+\ganttcon{71}{356}{70}{357}
+\ganttbar{  \%358 = or i32 \%357, 256}{70}{1}
+\ganttcon{71}{357}{71}{366}
+\ganttbar{  \%362 = lshr i32 \%350, 8}{70}{1}
+\ganttcon{71}{358}{70}{359}
+\ganttbar{  \%363 = and i32 \%362, 255}{70}{1}
+\ganttcon{71}{359}{70}{360}
+\ganttbar{  \%364 = or i32 \%363, 512}{70}{1}
+\ganttcon{71}{360}{71}{368}
+\ganttbar{  \%368 = and i32 \%350, 255}{70}{1}
+\ganttcon{71}{361}{70}{362}
+\ganttbar{  \%369 = or i32 \%368, 768}{70}{1}
+\ganttcon{71}{362}{71}{369}
+\ganttbar{  \%375 = xor i32 \%374, \%350}{70}{1}
+\ganttcon{71}{363}{74}{377}
+\ganttbar{  \%354 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%353}{71}{1}
+\ganttcon{72}{364}{71}{365}
+\ganttbar{  \%355 = load i32* \%354, align 4, !tbaa !1}{71}{2}
+\ganttcon{73}{365}{73}{372}
+\ganttbar{  \%359 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%358}{71}{1}
+\ganttcon{72}{366}{71}{367}
+\ganttbar{  \%360 = load i32* \%359, align 4, !tbaa !1}{71}{2}
+\ganttcon{73}{367}{73}{372}
+\ganttbar{  \%365 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%364}{71}{1}
+\ganttcon{72}{368}{72}{370}
+\ganttbar{  \%370 = getelementptr inbounds [1024 x i32]* @key\_S, i32 0, i32 \%369}{71}{1}
+\ganttcon{72}{369}{72}{371}
+\ganttbar{  \%366 = load i32* \%365, align 4, !tbaa !1}{72}{2}
+\ganttcon{74}{370}{74}{373}
+\ganttbar{  \%371 = load i32* \%370, align 4, !tbaa !1}{72}{2}
+\ganttcon{74}{371}{74}{374}
+\ganttbar{  \%361 = add i32 \%360, \%355}{73}{1}
+\ganttcon{74}{372}{74}{373}
+\ganttbar{  \%367 = xor i32 \%361, \%366}{74}{1}
+\ganttcon{75}{373}{74}{374}
+\ganttbar{  \%372 = add i32 \%367, \%371}{74}{1}
+\ganttcon{75}{374}{74}{375}
+\ganttbar{  \%373 = xor i32 \%352, \%372}{74}{1}
+\ganttcon{75}{375}{74}{376}
+\ganttbar{  store i32 \%373, i32* \%2, align 4, !tbaa !1}{74}{1}
+\ganttbar{  store i32 \%375, i32* \%data, align 4, !tbaa !1}{74}{1}
+\ganttbar{  ret void}{75}{1}
+\end{gantt}
+\end{figure}
+\end{document}

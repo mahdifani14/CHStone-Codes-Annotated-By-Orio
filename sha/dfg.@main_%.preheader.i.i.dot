@@ -1,0 +1,21 @@
+digraph {
+Node0x361d280[label="  %indvar8 = phi i32 [ %indvar.next9, %m..."];
+Node0x361d280 -> Node0x361d280[label="D:0.00ns L:0",color=blue];
+Node0x361d280 -> Node0x361d280[label="D:0.00ns L:0",color=blue];
+Node0x361d280 -> Node0x361d280[label="D:0.00ns L:0",color=blue];
+Node0x361d360[label="  %3 = shl i32 %indvar8, 6"];
+Node0x361d360 -> Node0x361d360[label="D:0.00ns L:0",color=blue];
+Node0x361d360 -> Node0x361d360[label="D:0.00ns L:0",color=blue];
+Node0x361d360 -> Node0x361d360[label="D:0.00ns L:0",color=blue];
+Node0x361d360 -> Node0x361d360[label="D:0.00ns L:0",color=blue];
+Node0x361d440[label="  %4 = or i32 %3, 3"];
+Node0x361d440 -> Node0x361d440[label="D:0.00ns L:0",color=blue];
+Node0x361d520[label="  %5 = or i32 %3, 2"];
+Node0x361d520 -> Node0x361d520[label="D:0.00ns L:0",color=blue];
+Node0x361d600[label="  %6 = or i32 %3, 1"];
+Node0x361d600 -> Node0x361d600[label="D:0.00ns L:0",color=blue];
+Node0x361d6e0[label="  %7 = mul i32 %indvar8, -64"];
+Node0x361d6e0 -> Node0x361d6e0[label="D:2.59ns L:1",color=blue];
+Node0x361d890[label="  %8 = add i32 %2, %7"];
+Node0x361d890 -> Node0x361d890[label="D:2.50ns L:0",color=blue];
+}

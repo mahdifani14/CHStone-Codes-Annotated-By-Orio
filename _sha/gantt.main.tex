@@ -1,0 +1,288 @@
+\documentclass[landscape]{article}
+\usepackage{gantt}
+\pagestyle{empty}
+\begin{document}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{7}{5}
+\begin{ganttitle}
+\numtitle{0}{1}{4}{1}
+\end{ganttitle}
+\ganttbar{  store i32 1732584193, i32* @sha\_info\_digest.0, align 4, !tbaa !1}{1}{1}
+\ganttbar{  store i32 -271733879, i32* @sha\_info\_digest.1, align 4, !tbaa !1}{1}{1}
+\ganttbar{  br label \%.preheader.lr.ph.i.i}{1}{1}
+\ganttbar{  store i32 -1732584194, i32* @sha\_info\_digest.2, align 4, !tbaa !1}{2}{1}
+\ganttbar{  store i32 271733878, i32* @sha\_info\_digest.3, align 4, !tbaa !1}{2}{1}
+\ganttbar{  store i32 -1009589776, i32* @sha\_info\_digest.4, align 4, !tbaa !1}{3}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{6}{3}
+\begin{ganttitle}
+\numtitle{0}{1}{2}{1}
+\end{ganttitle}
+\ganttbar{  \%j.02.i = phi i32 [ 0, \%0 ], [ \%32, \%sha\_update.exit.i ]}{1}{1}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  \%scevgep30 = getelementptr [2 x i32]* @in\_i, i32 0, i32 \%j.02.i}{1}{1}
+\ganttcon{2}{2}{1}{3}
+\ganttbar{  \%1 = load i32* \%scevgep30, align 4, !tbaa !1}{1}{1}
+\ganttcon{2}{3}{2}{5}
+\ganttbar{  br label \%.preheader.i.i}{1}{1}
+\ganttbar{  \%2 = add i32 \%1, -64}{2}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{9}{3}
+\begin{ganttitle}
+\numtitle{0}{1}{2}{1}
+\end{ganttitle}
+\ganttbar{  \%indvar4 = phi i32 [ \%indvar.next5, \%memcpy.exit.i.i ], [ 0, \%.preheader.l...}{1}{1}
+\ganttcon{2}{1}{1}{6}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  \%3 = shl i32 \%indvar4, 6}{1}{1}
+\ganttcon{2}{2}{1}{5}
+\ganttcon{2}{2}{1}{4}
+\ganttcon{2}{2}{1}{3}
+\ganttbar{  \%4 = or i32 \%3, 3}{1}{1}
+\ganttbar{  \%5 = or i32 \%3, 2}{1}{1}
+\ganttbar{  \%6 = or i32 \%3, 1}{1}{1}
+\ganttbar{  \%7 = mul i32 \%indvar4, -64}{1}{1}
+\ganttcon{2}{6}{2}{8}
+\ganttbar{  br label \%9}{1}{1}
+\ganttbar{  \%8 = add i32 \%2, \%7}{2}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{30}{6}
+\begin{ganttitle}
+\numtitle{0}{1}{5}{1}
+\end{ganttitle}
+\ganttbar{  \%indvar1 = phi i32 [ \%indvar.next2, \%9 ], [ 0, \%.preheader.i.i ]}{1}{1}
+\ganttcon{2}{1}{1}{8}
+\ganttcon{2}{1}{1}{7}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  \%10 = shl i32 \%indvar1, 2}{1}{1}
+\ganttcon{2}{2}{1}{6}
+\ganttcon{2}{2}{1}{5}
+\ganttcon{2}{2}{1}{4}
+\ganttcon{2}{2}{1}{3}
+\ganttbar{  \%11 = add i32 \%4, \%10}{1}{1}
+\ganttcon{2}{3}{2}{11}
+\ganttbar{  \%12 = add i32 \%5, \%10}{1}{1}
+\ganttcon{2}{4}{2}{12}
+\ganttbar{  \%13 = add i32 \%3, \%10}{1}{1}
+\ganttcon{2}{5}{2}{13}
+\ganttbar{  \%14 = add i32 \%6, \%10}{1}{1}
+\ganttcon{2}{6}{2}{14}
+\ganttbar{  \%p1.02.i.i.i = getelementptr [16 x i32]* @sha\_info\_data, i32 0, i32 \%indva...}{1}{1}
+\ganttcon{2}{7}{4}{29}
+\ganttbar{  \%indvar.next2 = add i32 \%indvar1, 1}{1}{1}
+\ganttcon{2}{8}{1}{9}
+\ganttcon{2}{8}{1}{1}
+\ganttbar{  \%exitcond3 = icmp eq i32 \%indvar.next2, 16}{1}{1}
+\ganttcon{2}{9}{1}{10}
+\ganttbar{  br i1 \%exitcond3, label \%memcpy.exit.i.i, label \%9}{1}{1}
+\ganttbar{  \%scevgep = getelementptr [2 x [8192 x i8]]* @indata, i32 0, i32 \%j.02.i, i32...}{2}{1}
+\ganttcon{3}{11}{3}{22}
+\ganttbar{  \%scevgep6 = getelementptr [2 x [8192 x i8]]* @indata, i32 0, i32 \%j.02.i, i3...}{2}{1}
+\ganttcon{3}{12}{3}{21}
+\ganttbar{  \%p2.01.i.i.i = getelementptr [2 x [8192 x i8]]* @indata, i32 0, i32 \%j.02.i,...}{2}{1}
+\ganttcon{3}{13}{2}{15}
+\ganttbar{  \%scevgep8 = getelementptr [2 x [8192 x i8]]* @indata, i32 0, i32 \%j.02.i, i3...}{2}{1}
+\ganttcon{3}{14}{2}{16}
+\ganttbar{  \%15 = load i8* \%p2.01.i.i.i, align 1, !tbaa !5}{2}{1}
+\ganttcon{3}{15}{3}{17}
+\ganttbar{  \%17 = load i8* \%scevgep8, align 1, !tbaa !5}{2}{1}
+\ganttcon{3}{16}{3}{18}
+\ganttbar{  \%16 = zext i8 \%15 to i32}{3}{1}
+\ganttcon{4}{17}{3}{20}
+\ganttbar{  \%18 = zext i8 \%17 to i32}{3}{1}
+\ganttcon{4}{18}{3}{19}
+\ganttbar{  \%19 = shl nuw nsw i32 \%18, 8}{3}{1}
+\ganttcon{4}{19}{3}{20}
+\ganttbar{  \%20 = or i32 \%19, \%16}{3}{1}
+\ganttcon{4}{20}{4}{25}
+\ganttbar{  \%21 = load i8* \%scevgep6, align 1, !tbaa !5}{3}{1}
+\ganttcon{4}{21}{4}{23}
+\ganttbar{  \%25 = load i8* \%scevgep, align 1, !tbaa !5}{3}{1}
+\ganttcon{4}{22}{4}{26}
+\ganttbar{  \%22 = zext i8 \%21 to i32}{4}{1}
+\ganttcon{5}{23}{4}{24}
+\ganttbar{  \%23 = shl nuw nsw i32 \%22, 16}{4}{1}
+\ganttcon{5}{24}{4}{25}
+\ganttbar{  \%24 = or i32 \%20, \%23}{4}{1}
+\ganttcon{5}{25}{4}{28}
+\ganttbar{  \%26 = zext i8 \%25 to i32}{4}{1}
+\ganttcon{5}{26}{4}{27}
+\ganttbar{  \%27 = shl nuw i32 \%26, 24}{4}{1}
+\ganttcon{5}{27}{4}{28}
+\ganttbar{  \%28 = or i32 \%24, \%27}{4}{1}
+\ganttcon{5}{28}{4}{29}
+\ganttbar{  store i32 \%28, i32* \%p1.02.i.i.i, align 4, !tbaa !1}{4}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{5}{4}
+\begin{ganttitle}
+\numtitle{0}{1}{3}{1}
+\end{ganttitle}
+\ganttbar{  \%29 = icmp sgt i32 \%8, 63}{1}{1}
+\ganttcon{2}{1}{1}{3}
+\ganttbar{  \%indvar.next5 = add i32 \%indvar4, 1}{1}{1}
+\ganttbar{  br i1 \%29, label \%.preheader.i.i, label \%30}{1}{1}
+\ganttbar{  tail call fastcc void @sha\_transform() #1}{2}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{2}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  br i1 false, label \%.lr.ph.i.i1.i, label \%sha\_update.exit.i}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{2}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  br label \%31}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{2}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  br i1 undef, label \%sha\_update.exit.i.loopexit, label \%31}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{2}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  br label \%sha\_update.exit.i}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{4}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%32 = add nsw i32 \%j.02.i, 1}{1}{1}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  \%exitcond21 = icmp eq i32 \%32, 2}{1}{1}
+\ganttcon{2}{2}{1}{3}
+\ganttbar{  br i1 \%exitcond21, label \%.lr.ph.i8.preheader.i.i, label \%.preheader.lr.ph....}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{3}{3}
+\begin{ganttitle}
+\numtitle{0}{1}{2}{1}
+\end{ganttitle}
+\ganttbar{  store i32 128, i32* getelementptr inbounds ([16 x i32]* @sha\_info\_data, i32 ...}{1}{1}
+\ganttbar{  br label \%.lr.ph.i8.i.i}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{8}{4}
+\begin{ganttitle}
+\numtitle{0}{1}{3}{1}
+\end{ganttitle}
+\ganttbar{  \%indvar = phi i32 [ \%indvar.next, \%.lr.ph.i8.i.i ], [ 0, \%.lr.ph.i8.prehea...}{1}{1}
+\ganttcon{2}{1}{1}{3}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  \%33 = add i32 \%indvar, 1}{1}{1}
+\ganttcon{2}{2}{2}{6}
+\ganttbar{  \%indvar.next = add i32 \%indvar, 1}{1}{1}
+\ganttcon{2}{3}{1}{4}
+\ganttcon{2}{3}{1}{1}
+\ganttbar{  \%exitcond = icmp eq i32 \%indvar.next, 13}{1}{1}
+\ganttcon{2}{4}{1}{5}
+\ganttbar{  br i1 \%exitcond, label \%sha\_stream.exit, label \%.lr.ph.i8.i.i}{1}{1}
+\ganttbar{  \%p.11.i7.i.i = getelementptr [16 x i32]* @sha\_info\_data, i32 0, i32 \%33}{2}{1}
+\ganttcon{3}{6}{2}{7}
+\ganttbar{  store i32 0, i32* \%p.11.i7.i.i, align 4, !tbaa !1}{2}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{26}{9}
+\begin{ganttitle}
+\numtitle{0}{1}{8}{1}
+\end{ganttitle}
+\ganttbar{  store i32 0, i32* getelementptr inbounds ([16 x i32]* @sha\_info\_data, i32 0,...}{1}{1}
+\ganttbar{  store i32 131072, i32* getelementptr inbounds ([16 x i32]* @sha\_info\_data, i...}{1}{1}
+\ganttbar{  tail call fastcc void @sha\_transform() #1}{3}{1}
+\ganttbar{  \%.pre = load i32* @sha\_info\_digest.0, align 4, !tbaa !1}{4}{2}
+\ganttcon{6}{4}{6}{9}
+\ganttbar{  \%.pre4 = load i32* @sha\_info\_digest.1, align 4, !tbaa !1}{4}{2}
+\ganttcon{6}{5}{6}{11}
+\ganttbar{  \%.pre5 = load i32* @sha\_info\_digest.2, align 4, !tbaa !1}{5}{2}
+\ganttcon{7}{6}{7}{14}
+\ganttbar{  \%.pre6 = load i32* @sha\_info\_digest.3, align 4, !tbaa !1}{5}{2}
+\ganttcon{7}{7}{7}{17}
+\ganttbar{  \%.pre7 = load i32* @sha\_info\_digest.4, align 4, !tbaa !1}{6}{2}
+\ganttcon{8}{8}{8}{20}
+\ganttbar{  \%34 = icmp eq i32 \%.pre, 6969911}{6}{1}
+\ganttcon{7}{9}{6}{10}
+\ganttbar{  \%35 = zext i1 \%34 to i32}{6}{1}
+\ganttcon{7}{10}{6}{13}
+\ganttbar{  \%36 = icmp eq i32 \%.pre4, -1814260603}{6}{1}
+\ganttcon{7}{11}{6}{12}
+\ganttbar{  \%37 = zext i1 \%36 to i32}{6}{1}
+\ganttcon{7}{12}{6}{13}
+\ganttbar{  \%38 = add nuw nsw i32 \%35, \%37}{6}{1}
+\ganttcon{7}{13}{7}{16}
+\ganttbar{  \%39 = icmp eq i32 \%.pre5, 742465810}{7}{1}
+\ganttcon{8}{14}{7}{15}
+\ganttbar{  \%40 = zext i1 \%39 to i32}{7}{1}
+\ganttcon{8}{15}{7}{16}
+\ganttbar{  \%41 = add nuw nsw i32 \%38, \%40}{7}{1}
+\ganttcon{8}{16}{7}{19}
+\ganttbar{  \%42 = icmp eq i32 \%.pre6, 1677179459}{7}{1}
+\ganttcon{8}{17}{7}{18}
+\ganttbar{  \%43 = zext i1 \%42 to i32}{7}{1}
+\ganttcon{8}{18}{7}{19}
+\ganttbar{  \%44 = add nuw nsw i32 \%41, \%43}{7}{1}
+\ganttcon{8}{19}{8}{22}
+\ganttbar{  \%45 = icmp eq i32 \%.pre7, -1384908510}{8}{1}
+\ganttcon{9}{20}{8}{21}
+\ganttbar{  \%46 = zext i1 \%45 to i32}{8}{1}
+\ganttcon{9}{21}{8}{22}
+\ganttbar{  \%47 = add nuw nsw i32 \%44, \%46}{8}{1}
+\ganttcon{9}{22}{8}{24}
+\ganttcon{9}{22}{8}{23}
+\ganttbar{  \%48 = tail call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([11 x i8]...}{8}{1}
+\ganttbar{  \%49 = icmp eq i32 \%47, 5}{8}{1}
+\ganttcon{9}{24}{8}{25}
+\ganttbar{  br i1 \%49, label \%50, label \%52}{8}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{3}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%51 = tail call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([13 x i8]...}{1}{1}
+\ganttbar{  br label \%54}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{3}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%53 = tail call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([13 x i8]...}{1}{1}
+\ganttbar{  br label \%54}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{2}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  ret i32 \%47}{1}{1}
+\end{gantt}
+\end{figure}
+\end{document}

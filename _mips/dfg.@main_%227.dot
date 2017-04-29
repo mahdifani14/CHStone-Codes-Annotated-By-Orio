@@ -1,0 +1,16 @@
+digraph {
+Node0x2609ec0[label="  %228 = getelementptr inbounds [32 x i3..."];
+Node0x2609ec0 -> Node0x2609ec0[label="D:20.00ns L:0",color=blue];
+Node0x2609fe0[label="  %229 = load i32* %228, align 4"];
+Node0x2609fe0 -> Node0x2609fe0[label="D:0.00ns L:1",color=blue];
+Node0x260a480[label="  store i32 %232, i32* %233, align 4"];
+Node0x2609fe0 -> Node0x260a480[label="D:0.00ns L:1",color=red];
+Node0x260a0c0[label="  %230 = and i32 %23, 65535"];
+Node0x260a0c0 -> Node0x260a0c0[label="D:0.00ns L:0",color=blue];
+Node0x260a1a0[label="  %231 = icmp ult i32 %229, %230"];
+Node0x260a1a0 -> Node0x260a1a0[label="D:2.92ns L:0",color=blue];
+Node0x260a280[label="  %232 = zext i1 %231 to i32"];
+Node0x260a280 -> Node0x260a280[label="D:0.00ns L:0",color=blue];
+Node0x260a360[label="  %233 = getelementptr inbounds [32 x i3..."];
+Node0x260a360 -> Node0x260a360[label="D:20.00ns L:0",color=blue];
+}

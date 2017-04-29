@@ -1,0 +1,2 @@
+/home/legup/legup-4.0/examples/chstone/adpcm/orio/adpcm/output/legup_system/testbench/legup_system_tb/simulation
+(Open "transcript" file)

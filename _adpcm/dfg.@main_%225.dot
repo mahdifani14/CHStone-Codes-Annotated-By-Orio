@@ -1,0 +1,12 @@
+digraph {
+Node0x31861f0[label="  %226 = load i32* %scevgep24, align 4"];
+Node0x31861f0 -> Node0x31861f0[label="D:0.00ns L:1",color=blue];
+Node0x3186510[label="  store i32 %228, i32* %scevgep24, align..."];
+Node0x31861f0 -> Node0x3186510[label="D:0.00ns L:1",color=red];
+Node0x31862d0[label="  %227 = mul nsw i32 %226, 255"];
+Node0x31862d0 -> Node0x31862d0[label="D:2.59ns L:1",color=blue];
+Node0x3186430[label="  %228 = ashr i32 %227, 8"];
+Node0x3186430 -> Node0x3186430[label="D:0.00ns L:0",color=blue];
+Node0x3186630[label="  %229 = add nsw i32 %224, 1"];
+Node0x3186630 -> Node0x3186630[label="D:2.50ns L:0",color=blue];
+}

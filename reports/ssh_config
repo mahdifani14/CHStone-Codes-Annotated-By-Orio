@@ -1,0 +1,27 @@
+# SSH Config file to be copied in  ~/.ssh/ using name "config"
+Host hbomb
+HostName  10.79.4.233
+User puya_amiri 
+
+Host legup
+HostName 10.79.4.173
+User legup
+Compression yes
+ForwardX11 yes
+Ciphers blowfish-cbc,arcfour
+
+Host gbomb
+HostName 10.79.5.42
+User puya_amiri
+Compression yes
+ForwardX11 yes
+Ciphers blowfish-cbc,arcfour
+
+Host mips
+HostName 10.79.4.173
+User root
+port 2222
+Compression yes
+ForwardX11 yes
+Ciphers blowfish-cbc,arcfour
+

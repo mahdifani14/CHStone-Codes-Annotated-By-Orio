@@ -1,0 +1,12 @@
+digraph {
+Node0x304aa70[label="  %.tr = trunc i64 %zSig to i32"];
+Node0x304aa70 -> Node0x304aa70[label="D:0.00ns L:0",color=blue];
+Node0x30ddfb0[label="  %1 = and i32 %.tr, 1023"];
+Node0x30ddfb0 -> Node0x30ddfb0[label="D:0.00ns L:0",color=blue];
+Node0x30ddfb0 -> Node0x30ddfb0[label="D:0.00ns L:0",color=blue];
+Node0x30ddfb0 -> Node0x30ddfb0[label="D:0.00ns L:0",color=blue];
+Node0x30de0c0[label="  %2 = and i32 %zExp, 65535"];
+Node0x30de0c0 -> Node0x30de0c0[label="D:0.00ns L:0",color=blue];
+Node0x30de1a0[label="  %3 = icmp ugt i32 %2, 2044"];
+Node0x30de1a0 -> Node0x30de1a0[label="D:3.12ns L:0",color=blue];
+}

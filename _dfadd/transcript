@@ -1,0 +1,17 @@
+# vsim -c -do "run 7000000000000000ns; exit;" work.main_tb 
+# Start time: 14:59:18 on Apr 22,2017
+# Loading work.main_tb
+# Loading work.top
+# Loading work.memory_controller
+# Loading work.ram_dual_port
+# Loading work.ALTERA_MF_MEMORY_INITIALIZATION
+# Loading work.main
+# Loading work.roundAndPackFloat64
+# Loading work.rom_dual_port
+# run 7000000000000000ns
+# Result:          46RESULT: PASSAt t=            12910000 clk=1 finish=1 return_val=        46
+# Cycles:                  643
+# ** Note: $finish    : _dfadd.v(7362)
+#    Time: 12910 ns  Iteration: 2  Instance: /main_tb
+# End time: 14:59:19 on Apr 22,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

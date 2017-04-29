@@ -1,0 +1,14 @@
+NAME=dfadd
+SRCS=dfadd.c
+LOCAL_CONFIG = -legup-config=config.tcl
+CFLAG += -mllvm -unroll-threshold=0
+#ifeq ($(NO_OPT),)
+#    NO_OPT=1
+#endif
+
+OPT_O1 = 0
+OPT_O2 = 0
+OPT_O3 = 1
+LEVEL = ../../..
+include ../../Makefile.common
+include $(LEVEL)/Makefile.common

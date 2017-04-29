@@ -1,0 +1,8 @@
+run on legup:
+qemu-system-mips64el -M malta -kernel vmlinux-3.2.0-4-5kc-malta -hda debian_wheezy_mipsel_standard.qcow2 -append "root=/dev/sda1 console=tty0" -nographic -redir tcp:2222::22
+
+Run on other host PCs:
+ssh -p 2222 root@leguphost
+example on current legup : ssh -p 2222 root@10.79.4.173
+
+Use scp to transfer files between local and remote

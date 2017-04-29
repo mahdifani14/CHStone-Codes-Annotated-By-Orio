@@ -1,0 +1,32 @@
+digraph {
+Node0x433fee0[label="  %100 = getelementptr inbounds [8 x i8]..."];
+Node0x433fee0 -> Node0x433fee0[label="D:20.00ns L:0",color=blue];
+Node0x433fee0 -> Node0x433fee0[label="D:20.00ns L:0",color=blue];
+Node0x433ffc0[label="  %101 = load i8* %100, align 1, !tbaa !..."];
+Node0x433ffc0 -> Node0x433ffc0[label="D:0.00ns L:1",color=blue];
+Node0x4340180[label="  store i8 %102, i8* %100, align 1, !tba..."];
+Node0x433ffc0 -> Node0x4340180[label="D:0.00ns L:1",color=red];
+Node0x43400a0[label="  %102 = xor i8 %101, %53"];
+Node0x43400a0 -> Node0x43400a0[label="D:0.92ns L:0",color=blue];
+Node0x43400a0 -> Node0x43400a0[label="D:0.92ns L:0",color=blue];
+Node0x4340260[label="  %103 = add nuw nsw i32 %num.i.0, 1"];
+Node0x4340260 -> Node0x4340260[label="D:2.50ns L:0",color=blue];
+Node0x4340340[label="  %104 = and i32 %103, 7"];
+Node0x4340340 -> Node0x4340340[label="D:0.00ns L:0",color=blue];
+Node0x4340420[label="  %105 = load i8* %scevgep, align 1, !tb..."];
+Node0x4340420 -> Node0x4340420[label="D:0.00ns L:1",color=blue];
+Node0x4340500[label="  %106 = icmp eq i8 %102, %105"];
+Node0x4340500 -> Node0x4340500[label="D:1.79ns L:0",color=blue];
+Node0x43405e0[label="  %107 = zext i1 %106 to i32"];
+Node0x43405e0 -> Node0x43405e0[label="D:0.00ns L:0",color=blue];
+Node0x43406c0[label="  %108 = add nsw i32 %107, %check.05.i"];
+Node0x43406c0 -> Node0x43406c0[label="D:2.50ns L:0",color=blue];
+Node0x43406c0 -> Node0x43406c0[label="D:2.50ns L:0",color=blue];
+Node0x43406c0 -> Node0x43406c0[label="D:2.50ns L:0",color=blue];
+Node0x43406c0 -> Node0x43406c0[label="D:2.50ns L:0",color=blue];
+Node0x43407a0[label="  %109 = add nsw i32 %k.06.i, 1"];
+Node0x43407a0 -> Node0x43407a0[label="D:2.50ns L:0",color=blue];
+Node0x43407a0 -> Node0x43407a0[label="D:2.50ns L:0",color=blue];
+Node0x4340880[label="  %exitcond = icmp eq i32 %109, 5200"];
+Node0x4340880 -> Node0x4340880[label="D:2.49ns L:0",color=blue];
+}

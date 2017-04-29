@@ -1,0 +1,907 @@
+\documentclass[landscape]{article}
+\usepackage{gantt}
+\pagestyle{empty}
+\begin{document}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{21}{3}
+\begin{ganttitle}
+\numtitle{0}{1}{2}{1}
+\end{ganttitle}
+\ganttbar{  \%main\_result.02 = phi i32 [ 0, \%0 ], [ \%217, \%float64\_add.exit ]}{1}{1}
+\ganttbar{  \%i.01 = phi i32 [ 0, \%0 ], [ \%218, \%float64\_add.exit ]}{1}{1}
+\ganttcon{2}{2}{1}{5}
+\ganttcon{2}{2}{1}{4}
+\ganttcon{2}{2}{1}{3}
+\ganttbar{  \%scevgep = getelementptr [46 x i64]* @z\_output, i32 0, i32 \%i.01}{1}{1}
+\ganttbar{  \%scevgep2 = getelementptr [46 x i64]* @b\_input, i32 0, i32 \%i.01}{1}{1}
+\ganttcon{2}{4}{1}{7}
+\ganttbar{  \%scevgep3 = getelementptr [46 x i64]* @a\_input, i32 0, i32 \%i.01}{1}{1}
+\ganttcon{2}{5}{1}{6}
+\ganttbar{  \%2 = load i64* \%scevgep3, align 8, !tbaa !1}{1}{1}
+\ganttcon{2}{6}{2}{13}
+\ganttcon{2}{6}{2}{8}
+\ganttbar{  \%3 = load i64* \%scevgep2, align 8, !tbaa !1}{1}{1}
+\ganttcon{2}{7}{2}{16}
+\ganttcon{2}{7}{2}{10}
+\ganttbar{  \%4 = lshr i64 \%2, 63}{2}{1}
+\ganttcon{3}{8}{2}{9}
+\ganttbar{  \%5 = trunc i64 \%4 to i32}{2}{1}
+\ganttcon{3}{9}{2}{12}
+\ganttbar{  \%6 = lshr i64 \%3, 63}{2}{1}
+\ganttcon{3}{10}{2}{11}
+\ganttbar{  \%7 = trunc i64 \%6 to i32}{2}{1}
+\ganttcon{3}{11}{2}{12}
+\ganttbar{  \%8 = icmp eq i32 \%5, \%7}{2}{1}
+\ganttcon{3}{12}{2}{20}
+\ganttbar{  \%9 = lshr i64 \%2, 52}{2}{1}
+\ganttcon{3}{13}{2}{14}
+\ganttbar{  \%.tr.i.i = trunc i64 \%9 to i32}{2}{1}
+\ganttcon{3}{14}{2}{15}
+\ganttbar{  \%10 = and i32 \%.tr.i.i, 2047}{2}{1}
+\ganttcon{3}{15}{2}{19}
+\ganttbar{  \%11 = lshr i64 \%3, 52}{2}{1}
+\ganttcon{3}{16}{2}{17}
+\ganttbar{  \%.tr.i17.i = trunc i64 \%11 to i32}{2}{1}
+\ganttcon{3}{17}{2}{18}
+\ganttbar{  \%12 = and i32 \%.tr.i17.i, 2047}{2}{1}
+\ganttcon{3}{18}{2}{19}
+\ganttbar{  \%13 = sub nsw i32 \%10, \%12}{2}{1}
+\ganttbar{  br i1 \%8, label \%14, label \%102}{2}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{7}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%15 = shl i64 \%2, 9}{1}{1}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  \%16 = and i64 \%15, 2305843009213693440}{1}{1}
+\ganttbar{  \%17 = shl i64 \%3, 9}{1}{1}
+\ganttcon{2}{3}{1}{4}
+\ganttbar{  \%18 = and i64 \%17, 2305843009213693440}{1}{1}
+\ganttbar{  \%19 = icmp sgt i32 \%13, 0}{1}{1}
+\ganttcon{2}{5}{1}{6}
+\ganttbar{  br i1 \%19, label \%20, label \%47}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{3}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%21 = icmp eq i32 \%10, 2047}{1}{1}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  br i1 \%21, label \%22, label \%26}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{3}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%23 = icmp eq i64 \%16, 0}{1}{1}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  br i1 \%23, label \%float64\_add.exit, label \%float64\_is\_signaling\_nan.exi...}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{6}{3}
+\begin{ganttitle}
+\numtitle{0}{1}{2}{1}
+\end{ganttitle}
+\ganttbar{  \%24 = trunc i64 \%3 to i63}{1}{1}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  \%25 = icmp ugt i63 \%24, -4503599627370496}{1}{1}
+\ganttcon{2}{2}{2}{4}
+\ganttbar{  br label \%float64\_add.exit}{1}{1}
+\ganttbar{  \%.mux2.v.i14.i = select i1 \%25, i64 \%3, i64 \%2}{2}{1}
+\ganttcon{3}{4}{2}{5}
+\ganttbar{  \%.mux2.i15.i = or i64 \%.mux2.v.i14.i, 2251799813685248}{2}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{8}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%27 = icmp eq i32 \%12, 0}{1}{1}
+\ganttcon{2}{1}{1}{4}
+\ganttcon{2}{1}{1}{3}
+\ganttbar{  \%28 = or i64 \%18, 2305843009213693952}{1}{1}
+\ganttcon{2}{2}{1}{3}
+\ganttbar{  \%29 = select i1 \%27, i64 \%18, i64 \%28}{1}{1}
+\ganttbar{  \%30 = sext i1 \%27 to i32}{1}{1}
+\ganttcon{2}{4}{1}{5}
+\ganttbar{  \%expDiff.0.i = add nsw i32 \%30, \%13}{1}{1}
+\ganttcon{2}{5}{1}{6}
+\ganttbar{  \%31 = icmp eq i32 \%expDiff.0.i, 0}{1}{1}
+\ganttcon{2}{6}{1}{7}
+\ganttbar{  br i1 \%31, label \%shift64RightJamming.exit9.i, label \%32}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{3}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%33 = icmp slt i32 \%expDiff.0.i, 64}{1}{1}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  br i1 \%33, label \%34, label \%44}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{11}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%35 = zext i32 \%expDiff.0.i to i64}{1}{1}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  \%36 = lshr i64 \%29, \%35}{1}{1}
+\ganttcon{2}{2}{1}{9}
+\ganttbar{  \%37 = sub nsw i32 0, \%expDiff.0.i}{1}{1}
+\ganttcon{2}{3}{1}{4}
+\ganttbar{  \%38 = and i32 \%37, 63}{1}{1}
+\ganttcon{2}{4}{1}{5}
+\ganttbar{  \%39 = zext i32 \%38 to i64}{1}{1}
+\ganttcon{2}{5}{1}{6}
+\ganttbar{  \%40 = shl i64 \%29, \%39}{1}{1}
+\ganttcon{2}{6}{1}{7}
+\ganttbar{  \%41 = icmp ne i64 \%40, 0}{1}{1}
+\ganttcon{2}{7}{1}{8}
+\ganttbar{  \%42 = zext i1 \%41 to i64}{1}{1}
+\ganttcon{2}{8}{1}{9}
+\ganttbar{  \%43 = or i64 \%42, \%36}{1}{1}
+\ganttbar{  br label \%shift64RightJamming.exit9.i}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{4}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%45 = icmp ne i64 \%29, 0}{1}{1}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  \%46 = zext i1 \%45 to i64}{1}{1}
+\ganttbar{  br label \%shift64RightJamming.exit9.i}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{3}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%48 = icmp slt i32 \%13, 0}{1}{1}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  br i1 \%48, label \%49, label \%79}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{3}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%50 = icmp eq i32 \%12, 2047}{1}{1}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  br i1 \%50, label \%51, label \%58}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{3}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%52 = icmp eq i64 \%18, 0}{1}{1}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  br i1 \%52, label \%55, label \%float64\_is\_signaling\_nan.exit1.i1.i}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{6}{3}
+\begin{ganttitle}
+\numtitle{0}{1}{2}{1}
+\end{ganttitle}
+\ganttbar{  \%53 = trunc i64 \%3 to i63}{1}{1}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  \%54 = icmp ugt i63 \%53, -4503599627370496}{1}{1}
+\ganttcon{2}{2}{2}{4}
+\ganttbar{  br label \%float64\_add.exit}{1}{1}
+\ganttbar{  \%.mux2.v.i5.i = select i1 \%54, i64 \%3, i64 \%2}{2}{1}
+\ganttcon{3}{4}{2}{5}
+\ganttbar{  \%.mux2.i6.i = or i64 \%.mux2.v.i5.i, 2251799813685248}{2}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{4}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%56 = shl nuw i64 \%4, 63}{1}{1}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  \%57 = or i64 \%56, 9218868437227405312}{1}{1}
+\ganttbar{  br label \%float64\_add.exit}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{9}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%59 = icmp eq i32 \%10, 0}{1}{1}
+\ganttcon{2}{1}{1}{4}
+\ganttcon{2}{1}{1}{3}
+\ganttbar{  \%60 = or i64 \%16, 2305843009213693952}{1}{1}
+\ganttcon{2}{2}{1}{3}
+\ganttbar{  \%61 = select i1 \%59, i64 \%16, i64 \%60}{1}{1}
+\ganttbar{  \%62 = zext i1 \%59 to i32}{1}{1}
+\ganttcon{2}{4}{1}{5}
+\ganttbar{  \%expDiff.1.i = add nsw i32 \%13, \%62}{1}{1}
+\ganttcon{2}{5}{1}{7}
+\ganttcon{2}{5}{1}{6}
+\ganttbar{  \%63 = sub nsw i32 0, \%expDiff.1.i}{1}{1}
+\ganttbar{  \%64 = icmp eq i32 \%expDiff.1.i, 0}{1}{1}
+\ganttcon{2}{7}{1}{8}
+\ganttbar{  br i1 \%64, label \%shift64RightJamming.exit9.i, label \%65}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{3}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%66 = icmp sgt i32 \%expDiff.1.i, -64}{1}{1}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  br i1 \%66, label \%67, label \%76}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{10}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%68 = zext i32 \%63 to i64}{1}{1}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  \%69 = lshr i64 \%61, \%68}{1}{1}
+\ganttcon{2}{2}{1}{8}
+\ganttbar{  \%70 = and i32 \%expDiff.1.i, 63}{1}{1}
+\ganttcon{2}{3}{1}{4}
+\ganttbar{  \%71 = zext i32 \%70 to i64}{1}{1}
+\ganttcon{2}{4}{1}{5}
+\ganttbar{  \%72 = shl i64 \%61, \%71}{1}{1}
+\ganttcon{2}{5}{1}{6}
+\ganttbar{  \%73 = icmp ne i64 \%72, 0}{1}{1}
+\ganttcon{2}{6}{1}{7}
+\ganttbar{  \%74 = zext i1 \%73 to i64}{1}{1}
+\ganttcon{2}{7}{1}{8}
+\ganttbar{  \%75 = or i64 \%74, \%69}{1}{1}
+\ganttbar{  br label \%shift64RightJamming.exit9.i}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{4}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%77 = icmp ne i64 \%61, 0}{1}{1}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  \%78 = zext i1 \%77 to i64}{1}{1}
+\ganttbar{  br label \%shift64RightJamming.exit9.i}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{2}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  switch i32 \%10, label \%90 [
+    i32 2047, label \%80
+    i32 0, label \%85
+ ...}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{4}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%81 = or i64 \%18, \%16}{1}{1}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  \%82 = icmp eq i64 \%81, 0}{1}{1}
+\ganttcon{2}{2}{1}{3}
+\ganttbar{  br i1 \%82, label \%float64\_add.exit, label \%float64\_is\_signaling\_nan.exi...}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{6}{3}
+\begin{ganttitle}
+\numtitle{0}{1}{2}{1}
+\end{ganttitle}
+\ganttbar{  \%83 = trunc i64 \%3 to i63}{1}{1}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  \%84 = icmp ugt i63 \%83, -4503599627370496}{1}{1}
+\ganttcon{2}{2}{2}{4}
+\ganttbar{  br label \%float64\_add.exit}{1}{1}
+\ganttbar{  \%.mux2.v.i.i = select i1 \%84, i64 \%3, i64 \%2}{2}{1}
+\ganttcon{3}{4}{2}{5}
+\ganttbar{  \%.mux2.i.i = or i64 \%.mux2.v.i.i, 2251799813685248}{2}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{6}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%86 = add nuw nsw i64 \%18, \%16}{1}{1}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  \%87 = lshr exact i64 \%86, 9}{1}{1}
+\ganttcon{2}{2}{1}{4}
+\ganttbar{  \%88 = shl nuw i64 \%4, 63}{1}{1}
+\ganttcon{2}{3}{1}{4}
+\ganttbar{  \%89 = or i64 \%87, \%88}{1}{1}
+\ganttbar{  br label \%float64\_add.exit}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{4}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%91 = or i64 \%16, 4611686018427387904}{1}{1}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  \%92 = add nuw i64 \%91, \%18}{1}{1}
+\ganttbar{  br label \%100}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{13}{4}
+\begin{ganttitle}
+\numtitle{0}{1}{3}{1}
+\end{ganttitle}
+\ganttbar{  \%93 = phi i64 [ \%16, \%26 ], [ \%16, \%34 ], [ \%16, \%44 ], [ \%75, \%67 ],...}{1}{1}
+\ganttcon{2}{1}{1}{4}
+\ganttbar{  \%94 = phi i64 [ \%29, \%26 ], [ \%43, \%34 ], [ \%46, \%44 ], [ \%18, \%67 ],...}{1}{1}
+\ganttcon{2}{2}{1}{5}
+\ganttbar{  \%zExp.0.i = phi i32 [ \%10, \%26 ], [ \%10, \%34 ], [ \%10, \%44 ], [ \%12, \...}{1}{1}
+\ganttcon{2}{3}{3}{12}
+\ganttbar{  \%95 = or i64 \%93, 2305843009213693952}{1}{1}
+\ganttcon{2}{4}{1}{5}
+\ganttbar{  \%96 = add i64 \%95, \%94}{1}{1}
+\ganttcon{2}{5}{1}{8}
+\ganttcon{2}{5}{1}{6}
+\ganttbar{  \%97 = shl i64 \%96, 1}{1}{1}
+\ganttcon{2}{6}{1}{8}
+\ganttcon{2}{6}{1}{7}
+\ganttbar{  \%98 = icmp slt i64 \%97, 0}{1}{1}
+\ganttcon{2}{7}{1}{8}
+\ganttcon{2}{7}{2}{10}
+\ganttbar{  \%..i = select i1 \%98, i64 \%96, i64 \%97}{1}{1}
+\ganttbar{  br label \%100}{1}{1}
+\ganttbar{  \%not..i = xor i1 \%98, true}{2}{1}
+\ganttcon{3}{10}{2}{11}
+\ganttbar{  \%99 = sext i1 \%not..i to i32}{2}{1}
+\ganttcon{3}{11}{3}{12}
+\ganttbar{  \%zExp.0..i = add nsw i32 \%99, \%zExp.0.i}{3}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{5}{4}
+\begin{ganttitle}
+\numtitle{0}{1}{3}{1}
+\end{ganttitle}
+\ganttbar{  \%zExp.1.i = phi i32 [ \%10, \%90 ], [ \%zExp.0..i, \%shift64RightJamming.exit...}{1}{1}
+\ganttcon{2}{1}{2}{4}
+\ganttbar{  \%zSig.0.i = phi i64 [ \%92, \%90 ], [ \%..i, \%shift64RightJamming.exit9.i ]}{1}{1}
+\ganttcon{2}{2}{2}{4}
+\ganttbar{  br label \%float64\_add.exit}{1}{1}
+\ganttbar{  \%101 = tail call fastcc i64 @roundAndPackFloat64(i32 \%5, i32 \%zExp.1.i, i64...}{2}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{7}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%103 = shl i64 \%2, 10}{1}{1}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  \%104 = and i64 \%103, 4611686018427386880}{1}{1}
+\ganttbar{  \%105 = shl i64 \%3, 10}{1}{1}
+\ganttcon{2}{3}{1}{4}
+\ganttbar{  \%106 = and i64 \%105, 4611686018427386880}{1}{1}
+\ganttbar{  \%107 = icmp sgt i32 \%13, 0}{1}{1}
+\ganttcon{2}{5}{1}{6}
+\ganttbar{  br i1 \%107, label \%162, label \%108}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{3}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%109 = icmp slt i32 \%13, 0}{1}{1}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  br i1 \%109, label \%124, label \%110}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{2}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  switch i32 \%10, label \%120 [
+    i32 2047, label \%111
+    i32 0, label \%11...}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{4}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%112 = or i64 \%106, \%104}{1}{1}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  \%113 = icmp eq i64 \%112, 0}{1}{1}
+\ganttcon{2}{2}{1}{3}
+\ganttbar{  br i1 \%113, label \%116, label \%float64\_is\_signaling\_nan.exit1.i11.i}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{6}{3}
+\begin{ganttitle}
+\numtitle{0}{1}{2}{1}
+\end{ganttitle}
+\ganttbar{  \%114 = trunc i64 \%3 to i63}{1}{1}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  \%115 = icmp ugt i63 \%114, -4503599627370496}{1}{1}
+\ganttcon{2}{2}{2}{4}
+\ganttbar{  br label \%float64\_add.exit}{1}{1}
+\ganttbar{  \%.mux2.v.i15.i = select i1 \%115, i64 \%3, i64 \%2}{2}{1}
+\ganttcon{3}{4}{2}{5}
+\ganttbar{  \%.mux2.i16.i = or i64 \%.mux2.v.i15.i, 2251799813685248}{2}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{5}{5}
+\begin{ganttitle}
+\numtitle{0}{1}{4}{1}
+\end{ganttitle}
+\ganttbar{  \%117 = load i32* @float\_exception\_flags, align 4, !tbaa !5}{1}{2}
+\ganttcon{3}{1}{3}{3}
+\ganttbar{  br label \%float64\_add.exit}{1}{1}
+\ganttbar{  \%118 = or i32 \%117, 16}{3}{1}
+\ganttcon{4}{3}{3}{4}
+\ganttbar{  store i32 \%118, i32* @float\_exception\_flags, align 4, !tbaa !5}{3}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{2}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  br label \%120}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{5}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%aExp.0.i = phi i32 [ 1, \%119 ], [ \%10, \%110 ]}{1}{1}
+\ganttbar{  \%bExp.0.i = phi i32 [ 1, \%119 ], [ \%12, \%110 ]}{1}{1}
+\ganttbar{  \%121 = icmp ult i64 \%106, \%104}{1}{1}
+\ganttcon{2}{3}{1}{4}
+\ganttbar{  br i1 \%121, label \%190, label \%122}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{3}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%123 = icmp ult i64 \%104, \%106}{1}{1}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  br i1 \%123, label \%157, label \%float64\_add.exit}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{3}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%125 = icmp eq i32 \%12, 2047}{1}{1}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  br i1 \%125, label \%126, label \%135}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{3}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%127 = icmp eq i64 \%106, 0}{1}{1}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  br i1 \%127, label \%130, label \%float64\_is\_signaling\_nan.exit1.i4.i}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{6}{3}
+\begin{ganttitle}
+\numtitle{0}{1}{2}{1}
+\end{ganttitle}
+\ganttbar{  \%128 = trunc i64 \%3 to i63}{1}{1}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  \%129 = icmp ugt i63 \%128, -4503599627370496}{1}{1}
+\ganttcon{2}{2}{2}{4}
+\ganttbar{  br label \%float64\_add.exit}{1}{1}
+\ganttbar{  \%.mux2.v.i8.i = select i1 \%129, i64 \%3, i64 \%2}{2}{1}
+\ganttcon{3}{4}{2}{5}
+\ganttbar{  \%.mux2.i9.i = or i64 \%.mux2.v.i8.i, 2251799813685248}{2}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{6}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%131 = xor i32 \%5, 1}{1}{1}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  \%132 = zext i32 \%131 to i64}{1}{1}
+\ganttcon{2}{2}{1}{3}
+\ganttbar{  \%133 = shl nuw i64 \%132, 63}{1}{1}
+\ganttcon{2}{3}{1}{4}
+\ganttbar{  \%134 = or i64 \%133, 9218868437227405312}{1}{1}
+\ganttbar{  br label \%float64\_add.exit}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{9}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%136 = icmp eq i32 \%10, 0}{1}{1}
+\ganttcon{2}{1}{1}{4}
+\ganttcon{2}{1}{1}{3}
+\ganttbar{  \%137 = or i64 \%104, 4611686018427387904}{1}{1}
+\ganttcon{2}{2}{1}{3}
+\ganttbar{  \%138 = select i1 \%136, i64 \%104, i64 \%137}{1}{1}
+\ganttbar{  \%139 = zext i1 \%136 to i32}{1}{1}
+\ganttcon{2}{4}{1}{5}
+\ganttbar{  \%expDiff.0.i3 = add nsw i32 \%13, \%139}{1}{1}
+\ganttcon{2}{5}{1}{7}
+\ganttcon{2}{5}{1}{6}
+\ganttbar{  \%140 = sub nsw i32 0, \%expDiff.0.i3}{1}{1}
+\ganttbar{  \%141 = icmp eq i32 \%expDiff.0.i3, 0}{1}{1}
+\ganttcon{2}{7}{1}{8}
+\ganttbar{  br i1 \%141, label \%shift64RightJamming.exit3.i, label \%142}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{3}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%143 = icmp sgt i32 \%expDiff.0.i3, -64}{1}{1}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  br i1 \%143, label \%144, label \%153}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{10}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%145 = zext i32 \%140 to i64}{1}{1}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  \%146 = lshr i64 \%138, \%145}{1}{1}
+\ganttcon{2}{2}{1}{8}
+\ganttbar{  \%147 = and i32 \%expDiff.0.i3, 63}{1}{1}
+\ganttcon{2}{3}{1}{4}
+\ganttbar{  \%148 = zext i32 \%147 to i64}{1}{1}
+\ganttcon{2}{4}{1}{5}
+\ganttbar{  \%149 = shl i64 \%138, \%148}{1}{1}
+\ganttcon{2}{5}{1}{6}
+\ganttbar{  \%150 = icmp ne i64 \%149, 0}{1}{1}
+\ganttcon{2}{6}{1}{7}
+\ganttbar{  \%151 = zext i1 \%150 to i64}{1}{1}
+\ganttcon{2}{7}{1}{8}
+\ganttbar{  \%152 = or i64 \%151, \%146}{1}{1}
+\ganttbar{  br label \%shift64RightJamming.exit3.i}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{4}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%154 = icmp ne i64 \%138, 0}{1}{1}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  \%155 = zext i1 \%154 to i64}{1}{1}
+\ganttbar{  br label \%shift64RightJamming.exit3.i}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{4}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%z.0.i2.i = phi i64 [ \%152, \%144 ], [ \%155, \%153 ], [ \%138, \%135 ]}{1}{1}
+\ganttbar{  \%156 = or i64 \%106, 4611686018427387904}{1}{1}
+\ganttbar{  br label \%157}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{7}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%158 = phi i64 [ \%z.0.i2.i, \%shift64RightJamming.exit3.i ], [ \%104, \%122 ...}{1}{1}
+\ganttcon{2}{1}{1}{4}
+\ganttbar{  \%159 = phi i64 [ \%156, \%shift64RightJamming.exit3.i ], [ \%106, \%122 ]}{1}{1}
+\ganttcon{2}{2}{1}{4}
+\ganttbar{  \%bExp.1.i = phi i32 [ \%12, \%shift64RightJamming.exit3.i ], [ \%bExp.0.i, \%...}{1}{1}
+\ganttbar{  \%160 = sub i64 \%159, \%158}{1}{1}
+\ganttbar{  \%161 = xor i32 \%5, 1}{1}{1}
+\ganttbar{  br label \%194}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{3}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%163 = icmp eq i32 \%10, 2047}{1}{1}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  br i1 \%163, label \%164, label \%168}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{3}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%165 = icmp eq i64 \%104, 0}{1}{1}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  br i1 \%165, label \%float64\_add.exit, label \%float64\_is\_signaling\_nan.ex...}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{6}{3}
+\begin{ganttitle}
+\numtitle{0}{1}{2}{1}
+\end{ganttitle}
+\ganttbar{  \%166 = trunc i64 \%3 to i63}{1}{1}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  \%167 = icmp ugt i63 \%166, -4503599627370496}{1}{1}
+\ganttcon{2}{2}{2}{4}
+\ganttbar{  br label \%float64\_add.exit}{1}{1}
+\ganttbar{  \%.mux2.v.i.i8 = select i1 \%167, i64 \%3, i64 \%2}{2}{1}
+\ganttcon{3}{4}{2}{5}
+\ganttbar{  \%.mux2.i.i9 = or i64 \%.mux2.v.i.i8, 2251799813685248}{2}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{8}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%169 = icmp eq i32 \%12, 0}{1}{1}
+\ganttcon{2}{1}{1}{4}
+\ganttcon{2}{1}{1}{3}
+\ganttbar{  \%170 = or i64 \%106, 4611686018427387904}{1}{1}
+\ganttcon{2}{2}{1}{3}
+\ganttbar{  \%171 = select i1 \%169, i64 \%106, i64 \%170}{1}{1}
+\ganttbar{  \%172 = sext i1 \%169 to i32}{1}{1}
+\ganttcon{2}{4}{1}{5}
+\ganttbar{  \%expDiff.1.i11 = add nsw i32 \%172, \%13}{1}{1}
+\ganttcon{2}{5}{1}{6}
+\ganttbar{  \%173 = icmp eq i32 \%expDiff.1.i11, 0}{1}{1}
+\ganttcon{2}{6}{1}{7}
+\ganttbar{  br i1 \%173, label \%shift64RightJamming.exit.i, label \%174}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{3}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%175 = icmp slt i32 \%expDiff.1.i11, 64}{1}{1}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  br i1 \%175, label \%176, label \%186}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{11}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%177 = zext i32 \%expDiff.1.i11 to i64}{1}{1}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  \%178 = lshr i64 \%171, \%177}{1}{1}
+\ganttcon{2}{2}{1}{9}
+\ganttbar{  \%179 = sub nsw i32 0, \%expDiff.1.i11}{1}{1}
+\ganttcon{2}{3}{1}{4}
+\ganttbar{  \%180 = and i32 \%179, 63}{1}{1}
+\ganttcon{2}{4}{1}{5}
+\ganttbar{  \%181 = zext i32 \%180 to i64}{1}{1}
+\ganttcon{2}{5}{1}{6}
+\ganttbar{  \%182 = shl i64 \%171, \%181}{1}{1}
+\ganttcon{2}{6}{1}{7}
+\ganttbar{  \%183 = icmp ne i64 \%182, 0}{1}{1}
+\ganttcon{2}{7}{1}{8}
+\ganttbar{  \%184 = zext i1 \%183 to i64}{1}{1}
+\ganttcon{2}{8}{1}{9}
+\ganttbar{  \%185 = or i64 \%184, \%178}{1}{1}
+\ganttbar{  br label \%shift64RightJamming.exit.i}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{4}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%187 = icmp ne i64 \%171, 0}{1}{1}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  \%188 = zext i1 \%187 to i64}{1}{1}
+\ganttbar{  br label \%shift64RightJamming.exit.i}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{4}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%z.0.i.i = phi i64 [ \%185, \%176 ], [ \%188, \%186 ], [ \%171, \%168 ]}{1}{1}
+\ganttbar{  \%189 = or i64 \%104, 4611686018427387904}{1}{1}
+\ganttbar{  br label \%190}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{6}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%191 = phi i64 [ \%189, \%shift64RightJamming.exit.i ], [ \%104, \%120 ]}{1}{1}
+\ganttcon{2}{1}{1}{4}
+\ganttbar{  \%192 = phi i64 [ \%z.0.i.i, \%shift64RightJamming.exit.i ], [ \%106, \%120 ]}{1}{1}
+\ganttcon{2}{2}{1}{4}
+\ganttbar{  \%aExp.1.i = phi i32 [ \%10, \%shift64RightJamming.exit.i ], [ \%aExp.0.i, \%1...}{1}{1}
+\ganttbar{  \%193 = sub i64 \%191, \%192}{1}{1}
+\ganttbar{  br label \%194}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{15}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%.0.i12 = phi i32 [ \%5, \%190 ], [ \%161, \%157 ]}{1}{1}
+\ganttbar{  \%zExp.0.i13 = phi i32 [ \%aExp.1.i, \%190 ], [ \%bExp.1.i, \%157 ]}{1}{1}
+\ganttcon{2}{2}{1}{4}
+\ganttbar{  \%zSig.0.i14 = phi i64 [ \%193, \%190 ], [ \%160, \%157 ]}{1}{1}
+\ganttcon{2}{3}{1}{7}
+\ganttcon{2}{3}{1}{6}
+\ganttcon{2}{3}{1}{5}
+\ganttbar{  \%195 = add nsw i32 \%zExp.0.i13, -1}{1}{1}
+\ganttbar{  \%196 = icmp ult i64 \%zSig.0.i14, 4294967296}{1}{1}
+\ganttcon{2}{5}{1}{7}
+\ganttbar{  \%197 = lshr i64 \%zSig.0.i14, 32}{1}{1}
+\ganttcon{2}{6}{1}{7}
+\ganttbar{  \%a.sink.i.i.i = select i1 \%196, i64 \%zSig.0.i14, i64 \%197}{1}{1}
+\ganttcon{2}{7}{1}{8}
+\ganttbar{  \%extract.t.i.i.i = trunc i64 \%a.sink.i.i.i to i32}{1}{1}
+\ganttcon{2}{8}{1}{11}
+\ganttcon{2}{8}{1}{10}
+\ganttcon{2}{8}{1}{9}
+\ganttbar{  \%198 = icmp ult i32 \%extract.t.i.i.i, 65536}{1}{1}
+\ganttcon{2}{9}{1}{12}
+\ganttcon{2}{9}{1}{11}
+\ganttbar{  \%199 = shl i32 \%extract.t.i.i.i, 16}{1}{1}
+\ganttcon{2}{10}{1}{11}
+\ganttbar{  \%.a.i.i.i.i = select i1 \%198, i32 \%199, i32 \%extract.t.i.i.i}{1}{1}
+\ganttcon{2}{11}{1}{13}
+\ganttbar{  \%..i.i.i.i = select i1 \%198, i32 16, i32 0}{1}{1}
+\ganttbar{  \%200 = icmp ult i32 \%.a.i.i.i.i, 16777216}{1}{1}
+\ganttcon{2}{13}{1}{14}
+\ganttbar{  br i1 \%200, label \%201, label \%normalizeRoundAndPackFloat64.exit.i}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{4}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%202 = or i32 \%..i.i.i.i, 8}{1}{1}
+\ganttbar{  \%203 = shl i32 \%.a.i.i.i.i, 8}{1}{1}
+\ganttbar{  br label \%normalizeRoundAndPackFloat64.exit.i}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{14}{5}
+\begin{ganttitle}
+\numtitle{0}{1}{4}{1}
+\end{ganttitle}
+\ganttbar{  \%.1.i.i.i.i = phi i32 [ \%203, \%201 ], [ \%.a.i.i.i.i, \%194 ]}{1}{1}
+\ganttcon{2}{1}{1}{3}
+\ganttbar{  \%shiftCount.1.i.i.i.i = phi i32 [ \%202, \%201 ], [ \%..i.i.i.i, \%194 ]}{1}{1}
+\ganttcon{2}{2}{1}{7}
+\ganttbar{  \%204 = lshr i32 \%.1.i.i.i.i, 24}{1}{1}
+\ganttcon{2}{3}{1}{4}
+\ganttbar{  \%205 = getelementptr inbounds [256 x i32]* @countLeadingZeros32.countLeadingZ...}{1}{1}
+\ganttcon{2}{4}{1}{5}
+\ganttbar{  \%206 = load i32* \%205, align 4, !tbaa !5}{1}{1}
+\ganttcon{2}{5}{2}{9}
+\ganttbar{  \%207 = select i1 \%196, i32 31, i32 -1}{1}{1}
+\ganttcon{2}{6}{1}{7}
+\ganttbar{  \%208 = add nsw i32 \%shiftCount.1.i.i.i.i, \%207}{1}{1}
+\ganttcon{2}{7}{2}{9}
+\ganttbar{  br label \%float64\_add.exit}{1}{1}
+\ganttbar{  \%209 = add i32 \%208, \%206}{2}{1}
+\ganttcon{3}{9}{2}{11}
+\ganttcon{3}{9}{2}{10}
+\ganttbar{  \%210 = sub i32 \%195, \%209}{2}{1}
+\ganttcon{3}{10}{3}{13}
+\ganttbar{  \%211 = zext i32 \%209 to i64}{2}{1}
+\ganttcon{3}{11}{2}{12}
+\ganttbar{  \%212 = shl i64 \%zSig.0.i14, \%211}{2}{1}
+\ganttcon{3}{12}{3}{13}
+\ganttbar{  \%213 = tail call fastcc i64 @roundAndPackFloat64(i32 \%.0.i12, i32 \%210, i64...}{3}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{9}{3}
+\begin{ganttitle}
+\numtitle{0}{1}{2}{1}
+\end{ganttitle}
+\ganttbar{  \%.0.i = phi i64 [ \%.mux2.i15.i, \%float64\_is\_signaling\_nan.exit1.i10.i ],...}{1}{1}
+\ganttcon{2}{1}{2}{6}
+\ganttbar{  \%214 = load i64* \%scevgep, align 8, !tbaa !1}{1}{1}
+\ganttcon{2}{2}{2}{6}
+\ganttbar{  \%218 = add nsw i32 \%i.01, 1}{1}{1}
+\ganttcon{2}{3}{1}{4}
+\ganttbar{  \%exitcond1 = icmp eq i32 \%218, 46}{1}{1}
+\ganttcon{2}{4}{1}{5}
+\ganttbar{  br i1 \%exitcond1, label \%219, label \%1}{1}{1}
+\ganttbar{  \%215 = icmp eq i64 \%.0.i, \%214}{2}{1}
+\ganttcon{3}{6}{2}{7}
+\ganttbar{  \%216 = zext i1 \%215 to i32}{2}{1}
+\ganttcon{3}{7}{2}{8}
+\ganttbar{  \%217 = add nsw i32 \%216, \%main\_result.02}{2}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{4}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%220 = tail call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([11 x i8...}{1}{1}
+\ganttbar{  \%221 = icmp eq i32 \%217, 46}{1}{1}
+\ganttcon{2}{2}{1}{3}
+\ganttbar{  br i1 \%221, label \%222, label \%224}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{3}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%223 = tail call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([13 x i8...}{1}{1}
+\ganttbar{  br label \%226}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{3}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%225 = tail call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([13 x i8...}{1}{1}
+\ganttbar{  br label \%226}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{2}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  ret i32 \%217}{1}{1}
+\end{gantt}
+\end{figure}
+\end{document}

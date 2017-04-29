@@ -1,0 +1,8 @@
+digraph {
+Node0x28f7830[label="  %63 = or i32 %float_exception_flags.0,..."];
+Node0x28f7830 -> Node0x28f7830[label="D:0.00ns L:0",color=blue];
+Node0x28f7910[label="  %64 = shl nuw i64 %13, 63"];
+Node0x28f7910 -> Node0x28f7910[label="D:0.00ns L:0",color=blue];
+Node0x28f79f0[label="  %65 = or i64 %64, 9218868437227405312"];
+Node0x28f79f0 -> Node0x28f79f0[label="D:0.00ns L:0",color=blue];
+}

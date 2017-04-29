@@ -1,0 +1,16 @@
+digraph {
+Node0x418c9b0[label="  %indvar = phi i32 [ 0, %.lr.ph11.i.i.p..."];
+Node0x418c9b0 -> Node0x418c9b0[label="D:0.00ns L:0",color=blue];
+Node0x418c9b0 -> Node0x418c9b0[label="D:0.00ns L:0",color=blue];
+Node0x418c9b0 -> Node0x418c9b0[label="D:0.00ns L:0",color=blue];
+Node0x418ca90[label="  %n.010.i.i = phi i32 [ %num.i.1, %.lr...."];
+Node0x418ca90 -> Node0x418ca90[label="D:0.00ns L:0",color=blue];
+Node0x418ca90 -> Node0x418ca90[label="D:0.00ns L:0",color=blue];
+Node0x418ca90 -> Node0x418ca90[label="D:0.00ns L:0",color=blue];
+Node0x418cb70[label="  %.09.i.i = getelementptr [40 x i8]* %i..."];
+Node0x418cb70 -> Node0x418cb70[label="D:20.00ns L:0",color=blue];
+Node0x418cc50[label="  %.018.i.i = getelementptr [40 x i8]* %..."];
+Node0x418cc50 -> Node0x418cc50[label="D:20.00ns L:0",color=blue];
+Node0x418cd30[label="  %71 = icmp eq i32 %n.010.i.i, 0"];
+Node0x418cd30 -> Node0x418cd30[label="D:2.49ns L:0",color=blue];
+}

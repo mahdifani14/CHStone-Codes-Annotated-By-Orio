@@ -1,0 +1,13 @@
+digraph {
+Node0x2f00770[label="  %z.0.i.i.i = phi i64 [ %173, %164 ], [..."];
+Node0x2f00770 -> Node0x2f00770[label="D:0.00ns L:0",color=blue];
+Node0x2f00770 -> Node0x2f00770[label="D:0.00ns L:0",color=blue];
+Node0x2f00770 -> Node0x2f00770[label="D:0.00ns L:0",color=blue];
+Node0x2f00850[label="  %.tr3.i.i = trunc i64 %z.0.i.i.i to i3..."];
+Node0x2f00850 -> Node0x2f00850[label="D:0.00ns L:0",color=blue];
+Node0x2f00930[label="  %177 = and i32 %.tr3.i.i, 1023"];
+Node0x2f00930 -> Node0x2f00930[label="D:0.00ns L:0",color=blue];
+Node0x2f00930 -> Node0x2f00930[label="D:0.00ns L:0",color=blue];
+Node0x2f00a10[label="  %178 = icmp eq i32 %177, 0"];
+Node0x2f00a10 -> Node0x2f00a10[label="D:2.49ns L:0",color=blue];
+}

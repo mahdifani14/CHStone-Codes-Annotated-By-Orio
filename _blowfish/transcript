@@ -1,0 +1,17 @@
+# vsim -c -do "run 7000000000000000ns; exit;" work.main_tb 
+# Start time: 12:02:22 on Apr 22,2017
+# Loading work.main_tb
+# Loading work.top
+# Loading work.memory_controller
+# Loading work.ram_dual_port
+# Loading work.ALTERA_MF_MEMORY_INITIALIZATION
+# Loading work.main
+# Loading work.BF_encrypt
+# Loading work.rom_dual_port
+# run 7000000000000000ns
+# Result:        5200RESULT: PASSAt t=          2633850000 clk=1 finish=1 return_val=      5200
+# Cycles:               131690
+# ** Note: $finish    : _bf.v(12776)
+#    Time: 2633850 ns  Iteration: 2  Instance: /main_tb
+# End time: 12:02:59 on Apr 22,2017, Elapsed time: 0:00:37
+# Errors: 0, Warnings: 0

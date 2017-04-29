@@ -1,0 +1,19 @@
+digraph {
+Node0x418b3d0[label="  %57 = add i32 %k.012.i, -5200"];
+Node0x418b3d0 -> Node0x418b3d0[label="D:2.50ns L:0",color=blue];
+Node0x418b3d0 -> Node0x418b3d0[label="D:2.50ns L:0",color=blue];
+Node0x418b3d0 -> Node0x418b3d0[label="D:2.50ns L:0",color=blue];
+Node0x418b4b0[label="  %58 = icmp ugt i32 %57, -40"];
+Node0x418b4b0 -> Node0x418b4b0[label="D:3.12ns L:0",color=blue];
+Node0x418b590[label="  %umax.i = select i1 %58, i32 %57, i32 ..."];
+Node0x418b590 -> Node0x418b590[label="D:3.99ns L:0",color=blue];
+Node0x418b590 -> Node0x418b590[label="D:3.99ns L:0",color=blue];
+Node0x418b590 -> Node0x418b590[label="D:3.99ns L:0",color=blue];
+Node0x418b590 -> Node0x418b590[label="D:3.99ns L:0",color=blue];
+Node0x418b670[label="  %59 = icmp ugt i32 %57, -40"];
+Node0x418b670 -> Node0x418b670[label="D:3.12ns L:0",color=blue];
+Node0x418b750[label="  %.op = sub i32 5200, %k.012.i"];
+Node0x418b750 -> Node0x418b750[label="D:2.40ns L:0",color=blue];
+Node0x418b830[label="  %60 = select i1 %59, i32 %.op, i32 40"];
+Node0x418b830 -> Node0x418b830[label="D:3.99ns L:0",color=blue];
+}

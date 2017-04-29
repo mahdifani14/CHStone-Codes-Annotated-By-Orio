@@ -1,0 +1,25 @@
+NAME=gsm
+SRCS=gsm.c
+
+LOCAL_CONFIG = -legup-config=config.tcl
+#CFLAGS += -mllvm -unroll-threshold=0
+
+#ifeq ($(NO_OPT),)
+#    NO_OPT=1
+#endif
+
+#OPT_O1 = 1
+#OPT_O2 = 0
+#OPT_O3 = 0
+
+
+
+#ifeq ($(NO_INLINE),)
+#    NO_INLINE=1
+#endif
+
+LEVEL = ../../..
+include ../../Makefile.common
+include $(LEVEL)/Makefile.common
+
+

@@ -1,0 +1,17 @@
+# vsim -c -do "run 7000000000000000ns; exit;" work.main_tb 
+# Start time: 10:53:40 on Apr 23,2017
+# Loading work.main_tb
+# Loading work.top
+# Loading work.memory_controller
+# Loading work.ram_dual_port
+# Loading work.ALTERA_MF_MEMORY_INITIALIZATION
+# Loading work.main
+# Loading work.sha_transform
+# Loading work.rom_dual_port
+# run 7000000000000000ns
+# Result:           5RESULT: PASSAt t=          3623310000 clk=1 finish=1 return_val=         5
+# Cycles:               181163
+# ** Note: $finish    : _sha_driver.v(6061)
+#    Time: 3623310 ns  Iteration: 2  Instance: /main_tb
+# End time: 10:53:58 on Apr 23,2017, Elapsed time: 0:00:18
+# Errors: 0, Warnings: 0

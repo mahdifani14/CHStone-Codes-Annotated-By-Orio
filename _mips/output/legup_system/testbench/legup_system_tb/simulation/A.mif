@@ -1,0 +1,15 @@
+Depth = 8;
+Width = 32;
+Address_radix = dec;
+Data_radix = hex;
+Content
+Begin
+0: 00000016;	-- A[0] = 22
+1: 00000005;	-- A[1] = 5
+2: FFFFFFF7;	-- A[2] = -9
+3: 00000003;	-- A[3] = 3
+4: FFFFFFEF;	-- A[4] = -17
+5: 00000026;	-- A[5] = 38
+6: 00000000;	-- A[6] = 0
+7: 0000000B;	-- A[7] = 11
+End;

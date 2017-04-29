@@ -1,0 +1,14 @@
+# vsim -c -do "run 7000000000000000ns; exit;" work.main_tb 
+# Start time: 11:24:43 on Apr 25,2017
+# Loading work.main_tb
+# Loading work.top
+# Loading work.main
+# Loading work.rom_dual_port
+# Loading work.ALTERA_MF_MEMORY_INITIALIZATION
+# run 7000000000000000ns
+# Result:          20RESULT: PASSAt t=             4370000 clk=1 finish=1 return_val=        20
+# Cycles:                  216
+# ** Note: $finish    : _dfmul.v(5169)
+#    Time: 4370 ns  Iteration: 2  Instance: /main_tb
+# End time: 11:24:43 on Apr 25,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

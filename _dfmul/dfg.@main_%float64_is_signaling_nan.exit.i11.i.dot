@@ -1,0 +1,18 @@
+digraph {
+Node0x3745e00[label="  %30 = phi i1 [ false, %float64_is_sign..."];
+Node0x3745e00 -> Node0x3745e00[label="D:0.00ns L:0",color=blue];
+Node0x3745e00 -> Node0x3745e00[label="D:0.00ns L:0",color=blue];
+Node0x3745ee0[label="  %31 = or i1 %.1, %30"];
+Node0x3745ee0 -> Node0x3745ee0[label="D:0.00ns L:0",color=blue];
+Node0x3745ee0 -> Node0x3745ee0[label="D:0.00ns L:0",color=blue];
+Node0x3745fc0[label="  %32 = or i32 %float_exception_flags.0,..."];
+Node0x3745fc0 -> Node0x3745fc0[label="D:0.00ns L:0",color=blue];
+Node0x37460a0[label="  %.float_exception_flags.0 = select i1 ..."];
+Node0x37460a0 -> Node0x37460a0[label="D:3.99ns L:0",color=blue];
+Node0x3746200[label="  %. = select i1 %31, i1 %30, i1 %23"];
+Node0x3746200 -> Node0x3746200[label="D:20.00ns L:0",color=blue];
+Node0x37462e0[label="  %.mux2.v.i14.i = select i1 %., i64 %4,..."];
+Node0x37462e0 -> Node0x37462e0[label="D:4.29ns L:0",color=blue];
+Node0x37463c0[label="  %.mux2.i15.i = or i64 %.mux2.v.i14.i, ..."];
+Node0x37463c0 -> Node0x37463c0[label="D:0.00ns L:0",color=blue];
+}

@@ -1,0 +1,17 @@
+digraph {
+Node0x25fe970[label="  %77 = getelementptr inbounds [32 x i32..."];
+Node0x25fe970 -> Node0x25fe970[label="D:20.00ns L:0",color=blue];
+Node0x25fea90[label="  %78 = load i32* %77, align 4"];
+Node0x25fea90 -> Node0x25fea90[label="D:0.00ns L:1",color=blue];
+Node0x25fef70[label="  store i32 %81, i32* %82, align 4"];
+Node0x25fea90 -> Node0x25fef70[label="D:0.00ns L:1",color=red];
+Node0x25feb70[label="  %79 = getelementptr inbounds [32 x i32..."];
+Node0x25feb70 -> Node0x25feb70[label="D:20.00ns L:0",color=blue];
+Node0x25fec90[label="  %80 = load i32* %79, align 4"];
+Node0x25fec90 -> Node0x25fec90[label="D:0.00ns L:1",color=blue];
+Node0x25fec90 -> Node0x25fef70[label="D:0.00ns L:1",color=red];
+Node0x25fed70[label="  %81 = and i32 %78, %80"];
+Node0x25fed70 -> Node0x25fed70[label="D:0.87ns L:0",color=blue];
+Node0x25fee50[label="  %82 = getelementptr inbounds [32 x i32..."];
+Node0x25fee50 -> Node0x25fee50[label="D:20.00ns L:0",color=blue];
+}

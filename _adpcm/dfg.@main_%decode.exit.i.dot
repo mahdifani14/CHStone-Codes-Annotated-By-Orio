@@ -1,0 +1,23 @@
+digraph {
+Node0x319aa70[label="  %.apl1.0.i.i.i = select i1 %266, i32 %..."];
+Node0x319aa70 -> Node0x319aa70[label="D:3.99ns L:0",color=blue];
+Node0x319aa70 -> Node0x319aa70[label="D:3.99ns L:0",color=blue];
+Node0x319ab50[label="  %299 = icmp slt i32 %.apl1.0.i.i.i, %2..."];
+Node0x319ab50 -> Node0x319ab50[label="D:3.36ns L:0",color=blue];
+Node0x319ac30[label="  %300 = mul nsw i32 %289, -44"];
+Node0x319ac30 -> Node0x319ac30[label="D:2.59ns L:1",color=blue];
+Node0x319ad50[label="  %301 = mul nsw i32 %290, 12"];
+Node0x319ad50 -> Node0x319ad50[label="D:2.59ns L:1",color=blue];
+Node0x319ae30[label="  %apl1.2.i.i.i = select i1 %299, i32 %2..."];
+Node0x319ae30 -> Node0x319ae30[label="D:3.99ns L:0",color=blue];
+Node0x319af10[label="  %302 = add nsw i32 %xa1.0.i.i, %300"];
+Node0x319af10 -> Node0x319af10[label="D:2.50ns L:0",color=blue];
+Node0x319aff0[label="  %303 = ashr i32 %302, 14"];
+Node0x319aff0 -> Node0x319aff0[label="D:0.00ns L:0",color=blue];
+Node0x319b0d0[label="  %304 = add nsw i32 %xa2.0.i.i, %301"];
+Node0x319b0d0 -> Node0x319b0d0[label="D:2.50ns L:0",color=blue];
+Node0x319b1b0[label="  %305 = ashr i32 %304, 14"];
+Node0x319b1b0 -> Node0x319b1b0[label="D:0.00ns L:0",color=blue];
+Node0x319b6d0[label="  %indvar.next36 = add i32 %indvar35, 1"];
+Node0x319b6d0 -> Node0x319b6d0[label="D:2.50ns L:0",color=blue];
+}

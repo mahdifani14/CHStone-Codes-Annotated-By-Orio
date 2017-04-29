@@ -1,0 +1,98 @@
+# vsim -c -do "run 7000000000000000ns; exit;" work.main_tb 
+# Start time: 16:09:07 on Apr 22,2017
+# Loading work.main_tb
+# Loading work.top
+# Loading work.memory_controller
+# Loading work.ram_dual_port
+# Loading work.ALTERA_MF_MEMORY_INITIALIZATION
+# Loading work.main
+# Loading work.lpm_divide
+# Loading work.LPM_HINT_EVALUATION
+# Loading work.huff_make_dhuff_tb
+# Loading work.decode_block
+# Loading work.buf_getv
+# Loading work.rom_dual_port
+# ** Warning: Design size of 23608 statements exceeds ModelSim Altera Starter recommended capacity.
+# Expect performance to be adversely affected.
+# run 7000000000000000ns
+# 
+# marker = 0xd8
+# 
+# marker = 0xe0
+# 
+# marker = 0xdb
+#  length =          65
+#  prec =           0
+#  num  =           0
+# 
+# marker = 0xdb
+#  length =          65
+#  prec =           0
+#  num  =           1
+# 
+# marker = 0xc0
+# length         =          17
+# data_precision =           8
+# image_height   =          59
+# image_width    =          90
+# num_components =           3
+#  index         =           0
+#  id            =           1
+#  h_samp_factor =           2
+#  v_samp_factor =           2
+#  quant_tbl_no  =           0
+# 
+#  index         =           1
+#  id            =           2
+#  h_samp_factor =           1
+#  v_samp_factor =           1
+#  quant_tbl_no  =           1
+# 
+#  index         =           2
+#  id            =           3
+#  h_samp_factor =           1
+#  v_samp_factor =           1
+#  quant_tbl_no  =           1
+# 
+# 
+# Sampling Factor is 4:1:1
+# 
+# marker = 0xc4
+#  length =          29
+#  index = 0x0
+#  count =          12
+# 
+# marker = 0xc4
+#  length =         179
+#  index = 0x10
+#  count =         162
+# 
+# marker = 0xc4
+#  length =          29
+#  index = 0x1
+#  count =          12
+# 
+# marker = 0xc4
+#  length =         179
+#  index = 0x11
+#  count =         162
+# 
+# marker = 0xda
+#  length =          12
+#  num_comp =           3
+#  comp_id       =           1
+#  dc_tbl_no     =           0
+#  ac_tbl_no     =           0
+#  comp_id       =           2
+#  dc_tbl_no     =           1
+#  ac_tbl_no     =           1
+#  comp_id       =           3
+#  dc_tbl_no     =           1
+#  ac_tbl_no     =           1
+# Decode 4:1:1 NumMCU =          96
+# Break key hit
+# Simulation stop requested.
+#  exit
+# End time: 16:19:23 on Apr 22,2017, Elapsed time: 0:10:16
+# Errors: 0, Warnings: 1
+# Break key hit

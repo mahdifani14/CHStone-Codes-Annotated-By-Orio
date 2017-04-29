@@ -1,0 +1,28 @@
+digraph {
+Node0x3120f10[label="  %103 = shl i64 %2, 10"];
+Node0x3120f10 -> Node0x3120f10[label="D:0.00ns L:0",color=blue];
+Node0x3120ff0[label="  %104 = and i64 %103, 46116860184273868..."];
+Node0x3120ff0 -> Node0x3120ff0[label="D:0.00ns L:0",color=blue];
+Node0x3120ff0 -> Node0x3120ff0[label="D:0.00ns L:0",color=blue];
+Node0x3120ff0 -> Node0x3120ff0[label="D:0.00ns L:0",color=blue];
+Node0x3120ff0 -> Node0x3120ff0[label="D:0.00ns L:0",color=blue];
+Node0x3120ff0 -> Node0x3120ff0[label="D:0.00ns L:0",color=blue];
+Node0x3120ff0 -> Node0x3120ff0[label="D:0.00ns L:0",color=blue];
+Node0x3120ff0 -> Node0x3120ff0[label="D:0.00ns L:0",color=blue];
+Node0x3120ff0 -> Node0x3120ff0[label="D:0.00ns L:0",color=blue];
+Node0x3120ff0 -> Node0x3120ff0[label="D:0.00ns L:0",color=blue];
+Node0x31210d0[label="  %105 = shl i64 %3, 10"];
+Node0x31210d0 -> Node0x31210d0[label="D:0.00ns L:0",color=blue];
+Node0x31211b0[label="  %106 = and i64 %105, 46116860184273868..."];
+Node0x31211b0 -> Node0x31211b0[label="D:0.00ns L:0",color=blue];
+Node0x31211b0 -> Node0x31211b0[label="D:0.00ns L:0",color=blue];
+Node0x31211b0 -> Node0x31211b0[label="D:0.00ns L:0",color=blue];
+Node0x31211b0 -> Node0x31211b0[label="D:0.00ns L:0",color=blue];
+Node0x31211b0 -> Node0x31211b0[label="D:0.00ns L:0",color=blue];
+Node0x31211b0 -> Node0x31211b0[label="D:0.00ns L:0",color=blue];
+Node0x31211b0 -> Node0x31211b0[label="D:0.00ns L:0",color=blue];
+Node0x31211b0 -> Node0x31211b0[label="D:0.00ns L:0",color=blue];
+Node0x31211b0 -> Node0x31211b0[label="D:0.00ns L:0",color=blue];
+Node0x3121290[label="  %107 = icmp sgt i32 %13, 0"];
+Node0x3121290 -> Node0x3121290[label="D:3.13ns L:0",color=blue];
+}

@@ -1,0 +1,4 @@
+digraph {
+Node0x28f5990[label="  %36 = or i32 %float_exception_flags.0,..."];
+Node0x28f5990 -> Node0x28f5990[label="D:0.00ns L:0",color=blue];
+}

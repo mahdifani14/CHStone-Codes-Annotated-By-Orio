@@ -1,0 +1,15 @@
+# vsim -c -do "run 7000000000000000ns; exit;" work.main_tb 
+# Start time: 18:26:18 on Apr 19,2017
+# Loading work.main_tb
+# Loading work.top
+# Loading work.main
+# Loading work.rom_dual_port
+# Loading work.ALTERA_MF_MEMORY_INITIALIZATION
+# Loading work.ram_dual_port
+# run 7000000000000000ns
+# Result:           9RESULT: PASSAt t=           102470000 clk=1 finish=1 return_val=         9
+# Cycles:                 5121
+# ** Note: $finish    : mips.v(6799)
+#    Time: 102470 ns  Iteration: 2  Instance: /main_tb
+# End time: 18:26:19 on Apr 19,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

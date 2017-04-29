@@ -1,0 +1,8 @@
+digraph {
+Node0x26092e0[label="  %sext1 = shl i32 %23, 16"];
+Node0x26092e0 -> Node0x26092e0[label="D:0.00ns L:0",color=blue];
+Node0x26093c0[label="  %218 = ashr exact i32 %sext1, 14"];
+Node0x26093c0 -> Node0x26093c0[label="D:0.00ns L:0",color=blue];
+Node0x26094a0[label="  %219 = add nsw i32 %pc.0, %218"];
+Node0x26094a0 -> Node0x26094a0[label="D:2.50ns L:0",color=blue];
+}

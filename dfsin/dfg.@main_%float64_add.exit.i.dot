@@ -1,0 +1,16 @@
+digraph {
+Node0x33644e0[label="  %.0.i3.i = phi i64 [ %.mux2.i15.i.i.i,..."];
+Node0x33644e0 -> Node0x33644e0[label="D:0.00ns L:0",color=blue];
+Node0x33644e0 -> Node0x33644e0[label="D:0.00ns L:0",color=blue];
+Node0x33644e0 -> Node0x33644e0[label="D:0.00ns L:0",color=blue];
+Node0x33645c0[label="  %564 = and i64 %.0.i1.i, 9218868437227..."];
+Node0x33645c0 -> Node0x33645c0[label="D:0.00ns L:0",color=blue];
+Node0x33646a0[label="  %565 = icmp ne i64 %564, 9218868437227..."];
+Node0x33646a0 -> Node0x33646a0[label="D:2.90ns L:0",color=blue];
+Node0x3364780[label="  %566 = and i64 %.0.i1.i, 4503599627370..."];
+Node0x3364780 -> Node0x3364780[label="D:0.00ns L:0",color=blue];
+Node0x3364860[label="  %567 = icmp eq i64 %566, 0"];
+Node0x3364860 -> Node0x3364860[label="D:2.90ns L:0",color=blue];
+Node0x3364940[label="  %or.cond4.i.i.i = or i1 %565, %567"];
+Node0x3364940 -> Node0x3364940[label="D:0.00ns L:0",color=blue];
+}
