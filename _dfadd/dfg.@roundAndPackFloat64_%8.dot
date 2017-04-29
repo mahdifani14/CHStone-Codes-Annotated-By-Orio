@@ -1,6 +1,0 @@
-digraph {
-Node0x3916ed0[label="  %9 = add i64 %zSig, 512"];
-Node0x3916ed0 -> Node0x3916ed0[label="D:3.16ns L:0",color=blue];
-Node0x3916fb0[label="  %10 = icmp slt i64 %9, 0"];
-Node0x3916fb0 -> Node0x3916fb0[label="D:3.50ns L:0",color=blue];
-}

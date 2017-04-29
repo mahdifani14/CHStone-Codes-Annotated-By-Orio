@@ -1,6 +1,0 @@
-digraph {
-Node0x335fc40[label="  %504 = and i64 %app.0.i, 2251799813685..."];
-Node0x335fc40 -> Node0x335fc40[label="D:0.00ns L:0",color=blue];
-Node0x335fd20[label="  %505 = icmp ne i64 %504, 0"];
-Node0x335fd20 -> Node0x335fd20[label="D:2.90ns L:0",color=blue];
-}

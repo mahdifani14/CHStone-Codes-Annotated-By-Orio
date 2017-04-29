@@ -1,7 +1,0 @@
-digraph {
-Node0x3620dc0[label="  tail call fastcc void @sha_transform()..."];
-Node0x3620bc0[label="  store i32 0, i32* getelementptr inboun..."];
-Node0x3620bc0 -> Node0x3620dc0[label="D:20.00ns L:1",color=red];
-Node0x3620ca0[label="  store i32 131072, i32* getelementptr i..."];
-Node0x3620ca0 -> Node0x3620dc0[label="D:20.00ns L:1",color=red];
-}

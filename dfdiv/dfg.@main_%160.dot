@@ -1,4 +1,0 @@
-digraph {
-Node0x28fff60[label="  %161 = udiv i64 %158, %128"];
-Node0x28fff60 -> Node0x28fff60[label="D:20.00ns L:64",color=blue];
-}

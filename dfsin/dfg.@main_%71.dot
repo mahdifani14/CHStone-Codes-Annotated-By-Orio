@@ -1,6 +1,0 @@
-digraph {
-Node0x3308f90[label="  %72 = and i64 %9, 9221120237041090560"];
-Node0x3308f90 -> Node0x3308f90[label="D:0.00ns L:0",color=blue];
-Node0x3309070[label="  %73 = icmp eq i64 %72, 921886843722740..."];
-Node0x3309070 -> Node0x3309070[label="D:2.90ns L:0",color=blue];
-}

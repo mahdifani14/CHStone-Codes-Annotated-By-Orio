@@ -1,7 +1,0 @@
-digraph {
-Node0x335a920[label="  %430 = phi i1 [ false, %float64_is_sig..."];
-Node0x335a920 -> Node0x335a920[label="D:0.00ns L:0",color=blue];
-Node0x335a920 -> Node0x335a920[label="D:0.00ns L:0",color=blue];
-Node0x335aa00[label="  %431 = or i1 %422, %430"];
-Node0x335aa00 -> Node0x335aa00[label="D:0.00ns L:0",color=blue];
-}

@@ -1,6 +1,0 @@
-digraph {
-Node0x317c240[label="  %29 = icmp sgt i32 %8, 63"];
-Node0x317c240 -> Node0x317c240[label="D:3.13ns L:0",color=blue];
-Node0x317c320[label="  %indvar.next5 = add i32 %indvar4, 1"];
-Node0x317c320 -> Node0x317c320[label="D:2.50ns L:0",color=blue];
-}

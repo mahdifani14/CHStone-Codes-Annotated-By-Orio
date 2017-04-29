@@ -1,7 +1,0 @@
-digraph {
-Node0x36200c0[label="  %32 = add nsw i32 %j.02.i, 1"];
-Node0x36200c0 -> Node0x36200c0[label="D:2.50ns L:0",color=blue];
-Node0x36200c0 -> Node0x36200c0[label="D:2.50ns L:0",color=blue];
-Node0x36201a0[label="  %exitcond26 = icmp eq i32 %32, 2"];
-Node0x36201a0 -> Node0x36201a0[label="D:2.49ns L:0",color=blue];
-}

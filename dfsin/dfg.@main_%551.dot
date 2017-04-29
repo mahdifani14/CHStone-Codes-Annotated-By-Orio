@@ -1,6 +1,0 @@
-digraph {
-Node0x33636e0[label="  %552 = or i32 %..i.i.i.i.i.i, 8"];
-Node0x33636e0 -> Node0x33636e0[label="D:0.00ns L:0",color=blue];
-Node0x33637c0[label="  %553 = shl i32 %.a.i.i.i.i.i.i, 8"];
-Node0x33637c0 -> Node0x33637c0[label="D:0.00ns L:0",color=blue];
-}

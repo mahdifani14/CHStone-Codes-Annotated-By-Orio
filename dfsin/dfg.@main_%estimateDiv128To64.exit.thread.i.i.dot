@@ -1,6 +1,0 @@
-digraph {
-Node0x334ad00[label="  %zSig.1.i.i = phi i64 [ %256, %._crit_..."];
-Node0x334ad00 -> Node0x334ad00[label="D:0.00ns L:0",color=blue];
-Node0x334ade0[label="  %257 = tail call fastcc i64 @roundAndP..."];
-Node0x334ade0 -> Node0x334ade0[label="D:0.00ns L:1",color=blue];
-}

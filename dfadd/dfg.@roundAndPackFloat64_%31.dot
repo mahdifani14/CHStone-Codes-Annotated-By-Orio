@@ -1,6 +1,0 @@
-digraph {
-Node0x30e0d10[label="  %32 = icmp ne i64 %zSig, 0"];
-Node0x30e0d10 -> Node0x30e0d10[label="D:2.90ns L:0",color=blue];
-Node0x30e0df0[label="  %33 = zext i1 %32 to i64"];
-Node0x30e0df0 -> Node0x30e0df0[label="D:0.00ns L:0",color=blue];
-}

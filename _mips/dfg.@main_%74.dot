@@ -1,4 +1,0 @@
-digraph {
-Node0x25fe690[label="  %75 = getelementptr inbounds [32 x i32..."];
-Node0x25fe690 -> Node0x25fe690[label="D:20.00ns L:0",color=blue];
-}

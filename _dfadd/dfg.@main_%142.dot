@@ -1,4 +1,0 @@
-digraph {
-Node0x3933710[label="  %143 = icmp sgt i32 %expDiff.0.i3, -64"];
-Node0x3933710 -> Node0x3933710[label="D:3.13ns L:0",color=blue];
-}

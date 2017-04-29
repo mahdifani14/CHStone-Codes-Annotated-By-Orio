@@ -1,9 +1,0 @@
-Depth = 2;
-Width = 32;
-Address_radix = dec;
-Data_radix = hex;
-Content
-Begin
-0: 00002000;	-- in_i[0] = 8192
-1: 00002000;	-- in_i[1] = 8192
-End;

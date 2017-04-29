@@ -1,8 +1,0 @@
-digraph {
-Node0x335b720[label="  %aExp.0.i.i.i = phi i32 [ 1, %437 ], [..."];
-Node0x335b720 -> Node0x335b720[label="D:0.00ns L:0",color=blue];
-Node0x335b800[label="  %bExp.0.i.i.i = phi i32 [ 1, %437 ], [..."];
-Node0x335b800 -> Node0x335b800[label="D:0.00ns L:0",color=blue];
-Node0x335b8e0[label="  %439 = icmp ult i64 %408, %406"];
-Node0x335b8e0 -> Node0x335b8e0[label="D:3.50ns L:0",color=blue];
-}

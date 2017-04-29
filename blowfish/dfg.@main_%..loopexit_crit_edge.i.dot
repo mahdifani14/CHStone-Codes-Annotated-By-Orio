@@ -1,4 +1,0 @@
-digraph {
-Node0x418a870[label="  %54 = sub i32 %l.013.i, %umax.i"];
-Node0x418a870 -> Node0x418a870[label="D:2.40ns L:0",color=blue];
-}

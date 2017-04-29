@@ -1,4 +1,4 @@
-source ../config.tcl
+source ../../config.tcl
 
 # temporary: some getelmentptr instructions have
 # negative offsets which are not handled properly

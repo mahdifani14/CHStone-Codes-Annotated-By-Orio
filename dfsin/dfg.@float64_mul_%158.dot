@@ -1,4 +1,0 @@
-digraph {
-Node0x333b770[label="  %.0 = phi i64 [ %.mux2.i15, %propagate..."];
-Node0x333b770 -> Node0x333b770[label="D:0.00ns L:0",color=blue];
-}

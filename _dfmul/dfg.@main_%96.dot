@@ -1,4 +1,0 @@
-digraph {
-Node0x374b680[label="  %97 = shl nuw i64 %12, 63"];
-Node0x374b680 -> Node0x374b680[label="D:0.00ns L:0",color=blue];
-}

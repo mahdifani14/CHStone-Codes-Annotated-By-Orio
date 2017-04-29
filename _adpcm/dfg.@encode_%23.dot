@@ -1,9 +1,0 @@
-digraph {
-Node0x3153230[label="  %24 = phi i32 [ 0, %20 ], [ %29, %25 ]"];
-Node0x3153230 -> Node0x3153230[label="D:0.00ns L:0",color=blue];
-Node0x3153230 -> Node0x3153230[label="D:0.00ns L:0",color=blue];
-Node0x3153230 -> Node0x3153230[label="D:0.00ns L:0",color=blue];
-Node0x3153230 -> Node0x3153230[label="D:0.00ns L:0",color=blue];
-Node0x3153310[label="  %exitcond20 = icmp eq i32 %24, 22"];
-Node0x3153310 -> Node0x3153310[label="D:2.49ns L:0",color=blue];
-}
