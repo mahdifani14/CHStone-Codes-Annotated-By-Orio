@@ -1,0 +1,987 @@
+
+====== START ORIO ======
+
+----- begin reading the source file: adpcm.c -----
+----- finished reading the source file -----
+
+----- begin reading the tuning specification file: adpcm.spec -----
+----- finished reading the tuning specification -----
+
+----- begin parsing annotations -----
+----- finished parsing annotations -----
+
+----- begin optimizations -----
+Search_Space         = 5.400e+01
+Number_of_Parameters = 03
+Numeric_Parameters   = 02
+Binary_Parameters    = 01
+['UF', 'VEC', 'CFLAGS']
+[[1, 2, 3, 4, 5, 6, 7, 8, 9], [False, True], ['-O1', '-O2', '-O3']]
+
+----- begin empirical tuning for problem size -----
+ IN_END = 100
+ SIZE = 100
+
+----- begin random search -----
+Code stats:
+        Number of loops: 	1
+        Max loop nest depth: 	1
+        Additions: 		3
+        Multiplications: 	0
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			13
+        Writes: 		4
+        Comparisons:		1
+        Gotos: 			0
+        
+ building the original code:
+	gcc -O3  -DORIO_REPS=50 -DORIGINAL -o __orio_perftest_original.exe __orio_perftest1.c timer_cpu.o 
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest1.exe __orio_perftest1.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest1.exe  
+(run 1) | {"compile_time": 0.11961793899536133, "run": 1, "cost": [7.06e-07, 2.4e-07, 2.12e-07, 2.46e-07, 2.13e-07, 2.14e-07, 2.14e-07, 2.15e-07, 2.17e-07, 2.16e-07, 2.14e-07, 2.19e-07, 2.14e-07, 2.15e-07, 2.2e-07, 2.16e-07, 2.19e-07, 2.19e-07, 2.15e-07, 2.14e-07, 2.35e-07, 2.14e-07, 2.16e-07, 2.16e-07, 2.16e-07, 2.2e-07, 2.925e-06, 2.17e-07, 7.56e-07, 2.29e-07, 2.15e-07, 2.2e-07, 2.2e-07, 2.18e-07, 2.21e-07, 2.17e-07, 2.16e-07, 2.17e-07, 2.15e-07, 2.18e-07, 2.19e-07, 2.18e-07, 2.19e-07, 2.39e-07, 2.15e-07, 2.17e-07, 2.16e-07, 2.16e-07, 2.16e-07, 2.12e-07], "coordinate": [0, 0, 0], "perf_params": {"UF": 1, "VEC": false, "CFLAGS": "-O1"}, "transform_time": 0.1006920337677002}
+>>>> best coordinate found: [0, 0, 0], cost: 2.933200e-07
+Code stats:
+        Number of loops: 	2
+        Max loop nest depth: 	1
+        Additions: 		24
+        Multiplications: 	6
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			74
+        Writes: 		21
+        Comparisons:		2
+        Gotos: 			0
+        
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest2.exe __orio_perftest2.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest2.exe  
+(run 2) | {"compile_time": 0.11420798301696777, "run": 2, "cost": [6.8e-07, 2.53e-07, 2.1e-07, 2.13e-07, 2.11e-07, 2.11e-07, 2.11e-07, 2.2e-07, 2.15e-07, 2.11e-07, 2.13e-07, 2.09e-07, 2.1e-07, 2.09e-07, 2.11e-07, 2.11e-07, 2.11e-07, 2.14e-07, 2.13e-07, 2.1e-07, 2.1e-07, 2.12e-07, 2.14e-07, 2.13e-07, 2.1e-07, 2.13e-07, 2.12e-07, 2.11e-07, 2.12e-07, 2.15e-07, 2.08e-07, 2.1e-07, 2.12e-07, 2.11e-07, 2.1e-07, 2.14e-07, 2.13e-07, 2.31e-07, 2.09e-07, 2.1e-07, 2.23e-07, 2.3e-07, 2.11e-07, 2.08e-07, 2.08e-07, 2.13e-07, 2.1e-07, 2.1e-07, 2.1e-07, 2.1e-07], "coordinate": [5, 1, 2], "perf_params": {"UF": 6, "VEC": true, "CFLAGS": "-O3"}, "transform_time": 0.09297394752502441}
+>>>> best coordinate found: [5, 1, 2], cost: 2.225800e-07
+Code stats:
+        Number of loops: 	2
+        Max loop nest depth: 	1
+        Additions: 		27
+        Multiplications: 	7
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			82
+        Writes: 		23
+        Comparisons:		2
+        Gotos: 			0
+        
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest3.exe __orio_perftest3.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest3.exe  
+(run 3) | {"compile_time": 0.11149001121520996, "run": 3, "cost": [7.59e-07, 2.25e-07, 2.13e-07, 2.12e-07, 2.13e-07, 2.12e-07, 2.11e-07, 2.11e-07, 2.12e-07, 2.11e-07, 2.12e-07, 2.11e-07, 2.11e-07, 2.12e-07, 2.11e-07, 2.11e-07, 2.11e-07, 2.11e-07, 2.12e-07, 2.13e-07, 2.13e-07, 2.13e-07, 2.12e-07, 2.12e-07, 2.12e-07, 2.12e-07, 2.13e-07, 2.11e-07, 2.12e-07, 2.11e-07, 2.12e-07, 2.12e-07, 2.11e-07, 2.12e-07, 2.13e-07, 2.11e-07, 2.11e-07, 2.11e-07, 2.12e-07, 2.11e-07, 2.11e-07, 2.11e-07, 2.11e-07, 2.11e-07, 2.12e-07, 2.11e-07, 2.11e-07, 2.11e-07, 2.11e-07, 2.11e-07], "coordinate": [6, 1, 1], "perf_params": {"UF": 7, "VEC": true, "CFLAGS": "-O2"}, "transform_time": 0.08948707580566406}
+Code stats:
+        Number of loops: 	2
+        Max loop nest depth: 	1
+        Additions: 		24
+        Multiplications: 	6
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			74
+        Writes: 		21
+        Comparisons:		2
+        Gotos: 			0
+        
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest4.exe __orio_perftest4.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest4.exe  
+(run 4) | {"compile_time": 0.1121971607208252, "run": 4, "cost": [7.14e-07, 2.77e-07, 2.05e-07, 2.12e-07, 2.1e-07, 2.14e-07, 2.13e-07, 2.13e-07, 2.11e-07, 2.1e-07, 2.12e-07, 2.11e-07, 2.09e-07, 2.13e-07, 2.11e-07, 2.11e-07, 2.1e-07, 2.12e-07, 2.09e-07, 2.1e-07, 2.09e-07, 2.11e-07, 2.1e-07, 2.11e-07, 2.1e-07, 2.08e-07, 2.3e-07, 2.08e-07, 2.11e-07, 2.1e-07, 2.09e-07, 2.13e-07, 2.13e-07, 2.14e-07, 2.09e-07, 2.12e-07, 2.1e-07, 2.09e-07, 2.11e-07, 2.08e-07, 2.15e-07, 2.1e-07, 2.14e-07, 2.1e-07, 2.1e-07, 2.13e-07, 2.1e-07, 2.13e-07, 2.12e-07, 2.1e-07], "coordinate": [5, 1, 0], "perf_params": {"UF": 6, "VEC": true, "CFLAGS": "-O1"}, "transform_time": 0.08937692642211914}
+Code stats:
+        Number of loops: 	1
+        Max loop nest depth: 	1
+        Additions: 		3
+        Multiplications: 	0
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			15
+        Writes: 		5
+        Comparisons:		1
+        Gotos: 			0
+        
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest5.exe __orio_perftest5.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest5.exe  
+(run 5) | {"compile_time": 0.11270904541015625, "run": 5, "cost": [7.71e-07, 2.94e-07, 2.28e-07, 2.09e-07, 2.12e-07, 2.12e-07, 2.11e-07, 2.3e-07, 2.12e-07, 2.1e-07, 2.3e-07, 2.11e-07, 2.1e-07, 2.11e-07, 2.06e-07, 2.11e-07, 2.08e-07, 2.14e-07, 2.11e-07, 2.13e-07, 2.12e-07, 2.08e-07, 2.13e-07, 2.09e-07, 2.11e-07, 2.1e-07, 2.11e-07, 2.1e-07, 2.11e-07, 2.1e-07, 2.09e-07, 2.15e-07, 2.3e-07, 2.12e-07, 2.13e-07, 2.11e-07, 2.14e-07, 2.12e-07, 2.1e-07, 2.12e-07, 2.1e-07, 2.13e-07, 2.14e-07, 2.12e-07, 2.11e-07, 2.14e-07, 2.12e-07, 2.08e-07, 2.12e-07, 2.08e-07], "coordinate": [0, 1, 1], "perf_params": {"UF": 1, "VEC": true, "CFLAGS": "-O2"}, "transform_time": 0.08232998847961426}
+Code stats:
+        Number of loops: 	2
+        Max loop nest depth: 	1
+        Additions: 		30
+        Multiplications: 	8
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			84
+        Writes: 		22
+        Comparisons:		2
+        Gotos: 			0
+        
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest6.exe __orio_perftest6.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest6.exe  
+(run 6) | {"compile_time": 0.11327099800109863, "run": 6, "cost": [7.48e-07, 2.31e-07, 2.08e-07, 2.08e-07, 2.08e-07, 2.12e-07, 2.09e-07, 2.11e-07, 2.12e-07, 2.12e-07, 2.1e-07, 2.1e-07, 2.12e-07, 2.08e-07, 2.13e-07, 2.09e-07, 2.13e-07, 2.1e-07, 2.09e-07, 2.11e-07, 2.1e-07, 2.12e-07, 2.13e-07, 2.1e-07, 2.32e-07, 2.15e-07, 2.11e-07, 2.31e-07, 2.13e-07, 2.12e-07, 2.27e-07, 2.09e-07, 2.1e-07, 2.15e-07, 2.12e-07, 2.1e-07, 2.28e-07, 2.12e-07, 2.1e-07, 2.13e-07, 2.11e-07, 2.14e-07, 2.06e-07, 2.1e-07, 2.12e-07, 2.11e-07, 2.13e-07, 2.14e-07, 2.11e-07, 2.11e-07], "coordinate": [7, 0, 2], "perf_params": {"UF": 8, "VEC": false, "CFLAGS": "-O3"}, "transform_time": 0.08941197395324707}
+Code stats:
+        Number of loops: 	1
+        Max loop nest depth: 	1
+        Additions: 		3
+        Multiplications: 	0
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			15
+        Writes: 		5
+        Comparisons:		1
+        Gotos: 			0
+        
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest7.exe __orio_perftest7.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest7.exe  
+(run 7) | {"compile_time": 0.11294388771057129, "run": 7, "cost": [9.4e-07, 2.73e-07, 2.14e-07, 2.17e-07, 2.18e-07, 2.17e-07, 2.15e-07, 2.17e-07, 2.16e-07, 2.17e-07, 2.17e-07, 2.17e-07, 2.16e-07, 2.18e-07, 2.16e-07, 2.18e-07, 2.18e-07, 2.14e-07, 2.33e-07, 2.16e-07, 2.18e-07, 2.14e-07, 2.16e-07, 2.15e-07, 2.15e-07, 2.18e-07, 2.15e-07, 2.15e-07, 2.17e-07, 2.18e-07, 2.38e-07, 2.18e-07, 2.37e-07, 2.15e-07, 2.16e-07, 2.18e-07, 2.13e-07, 2.2e-07, 2.17e-07, 2.15e-07, 2.18e-07, 2.18e-07, 2.15e-07, 2.18e-07, 2.17e-07, 2.19e-07, 2.18e-07, 2.17e-07, 2.14e-07, 2.12e-07], "coordinate": [0, 1, 2], "perf_params": {"UF": 1, "VEC": true, "CFLAGS": "-O3"}, "transform_time": 0.091217041015625}
+Code stats:
+        Number of loops: 	2
+        Max loop nest depth: 	1
+        Additions: 		12
+        Multiplications: 	2
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			42
+        Writes: 		13
+        Comparisons:		2
+        Gotos: 			0
+        
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest8.exe __orio_perftest8.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest8.exe  
+(run 8) | {"compile_time": 0.11248612403869629, "run": 8, "cost": [7.74e-07, 2.27e-07, 2.11e-07, 2.12e-07, 2.11e-07, 2.33e-07, 2.09e-07, 2.11e-07, 2.1e-07, 2.11e-07, 2.1e-07, 2.09e-07, 2.13e-07, 2.11e-07, 2.1e-07, 2.11e-07, 2.07e-07, 2.08e-07, 2.1e-07, 2.1e-07, 2.13e-07, 2.09e-07, 2.11e-07, 2.07e-07, 2.09e-07, 2.1e-07, 2.14e-07, 2.11e-07, 2.08e-07, 2.1e-07, 2.11e-07, 2.11e-07, 2.14e-07, 2.1e-07, 2.12e-07, 2.08e-07, 2.12e-07, 2.11e-07, 2.09e-07, 2.1e-07, 2.1e-07, 2.1e-07, 2.08e-07, 2.06e-07, 2.13e-07, 2.13e-07, 2.11e-07, 2.11e-07, 2.11e-07, 2.07e-07], "coordinate": [1, 1, 2], "perf_params": {"UF": 2, "VEC": true, "CFLAGS": "-O3"}, "transform_time": 0.08652591705322266}
+>>>> best coordinate found: [1, 1, 2], cost: 2.223600e-07
+Code stats:
+        Number of loops: 	2
+        Max loop nest depth: 	1
+        Additions: 		21
+        Multiplications: 	5
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			60
+        Writes: 		16
+        Comparisons:		2
+        Gotos: 			0
+        
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest9.exe __orio_perftest9.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest9.exe  
+(run 9) | {"compile_time": 0.11279296875, "run": 9, "cost": [7.59e-07, 2.78e-07, 2.1e-07, 2.11e-07, 2.09e-07, 2.09e-07, 2.15e-07, 2.13e-07, 2.11e-07, 2.14e-07, 2.09e-07, 2.12e-07, 2.13e-07, 2.13e-07, 2.13e-07, 2.14e-07, 2.09e-07, 2.1e-07, 2.3e-07, 2.11e-07, 2.1e-07, 2.12e-07, 2.11e-07, 2.1e-07, 2.11e-07, 2.27e-07, 2.11e-07, 2.11e-07, 2.1e-07, 2.12e-07, 2.11e-07, 2.11e-07, 2.12e-07, 2.13e-07, 2.1e-07, 2.13e-07, 2.11e-07, 2.29e-07, 2.14e-07, 2.12e-07, 2.12e-07, 2.29e-07, 2.14e-07, 2.15e-07, 2.11e-07, 2.09e-07, 2.33e-07, 2.08e-07, 2.28e-07, 2.09e-07], "coordinate": [4, 0, 1], "perf_params": {"UF": 5, "VEC": false, "CFLAGS": "-O2"}, "transform_time": 0.08836603164672852}
+Code stats:
+        Number of loops: 	2
+        Max loop nest depth: 	1
+        Additions: 		21
+        Multiplications: 	5
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			66
+        Writes: 		19
+        Comparisons:		2
+        Gotos: 			0
+        
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest10.exe __orio_perftest10.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest10.exe  
+(run 10) | {"compile_time": 0.11224794387817383, "run": 10, "cost": [7.52e-07, 2.27e-07, 2.1e-07, 2.12e-07, 2.11e-07, 2.11e-07, 2.14e-07, 2.15e-07, 2.11e-07, 2.12e-07, 2.15e-07, 2.16e-07, 2.11e-07, 2.11e-07, 2.12e-07, 2.1e-07, 2.11e-07, 2.1e-07, 2.11e-07, 2.1e-07, 2.1e-07, 2.3e-07, 2.14e-07, 2.09e-07, 2.12e-07, 2.11e-07, 2.14e-07, 2.13e-07, 2.16e-07, 2.11e-07, 2.11e-07, 2.11e-07, 2.13e-07, 2.09e-07, 2.11e-07, 2.11e-07, 2.11e-07, 2.11e-07, 2.14e-07, 2.14e-07, 2.11e-07, 2.31e-07, 2.16e-07, 2.12e-07, 2.13e-07, 2.1e-07, 2.1e-07, 2.11e-07, 2.16e-07, 2.12e-07], "coordinate": [4, 1, 0], "perf_params": {"UF": 5, "VEC": true, "CFLAGS": "-O1"}, "transform_time": 0.08864307403564453}
+Code stats:
+        Number of loops: 	2
+        Max loop nest depth: 	1
+        Additions: 		12
+        Multiplications: 	2
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			36
+        Writes: 		10
+        Comparisons:		2
+        Gotos: 			0
+        
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest11.exe __orio_perftest11.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest11.exe  
+(run 11) | {"compile_time": 0.11229181289672852, "run": 11, "cost": [7.45e-07, 2.78e-07, 2.17e-07, 2.14e-07, 2.14e-07, 2.16e-07, 2.17e-07, 2.17e-07, 2.16e-07, 2.42e-07, 2.15e-07, 2.16e-07, 2.16e-07, 2.21e-07, 2.15e-07, 2.18e-07, 2.21e-07, 2.18e-07, 2.18e-07, 2.19e-07, 2.18e-07, 2.17e-07, 2.16e-07, 2.16e-07, 2.14e-07, 2.15e-07, 2.19e-07, 2.17e-07, 2.18e-07, 2.15e-07, 2.17e-07, 2.15e-07, 2.18e-07, 2.17e-07, 2.15e-07, 2.2e-07, 2.15e-07, 2.22e-07, 2.16e-07, 2.17e-07, 2.15e-07, 2.21e-07, 2.18e-07, 2.18e-07, 2.18e-07, 2.15e-07, 2.18e-07, 2.2e-07, 2.18e-07, 2.15e-07], "coordinate": [1, 0, 2], "perf_params": {"UF": 2, "VEC": false, "CFLAGS": "-O3"}, "transform_time": 0.08537507057189941}
+Code stats:
+        Number of loops: 	2
+        Max loop nest depth: 	1
+        Additions: 		24
+        Multiplications: 	6
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			68
+        Writes: 		18
+        Comparisons:		2
+        Gotos: 			0
+        
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest12.exe __orio_perftest12.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest12.exe  
+(run 12) | {"compile_time": 0.11269998550415039, "run": 12, "cost": [7.72e-07, 2.22e-07, 2.08e-07, 2.12e-07, 2.14e-07, 2.14e-07, 2.11e-07, 2.13e-07, 2.1e-07, 2.11e-07, 2.1e-07, 2.11e-07, 2.36e-07, 2.12e-07, 2.09e-07, 2.12e-07, 2.1e-07, 2.09e-07, 2.14e-07, 2.12e-07, 2.13e-07, 2.12e-07, 2.08e-07, 2.1e-07, 2.12e-07, 2.13e-07, 2.14e-07, 2.13e-07, 2.14e-07, 2.1e-07, 2.1e-07, 2.11e-07, 2.11e-07, 2.12e-07, 2.1e-07, 2.1e-07, 2.1e-07, 2.14e-07, 2.11e-07, 2.11e-07, 2.15e-07, 2.13e-07, 2.14e-07, 2.1e-07, 2.1e-07, 2.11e-07, 2.14e-07, 2.11e-07, 2.09e-07, 2.1e-07], "coordinate": [5, 0, 0], "perf_params": {"UF": 6, "VEC": false, "CFLAGS": "-O1"}, "transform_time": 0.08899116516113281}
+Code stats:
+        Number of loops: 	2
+        Max loop nest depth: 	1
+        Additions: 		27
+        Multiplications: 	7
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			76
+        Writes: 		20
+        Comparisons:		2
+        Gotos: 			0
+        
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest13.exe __orio_perftest13.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest13.exe  
+(run 13) | {"compile_time": 0.11314988136291504, "run": 13, "cost": [8.11e-07, 2.3e-07, 2.07e-07, 2.11e-07, 2.12e-07, 2.08e-07, 2.12e-07, 2.11e-07, 2.11e-07, 2.08e-07, 2.13e-07, 2.11e-07, 2.14e-07, 2.12e-07, 2.13e-07, 2.1e-07, 2.08e-07, 2.1e-07, 2.17e-07, 2.12e-07, 2.32e-07, 2.16e-07, 2.13e-07, 2.14e-07, 2.11e-07, 2.09e-07, 2.11e-07, 2.12e-07, 2.12e-07, 2.1e-07, 2.13e-07, 2.1e-07, 2.1e-07, 2.1e-07, 2.27e-07, 2.12e-07, 2.11e-07, 2.1e-07, 2.14e-07, 2.1e-07, 2.12e-07, 2.11e-07, 2.12e-07, 2.17e-07, 2.1e-07, 2.29e-07, 2.11e-07, 2.12e-07, 2.11e-07, 2.1e-07], "coordinate": [6, 0, 0], "perf_params": {"UF": 7, "VEC": false, "CFLAGS": "-O1"}, "transform_time": 0.08968114852905273}
+Code stats:
+        Number of loops: 	2
+        Max loop nest depth: 	1
+        Additions: 		15
+        Multiplications: 	3
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			50
+        Writes: 		15
+        Comparisons:		2
+        Gotos: 			0
+        
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest14.exe __orio_perftest14.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest14.exe  
+(run 14) | {"compile_time": 0.11269307136535645, "run": 14, "cost": [7.29e-07, 2.14e-07, 2.15e-07, 2.08e-07, 2.32e-07, 2.13e-07, 2.11e-07, 2.08e-07, 2.1e-07, 2.13e-07, 2.12e-07, 2.09e-07, 2.11e-07, 2.14e-07, 2.13e-07, 2.13e-07, 2.09e-07, 2.1e-07, 2.1e-07, 2.1e-07, 2.13e-07, 2.25e-07, 2.1e-07, 2.09e-07, 2.09e-07, 2.09e-07, 2.12e-07, 2.1e-07, 2.09e-07, 2.1e-07, 2.09e-07, 2.14e-07, 2.12e-07, 2.1e-07, 2.09e-07, 2.11e-07, 2.11e-07, 2.14e-07, 2.09e-07, 2.11e-07, 2.32e-07, 2.06e-07, 2.14e-07, 2.09e-07, 2.11e-07, 2.11e-07, 2.12e-07, 2.11e-07, 2.13e-07, 2.08e-07], "coordinate": [2, 1, 2], "perf_params": {"UF": 3, "VEC": true, "CFLAGS": "-O3"}, "transform_time": 0.08779692649841309}
+>>>> best coordinate found: [2, 1, 2], cost: 2.223400e-07
+Code stats:
+        Number of loops: 	2
+        Max loop nest depth: 	1
+        Additions: 		24
+        Multiplications: 	6
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			68
+        Writes: 		18
+        Comparisons:		2
+        Gotos: 			0
+        
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest15.exe __orio_perftest15.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest15.exe  
+(run 15) | {"compile_time": 0.11227107048034668, "run": 15, "cost": [6.87e-07, 2.6e-07, 2.35e-07, 2.1e-07, 2.16e-07, 2.09e-07, 2.12e-07, 2.13e-07, 2.12e-07, 2.09e-07, 2.13e-07, 2.12e-07, 2.08e-07, 2.08e-07, 2.11e-07, 2.14e-07, 2.11e-07, 2.08e-07, 2.15e-07, 2.3e-07, 2.11e-07, 2.11e-07, 2.09e-07, 2.15e-07, 2.12e-07, 2.12e-07, 2.13e-07, 2.13e-07, 2.12e-07, 2.14e-07, 2.08e-07, 2.12e-07, 2.12e-07, 2.15e-07, 2.11e-07, 2.12e-07, 2.11e-07, 2.1e-07, 2.09e-07, 2.14e-07, 2.07e-07, 2.09e-07, 2.14e-07, 2.13e-07, 2.15e-07, 2.1e-07, 2.09e-07, 2.32e-07, 2.1e-07, 2.12e-07], "coordinate": [5, 0, 1], "perf_params": {"UF": 6, "VEC": false, "CFLAGS": "-O2"}, "transform_time": 0.10383796691894531}
+Code stats:
+        Number of loops: 	2
+        Max loop nest depth: 	1
+        Additions: 		30
+        Multiplications: 	8
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			90
+        Writes: 		25
+        Comparisons:		2
+        Gotos: 			0
+        
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest16.exe __orio_perftest16.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest16.exe  
+(run 16) | {"compile_time": 0.11220192909240723, "run": 16, "cost": [6.13e-07, 2.77e-07, 2.12e-07, 2.11e-07, 2.53e-07, 2.11e-07, 2.11e-07, 2.1e-07, 2.11e-07, 2.16e-07, 2.1e-07, 2.11e-07, 2.1e-07, 2.1e-07, 2.1e-07, 2.13e-07, 2.12e-07, 2.1e-07, 2.12e-07, 2.09e-07, 2.08e-07, 2.12e-07, 2.11e-07, 2.11e-07, 2.16e-07, 2.1e-07, 2.11e-07, 2.09e-07, 2.1e-07, 2.09e-07, 2.14e-07, 2.15e-07, 2.12e-07, 2.1e-07, 2.09e-07, 2.13e-07, 2.22e-07, 2.12e-07, 2.1e-07, 2.09e-07, 2.11e-07, 2.13e-07, 2.08e-07, 2.11e-07, 2.13e-07, 2.13e-07, 2.11e-07, 2.11e-07, 2.09e-07, 2.26e-07], "coordinate": [7, 1, 2], "perf_params": {"UF": 8, "VEC": true, "CFLAGS": "-O3"}, "transform_time": 0.09291291236877441}
+>>>> best coordinate found: [7, 1, 2], cost: 2.218200e-07
+Code stats:
+        Number of loops: 	2
+        Max loop nest depth: 	1
+        Additions: 		33
+        Multiplications: 	9
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			92
+        Writes: 		24
+        Comparisons:		2
+        Gotos: 			0
+        
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest17.exe __orio_perftest17.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest17.exe  
+(run 17) | {"compile_time": 0.11126589775085449, "run": 17, "cost": [7.78e-07, 2.37e-07, 2.13e-07, 2.14e-07, 2.08e-07, 2.11e-07, 2.15e-07, 2.12e-07, 2.1e-07, 2.32e-07, 2.13e-07, 2.11e-07, 2.13e-07, 2.09e-07, 2.13e-07, 2.1e-07, 2.3e-07, 2.11e-07, 2.11e-07, 2.13e-07, 2.11e-07, 2.12e-07, 2.08e-07, 2.14e-07, 2.12e-07, 2.07e-07, 2.11e-07, 2.15e-07, 2.08e-07, 2.11e-07, 2.09e-07, 2.14e-07, 2.11e-07, 2.11e-07, 2.1e-07, 2.1e-07, 2.14e-07, 2.1e-07, 2.1e-07, 2.12e-07, 2.13e-07, 2.12e-07, 2.14e-07, 2.08e-07, 2.12e-07, 2.1e-07, 2.1e-07, 2.11e-07, 2.08e-07, 2.08e-07], "coordinate": [8, 0, 0], "perf_params": {"UF": 9, "VEC": false, "CFLAGS": "-O1"}, "transform_time": 0.09177589416503906}
+Code stats:
+        Number of loops: 	2
+        Max loop nest depth: 	1
+        Additions: 		18
+        Multiplications: 	4
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			52
+        Writes: 		14
+        Comparisons:		2
+        Gotos: 			0
+        
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest18.exe __orio_perftest18.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest18.exe  
+(run 18) | {"compile_time": 0.11183404922485352, "run": 18, "cost": [7.29e-07, 3.02e-07, 2.09e-07, 2.14e-07, 2.755e-06, 2.11e-07, 2.11e-07, 2.13e-07, 2.1e-07, 2.1e-07, 2.1e-07, 2.13e-07, 2.11e-07, 2.11e-07, 2.13e-07, 2.09e-07, 2.11e-07, 2.11e-07, 2.32e-07, 2.12e-07, 2.12e-07, 2.11e-07, 2.1e-07, 2.33e-07, 2.1e-07, 2.1e-07, 2.08e-07, 2.1e-07, 2.13e-07, 2.09e-07, 2.32e-07, 2.13e-07, 2.12e-07, 2.08e-07, 2.12e-07, 2.08e-07, 2.08e-07, 2.11e-07, 2.15e-07, 2.14e-07, 2.11e-07, 2.09e-07, 2.13e-07, 2.32e-07, 2.13e-07, 2.15e-07, 2.1e-07, 2.12e-07, 2.06e-07, 2.1e-07], "coordinate": [3, 0, 1], "perf_params": {"UF": 4, "VEC": false, "CFLAGS": "-O2"}, "transform_time": 0.0876469612121582}
+Code stats:
+        Number of loops: 	2
+        Max loop nest depth: 	1
+        Additions: 		12
+        Multiplications: 	2
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			36
+        Writes: 		10
+        Comparisons:		2
+        Gotos: 			0
+        
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest19.exe __orio_perftest19.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest19.exe  
+(run 19) | {"compile_time": 0.11159706115722656, "run": 19, "cost": [6.79e-07, 2.68e-07, 2.13e-07, 2.08e-07, 2.11e-07, 2.1e-07, 2.1e-07, 2.12e-07, 2.1e-07, 2.11e-07, 2.12e-07, 2.1e-07, 2.11e-07, 2.12e-07, 2.1e-07, 2.15e-07, 2.12e-07, 2.11e-07, 2.11e-07, 2.12e-07, 2.11e-07, 2.11e-07, 2.11e-07, 2.11e-07, 2.11e-07, 2.1e-07, 2.1e-07, 2.1e-07, 2.11e-07, 2.08e-07, 2.11e-07, 2.12e-07, 2.13e-07, 2.1e-07, 2.09e-07, 2.14e-07, 2.12e-07, 2.12e-07, 2.15e-07, 2.14e-07, 2.08e-07, 2.34e-07, 2.1e-07, 2.14e-07, 2.12e-07, 2.11e-07, 2.34e-07, 2.11e-07, 2.11e-07, 2.11e-07], "coordinate": [1, 0, 0], "perf_params": {"UF": 2, "VEC": false, "CFLAGS": "-O1"}, "transform_time": 0.08658599853515625}
+Code stats:
+        Number of loops: 	2
+        Max loop nest depth: 	1
+        Additions: 		27
+        Multiplications: 	7
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			82
+        Writes: 		23
+        Comparisons:		2
+        Gotos: 			0
+        
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest20.exe __orio_perftest20.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest20.exe  
+(run 20) | {"compile_time": 0.11231184005737305, "run": 20, "cost": [7.05e-07, 2.38e-07, 2.13e-07, 2.14e-07, 2.12e-07, 2.11e-07, 2.16e-07, 2.16e-07, 2.15e-07, 2.14e-07, 2.14e-07, 2.13e-07, 2.15e-07, 2.12e-07, 2.12e-07, 2.16e-07, 2.16e-07, 2.17e-07, 2.16e-07, 2.15e-07, 2.18e-07, 2.18e-07, 2.14e-07, 2.18e-07, 2.15e-07, 2.18e-07, 2.17e-07, 2.18e-07, 2.15e-07, 2.11e-07, 2.14e-07, 2.15e-07, 2.13e-07, 2.14e-07, 2.14e-07, 2.12e-07, 2.13e-07, 2.09e-07, 2.17e-07, 2.16e-07, 2.18e-07, 2.16e-07, 2.15e-07, 2.18e-07, 2.13e-07, 2.13e-07, 2.14e-07, 2.13e-07, 2.14e-07, 2.14e-07], "coordinate": [6, 1, 0], "perf_params": {"UF": 7, "VEC": true, "CFLAGS": "-O1"}, "transform_time": 0.09217381477355957}
+Code stats:
+        Number of loops: 	2
+        Max loop nest depth: 	1
+        Additions: 		27
+        Multiplications: 	7
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			82
+        Writes: 		23
+        Comparisons:		2
+        Gotos: 			0
+        
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest21.exe __orio_perftest21.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest21.exe  
+(run 21) | {"compile_time": 0.11246013641357422, "run": 21, "cost": [9.61e-07, 2.28e-07, 2.09e-07, 2.11e-07, 2.12e-07, 2.09e-07, 2.11e-07, 2.1e-07, 2.15e-07, 2.12e-07, 2.13e-07, 2.11e-07, 2.13e-07, 2.11e-07, 2.15e-07, 2.1e-07, 2.1e-07, 2.07e-07, 2.14e-07, 2.11e-07, 2.11e-07, 2.36e-07, 2.14e-07, 2.1e-07, 2.12e-07, 2.14e-07, 2.11e-07, 2.1e-07, 2.2e-07, 2.11e-07, 2.11e-07, 2.14e-07, 2.11e-07, 2.11e-07, 2.11e-07, 2.11e-07, 2.11e-07, 2.13e-07, 2.12e-07, 2.1e-07, 2.12e-07, 2.14e-07, 2.09e-07, 2.11e-07, 2.08e-07, 2.11e-07, 2.1e-07, 2.15e-07, 2.09e-07, 2.11e-07], "coordinate": [6, 1, 2], "perf_params": {"UF": 7, "VEC": true, "CFLAGS": "-O3"}, "transform_time": 0.09247398376464844}
+Code stats:
+        Number of loops: 	2
+        Max loop nest depth: 	1
+        Additions: 		15
+        Multiplications: 	3
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			44
+        Writes: 		12
+        Comparisons:		2
+        Gotos: 			0
+        
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest22.exe __orio_perftest22.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest22.exe  
+(run 22) | {"compile_time": 0.11175990104675293, "run": 22, "cost": [7.07e-07, 2.79e-07, 2.1e-07, 2.11e-07, 2.1e-07, 2.11e-07, 2.15e-07, 2.12e-07, 2.1e-07, 2.12e-07, 2.27e-07, 2.12e-07, 2.11e-07, 2.14e-07, 2.12e-07, 2.1e-07, 2.11e-07, 2.15e-07, 2.09e-07, 2.11e-07, 2.13e-07, 2.11e-07, 2.13e-07, 2.15e-07, 2.08e-07, 2.11e-07, 2.12e-07, 2.14e-07, 2.11e-07, 2.11e-07, 2.29e-07, 2.13e-07, 2.14e-07, 2.1e-07, 2.11e-07, 2.12e-07, 2.1e-07, 2.34e-07, 2.1e-07, 2.1e-07, 2.1e-07, 2.12e-07, 2.13e-07, 2.12e-07, 2.11e-07, 2.12e-07, 2.09e-07, 2.13e-07, 2.11e-07, 2.11e-07], "coordinate": [2, 0, 0], "perf_params": {"UF": 3, "VEC": false, "CFLAGS": "-O1"}, "transform_time": 0.08799004554748535}
+Code stats:
+        Number of loops: 	2
+        Max loop nest depth: 	1
+        Additions: 		12
+        Multiplications: 	2
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			36
+        Writes: 		10
+        Comparisons:		2
+        Gotos: 			0
+        
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest23.exe __orio_perftest23.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest23.exe  
+(run 23) | {"compile_time": 0.11135697364807129, "run": 23, "cost": [7.41e-07, 2.61e-07, 2.12e-07, 2.14e-07, 2.11e-07, 2.12e-07, 2.13e-07, 2.11e-07, 2.1e-07, 2.1e-07, 2.13e-07, 2.09e-07, 2.1e-07, 2.11e-07, 2.12e-07, 2.08e-07, 2.08e-07, 2.13e-07, 2.11e-07, 2.09e-07, 2.11e-07, 2.11e-07, 2.15e-07, 2.11e-07, 2.12e-07, 2.12e-07, 2.09e-07, 2.12e-07, 2.1e-07, 2.13e-07, 2.08e-07, 2.13e-07, 2.11e-07, 2.11e-07, 2.12e-07, 2.11e-07, 2.11e-07, 2.1e-07, 2.12e-07, 2.12e-07, 2.1e-07, 2.1e-07, 2.11e-07, 2.1e-07, 2.12e-07, 2.08e-07, 2.1e-07, 2.12e-07, 2.11e-07, 2.1e-07], "coordinate": [1, 0, 1], "perf_params": {"UF": 2, "VEC": false, "CFLAGS": "-O2"}, "transform_time": 0.08752799034118652}
+Code stats:
+        Number of loops: 	2
+        Max loop nest depth: 	1
+        Additions: 		27
+        Multiplications: 	7
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			76
+        Writes: 		20
+        Comparisons:		2
+        Gotos: 			0
+        
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest24.exe __orio_perftest24.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest24.exe  
+(run 24) | {"compile_time": 0.1123049259185791, "run": 24, "cost": [6.67e-07, 2.66e-07, 2.1e-07, 2.12e-07, 2.09e-07, 2.1e-07, 2.1e-07, 2.12e-07, 2.12e-07, 2.1e-07, 2.1e-07, 2.1e-07, 2.09e-07, 2.11e-07, 2.12e-07, 2.13e-07, 2.1e-07, 2.15e-07, 2.1e-07, 2.11e-07, 2.1e-07, 2.12e-07, 2.13e-07, 2.11e-07, 2.14e-07, 2.14e-07, 2.08e-07, 2.11e-07, 2.1e-07, 2.16e-07, 2.06e-07, 2.12e-07, 2.09e-07, 2.08e-07, 2.11e-07, 2.3e-07, 2.08e-07, 2.09e-07, 2.11e-07, 2.12e-07, 2.08e-07, 2.08e-07, 2.11e-07, 2.11e-07, 2.15e-07, 2.1e-07, 2.11e-07, 2.09e-07, 2.27e-07, 2.1e-07], "coordinate": [6, 0, 2], "perf_params": {"UF": 7, "VEC": false, "CFLAGS": "-O3"}, "transform_time": 0.10278487205505371}
+>>>> best coordinate found: [6, 0, 2], cost: 2.216800e-07
+Code stats:
+        Number of loops: 	2
+        Max loop nest depth: 	1
+        Additions: 		27
+        Multiplications: 	7
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			76
+        Writes: 		20
+        Comparisons:		2
+        Gotos: 			0
+        
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest25.exe __orio_perftest25.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest25.exe  
+(run 25) | {"compile_time": 0.11269092559814453, "run": 25, "cost": [7.67e-07, 2.7e-07, 2.14e-07, 2.11e-07, 2.12e-07, 2.11e-07, 2.07e-07, 2.11e-07, 2.3e-07, 2.15e-07, 2.09e-07, 2.1e-07, 2.12e-07, 2.1e-07, 2.11e-07, 2.11e-07, 2.05e-07, 2.11e-07, 2.14e-07, 2.27e-07, 2.16e-07, 2.1e-07, 2.12e-07, 2.1e-07, 2.14e-07, 2.12e-07, 2.14e-07, 2.11e-07, 2.09e-07, 2.13e-07, 2.13e-07, 2.09e-07, 2.29e-07, 2.15e-07, 2.13e-07, 2.08e-07, 2.12e-07, 2.11e-07, 2.1e-07, 2.12e-07, 2.12e-07, 2.1e-07, 2.11e-07, 2.11e-07, 2.1e-07, 2.53e-07, 2.11e-07, 2.11e-07, 2.12e-07, 2.27e-07], "coordinate": [6, 0, 1], "perf_params": {"UF": 7, "VEC": false, "CFLAGS": "-O2"}, "transform_time": 0.09136104583740234}
+Code stats:
+        Number of loops: 	2
+        Max loop nest depth: 	1
+        Additions: 		18
+        Multiplications: 	4
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			58
+        Writes: 		17
+        Comparisons:		2
+        Gotos: 			0
+        
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest26.exe __orio_perftest26.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest26.exe  
+(run 26) | {"compile_time": 0.11224603652954102, "run": 26, "cost": [7.73e-07, 2.72e-07, 2.15e-07, 2.19e-07, 2.21e-07, 2.22e-07, 2.15e-07, 2.17e-07, 2.17e-07, 2.16e-07, 2.16e-07, 2.14e-07, 2.15e-07, 2.14e-07, 2.16e-07, 2.15e-07, 2.2e-07, 2.15e-07, 2.15e-07, 2.14e-07, 2.16e-07, 2.15e-07, 2.12e-07, 2.14e-07, 2.4e-07, 2.16e-07, 2.16e-07, 2.15e-07, 2.15e-07, 2.12e-07, 2.15e-07, 2.14e-07, 2.17e-07, 2.18e-07, 2.12e-07, 2.18e-07, 2.13e-07, 2.14e-07, 2.14e-07, 2.14e-07, 2.19e-07, 2.16e-07, 2.16e-07, 2.15e-07, 2.16e-07, 2.15e-07, 2.18e-07, 2.13e-07, 2.16e-07, 2.19e-07], "coordinate": [3, 1, 0], "perf_params": {"UF": 4, "VEC": true, "CFLAGS": "-O1"}, "transform_time": 0.08946514129638672}
+Code stats:
+        Number of loops: 	1
+        Max loop nest depth: 	1
+        Additions: 		3
+        Multiplications: 	0
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			15
+        Writes: 		5
+        Comparisons:		1
+        Gotos: 			0
+        
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest27.exe __orio_perftest27.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest27.exe  
+(run 27) | {"compile_time": 0.11163187026977539, "run": 27, "cost": [7.58e-07, 2.2e-07, 2.1e-07, 2.13e-07, 2.11e-07, 2.16e-07, 2.12e-07, 2.09e-07, 2.12e-07, 2.14e-07, 2.1e-07, 2.08e-07, 2.12e-07, 2.14e-07, 2.08e-07, 2.11e-07, 2.12e-07, 2.09e-07, 2.17e-07, 2.13e-07, 2.08e-07, 2.11e-07, 2.08e-07, 2.1e-07, 2.1e-07, 2.13e-07, 2.09e-07, 2.07e-07, 2.13e-07, 2.15e-07, 2.13e-07, 2.1e-07, 2.1e-07, 2.07e-07, 2.09e-07, 2.13e-07, 2.1e-07, 2.11e-07, 2.1e-07, 2.3e-07, 2.13e-07, 2.13e-07, 2.1e-07, 2.09e-07, 2.11e-07, 2.12e-07, 2.08e-07, 2.1e-07, 2.1e-07, 2.07e-07], "coordinate": [0, 1, 0], "perf_params": {"UF": 1, "VEC": true, "CFLAGS": "-O1"}, "transform_time": 0.08348989486694336}
+Code stats:
+        Number of loops: 	2
+        Max loop nest depth: 	1
+        Additions: 		33
+        Multiplications: 	9
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			98
+        Writes: 		27
+        Comparisons:		2
+        Gotos: 			0
+        
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest28.exe __orio_perftest28.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest28.exe  
+(run 28) | {"compile_time": 0.11173200607299805, "run": 28, "cost": [7.3e-07, 2.56e-07, 2.29e-07, 2.13e-07, 2.13e-07, 2.08e-07, 2.09e-07, 2.14e-07, 2.29e-07, 2.12e-07, 2.26e-07, 2.3e-07, 2.13e-07, 2.14e-07, 2.14e-07, 2.08e-07, 2.13e-07, 2.31e-07, 2.14e-07, 2.11e-07, 2.3e-07, 2.07e-07, 2.12e-07, 2.28e-07, 2.11e-07, 2.1e-07, 2.1e-07, 2.1e-07, 2.1e-07, 2.1e-07, 2.1e-07, 2.11e-07, 2.11e-07, 2.07e-07, 2.11e-07, 2.15e-07, 2.27e-07, 2.1e-07, 2.14e-07, 2.1e-07, 2.1e-07, 2.08e-07, 2.14e-07, 2.11e-07, 2.14e-07, 2.11e-07, 2.07e-07, 2.13e-07, 2.11e-07, 2.11e-07], "coordinate": [8, 1, 0], "perf_params": {"UF": 9, "VEC": true, "CFLAGS": "-O1"}, "transform_time": 0.09333300590515137}
+Code stats:
+        Number of loops: 	2
+        Max loop nest depth: 	1
+        Additions: 		12
+        Multiplications: 	2
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			42
+        Writes: 		13
+        Comparisons:		2
+        Gotos: 			0
+        
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest29.exe __orio_perftest29.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest29.exe  
+(run 29) | {"compile_time": 0.11219596862792969, "run": 29, "cost": [7.91e-07, 2.72e-07, 2.33e-07, 2.12e-07, 2.09e-07, 2.11e-07, 2.12e-07, 2.17e-07, 2.14e-07, 2.13e-07, 2.31e-07, 2.1e-07, 2.11e-07, 2.1e-07, 2.14e-07, 2.11e-07, 2.12e-07, 2.13e-07, 2.12e-07, 2.1e-07, 2.09e-07, 2.1e-07, 2.1e-07, 2.12e-07, 2.13e-07, 2.13e-07, 2.11e-07, 2.11e-07, 2.12e-07, 2.28e-07, 2.15e-07, 2.11e-07, 2.1e-07, 2.14e-07, 2.09e-07, 2.31e-07, 2.1e-07, 2.14e-07, 2.12e-07, 2.11e-07, 2.12e-07, 2.11e-07, 2.1e-07, 2.08e-07, 2.1e-07, 2.32e-07, 2.12e-07, 2.13e-07, 2.14e-07, 2.11e-07], "coordinate": [1, 1, 0], "perf_params": {"UF": 2, "VEC": true, "CFLAGS": "-O1"}, "transform_time": 0.087493896484375}
+Code stats:
+        Number of loops: 	2
+        Max loop nest depth: 	1
+        Additions: 		18
+        Multiplications: 	4
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			58
+        Writes: 		17
+        Comparisons:		2
+        Gotos: 			0
+        
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest30.exe __orio_perftest30.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest30.exe  
+(run 30) | {"compile_time": 0.11325407028198242, "run": 30, "cost": [6.89e-07, 2.67e-07, 2.04e-07, 2.1e-07, 2.11e-07, 2.11e-07, 2.1e-07, 2.11e-07, 2.1e-07, 2.09e-07, 2.1e-07, 2.09e-07, 2.12e-07, 2.09e-07, 2.1e-07, 2.13e-07, 2.09e-07, 2.14e-07, 2.12e-07, 2.11e-07, 2.12e-07, 2.12e-07, 2.1e-07, 2.09e-07, 2.13e-07, 2.13e-07, 2.11e-07, 2.1e-07, 2.13e-07, 2.11e-07, 2.12e-07, 2.11e-07, 2.1e-07, 2.14e-07, 2.27e-07, 2.16e-07, 2.13e-07, 2.1e-07, 2.29e-07, 2.09e-07, 2.08e-07, 2.09e-07, 2.28e-07, 2.14e-07, 2.12e-07, 2.09e-07, 2.1e-07, 2.11e-07, 2.1e-07, 2.1e-07], "coordinate": [3, 1, 2], "perf_params": {"UF": 4, "VEC": true, "CFLAGS": "-O3"}, "transform_time": 0.09051012992858887}
+Code stats:
+        Number of loops: 	1
+        Max loop nest depth: 	1
+        Additions: 		3
+        Multiplications: 	0
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			13
+        Writes: 		4
+        Comparisons:		1
+        Gotos: 			0
+        
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest31.exe __orio_perftest31.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest31.exe  
+(run 31) | {"compile_time": 0.11171817779541016, "run": 31, "cost": [7.11e-07, 2.51e-07, 2.08e-07, 2.09e-07, 2.11e-07, 2.1e-07, 2.14e-07, 2.15e-07, 2.14e-07, 2.11e-07, 2.3e-07, 2.12e-07, 2.12e-07, 2.13e-07, 2.14e-07, 2.11e-07, 2.13e-07, 2.28e-07, 2.11e-07, 2.11e-07, 2.09e-07, 2.14e-07, 2.11e-07, 2.12e-07, 2.07e-07, 2.14e-07, 2.17e-07, 2.15e-07, 2.1e-07, 2.12e-07, 2.11e-07, 2.12e-07, 2.11e-07, 2.11e-07, 2.11e-07, 2.1e-07, 2.13e-07, 2.12e-07, 2.1e-07, 2.09e-07, 2.1e-07, 2.14e-07, 2.1e-07, 2.09e-07, 2.11e-07, 2.1e-07, 2.12e-07, 2.34e-07, 2.1e-07, 2.11e-07], "coordinate": [0, 0, 1], "perf_params": {"UF": 1, "VEC": false, "CFLAGS": "-O2"}, "transform_time": 0.08395099639892578}
+Code stats:
+        Number of loops: 	2
+        Max loop nest depth: 	1
+        Additions: 		12
+        Multiplications: 	2
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			42
+        Writes: 		13
+        Comparisons:		2
+        Gotos: 			0
+        
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest32.exe __orio_perftest32.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest32.exe  
+(run 32) | {"compile_time": 0.1122128963470459, "run": 32, "cost": [6.79e-07, 2.66e-07, 2.1e-07, 2.1e-07, 2.09e-07, 2.13e-07, 2.09e-07, 2.11e-07, 2.12e-07, 2.03e-07, 2.11e-07, 2.11e-07, 2.11e-07, 2.08e-07, 2.08e-07, 2.1e-07, 2.12e-07, 2.09e-07, 2.11e-07, 2.34e-07, 2.08e-07, 2.11e-07, 2.11e-07, 2.1e-07, 2.13e-07, 2.12e-07, 2.08e-07, 2.09e-07, 2.11e-07, 2.1e-07, 2.12e-07, 2.04e-07, 2.15e-07, 2.13e-07, 2.1e-07, 2.11e-07, 2.3e-07, 2.11e-07, 2.07e-07, 2.12e-07, 2.11e-07, 2.11e-07, 2.12e-07, 2.1e-07, 2.1e-07, 2.12e-07, 2.14e-07, 2.09e-07, 2.1e-07, 2.13e-07], "coordinate": [1, 1, 1], "perf_params": {"UF": 2, "VEC": true, "CFLAGS": "-O2"}, "transform_time": 0.10126805305480957}
+Code stats:
+        Number of loops: 	2
+        Max loop nest depth: 	1
+        Additions: 		18
+        Multiplications: 	4
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			52
+        Writes: 		14
+        Comparisons:		2
+        Gotos: 			0
+        
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest33.exe __orio_perftest33.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest33.exe  
+(run 33) | {"compile_time": 0.11318302154541016, "run": 33, "cost": [7.04e-07, 2.31e-07, 2.1e-07, 2.08e-07, 2.09e-07, 2.11e-07, 2.11e-07, 2.12e-07, 2.11e-07, 2.11e-07, 2.11e-07, 2.1e-07, 2.14e-07, 2.1e-07, 2.1e-07, 2.12e-07, 2.27e-07, 2.09e-07, 2.09e-07, 2.12e-07, 2.3e-07, 2.12e-07, 2.29e-07, 2.11e-07, 2.1e-07, 2.11e-07, 2.09e-07, 2.06e-07, 2.08e-07, 2.1e-07, 2.07e-07, 2.09e-07, 2.12e-07, 2.12e-07, 2.1e-07, 2.1e-07, 2.11e-07, 2.14e-07, 2.1e-07, 2.07e-07, 3.107e-06, 2.11e-07, 2.12e-07, 2.1e-07, 2.13e-07, 2.1e-07, 2.12e-07, 2.09e-07, 2.11e-07, 2.1e-07], "coordinate": [3, 0, 0], "perf_params": {"UF": 4, "VEC": false, "CFLAGS": "-O1"}, "transform_time": 0.08697199821472168}
+Code stats:
+        Number of loops: 	2
+        Max loop nest depth: 	1
+        Additions: 		15
+        Multiplications: 	3
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			50
+        Writes: 		15
+        Comparisons:		2
+        Gotos: 			0
+        
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest34.exe __orio_perftest34.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest34.exe  
+(run 34) | {"compile_time": 0.11316990852355957, "run": 34, "cost": [7.75e-07, 2.79e-07, 2.13e-07, 2.18e-07, 2.16e-07, 2.17e-07, 2.15e-07, 2.14e-07, 2.21e-07, 2.14e-07, 2.19e-07, 2.12e-07, 2.34e-07, 2.16e-07, 2.15e-07, 2.16e-07, 2.15e-07, 2.14e-07, 2.14e-07, 2.14e-07, 2.16e-07, 2.36e-07, 2.18e-07, 2.19e-07, 2.21e-07, 2.12e-07, 2.17e-07, 2.18e-07, 2.19e-07, 2.18e-07, 2.19e-07, 2.15e-07, 2.18e-07, 2.18e-07, 2.14e-07, 2.14e-07, 2.17e-07, 2.16e-07, 2.19e-07, 2.19e-07, 2.37e-07, 2.18e-07, 2.15e-07, 2.15e-07, 2.16e-07, 2.18e-07, 2.14e-07, 2.17e-07, 2.18e-07, 2.15e-07], "coordinate": [2, 1, 1], "perf_params": {"UF": 3, "VEC": true, "CFLAGS": "-O2"}, "transform_time": 0.08843994140625}
+Code stats:
+        Number of loops: 	2
+        Max loop nest depth: 	1
+        Additions: 		30
+        Multiplications: 	8
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			84
+        Writes: 		22
+        Comparisons:		2
+        Gotos: 			0
+        
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest35.exe __orio_perftest35.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest35.exe  
+(run 35) | {"compile_time": 0.11355090141296387, "run": 35, "cost": [6.93e-07, 2.29e-07, 2.07e-07, 2.11e-07, 2.08e-07, 2.11e-07, 2.11e-07, 2.37e-07, 2.1e-07, 2.14e-07, 2.08e-07, 2.11e-07, 2.13e-07, 2.06e-07, 2.1e-07, 2.1e-07, 2.1e-07, 2.1e-07, 2.1e-07, 2.11e-07, 2.14e-07, 2.08e-07, 2.11e-07, 2.1e-07, 2.11e-07, 2.12e-07, 2.11e-07, 2.09e-07, 2.11e-07, 2.1e-07, 2.1e-07, 2.1e-07, 2.09e-07, 2.1e-07, 2.06e-07, 2.07e-07, 2.1e-07, 2.12e-07, 2.08e-07, 2.12e-07, 2.09e-07, 2.14e-07, 2.09e-07, 2.12e-07, 2.13e-07, 2.09e-07, 2.09e-07, 2.14e-07, 2.11e-07, 2.1e-07], "coordinate": [7, 0, 1], "perf_params": {"UF": 8, "VEC": false, "CFLAGS": "-O2"}, "transform_time": 0.08983993530273438}
+>>>> best coordinate found: [7, 0, 1], cost: 2.208200e-07
+Code stats:
+        Number of loops: 	2
+        Max loop nest depth: 	1
+        Additions: 		30
+        Multiplications: 	8
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			84
+        Writes: 		22
+        Comparisons:		2
+        Gotos: 			0
+        
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest36.exe __orio_perftest36.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest36.exe  
+(run 36) | {"compile_time": 0.11243009567260742, "run": 36, "cost": [6.96e-07, 2.48e-07, 2.14e-07, 2.09e-07, 2.15e-07, 2.14e-07, 2.12e-07, 2.1e-07, 2.11e-07, 2.11e-07, 2.1e-07, 2.12e-07, 2.12e-07, 2.09e-07, 2.11e-07, 2.15e-07, 2.12e-07, 2.14e-07, 2.13e-07, 2.11e-07, 2.09e-07, 2.11e-07, 2.09e-07, 2.1e-07, 2.09e-07, 2.11e-07, 2.11e-07, 2.15e-07, 2.1e-07, 2.17e-07, 2.14e-07, 2.11e-07, 2.1e-07, 2.11e-07, 2.1e-07, 2.12e-07, 2.31e-07, 2.33e-07, 2.1e-07, 2.12e-07, 2.12e-07, 2.08e-07, 2.1e-07, 2.11e-07, 2.1e-07, 2.12e-07, 2.14e-07, 2.14e-07, 2.09e-07, 2.1e-07], "coordinate": [7, 0, 0], "perf_params": {"UF": 8, "VEC": false, "CFLAGS": "-O1"}, "transform_time": 0.09065389633178711}
+Code stats:
+        Number of loops: 	2
+        Max loop nest depth: 	1
+        Additions: 		33
+        Multiplications: 	9
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			92
+        Writes: 		24
+        Comparisons:		2
+        Gotos: 			0
+        
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest37.exe __orio_perftest37.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest37.exe  
+(run 37) | {"compile_time": 0.11349010467529297, "run": 37, "cost": [7.87e-07, 2.78e-07, 2.27e-07, 2.11e-07, 2.1e-07, 2.25e-07, 2.09e-07, 2.13e-07, 2.14e-07, 2.11e-07, 2.1e-07, 2.11e-07, 2.12e-07, 2.1e-07, 2.11e-07, 2.1e-07, 2.12e-07, 2.12e-07, 2.12e-07, 2.11e-07, 2.12e-07, 2.1e-07, 2.12e-07, 2.11e-07, 2.14e-07, 2.17e-07, 2.12e-07, 2.12e-07, 2.12e-07, 2.29e-07, 2.11e-07, 2.3e-07, 2.1e-07, 2.1e-07, 2.28e-07, 2.14e-07, 2.11e-07, 2.13e-07, 2.13e-07, 2.1e-07, 2.28e-07, 2.12e-07, 2.1e-07, 2.11e-07, 2.06e-07, 2.09e-07, 2.11e-07, 2.09e-07, 3.188e-06, 2.29e-07], "coordinate": [8, 0, 1], "perf_params": {"UF": 9, "VEC": false, "CFLAGS": "-O2"}, "transform_time": 0.09208989143371582}
+Code stats:
+        Number of loops: 	2
+        Max loop nest depth: 	1
+        Additions: 		21
+        Multiplications: 	5
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			60
+        Writes: 		16
+        Comparisons:		2
+        Gotos: 			0
+        
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest38.exe __orio_perftest38.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest38.exe  
+(run 38) | {"compile_time": 0.11293292045593262, "run": 38, "cost": [6.68e-07, 2.8e-07, 2.1e-07, 2.1e-07, 2.14e-07, 2.14e-07, 2.11e-07, 2.11e-07, 2.11e-07, 2.12e-07, 2.1e-07, 2.13e-07, 2.11e-07, 2.27e-07, 2.12e-07, 2.11e-07, 2.1e-07, 2.12e-07, 2.08e-07, 2.12e-07, 2.13e-07, 2.14e-07, 2.12e-07, 2.14e-07, 2.13e-07, 2.1e-07, 2.13e-07, 2.11e-07, 2.09e-07, 2.11e-07, 2.09e-07, 2.09e-07, 2.13e-07, 2.13e-07, 2.08e-07, 2.11e-07, 2.16e-07, 2.11e-07, 2.11e-07, 2.12e-07, 2.1e-07, 2.09e-07, 2.1e-07, 2.1e-07, 2.13e-07, 2.13e-07, 2.29e-07, 2.08e-07, 2.11e-07, 2.1e-07], "coordinate": [4, 0, 2], "perf_params": {"UF": 5, "VEC": false, "CFLAGS": "-O3"}, "transform_time": 0.08936190605163574}
+Code stats:
+        Number of loops: 	2
+        Max loop nest depth: 	1
+        Additions: 		15
+        Multiplications: 	3
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			50
+        Writes: 		15
+        Comparisons:		2
+        Gotos: 			0
+        
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest39.exe __orio_perftest39.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest39.exe  
+(run 39) | {"compile_time": 0.11244320869445801, "run": 39, "cost": [7.52e-07, 2.66e-07, 2.1e-07, 2.11e-07, 2.11e-07, 2.11e-07, 2.1e-07, 2.13e-07, 2.1e-07, 2.13e-07, 2.1e-07, 2.14e-07, 2.12e-07, 2.14e-07, 2.11e-07, 2.08e-07, 2.14e-07, 2.11e-07, 2.09e-07, 2.1e-07, 2.1e-07, 2.09e-07, 2.1e-07, 2.1e-07, 2.1e-07, 2.14e-07, 2.15e-07, 2.09e-07, 2.14e-07, 2.32e-07, 2.13e-07, 2.1e-07, 2.13e-07, 2.11e-07, 2.11e-07, 2.13e-07, 2.1e-07, 2.09e-07, 2.11e-07, 2.1e-07, 2.11e-07, 2.11e-07, 2.11e-07, 2.1e-07, 2.1e-07, 2.34e-07, 2.12e-07, 2.1e-07, 2.08e-07, 2.11e-07], "coordinate": [2, 1, 0], "perf_params": {"UF": 3, "VEC": true, "CFLAGS": "-O1"}, "transform_time": 0.08807206153869629}
+Code stats:
+        Number of loops: 	2
+        Max loop nest depth: 	1
+        Additions: 		33
+        Multiplications: 	9
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			98
+        Writes: 		27
+        Comparisons:		2
+        Gotos: 			0
+        
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest40.exe __orio_perftest40.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest40.exe  
+(run 40) | {"compile_time": 0.11340093612670898, "run": 40, "cost": [7.28e-07, 2.28e-07, 2.12e-07, 2.1e-07, 2.13e-07, 2.09e-07, 2.1e-07, 2.09e-07, 2.11e-07, 2.09e-07, 2.1e-07, 2.1e-07, 2.09e-07, 2.08e-07, 2.11e-07, 2.1e-07, 2.12e-07, 2.06e-07, 2.08e-07, 2.1e-07, 2.1e-07, 2.1e-07, 2.11e-07, 2.14e-07, 2.27e-07, 2.1e-07, 2.11e-07, 2.09e-07, 2.1e-07, 2.11e-07, 2.11e-07, 2.11e-07, 2.07e-07, 2.08e-07, 2.1e-07, 2.07e-07, 2.07e-07, 2.1e-07, 2.11e-07, 2.11e-07, 2.13e-07, 2.1e-07, 2.09e-07, 2.12e-07, 2.08e-07, 2.1e-07, 2.08e-07, 2.11e-07, 2.11e-07, 2.11e-07], "coordinate": [8, 1, 2], "perf_params": {"UF": 9, "VEC": true, "CFLAGS": "-O3"}, "transform_time": 0.10756397247314453}
+Code stats:
+        Number of loops: 	2
+        Max loop nest depth: 	1
+        Additions: 		18
+        Multiplications: 	4
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			52
+        Writes: 		14
+        Comparisons:		2
+        Gotos: 			0
+        
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest41.exe __orio_perftest41.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest41.exe  
+(run 41) | {"compile_time": 0.11265015602111816, "run": 41, "cost": [6.95e-07, 3.16e-07, 2.13e-07, 2.18e-07, 2.15e-07, 2.16e-07, 2.13e-07, 2.15e-07, 2.17e-07, 2.13e-07, 2.16e-07, 2.15e-07, 2.14e-07, 2.16e-07, 2.18e-07, 2.17e-07, 2.18e-07, 2.17e-07, 2.15e-07, 2.35e-07, 2.16e-07, 2.13e-07, 2.16e-07, 2.17e-07, 2.17e-07, 2.14e-07, 2.14e-07, 2.16e-07, 2.15e-07, 2.13e-07, 2.14e-07, 2.16e-07, 2.15e-07, 2.14e-07, 2.14e-07, 2.14e-07, 2.16e-07, 2.16e-07, 2.14e-07, 2.14e-07, 2.14e-07, 2.15e-07, 2.17e-07, 2.17e-07, 2.14e-07, 2.21e-07, 2.13e-07, 2.15e-07, 2.12e-07, 2.18e-07], "coordinate": [3, 0, 2], "perf_params": {"UF": 4, "VEC": false, "CFLAGS": "-O3"}, "transform_time": 0.08695721626281738}
+Code stats:
+        Number of loops: 	1
+        Max loop nest depth: 	1
+        Additions: 		3
+        Multiplications: 	0
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			13
+        Writes: 		4
+        Comparisons:		1
+        Gotos: 			0
+        
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest42.exe __orio_perftest42.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest42.exe  
+(run 42) | {"compile_time": 0.11241292953491211, "run": 42, "cost": [7.08e-07, 2.35e-07, 2.29e-07, 2.1e-07, 2.09e-07, 2.1e-07, 2.08e-07, 2.14e-07, 2.11e-07, 2.14e-07, 2.11e-07, 2.14e-07, 2.12e-07, 2.11e-07, 2.1e-07, 2.13e-07, 2.15e-07, 2.13e-07, 2.12e-07, 2.13e-07, 2.12e-07, 2.09e-07, 2.09e-07, 2.11e-07, 2.2e-07, 2.11e-07, 2.09e-07, 2.12e-07, 2.11e-07, 2.14e-07, 2.13e-07, 2.11e-07, 2.11e-07, 2.08e-07, 2.15e-07, 2.09e-07, 2.11e-07, 2.13e-07, 2.1e-07, 2.09e-07, 2.09e-07, 2.13e-07, 2.31e-07, 2.11e-07, 2.12e-07, 2.1e-07, 2.32e-07, 2.1e-07, 2.08e-07, 2.12e-07], "coordinate": [0, 0, 2], "perf_params": {"UF": 1, "VEC": false, "CFLAGS": "-O3"}, "transform_time": 0.08274388313293457}
+Code stats:
+        Number of loops: 	2
+        Max loop nest depth: 	1
+        Additions: 		24
+        Multiplications: 	6
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			68
+        Writes: 		18
+        Comparisons:		2
+        Gotos: 			0
+        
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest43.exe __orio_perftest43.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest43.exe  
+(run 43) | {"compile_time": 0.1125481128692627, "run": 43, "cost": [7.73e-07, 2.3e-07, 2.12e-07, 2.14e-07, 2.11e-07, 2.1e-07, 2.1e-07, 2.12e-07, 2.15e-07, 2.1e-07, 2.13e-07, 2.11e-07, 2.1e-07, 2.12e-07, 2.11e-07, 2.13e-07, 2.11e-07, 2.1e-07, 2.1e-07, 2.14e-07, 2.28e-07, 2.1e-07, 2.13e-07, 2.1e-07, 2.11e-07, 2.12e-07, 2.08e-07, 2.09e-07, 2.12e-07, 2.1e-07, 2.14e-07, 2.11e-07, 2.11e-07, 2.1e-07, 2.12e-07, 2.11e-07, 2.1e-07, 2.1e-07, 2.12e-07, 2.11e-07, 2.13e-07, 2.32e-07, 2.09e-07, 2.11e-07, 2.12e-07, 2.1e-07, 2.14e-07, 2.14e-07, 2.11e-07, 2.09e-07], "coordinate": [5, 0, 2], "perf_params": {"UF": 6, "VEC": false, "CFLAGS": "-O3"}, "transform_time": 0.08909988403320312}
+Code stats:
+        Number of loops: 	2
+        Max loop nest depth: 	1
+        Additions: 		24
+        Multiplications: 	6
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			74
+        Writes: 		21
+        Comparisons:		2
+        Gotos: 			0
+        
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest44.exe __orio_perftest44.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest44.exe  
+(run 44) | {"compile_time": 0.11293983459472656, "run": 44, "cost": [7.39e-07, 2.4e-07, 2.08e-07, 2.09e-07, 2.13e-07, 2.12e-07, 2.11e-07, 2.12e-07, 2.12e-07, 2.12e-07, 2.1e-07, 2.1e-07, 2.15e-07, 2.14e-07, 2.12e-07, 2.1e-07, 2.1e-07, 2.14e-07, 2.1e-07, 2.08e-07, 2.34e-07, 2.1e-07, 2.12e-07, 2.15e-07, 2.15e-07, 2.1e-07, 2.1e-07, 2.1e-07, 2.16e-07, 2.09e-07, 2.14e-07, 2.12e-07, 2.11e-07, 2.11e-07, 2.08e-07, 2.09e-07, 2.12e-07, 2.11e-07, 2.27e-07, 2.13e-07, 2.13e-07, 2.09e-07, 2.06e-07, 2.1e-07, 2.1e-07, 2.28e-07, 2.12e-07, 2.13e-07, 2.14e-07, 2.08e-07], "coordinate": [5, 1, 1], "perf_params": {"UF": 6, "VEC": true, "CFLAGS": "-O2"}, "transform_time": 0.08972597122192383}
+Code stats:
+        Number of loops: 	2
+        Max loop nest depth: 	1
+        Additions: 		30
+        Multiplications: 	8
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			90
+        Writes: 		25
+        Comparisons:		2
+        Gotos: 			0
+        
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest45.exe __orio_perftest45.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest45.exe  
+(run 45) | {"compile_time": 0.11361098289489746, "run": 45, "cost": [9.12e-07, 2.79e-07, 2.1e-07, 2.15e-07, 2.18e-07, 2.37e-07, 2.18e-07, 2.21e-07, 2.14e-07, 2.2e-07, 2.17e-07, 2.18e-07, 2.15e-07, 2.17e-07, 2.18e-07, 2.14e-07, 2.15e-07, 2.15e-07, 2.2e-07, 2.19e-07, 2.15e-07, 2.18e-07, 2.15e-07, 2.16e-07, 2.15e-07, 2.17e-07, 2.17e-07, 2.16e-07, 2.15e-07, 2.17e-07, 2.14e-07, 2.32e-07, 2.15e-07, 2.17e-07, 2.15e-07, 2.16e-07, 2.17e-07, 2.17e-07, 2.19e-07, 2.16e-07, 2.15e-07, 2.19e-07, 2.19e-07, 2.18e-07, 2.15e-07, 2.15e-07, 2.16e-07, 2.17e-07, 2.18e-07, 2.11e-07], "coordinate": [7, 1, 0], "perf_params": {"UF": 8, "VEC": true, "CFLAGS": "-O1"}, "transform_time": 0.09180498123168945}
+Code stats:
+        Number of loops: 	2
+        Max loop nest depth: 	1
+        Additions: 		33
+        Multiplications: 	9
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			92
+        Writes: 		24
+        Comparisons:		2
+        Gotos: 			0
+        
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest46.exe __orio_perftest46.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest46.exe  
+(run 46) | {"compile_time": 0.11204409599304199, "run": 46, "cost": [7.97e-07, 2.37e-07, 2.06e-07, 2.09e-07, 2.13e-07, 2.1e-07, 2.11e-07, 2.1e-07, 2.11e-07, 2.1e-07, 2.1e-07, 2.09e-07, 2.12e-07, 2.13e-07, 2.11e-07, 2.1e-07, 2.12e-07, 2.11e-07, 2.14e-07, 2.09e-07, 2.09e-07, 2.09e-07, 2.08e-07, 2.07e-07, 2.45e-07, 2.12e-07, 2.1e-07, 2.1e-07, 2.12e-07, 2.11e-07, 2.14e-07, 2.13e-07, 2.11e-07, 2.11e-07, 2.09e-07, 2.11e-07, 2.13e-07, 2.06e-07, 2.14e-07, 2.09e-07, 2.12e-07, 2.08e-07, 2.09e-07, 2.11e-07, 2.1e-07, 2.1e-07, 2.13e-07, 2.13e-07, 2.13e-07, 2.13e-07], "coordinate": [8, 0, 2], "perf_params": {"UF": 9, "VEC": false, "CFLAGS": "-O3"}, "transform_time": 0.09178805351257324}
+Code stats:
+        Number of loops: 	2
+        Max loop nest depth: 	1
+        Additions: 		30
+        Multiplications: 	8
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			90
+        Writes: 		25
+        Comparisons:		2
+        Gotos: 			0
+        
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest47.exe __orio_perftest47.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest47.exe  
+(run 47) | {"compile_time": 0.11261701583862305, "run": 47, "cost": [7.1e-07, 2.28e-07, 2.11e-07, 2.12e-07, 2.1e-07, 2.12e-07, 2.13e-07, 2.13e-07, 2.08e-07, 2.11e-07, 2.1e-07, 2.14e-07, 2.12e-07, 2.13e-07, 2.11e-07, 2.13e-07, 2.11e-07, 2.08e-07, 2.11e-07, 2.1e-07, 2.17e-07, 2.1e-07, 2.32e-07, 2.08e-07, 2.14e-07, 2.12e-07, 2.11e-07, 2.14e-07, 2.11e-07, 2.13e-07, 2.12e-07, 2.08e-07, 2.13e-07, 2.12e-07, 2.14e-07, 2.13e-07, 2.1e-07, 2.11e-07, 2.15e-07, 2.08e-07, 2.13e-07, 2.11e-07, 2.1e-07, 2.29e-07, 2.12e-07, 2.1e-07, 2.11e-07, 2.1e-07, 2.11e-07, 2.08e-07], "coordinate": [7, 1, 1], "perf_params": {"UF": 8, "VEC": true, "CFLAGS": "-O2"}, "transform_time": 0.09335088729858398}
+Code stats:
+        Number of loops: 	2
+        Max loop nest depth: 	1
+        Additions: 		18
+        Multiplications: 	4
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			58
+        Writes: 		17
+        Comparisons:		2
+        Gotos: 			0
+        
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest48.exe __orio_perftest48.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest48.exe  
+(run 48) | {"compile_time": 0.11187481880187988, "run": 48, "cost": [7.7e-07, 2.5e-07, 2.13e-07, 2.11e-07, 2.14e-07, 2.12e-07, 2.14e-07, 2.35e-07, 2.16e-07, 2.13e-07, 2.13e-07, 2.13e-07, 2.11e-07, 2.13e-07, 2.3e-07, 2.09e-07, 2.1e-07, 2.12e-07, 2.11e-07, 2.09e-07, 2.12e-07, 2.11e-07, 2.12e-07, 2.11e-07, 2.13e-07, 2.1e-07, 2.15e-07, 2.32e-07, 2.16e-07, 2.11e-07, 2.08e-07, 2.12e-07, 2.14e-07, 2.15e-07, 2.14e-07, 2.11e-07, 2.11e-07, 2.11e-07, 2.1e-07, 2.11e-07, 2.11e-07, 2.1e-07, 2.1e-07, 2.14e-07, 2.11e-07, 2.11e-07, 2.14e-07, 2.11e-07, 2.09e-07, 2.11e-07], "coordinate": [3, 1, 1], "perf_params": {"UF": 4, "VEC": true, "CFLAGS": "-O2"}, "transform_time": 0.08941006660461426}
+Code stats:
+        Number of loops: 	2
+        Max loop nest depth: 	1
+        Additions: 		21
+        Multiplications: 	5
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			60
+        Writes: 		16
+        Comparisons:		2
+        Gotos: 			0
+        
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest49.exe __orio_perftest49.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest49.exe  
+(run 49) | {"compile_time": 0.11260485649108887, "run": 49, "cost": [7.59e-07, 2.47e-07, 2.1e-07, 2.1e-07, 2.11e-07, 2.08e-07, 2.13e-07, 2.11e-07, 2.29e-07, 2.1e-07, 2.09e-07, 2.11e-07, 2.11e-07, 2.12e-07, 2.1e-07, 2.1e-07, 2.13e-07, 2.1e-07, 2.12e-07, 2.13e-07, 2.08e-07, 2.3e-07, 2.11e-07, 2.08e-07, 2.13e-07, 2.1e-07, 2.1e-07, 2.11e-07, 2.13e-07, 2.11e-07, 2.1e-07, 2.14e-07, 2.13e-07, 2.11e-07, 2.11e-07, 2.08e-07, 2.12e-07, 2.11e-07, 2.1e-07, 2.1e-07, 2.09e-07, 2.12e-07, 2.14e-07, 2.09e-07, 2.14e-07, 2.09e-07, 2.09e-07, 2.12e-07, 2.11e-07, 2.11e-07], "coordinate": [4, 0, 0], "perf_params": {"UF": 5, "VEC": false, "CFLAGS": "-O1"}, "transform_time": 0.10010218620300293}
+Code stats:
+        Number of loops: 	2
+        Max loop nest depth: 	1
+        Additions: 		33
+        Multiplications: 	9
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			98
+        Writes: 		27
+        Comparisons:		2
+        Gotos: 			0
+        
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest50.exe __orio_perftest50.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest50.exe  
+(run 50) | {"compile_time": 0.11268806457519531, "run": 50, "cost": [7.07e-07, 2.67e-07, 2.1e-07, 2.09e-07, 2.1e-07, 2.11e-07, 2.14e-07, 2.11e-07, 2.11e-07, 2.11e-07, 2.11e-07, 2.08e-07, 2.15e-07, 2.12e-07, 2.14e-07, 2.13e-07, 2.11e-07, 2.13e-07, 2.1e-07, 2.12e-07, 2.32e-07, 2.12e-07, 2.1e-07, 2.13e-07, 2.28e-07, 2.12e-07, 2.14e-07, 2.1e-07, 2.13e-07, 2.07e-07, 2.11e-07, 2.12e-07, 2.14e-07, 2.11e-07, 2.14e-07, 2.11e-07, 2.09e-07, 2.14e-07, 2.14e-07, 2.1e-07, 2.12e-07, 2.07e-07, 2.1e-07, 2.14e-07, 2.1e-07, 2.13e-07, 2.11e-07, 2.11e-07, 2.1e-07, 2.11e-07], "coordinate": [8, 1, 1], "perf_params": {"UF": 9, "VEC": true, "CFLAGS": "-O2"}, "transform_time": 0.09320402145385742}
+Code stats:
+        Number of loops: 	2
+        Max loop nest depth: 	1
+        Additions: 		15
+        Multiplications: 	3
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			44
+        Writes: 		12
+        Comparisons:		2
+        Gotos: 			0
+        
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest51.exe __orio_perftest51.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest51.exe  
+(run 51) | {"compile_time": 0.1121218204498291, "run": 51, "cost": [6.73e-07, 2.37e-07, 2.07e-07, 2.1e-07, 2.11e-07, 2.12e-07, 2.14e-07, 2.11e-07, 2.09e-07, 2.09e-07, 2.14e-07, 2.12e-07, 2.11e-07, 2.09e-07, 2.12e-07, 2.09e-07, 2.18e-07, 2.12e-07, 2.1e-07, 2.12e-07, 2.09e-07, 2.07e-07, 2.06e-07, 2.1e-07, 2.07e-07, 2.1e-07, 2.1e-07, 2.1e-07, 2.11e-07, 2.11e-07, 2.11e-07, 2.17e-07, 2.1e-07, 2.12e-07, 2.1e-07, 2.13e-07, 2.1e-07, 2.11e-07, 2.08e-07, 2.11e-07, 2.13e-07, 2.13e-07, 2.09e-07, 2.1e-07, 2.1e-07, 2.1e-07, 2.12e-07, 2.12e-07, 2.1e-07, 2.18e-07], "coordinate": [2, 0, 2], "perf_params": {"UF": 3, "VEC": false, "CFLAGS": "-O3"}, "transform_time": 0.08766818046569824}
+>>>> best coordinate found: [2, 0, 2], cost: 2.206600e-07
+Code stats:
+        Number of loops: 	2
+        Max loop nest depth: 	1
+        Additions: 		21
+        Multiplications: 	5
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			66
+        Writes: 		19
+        Comparisons:		2
+        Gotos: 			0
+        
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest52.exe __orio_perftest52.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest52.exe  
+(run 52) | {"compile_time": 0.11242413520812988, "run": 52, "cost": [7.71e-07, 2.3e-07, 2.12e-07, 2.11e-07, 2.08e-07, 2.13e-07, 2.14e-07, 2.11e-07, 2.11e-07, 2.09e-07, 2.11e-07, 2.1e-07, 2.1e-07, 2.14e-07, 2.15e-07, 2.11e-07, 2.12e-07, 2.1e-07, 2.11e-07, 2.1e-07, 2.29e-07, 2.08e-07, 2.09e-07, 2.1e-07, 2.11e-07, 2.1e-07, 2.11e-07, 2.14e-07, 2.1e-07, 2.08e-07, 2.31e-07, 2.14e-07, 2.12e-07, 2.17e-07, 2.14e-07, 2.1e-07, 2.11e-07, 2.13e-07, 2.1e-07, 2.12e-07, 2.11e-07, 2.14e-07, 2.11e-07, 2.1e-07, 2.1e-07, 2.12e-07, 2.1e-07, 2.1e-07, 2.09e-07, 2.08e-07], "coordinate": [4, 1, 2], "perf_params": {"UF": 5, "VEC": true, "CFLAGS": "-O3"}, "transform_time": 0.09052395820617676}
+Code stats:
+        Number of loops: 	2
+        Max loop nest depth: 	1
+        Additions: 		21
+        Multiplications: 	5
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			66
+        Writes: 		19
+        Comparisons:		2
+        Gotos: 			0
+        
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest53.exe __orio_perftest53.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest53.exe  
+(run 53) | {"compile_time": 0.11204409599304199, "run": 53, "cost": [7.09e-07, 2.3e-07, 2.13e-07, 2.28e-07, 2.08e-07, 2.07e-07, 2.11e-07, 2.15e-07, 2.12e-07, 2.1e-07, 2.28e-07, 2.33e-07, 2.13e-07, 2.11e-07, 2.09e-07, 2.09e-07, 2.1e-07, 2.12e-07, 2.3e-07, 2.29e-07, 2.09e-07, 2.12e-07, 2.16e-07, 2.12e-07, 2.14e-07, 2.11e-07, 2.12e-07, 2.13e-07, 2.12e-07, 2.14e-07, 2.13e-07, 2.1e-07, 2.14e-07, 2.13e-07, 2.08e-07, 2.12e-07, 2.12e-07, 2.15e-07, 2.13e-07, 2.11e-07, 2.14e-07, 2.33e-07, 2.14e-07, 2.14e-07, 2.14e-07, 2.1e-07, 2.12e-07, 2.11e-07, 2.11e-07, 2.08e-07], "coordinate": [4, 1, 1], "perf_params": {"UF": 5, "VEC": true, "CFLAGS": "-O2"}, "transform_time": 0.09060096740722656}
+Code stats:
+        Number of loops: 	2
+        Max loop nest depth: 	1
+        Additions: 		15
+        Multiplications: 	3
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			44
+        Writes: 		12
+        Comparisons:		2
+        Gotos: 			0
+        
+ building test:
+	gcc -O3  -DORIO_REPS=50 -o __orio_perftest54.exe __orio_perftest54.c timer_cpu.o 
+ running test:
+	 ./__orio_perftest54.exe  
+(run 54) | {"compile_time": 0.11248779296875, "run": 54, "cost": [7.15e-07, 2.36e-07, 2.1e-07, 2.1e-07, 2.09e-07, 2.09e-07, 2.11e-07, 2.11e-07, 2.11e-07, 2.11e-07, 2.1e-07, 2.1e-07, 2.09e-07, 2.07e-07, 2.08e-07, 2.1e-07, 2.11e-07, 2.11e-07, 2.11e-07, 2.08e-07, 2.11e-07, 2.09e-07, 2.1e-07, 2.12e-07, 2.12e-07, 2.1e-07, 2.09e-07, 2.09e-07, 2.1e-07, 2.1e-07, 2.08e-07, 2.1e-07, 2.11e-07, 2.1e-07, 2.13e-07, 2.09e-07, 2.1e-07, 2.12e-07, 2.09e-07, 2.14e-07, 2.08e-07, 2.42e-07, 2.12e-07, 2.09e-07, 2.1e-07, 2.1e-07, 2.1e-07, 2.11e-07, 2.11e-07, 2.1e-07], "coordinate": [2, 0, 1], "perf_params": {"UF": 3, "VEC": false, "CFLAGS": "-O2"}, "transform_time": 0.08786702156066895}
+----- end random search -----
+----- begin random search summary -----
+ total completed runs: 54
+ total successful runs: 54
+ total failed runs: 0
+ speedup: 1.32928487265
+ fount at: 51
+----- end random search summary -----
+----- begin summary -----
+ best coordinate: [2, 0, 2]={'UF': 3, 'VEC': False, 'CFLAGS': '-O3'}, cost=2.206600e-07, transfer_time=inf, inputs=[('SIZE', 100), ('IN_END', 100)], search_time=11.45, runs=54
+----- end summary -----
+----- the obtained best performance parameters -----
+ CFLAGS = -O3
+ UF = 3
+ VEC = False
+Code stats:
+        Number of loops: 	2
+        Max loop nest depth: 	1
+        Additions: 		15
+        Multiplications: 	3
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			44
+        Writes: 		12
+        Comparisons:		2
+        Gotos: 			0
+        
+----- finish optimizations -----
+
+----- begin writing the output file(s) -----
+--> writing output to: _adpcm.c
+----- finished writing the output file(s) -----
+
+====== END ORIO ======

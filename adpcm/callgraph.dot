@@ -1,0 +1,25 @@
+digraph "callgraph" {
+subgraph "cluster0" { label="libc-start.c";
+  F12068c8 [label="(below main)\n193 712"];
+}
+subgraph "cluster1" { label="(unknown)";
+  F1291da8 [label="0x0000000000400530\n193 712"];
+}
+subgraph "cluster2" { label="adpcm.c";
+  F1350948 [label="main\n193 712"];
+  F1426708 [label="filtez\n21 608"];
+  F1426c78 [label="encode\n99 682"];
+  F14285a8 [label="upzero\n37 784"];
+  F14299e8 [label="decode\n88 918"];
+  F1443e78 [label="adpcm_main\n190 442"];
+}
+  F12068c8 -> F1350948 [weight=2,label="193 712 (2x)"];
+  F1291da8 -> F12068c8 [weight=2,label="193 712 (2x)"];
+  F1350948 -> F1443e78 [weight=2,label="190 442 (2x)"];
+  F1426c78 -> F1426708 [weight=2,label="10 804 (200x)"];
+  F1426c78 -> F14285a8 [weight=2,label="18 892 (200x)"];
+  F14299e8 -> F1426708 [weight=2,label="10 804 (200x)"];
+  F14299e8 -> F14285a8 [weight=2,label="18 892 (200x)"];
+  F1443e78 -> F1426c78 [weight=2,label="99 682 (100x)"];
+  F1443e78 -> F14299e8 [weight=2,label="88 918 (100x)"];
+}

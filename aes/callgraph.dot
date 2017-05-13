@@ -1,0 +1,27 @@
+digraph "callgraph" {
+subgraph "cluster0" { label="(global)";
+  F2e68848 [label="main\n111 169"];
+  F2e813e8 [label="aes_main\n108 701"];
+  F2e81f08 [label="printf\n18 756"];
+  F2e83958 [label="encrypt\n38 957"];
+  F2e842d8 [label="decrypt\n69 699"];
+  F2e84f78 [label="AddRoundKey_InversMixColumn\n47 103"];
+  F2e85538 [label="MixColumn_AddRoundKey\n14 842"];
+  F2e9f108 [label="KeySchedule\n16 600"];
+  F2eb90c8 [label="0x00000000004004d0\n111 169"];
+  F2eb9848 [label="(below main)\n111 169"];
+  F2fa4838 [label="vfprintf\n18 070"];
+}
+  F2e68848 -> F2e813e8 [weight=2,label="108 701 (1x)"];
+  F2e813e8 -> F2e83958 [weight=2,label="38 957 (1x)"];
+  F2e813e8 -> F2e842d8 [weight=2,label="69 699 (1x)"];
+  F2e81f08 -> F2fa4838 [weight=2,label="18 070 (33x)"];
+  F2e83958 -> F2e81f08 [weight=2,label="9 382 (17x)"];
+  F2e83958 -> F2e85538 [weight=2,label="14 842 (9x)"];
+  F2e83958 -> F2e9f108 [weight=2,label="8 300 (1x)"];
+  F2e842d8 -> F2e81f08 [weight=2,label="9 374 (17x)"];
+  F2e842d8 -> F2e84f78 [weight=2,label="47 103 (9x)"];
+  F2e842d8 -> F2e9f108 [weight=2,label="8 300 (1x)"];
+  F2eb90c8 -> F2eb9848 [weight=2,label="111 169 (1x)"];
+  F2eb9848 -> F2e68848 [weight=2,label="111 169 (1x)"];
+}

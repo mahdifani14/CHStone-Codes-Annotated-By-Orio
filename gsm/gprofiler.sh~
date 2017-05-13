@@ -1,0 +1,15 @@
+#!/bin/bash
+clear
+echo "Good morning, world."
+gcc -Wall -pg $1.c -o $1
+echo "$1 successfully compiled with debuging flag enabled"
+chmod 755 $1
+./$1
+echo ""
+echo "Profiling..."
+gprof $1 gmon.out > gprof_analysis.txt
+echo "Generating call-graph in png"
+gprof2dot gprof_analysis.txt > gprof_call_graph.dot
+dot -Tgif gprof_call_graph.dot -o gprof_call_graph.png
+echo "Done!"
+

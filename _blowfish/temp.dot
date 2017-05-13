@@ -1,0 +1,32 @@
+digraph CFG {
+	ForLoop136 [label="ForLoop136  for (; k<=KEYSIZE-1; ) {...",shape=box];
+	ForLoop136 -> 114;
+	ForLoop136 -> _JOIN_136;
+	ForLoop179 [label="ForLoop179  for (j=0; j<=i-1; j=j+1) {...",shape=box];
+	ForLoop179 -> 171;
+	ForLoop179 -> _JOIN_179;
+	ForLoop185 [label="ForLoop185  for (k=0; k<=KEYSIZE-1; ) {...",shape=box];
+	ForLoop185 -> ForLoop136;
+	ForLoop185 -> _JOIN_185;
+	IfStmt134 [label="IfStmt134  if (i<=N-1) ...",shape=box];
+	IfStmt134 -> 133;
+	IfStmt134 -> _JOIN_134;
+	183 [label="183  i=0;...",shape=box];
+	183 -> _JOIN_185;
+	_JOIN_136 [label="_JOIN_136None...",shape=box];
+	_JOIN_136 -> 145;
+	_JOIN_134 [label="_JOIN_134None...",shape=box];
+	_JOIN_134 -> _JOIN_136;
+	133 [label="133  break;...",shape=box];
+	133 -> _JOIN_134;
+	114 [label="114  indata[i]=in_key[k];...",shape=box];
+	_JOIN_179 [label="_JOIN_179None...",shape=box];
+	_JOIN_179 -> 183;
+	145 [label="145  BF_cfb64_encrypt(indata,outdata,i,ivec,numAdd,encordec);...",shape=box];
+	145 -> ForLoop179;
+	171 [label="171  check=check+(outdata[j]==out_key[l]);...",shape=box];
+	_JOIN_185 [label="_JOIN_185None...",shape=box];
+	_TOP_ [label="_TOP_None...",shape=box];
+	_TOP_ -> ForLoop185;
+
+}
