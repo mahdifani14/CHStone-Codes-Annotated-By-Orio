@@ -1,0 +1,14 @@
+digraph {
+Node0x306fe30[label="  %158 = load i8** @ld_Rdptr, align 4"];
+Node0x306fe30 -> Node0x306fe30[label="D:0.00ns L:2",color=blue];
+Node0x306fe30 -> Node0x306fe30[label="D:0.00ns L:2",color=blue];
+Node0x306fe30 -> Node0x306fe30[label="D:0.00ns L:2",color=blue];
+Node0x306fe30 -> Node0x306fe30[label="D:0.00ns L:2",color=blue];
+Node0x306ff10[label="  %159 = icmp ult i8* %158, getelementpt..."];
+Node0x306ff10 -> Node0x306ff10[label="D:20.00ns L:0",color=blue];
+Node0x306fff0[label="  %160 = add nsw i32 %153, 24"];
+Node0x306fff0 -> Node0x306fff0[label="D:2.50ns L:0",color=blue];
+Node0x30700d0[label="  %161 = sub i32 %160, %42"];
+Node0x30700d0 -> Node0x30700d0[label="D:2.40ns L:0",color=blue];
+Node0x30700d0 -> Node0x30700d0[label="D:2.40ns L:0",color=blue];
+}

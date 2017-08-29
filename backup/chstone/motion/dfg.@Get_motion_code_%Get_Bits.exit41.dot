@@ -1,0 +1,15 @@
+digraph {
+Node0x306c8f0[label="  %243 = icmp slt i32 %203, 0"];
+Node0x306c8f0 -> Node0x306c8f0[label="D:3.36ns L:0",color=blue];
+Node0x306ca10[label="  %244 = getelementptr inbounds [8 x [2 ..."];
+Node0x306ca10 -> Node0x306ca10[label="D:20.00ns L:0",color=blue];
+Node0x306cb30[label="  %245 = load i8* %244, align 1"];
+Node0x306cb30 -> Node0x306cb30[label="D:0.00ns L:1",color=blue];
+Node0x307ab20[label="  %246 = sext i8 %245 to i32"];
+Node0x307ab20 -> Node0x307ab20[label="D:0.00ns L:0",color=blue];
+Node0x307ab20 -> Node0x307ab20[label="D:0.00ns L:0",color=blue];
+Node0x307ac00[label="  %247 = sub nsw i32 0, %246"];
+Node0x307ac00 -> Node0x307ac00[label="D:2.40ns L:0",color=blue];
+Node0x307ace0[label="  %.88 = select i1 %243, i32 %247, i32 %..."];
+Node0x307ace0 -> Node0x307ace0[label="D:3.99ns L:0",color=blue];
+}

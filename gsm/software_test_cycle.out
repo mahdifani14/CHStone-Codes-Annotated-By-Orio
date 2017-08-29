@@ -1,0 +1,26 @@
+Sat May  6 02:56:35 EDT 2017
+# vlog ./submodules/220model.v ./submodules/AddressHash.v ./submodules/AddressStack.v ./submodules/CounterStack.v ./submodules/CounterStorage.v ./submodules/CountingBlock.v ./submodules/IncCounter.v ./submodules/LeapProfiler.v ./submodules/LeapTop.v ./submodules/OpDecode.v ./submodules/SerialDivider.v ./submodules/altera_avalon_packets_to_master.v ./submodules/altera_avalon_sc_fifo.v ./submodules/altera_avalon_st_bytes_to_packets.v ./submodules/altera_avalon_st_clock_crosser.v ./submodules/altera_avalon_st_idle_inserter.v ./submodules/altera_avalon_st_idle_remover.v ./submodules/altera_avalon_st_jtag_interface.v ./submodules/altera_avalon_st_packets_to_bytes.v ./submodules/altera_avalon_st_pipeline_base.v ./submodules/altera_jtag_dc_streaming.v ./submodules/altera_jtag_sld_node.v ./submodules/altera_jtag_streaming.v ./submodules/altera_mf.v ./submodules/altera_primitives.v ./submodules/altera_reset_controller.v ./submodules/altera_reset_synchronizer.v ./submodules/altera_sdram_partner_module.v ./submodules/altfp_adder64_13.v ./submodules/altfp_adder64_14.v ./submodules/altfp_adder_13.v ./submodules/altfp_adder_14.v ./submodules/altfp_compare32_1.v ./submodules/altfp_compare64_1.v ./submodules/altfp_divider64_61.v ./submodules/altfp_divider_33.v ./submodules/altfp_extend_2.v ./submodules/altfp_fptosi32_6.v ./submodules/altfp_fptosi64_6.v ./submodules/altfp_multiplier64_11.v ./submodules/altfp_multiplier_11.v ./submodules/altfp_sitofp32_6.v ./submodules/altfp_sitofp64_6.v ./submodules/altfp_subtractor64_14.v ./submodules/altfp_subtractor_14.v ./submodules/altfp_truncate_3.v ./submodules/cyclonev_atoms.v ./submodules/cyclonev_hssi_atoms.v ./submodules/cyclonev_pcie_hip_atoms.v ./submodules/div_signed.v ./submodules/div_unsigned.v ./submodules/leap_sim_controller.v ./submodules/legup_dm_wt_cache.v ./submodules/legup_system.v ./submodules/legup_system_JTAG_UART.v ./submodules/legup_system_JTAG_to_FPGA_Bridge.v ./submodules/legup_system_SDRAM.v ./submodules/legup_system_SDRAM_test_component.v 
+# -- Compiling module CounterStack
+# -- Compiling module CounterStorage
+# -- Compiling module IncCounter
+# -- Compiling module DownwardsRunningCounter
+
+Sat May  6 03:14:19 EDT 2017
+# Result: 168RESULT: PASScounter =                49236
+
+Sat May  6 03:36:25 EDT 2017
+Sat May  6 03:38:19 EDT 2017
+Sat May  6 03:44:44 EDT 2017
+Sat May  6 03:45:00 EDT 2017
+Sat May  6 03:45:14 EDT 2017
+Sat May  6 03:45:58 EDT 2017
+Sat May  6 03:47:16 EDT 2017
+Sat May  6 03:48:23 EDT 2017
+# Result: 168RESULT: PASScounter =                49236
+
+Sat May  6 03:57:18 EDT 2017
+Sat May  6 04:02:42 EDT 2017
+Sat May  6 04:02:56 EDT 2017
+Sat May  6 04:03:09 EDT 2017
+Sat May  6 04:15:12 EDT 2017
+Sat May  6 04:36:08 EDT 2017

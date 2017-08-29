@@ -1,0 +1,9 @@
+digraph {
+Node0x30fdd90[label="  %7 = phi i32 [ 0, %4 ], [ %10, %8 ]"];
+Node0x30fdd90 -> Node0x30fdd90[label="D:0.00ns L:0",color=blue];
+Node0x30fdd90 -> Node0x30fdd90[label="D:0.00ns L:0",color=blue];
+Node0x30fdd90 -> Node0x30fdd90[label="D:0.00ns L:0",color=blue];
+Node0x30fdd90 -> Node0x30fdd90[label="D:0.00ns L:0",color=blue];
+Node0x30fde70[label="  %exitcond42 = icmp eq i32 %7, 2"];
+Node0x30fde70 -> Node0x30fde70[label="D:2.49ns L:0",color=blue];
+}

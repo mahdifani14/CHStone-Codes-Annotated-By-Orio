@@ -137,3 +137,6 @@ do
 		echo
 	fi
 done
+
+#awk -F'                 ' 'NF > 1 {print $2}'  gsm/hardware_test_cycle.out > hw_cycles.out
+#awk -F'                ' 'NF > 1 {print $2}'  gsm/software_test_cycle.out > sw_cycles.out

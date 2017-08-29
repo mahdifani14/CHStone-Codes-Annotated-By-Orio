@@ -1,0 +1,23 @@
+Depth = 16;
+Width = 8;
+Address_radix = dec;
+Data_radix = hex;
+Content
+Begin
+0: FF;	-- MVtab1[0] = -1
+1: 00;	-- MVtab1[1] = 0
+2: FF;	-- MVtab1[2] = -1
+3: 00;	-- MVtab1[3] = 0
+4: FF;	-- MVtab1[4] = -1
+5: 00;	-- MVtab1[5] = 0
+6: 07;	-- MVtab1[6] = 7
+7: 06;	-- MVtab1[7] = 6
+8: 06;	-- MVtab1[8] = 6
+9: 06;	-- MVtab1[9] = 6
+10: 05;	-- MVtab1[10] = 5
+11: 06;	-- MVtab1[11] = 6
+12: 04;	-- MVtab1[12] = 4
+13: 05;	-- MVtab1[13] = 5
+14: 04;	-- MVtab1[14] = 4
+15: 05;	-- MVtab1[15] = 5
+End;

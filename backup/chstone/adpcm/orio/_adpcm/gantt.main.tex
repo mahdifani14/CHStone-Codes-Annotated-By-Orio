@@ -1,0 +1,969 @@
+\documentclass[landscape]{article}
+\usepackage{gantt}
+\pagestyle{empty}
+\begin{document}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{66}{34}
+\begin{ganttitle}
+\numtitle{0}{1}{33}{1}
+\end{ganttitle}
+\ganttbar{  store i32 32, i32* @detl, align 4, !tbaa !1}{1}{1}
+\ganttbar{  store i32 8, i32* @deth, align 4, !tbaa !1}{1}{1}
+\ganttbar{  br label \%1}{1}{1}
+\ganttbar{  store i32 0, i32* @rlt2, align 4, !tbaa !1}{2}{1}
+\ganttbar{  store i32 0, i32* @rlt1, align 4, !tbaa !1}{2}{1}
+\ganttbar{  store i32 0, i32* @plt2, align 4, !tbaa !1}{3}{1}
+\ganttbar{  store i32 0, i32* @plt1, align 4, !tbaa !1}{3}{1}
+\ganttbar{  store i32 0, i32* @al2, align 4, !tbaa !1}{4}{1}
+\ganttbar{  store i32 0, i32* @al1, align 4, !tbaa !1}{4}{1}
+\ganttbar{  store i32 0, i32* @nbl, align 4, !tbaa !1}{5}{1}
+\ganttbar{  store i32 0, i32* @rh2, align 4, !tbaa !1}{5}{1}
+\ganttbar{  store i32 0, i32* @rh1, align 4, !tbaa !1}{6}{1}
+\ganttbar{  store i32 0, i32* @ph2, align 4, !tbaa !1}{6}{1}
+\ganttbar{  store i32 0, i32* @ph1, align 4, !tbaa !1}{7}{1}
+\ganttbar{  store i32 0, i32* @ah2, align 4, !tbaa !1}{7}{1}
+\ganttbar{  store i32 0, i32* @ah1, align 4, !tbaa !1}{8}{1}
+\ganttbar{  store i32 0, i32* @nbh, align 4, !tbaa !1}{8}{1}
+\ganttbar{  store i32 0, i32* getelementptr inbounds ([6 x i32]* @delay\_dltx, i32 0, i32 ...}{9}{1}
+\ganttbar{  store i32 0, i32* getelementptr inbounds ([6 x i32]* @delay\_dhx, i32 0, i32 0...}{9}{1}
+\ganttbar{  store i32 0, i32* getelementptr inbounds ([6 x i32]* @dec\_del\_dltx, i32 0, i...}{10}{1}
+\ganttbar{  store i32 0, i32* getelementptr inbounds ([6 x i32]* @dec\_del\_dhx, i32 0, i3...}{10}{1}
+\ganttbar{  store i32 0, i32* getelementptr inbounds ([6 x i32]* @delay\_dltx, i32 0, i32 ...}{11}{1}
+\ganttbar{  store i32 0, i32* getelementptr inbounds ([6 x i32]* @delay\_dhx, i32 0, i32 1...}{11}{1}
+\ganttbar{  store i32 0, i32* getelementptr inbounds ([6 x i32]* @dec\_del\_dltx, i32 0, i...}{12}{1}
+\ganttbar{  store i32 0, i32* getelementptr inbounds ([6 x i32]* @dec\_del\_dhx, i32 0, i3...}{12}{1}
+\ganttbar{  store i32 0, i32* getelementptr inbounds ([6 x i32]* @delay\_dltx, i32 0, i32 ...}{13}{1}
+\ganttbar{  store i32 0, i32* getelementptr inbounds ([6 x i32]* @delay\_dhx, i32 0, i32 2...}{13}{1}
+\ganttbar{  store i32 0, i32* getelementptr inbounds ([6 x i32]* @dec\_del\_dltx, i32 0, i...}{14}{1}
+\ganttbar{  store i32 0, i32* getelementptr inbounds ([6 x i32]* @dec\_del\_dhx, i32 0, i3...}{14}{1}
+\ganttbar{  store i32 0, i32* getelementptr inbounds ([6 x i32]* @delay\_dltx, i32 0, i32 ...}{15}{1}
+\ganttbar{  store i32 0, i32* getelementptr inbounds ([6 x i32]* @delay\_dhx, i32 0, i32 3...}{15}{1}
+\ganttbar{  store i32 0, i32* getelementptr inbounds ([6 x i32]* @dec\_del\_dltx, i32 0, i...}{16}{1}
+\ganttbar{  store i32 0, i32* getelementptr inbounds ([6 x i32]* @dec\_del\_dhx, i32 0, i3...}{16}{1}
+\ganttbar{  store i32 0, i32* getelementptr inbounds ([6 x i32]* @delay\_dltx, i32 0, i32 ...}{17}{1}
+\ganttbar{  store i32 0, i32* getelementptr inbounds ([6 x i32]* @delay\_dhx, i32 0, i32 4...}{17}{1}
+\ganttbar{  store i32 0, i32* getelementptr inbounds ([6 x i32]* @dec\_del\_dltx, i32 0, i...}{18}{1}
+\ganttbar{  store i32 0, i32* getelementptr inbounds ([6 x i32]* @dec\_del\_dhx, i32 0, i3...}{18}{1}
+\ganttbar{  store i32 0, i32* getelementptr inbounds ([6 x i32]* @delay\_dltx, i32 0, i32 ...}{19}{1}
+\ganttbar{  store i32 0, i32* getelementptr inbounds ([6 x i32]* @delay\_dhx, i32 0, i32 5...}{19}{1}
+\ganttbar{  store i32 0, i32* getelementptr inbounds ([6 x i32]* @dec\_del\_dltx, i32 0, i...}{20}{1}
+\ganttbar{  store i32 0, i32* getelementptr inbounds ([6 x i32]* @dec\_del\_dhx, i32 0, i3...}{20}{1}
+\ganttbar{  store i32 0, i32* getelementptr inbounds ([6 x i32]* @delay\_bpl, i32 0, i32 0...}{21}{1}
+\ganttbar{  store i32 0, i32* getelementptr inbounds ([6 x i32]* @delay\_bph, i32 0, i32 0...}{21}{1}
+\ganttbar{  store i32 0, i32* getelementptr inbounds ([6 x i32]* @dec\_del\_bpl, i32 0, i3...}{22}{1}
+\ganttbar{  store i32 0, i32* getelementptr inbounds ([6 x i32]* @dec\_del\_bph, i32 0, i3...}{22}{1}
+\ganttbar{  store i32 0, i32* getelementptr inbounds ([6 x i32]* @delay\_bpl, i32 0, i32 1...}{23}{1}
+\ganttbar{  store i32 0, i32* getelementptr inbounds ([6 x i32]* @delay\_bph, i32 0, i32 1...}{23}{1}
+\ganttbar{  store i32 0, i32* getelementptr inbounds ([6 x i32]* @dec\_del\_bpl, i32 0, i3...}{24}{1}
+\ganttbar{  store i32 0, i32* getelementptr inbounds ([6 x i32]* @dec\_del\_bph, i32 0, i3...}{24}{1}
+\ganttbar{  store i32 0, i32* getelementptr inbounds ([6 x i32]* @delay\_bpl, i32 0, i32 2...}{25}{1}
+\ganttbar{  store i32 0, i32* getelementptr inbounds ([6 x i32]* @delay\_bph, i32 0, i32 2...}{25}{1}
+\ganttbar{  store i32 0, i32* getelementptr inbounds ([6 x i32]* @dec\_del\_bpl, i32 0, i3...}{26}{1}
+\ganttbar{  store i32 0, i32* getelementptr inbounds ([6 x i32]* @dec\_del\_bph, i32 0, i3...}{26}{1}
+\ganttbar{  store i32 0, i32* getelementptr inbounds ([6 x i32]* @delay\_bpl, i32 0, i32 3...}{27}{1}
+\ganttbar{  store i32 0, i32* getelementptr inbounds ([6 x i32]* @delay\_bph, i32 0, i32 3...}{27}{1}
+\ganttbar{  store i32 0, i32* getelementptr inbounds ([6 x i32]* @dec\_del\_bpl, i32 0, i3...}{28}{1}
+\ganttbar{  store i32 0, i32* getelementptr inbounds ([6 x i32]* @dec\_del\_bph, i32 0, i3...}{28}{1}
+\ganttbar{  store i32 0, i32* getelementptr inbounds ([6 x i32]* @delay\_bpl, i32 0, i32 4...}{29}{1}
+\ganttbar{  store i32 0, i32* getelementptr inbounds ([6 x i32]* @delay\_bph, i32 0, i32 4...}{29}{1}
+\ganttbar{  store i32 0, i32* getelementptr inbounds ([6 x i32]* @dec\_del\_bpl, i32 0, i3...}{30}{1}
+\ganttbar{  store i32 0, i32* getelementptr inbounds ([6 x i32]* @dec\_del\_bph, i32 0, i3...}{30}{1}
+\ganttbar{  store i32 0, i32* getelementptr inbounds ([6 x i32]* @delay\_bpl, i32 0, i32 5...}{31}{1}
+\ganttbar{  store i32 0, i32* getelementptr inbounds ([6 x i32]* @delay\_bph, i32 0, i32 5...}{31}{1}
+\ganttbar{  store i32 0, i32* getelementptr inbounds ([6 x i32]* @dec\_del\_bpl, i32 0, i3...}{32}{1}
+\ganttbar{  store i32 0, i32* getelementptr inbounds ([6 x i32]* @dec\_del\_bph, i32 0, i3...}{32}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{4}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%indvar17 = phi i64 [ \%indvar.next18, \%2 ], [ 0, \%0 ]}{1}{1}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  \%exitcond19 = icmp eq i64 \%indvar17, 24}{1}{1}
+\ganttcon{2}{2}{1}{3}
+\ganttbar{  br i1 \%exitcond19, label \%legup\_memset\_4\_i64.exit.preheader, label \%2}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{2}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  br label \%legup\_memset\_4\_i64.exit}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{8}{3}
+\begin{ganttitle}
+\numtitle{0}{1}{2}{1}
+\end{ganttitle}
+\ganttbar{  \%3 = shl i64 \%indvar17, 2}{1}{1}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  \%4 = add i64 \%3, zext (i32 ptrtoint ([24 x i32]* @tqmf to i32) to i64)}{1}{1}
+\ganttcon{2}{2}{1}{3}
+\ganttbar{  \%5 = trunc i64 \%4 to i32}{1}{1}
+\ganttcon{2}{3}{1}{4}
+\ganttbar{  \%s.i.0 = inttoptr i32 \%5 to i32*}{1}{1}
+\ganttcon{2}{4}{1}{5}
+\ganttbar{  store i32 0, i32* \%s.i.0, align 4}{1}{1}
+\ganttbar{  \%indvar.next18 = add i64 \%indvar17, 1}{1}{1}
+\ganttbar{  br label \%1}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{4}{5}
+\begin{ganttitle}
+\numtitle{0}{1}{4}{1}
+\end{ganttitle}
+\ganttbar{  br label \%27}{1}{1}
+\ganttbar{  \%6 = tail call fastcc i32 @encode(i32 0, i32 undef) #1}{2}{1}
+\ganttcon{3}{2}{3}{3}
+\ganttbar{  store i32 \%6, i32* getelementptr inbounds ([1000 x i32]* @compressed, i32 0, ...}{3}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{35}{43}
+\begin{ganttitle}
+\numtitle{0}{1}{42}{1}
+\end{ganttitle}
+\ganttbar{  \%indvar8 = phi i32 [ 0, \%legup\_memset\_4\_i64.exit.preheader ], [ \%indvar....}{1}{1}
+\ganttcon{2}{1}{1}{3}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  \%i1.05.i = mul i32 \%indvar8, 6}{1}{1}
+\ganttcon{2}{2}{2}{13}
+\ganttcon{2}{2}{2}{12}
+\ganttcon{2}{2}{2}{10}
+\ganttcon{2}{2}{2}{9}
+\ganttcon{2}{2}{2}{8}
+\ganttcon{2}{2}{2}{7}
+\ganttcon{2}{2}{2}{6}
+\ganttbar{  \%indvar.next9 = add i32 \%indvar8, 1}{1}{1}
+\ganttcon{2}{3}{1}{4}
+\ganttcon{2}{3}{1}{1}
+\ganttbar{  \%exitcond10 = icmp eq i32 \%indvar.next9, 166}{1}{1}
+\ganttcon{2}{4}{1}{5}
+\ganttbar{  br i1 \%exitcond10, label \%.preheader2.i, label \%legup\_memset\_4\_i64.exit}{1}{1}
+\ganttbar{  \%7 = add i32 \%i1.05.i, 5}{2}{1}
+\ganttcon{3}{6}{3}{16}
+\ganttbar{  \%8 = add i32 \%i1.05.i, 4}{2}{1}
+\ganttcon{3}{7}{5}{24}
+\ganttcon{3}{7}{3}{17}
+\ganttbar{  \%9 = add i32 \%i1.05.i, 3}{2}{1}
+\ganttcon{3}{8}{3}{18}
+\ganttbar{  \%10 = add i32 \%i1.05.i, 2}{2}{1}
+\ganttcon{3}{9}{3}{20}
+\ganttcon{3}{9}{3}{19}
+\ganttbar{  \%11 = or i32 \%i1.05.i, 1}{2}{1}
+\ganttcon{3}{10}{2}{11}
+\ganttbar{  \%scevgep15 = getelementptr [1000 x i32]* @test\_data, i32 0, i32 \%11}{2}{1}
+\ganttcon{3}{11}{2}{15}
+\ganttbar{  \%scevgep16 = getelementptr [1000 x i32]* @test\_data, i32 0, i32 \%i1.05.i}{2}{1}
+\ganttcon{3}{12}{2}{14}
+\ganttbar{  \%12 = sdiv i32 \%i1.05.i, 2}{2}{32}
+\ganttcon{34}{13}{35}{25}
+\ganttbar{  \%13 = load i32* \%scevgep16, align 4, !tbaa !1}{2}{1}
+\ganttcon{3}{14}{4}{21}
+\ganttbar{  \%14 = load i32* \%scevgep15, align 4, !tbaa !1}{2}{1}
+\ganttcon{3}{15}{4}{21}
+\ganttbar{  \%scevgep11 = getelementptr [1000 x i32]* @test\_data, i32 0, i32 \%7}{3}{1}
+\ganttcon{4}{16}{38}{31}
+\ganttbar{  \%scevgep12 = getelementptr [1000 x i32]* @test\_data, i32 0, i32 \%8}{3}{1}
+\ganttcon{4}{17}{38}{30}
+\ganttbar{  \%scevgep13 = getelementptr [1000 x i32]* @test\_data, i32 0, i32 \%9}{3}{1}
+\ganttcon{4}{18}{5}{23}
+\ganttbar{  \%scevgep14 = getelementptr [1000 x i32]* @test\_data, i32 0, i32 \%10}{3}{1}
+\ganttcon{4}{19}{5}{22}
+\ganttbar{  \%17 = sdiv i32 \%10, 2}{3}{32}
+\ganttcon{35}{20}{36}{27}
+\ganttbar{  \%15 = tail call fastcc i32 @encode(i32 \%13, i32 \%14) #1}{4}{1}
+\ganttcon{5}{21}{35}{26}
+\ganttbar{  \%18 = load i32* \%scevgep14, align 4, !tbaa !1}{5}{1}
+\ganttcon{6}{22}{37}{28}
+\ganttbar{  \%19 = load i32* \%scevgep13, align 4, !tbaa !1}{5}{1}
+\ganttcon{6}{23}{37}{28}
+\ganttbar{  \%22 = sdiv i32 \%8, 2}{5}{32}
+\ganttcon{37}{24}{38}{32}
+\ganttbar{  \%16 = getelementptr inbounds [1000 x i32]* @compressed, i32 0, i32 \%12}{35}{1}
+\ganttcon{36}{25}{35}{26}
+\ganttbar{  store i32 \%15, i32* \%16, align 4, !tbaa !1}{35}{1}
+\ganttbar{  \%21 = getelementptr inbounds [1000 x i32]* @compressed, i32 0, i32 \%17}{36}{1}
+\ganttcon{37}{27}{38}{29}
+\ganttbar{  \%20 = tail call fastcc i32 @encode(i32 \%18, i32 \%19) #1}{37}{1}
+\ganttcon{38}{28}{38}{29}
+\ganttbar{  store i32 \%20, i32* \%21, align 4, !tbaa !1}{38}{1}
+\ganttbar{  \%23 = load i32* \%scevgep12, align 4, !tbaa !1}{38}{1}
+\ganttcon{39}{30}{40}{33}
+\ganttbar{  \%24 = load i32* \%scevgep11, align 4, !tbaa !1}{38}{1}
+\ganttcon{39}{31}{40}{33}
+\ganttbar{  \%26 = getelementptr inbounds [1000 x i32]* @compressed, i32 0, i32 \%22}{38}{1}
+\ganttcon{39}{32}{41}{34}
+\ganttbar{  \%25 = tail call fastcc i32 @encode(i32 \%23, i32 \%24) #1}{40}{1}
+\ganttcon{41}{33}{41}{34}
+\ganttbar{  store i32 \%25, i32* \%26, align 4, !tbaa !1}{41}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{281}{57}
+\begin{ganttitle}
+\numtitle{0}{1}{56}{1}
+\end{ganttitle}
+\ganttbar{  \%indvar = phi i32 [ \%indvar.next, \%27 ], [ 0, \%.preheader2.i ]}{1}{1}
+\ganttcon{2}{1}{1}{83}
+\ganttcon{2}{1}{1}{40}
+\ganttbar{  \%accumd.10.0 = phi i32 [ \%accumd.9.0, \%27 ], [ 0, \%.preheader2.i ]}{1}{1}
+\ganttcon{2}{2}{1}{82}
+\ganttbar{  \%accumd.9.0 = phi i32 [ \%accumd.8.0, \%27 ], [ 0, \%.preheader2.i ]}{1}{1}
+\ganttcon{2}{3}{1}{80}
+\ganttcon{2}{3}{1}{2}
+\ganttbar{  \%accumd.8.0 = phi i32 [ \%accumd.7.0, \%27 ], [ 0, \%.preheader2.i ]}{1}{1}
+\ganttcon{2}{4}{1}{78}
+\ganttcon{2}{4}{1}{3}
+\ganttbar{  \%accumd.7.0 = phi i32 [ \%accumd.6.0, \%27 ], [ 0, \%.preheader2.i ]}{1}{1}
+\ganttcon{2}{5}{1}{76}
+\ganttcon{2}{5}{1}{4}
+\ganttbar{  \%accumd.6.0 = phi i32 [ \%accumd.5.0, \%27 ], [ 0, \%.preheader2.i ]}{1}{1}
+\ganttcon{2}{6}{1}{74}
+\ganttcon{2}{6}{1}{5}
+\ganttbar{  \%accumd.5.0 = phi i32 [ \%accumd.4.0, \%27 ], [ 0, \%.preheader2.i ]}{1}{1}
+\ganttcon{2}{7}{1}{72}
+\ganttcon{2}{7}{1}{6}
+\ganttbar{  \%accumd.4.0 = phi i32 [ \%accumd.3.0, \%27 ], [ 0, \%.preheader2.i ]}{1}{1}
+\ganttcon{2}{8}{1}{70}
+\ganttcon{2}{8}{1}{7}
+\ganttbar{  \%accumd.3.0 = phi i32 [ \%accumd.2.0, \%27 ], [ 0, \%.preheader2.i ]}{1}{1}
+\ganttcon{2}{9}{1}{68}
+\ganttcon{2}{9}{1}{8}
+\ganttbar{  \%accumd.2.0 = phi i32 [ \%accumd.1.0, \%27 ], [ 0, \%.preheader2.i ]}{1}{1}
+\ganttcon{2}{10}{1}{66}
+\ganttcon{2}{10}{1}{9}
+\ganttbar{  \%accumd.1.0 = phi i32 [ \%accumd.0.0, \%27 ], [ 0, \%.preheader2.i ]}{1}{1}
+\ganttcon{2}{11}{1}{64}
+\ganttcon{2}{11}{1}{10}
+\ganttbar{  \%accumd.0.0 = phi i32 [ \%187, \%27 ], [ 0, \%.preheader2.i ]}{1}{1}
+\ganttcon{2}{12}{1}{62}
+\ganttcon{2}{12}{1}{11}
+\ganttbar{  \%accumc.10.0 = phi i32 [ \%accumc.9.0, \%27 ], [ 0, \%.preheader2.i ]}{1}{1}
+\ganttcon{2}{13}{1}{81}
+\ganttbar{  \%accumc.9.0 = phi i32 [ \%accumc.8.0, \%27 ], [ 0, \%.preheader2.i ]}{1}{1}
+\ganttcon{2}{14}{1}{79}
+\ganttcon{2}{14}{1}{13}
+\ganttbar{  \%accumc.8.0 = phi i32 [ \%accumc.7.0, \%27 ], [ 0, \%.preheader2.i ]}{1}{1}
+\ganttcon{2}{15}{1}{77}
+\ganttcon{2}{15}{1}{14}
+\ganttbar{  \%accumc.7.0 = phi i32 [ \%accumc.6.0, \%27 ], [ 0, \%.preheader2.i ]}{1}{1}
+\ganttcon{2}{16}{1}{75}
+\ganttcon{2}{16}{1}{15}
+\ganttbar{  \%accumc.6.0 = phi i32 [ \%accumc.5.0, \%27 ], [ 0, \%.preheader2.i ]}{1}{1}
+\ganttcon{2}{17}{1}{73}
+\ganttcon{2}{17}{1}{16}
+\ganttbar{  \%accumc.5.0 = phi i32 [ \%accumc.4.0, \%27 ], [ 0, \%.preheader2.i ]}{1}{1}
+\ganttcon{2}{18}{1}{71}
+\ganttcon{2}{18}{1}{17}
+\ganttbar{  \%accumc.4.0 = phi i32 [ \%accumc.3.0, \%27 ], [ 0, \%.preheader2.i ]}{1}{1}
+\ganttcon{2}{19}{1}{69}
+\ganttcon{2}{19}{1}{18}
+\ganttbar{  \%accumc.3.0 = phi i32 [ \%accumc.2.0, \%27 ], [ 0, \%.preheader2.i ]}{1}{1}
+\ganttcon{2}{20}{1}{67}
+\ganttcon{2}{20}{1}{19}
+\ganttbar{  \%accumc.2.0 = phi i32 [ \%accumc.1.0, \%27 ], [ 0, \%.preheader2.i ]}{1}{1}
+\ganttcon{2}{21}{1}{65}
+\ganttcon{2}{21}{1}{20}
+\ganttbar{  \%accumc.1.0 = phi i32 [ \%accumc.0.0, \%27 ], [ 0, \%.preheader2.i ]}{1}{1}
+\ganttcon{2}{22}{1}{63}
+\ganttcon{2}{22}{1}{21}
+\ganttbar{  \%accumc.0.0 = phi i32 [ \%186, \%27 ], [ 0, \%.preheader2.i ]}{1}{1}
+\ganttcon{2}{23}{1}{61}
+\ganttcon{2}{23}{1}{22}
+\ganttbar{  \%dec\_ph2.0 = phi i32 [ \%dec\_ph1.0, \%27 ], [ 0, \%.preheader2.i ]}{1}{1}
+\ganttcon{2}{24}{52}{227}
+\ganttbar{  \%dec\_ph1.0 = phi i32 [ \%161, \%27 ], [ 0, \%.preheader2.i ]}{1}{1}
+\ganttcon{2}{25}{52}{226}
+\ganttcon{2}{25}{1}{24}
+\ganttbar{  \%dec\_nbh.0 = phi i32 [ \%...i2.i.i, \%27 ], [ 0, \%.preheader2.i ]}{1}{1}
+\ganttcon{2}{26}{1}{56}
+\ganttbar{  \%dec\_deth.0 = phi i32 [ \%160, \%27 ], [ 8, \%.preheader2.i ]}{1}{1}
+\ganttcon{2}{27}{50}{215}
+\ganttbar{  \%dec\_ah2.0 = phi i32 [ \%...i.i.i, \%27 ], [ 0, \%.preheader2.i ]}{1}{1}
+\ganttcon{2}{28}{1}{59}
+\ganttcon{2}{28}{1}{55}
+\ganttbar{  \%dec\_rh2.0 = phi i32 [ \%dec\_rh1.0, \%27 ], [ 0, \%.preheader2.i ]}{1}{1}
+\ganttcon{2}{29}{1}{55}
+\ganttbar{  \%dec\_ah1.0 = phi i32 [ \%apl1.2.i.i.i, \%27 ], [ 0, \%.preheader2.i ]}{1}{1}
+\ganttcon{2}{30}{1}{60}
+\ganttcon{2}{30}{1}{57}
+\ganttcon{2}{30}{1}{54}
+\ganttbar{  \%dec\_rh1.0 = phi i32 [ \%185, \%27 ], [ 0, \%.preheader2.i ]}{1}{1}
+\ganttcon{2}{31}{1}{54}
+\ganttcon{2}{31}{1}{29}
+\ganttbar{  \%dec\_plt2.0 = phi i32 [ \%dec\_plt1.0, \%27 ], [ 0, \%.preheader2.i ]}{1}{1}
+\ganttcon{2}{32}{37}{154}
+\ganttbar{  \%dec\_plt1.0 = phi i32 [ \%88, \%27 ], [ 0, \%.preheader2.i ]}{1}{1}
+\ganttcon{2}{33}{37}{153}
+\ganttcon{2}{33}{1}{32}
+\ganttbar{  \%dec\_nbl.0 = phi i32 [ \%...i13.i.i, \%27 ], [ 0, \%.preheader2.i ]}{1}{1}
+\ganttcon{2}{34}{1}{49}
+\ganttbar{  \%dec\_detl.0 = phi i32 [ \%87, \%27 ], [ 32, \%.preheader2.i ]}{1}{1}
+\ganttcon{2}{35}{10}{126}
+\ganttcon{2}{35}{36}{139}
+\ganttbar{  \%dec\_al2.0 = phi i32 [ \%...i11.i.i, \%27 ], [ 0, \%.preheader2.i ]}{1}{1}
+\ganttcon{2}{36}{1}{52}
+\ganttcon{2}{36}{1}{48}
+\ganttbar{  \%dec\_rlt2.0 = phi i32 [ \%dec\_rlt1.0, \%27 ], [ 0, \%.preheader2.i ]}{1}{1}
+\ganttcon{2}{37}{1}{48}
+\ganttbar{  \%dec\_al1.0 = phi i32 [ \%apl1.2.i7.i.i, \%27 ], [ 0, \%.preheader2.i ]}{1}{1}
+\ganttcon{2}{38}{1}{53}
+\ganttcon{2}{38}{1}{50}
+\ganttcon{2}{38}{1}{47}
+\ganttbar{  \%dec\_rlt1.0 = phi i32 [ \%112, \%27 ], [ 0, \%.preheader2.i ]}{1}{1}
+\ganttcon{2}{39}{1}{47}
+\ganttcon{2}{39}{1}{37}
+\ganttbar{  \%i.03.i = shl i32 \%indvar, 1}{1}{1}
+\ganttcon{2}{40}{1}{44}
+\ganttcon{2}{40}{1}{43}
+\ganttcon{2}{40}{1}{41}
+\ganttbar{  \%28 = or i32 \%i.03.i, 1}{1}{1}
+\ganttcon{2}{41}{1}{42}
+\ganttbar{  \%scevgep6 = getelementptr [1000 x i32]* @result, i32 0, i32 \%28}{1}{1}
+\ganttcon{2}{42}{55}{278}
+\ganttbar{  \%scevgep7 = getelementptr [1000 x i32]* @result, i32 0, i32 \%i.03.i}{1}{1}
+\ganttcon{2}{43}{55}{277}
+\ganttbar{  \%29 = sdiv i32 \%i.03.i, 2}{1}{32}
+\ganttcon{33}{44}{33}{129}
+\ganttbar{  \%33 = load i32* getelementptr inbounds ([6 x i32]* @dec\_del\_bpl, i32 0, i32...}{1}{2}
+\ganttcon{3}{45}{3}{102}
+\ganttbar{  \%34 = load i32* getelementptr inbounds ([6 x i32]* @dec\_del\_dltx, i32 0, i3...}{1}{2}
+\ganttcon{3}{46}{3}{102}
+\ganttbar{  \%57 = mul i32 \%dec\_al1.0, \%dec\_rlt1.0}{1}{1}
+\ganttcon{2}{47}{2}{88}
+\ganttbar{  \%58 = mul i32 \%dec\_al2.0, \%dec\_rlt2.0}{1}{1}
+\ganttcon{2}{48}{2}{88}
+\ganttbar{  \%73 = mul nsw i32 \%dec\_nbl.0, 127}{1}{1}
+\ganttcon{2}{49}{2}{91}
+\ganttbar{  \%89 = shl nsw i32 \%dec\_al1.0, 2}{1}{1}
+\ganttcon{2}{50}{38}{157}
+\ganttcon{2}{50}{1}{51}
+\ganttbar{  \%92 = sub nsw i32 0, \%89}{1}{1}
+\ganttcon{2}{51}{38}{157}
+\ganttbar{  \%98 = mul nsw i32 \%dec\_al2.0, 127}{1}{1}
+\ganttcon{2}{52}{2}{92}
+\ganttbar{  \%103 = mul nsw i32 \%dec\_al1.0, 255}{1}{1}
+\ganttcon{2}{53}{2}{93}
+\ganttbar{  \%137 = mul i32 \%dec\_ah1.0, \%dec\_rh1.0}{1}{1}
+\ganttcon{2}{54}{2}{95}
+\ganttbar{  \%138 = mul i32 \%dec\_ah2.0, \%dec\_rh2.0}{1}{1}
+\ganttcon{2}{55}{2}{95}
+\ganttbar{  \%146 = mul nsw i32 \%dec\_nbh.0, 127}{1}{1}
+\ganttcon{2}{56}{2}{98}
+\ganttbar{  \%162 = shl nsw i32 \%dec\_ah1.0, 2}{1}{1}
+\ganttcon{2}{57}{54}{235}
+\ganttcon{2}{57}{1}{58}
+\ganttbar{  \%165 = sub nsw i32 0, \%162}{1}{1}
+\ganttcon{2}{58}{54}{235}
+\ganttbar{  \%171 = mul nsw i32 \%dec\_ah2.0, 127}{1}{1}
+\ganttcon{2}{59}{2}{99}
+\ganttbar{  \%176 = mul nsw i32 \%dec\_ah1.0, 255}{1}{1}
+\ganttcon{2}{60}{2}{100}
+\ganttbar{  \%190 = mul nsw i32 \%accumc.0.0, -44}{1}{1}
+\ganttcon{2}{61}{54}{247}
+\ganttbar{  \%192 = mul nsw i32 \%accumd.0.0, 212}{1}{1}
+\ganttcon{2}{62}{54}{248}
+\ganttbar{  \%194 = mul nsw i32 \%accumc.1.0, 48}{1}{1}
+\ganttcon{2}{63}{54}{249}
+\ganttbar{  \%196 = mul nsw i32 \%accumd.1.0, -624}{1}{1}
+\ganttcon{2}{64}{54}{250}
+\ganttbar{  \%198 = shl nsw i32 \%accumc.2.0, 7}{1}{1}
+\ganttcon{2}{65}{54}{251}
+\ganttbar{  \%200 = mul nsw i32 \%accumd.2.0, 1448}{1}{1}
+\ganttcon{2}{66}{54}{252}
+\ganttbar{  \%202 = mul nsw i32 \%accumc.3.0, -840}{1}{1}
+\ganttcon{2}{67}{54}{253}
+\ganttbar{  \%204 = mul nsw i32 \%accumd.3.0, -3220}{1}{1}
+\ganttcon{2}{68}{54}{254}
+\ganttbar{  \%206 = mul nsw i32 \%accumc.4.0, 3804}{1}{1}
+\ganttcon{2}{69}{54}{255}
+\ganttbar{  \%208 = mul nsw i32 \%accumd.4.0, 15504}{1}{1}
+\ganttcon{2}{70}{54}{256}
+\ganttbar{  \%210 = mul nsw i32 \%accumc.5.0, 15504}{1}{1}
+\ganttcon{2}{71}{54}{257}
+\ganttbar{  \%212 = mul nsw i32 \%accumd.5.0, 3804}{1}{1}
+\ganttcon{2}{72}{54}{258}
+\ganttbar{  \%214 = mul nsw i32 \%accumc.6.0, -3220}{1}{1}
+\ganttcon{2}{73}{54}{259}
+\ganttbar{  \%216 = mul nsw i32 \%accumd.6.0, -840}{1}{1}
+\ganttcon{2}{74}{54}{260}
+\ganttbar{  \%218 = mul nsw i32 \%accumc.7.0, 1448}{1}{1}
+\ganttcon{2}{75}{54}{261}
+\ganttbar{  \%220 = shl nsw i32 \%accumd.7.0, 7}{1}{1}
+\ganttcon{2}{76}{54}{262}
+\ganttbar{  \%222 = mul nsw i32 \%accumc.8.0, -624}{1}{1}
+\ganttcon{2}{77}{55}{269}
+\ganttbar{  \%224 = mul nsw i32 \%accumd.8.0, 48}{1}{1}
+\ganttcon{2}{78}{55}{270}
+\ganttbar{  \%226 = mul nsw i32 \%accumc.9.0, 212}{1}{1}
+\ganttcon{2}{79}{55}{271}
+\ganttbar{  \%228 = mul nsw i32 \%accumd.9.0, -44}{1}{1}
+\ganttcon{2}{80}{55}{272}
+\ganttbar{  \%230 = mul nsw i32 \%accumc.10.0, -44}{1}{1}
+\ganttcon{2}{81}{55}{273}
+\ganttbar{  \%232 = mul nsw i32 \%accumd.10.0, 12}{1}{1}
+\ganttcon{2}{82}{55}{274}
+\ganttbar{  \%indvar.next = add i32 \%indvar, 1}{1}{1}
+\ganttcon{2}{83}{1}{84}
+\ganttcon{2}{83}{1}{1}
+\ganttbar{  \%exitcond5 = icmp eq i32 \%indvar.next, 500}{1}{1}
+\ganttcon{2}{84}{1}{85}
+\ganttbar{  br i1 \%exitcond5, label \%adpcm\_main.exit.preheader, label \%27}{1}{1}
+\ganttbar{  \%36 = load i32* getelementptr inbounds ([6 x i32]* @dec\_del\_bpl, i32 0, i32...}{2}{2}
+\ganttcon{4}{86}{4}{105}
+\ganttbar{  \%37 = load i32* getelementptr inbounds ([6 x i32]* @dec\_del\_dltx, i32 0, i3...}{2}{2}
+\ganttcon{4}{87}{4}{105}
+\ganttbar{  \%tmp.i.i.i = add i32 \%58, \%57}{2}{1}
+\ganttcon{3}{88}{2}{89}
+\ganttbar{  \%tmp1.i.i.i = shl i32 \%tmp.i.i.i, 1}{2}{1}
+\ganttcon{3}{89}{2}{90}
+\ganttbar{  \%59 = ashr i32 \%tmp1.i.i.i, 15}{2}{1}
+\ganttcon{3}{90}{9}{123}
+\ganttbar{  \%74 = ashr i32 \%73, 7}{2}{1}
+\ganttcon{3}{91}{36}{140}
+\ganttbar{  \%99 = ashr i32 \%98, 7}{2}{1}
+\ganttcon{3}{92}{38}{162}
+\ganttbar{  \%104 = ashr i32 \%103, 8}{2}{1}
+\ganttcon{3}{93}{2}{94}
+\ganttbar{  \%107 = add nsw i32 \%104, 192}{2}{1}
+\ganttcon{3}{94}{38}{168}
+\ganttbar{  \%tmp.i3.i.i = add i32 \%138, \%137}{2}{1}
+\ganttcon{3}{95}{2}{96}
+\ganttbar{  \%tmp1.i4.i.i = shl i32 \%tmp.i3.i.i, 1}{2}{1}
+\ganttcon{3}{96}{2}{97}
+\ganttbar{  \%139 = ashr i32 \%tmp1.i4.i.i, 15}{2}{1}
+\ganttcon{3}{97}{52}{222}
+\ganttbar{  \%147 = ashr i32 \%146, 7}{2}{1}
+\ganttcon{3}{98}{45}{190}
+\ganttbar{  \%172 = ashr i32 \%171, 7}{2}{1}
+\ganttcon{3}{99}{54}{240}
+\ganttbar{  \%177 = ashr i32 \%176, 8}{2}{1}
+\ganttcon{3}{100}{2}{101}
+\ganttbar{  \%180 = add nsw i32 \%177, 192}{2}{1}
+\ganttcon{3}{101}{54}{246}
+\ganttbar{  \%35 = mul nsw i32 \%34, \%33}{3}{1}
+\ganttcon{4}{102}{5}{108}
+\ganttbar{  \%40 = load i32* getelementptr inbounds ([6 x i32]* @dec\_del\_bpl, i32 0, i32...}{3}{2}
+\ganttcon{5}{103}{5}{109}
+\ganttbar{  \%41 = load i32* getelementptr inbounds ([6 x i32]* @dec\_del\_dltx, i32 0, i3...}{3}{2}
+\ganttcon{5}{104}{5}{109}
+\ganttbar{  \%38 = mul nsw i32 \%37, \%36}{4}{1}
+\ganttcon{5}{105}{5}{108}
+\ganttbar{  \%44 = load i32* getelementptr inbounds ([6 x i32]* @dec\_del\_bpl, i32 0, i32...}{4}{2}
+\ganttcon{6}{106}{6}{113}
+\ganttbar{  \%45 = load i32* getelementptr inbounds ([6 x i32]* @dec\_del\_dltx, i32 0, i3...}{4}{2}
+\ganttcon{6}{107}{6}{113}
+\ganttbar{  \%39 = add nsw i32 \%38, \%35}{5}{1}
+\ganttcon{6}{108}{6}{112}
+\ganttbar{  \%42 = mul nsw i32 \%41, \%40}{5}{1}
+\ganttcon{6}{109}{6}{112}
+\ganttbar{  \%48 = load i32* getelementptr inbounds ([6 x i32]* @dec\_del\_bpl, i32 0, i32...}{5}{2}
+\ganttcon{7}{110}{7}{117}
+\ganttbar{  \%49 = load i32* getelementptr inbounds ([6 x i32]* @dec\_del\_dltx, i32 0, i3...}{5}{2}
+\ganttcon{7}{111}{7}{117}
+\ganttbar{  \%43 = add nsw i32 \%39, \%42}{6}{1}
+\ganttcon{7}{112}{7}{116}
+\ganttbar{  \%46 = mul nsw i32 \%45, \%44}{6}{1}
+\ganttcon{7}{113}{7}{116}
+\ganttbar{  \%52 = load i32* getelementptr inbounds ([6 x i32]* @dec\_del\_bpl, i32 0, i32...}{6}{2}
+\ganttcon{8}{114}{8}{120}
+\ganttbar{  \%53 = load i32* getelementptr inbounds ([6 x i32]* @dec\_del\_dltx, i32 0, i3...}{6}{2}
+\ganttcon{8}{115}{8}{120}
+\ganttbar{  \%47 = add nsw i32 \%43, \%46}{7}{1}
+\ganttcon{8}{116}{8}{119}
+\ganttbar{  \%50 = mul nsw i32 \%49, \%48}{7}{1}
+\ganttcon{8}{117}{8}{119}
+\ganttbar{  \%67 = load i32* @il, align 4, !tbaa !1}{7}{2}
+\ganttcon{9}{118}{9}{124}
+\ganttbar{  \%51 = add nsw i32 \%47, \%50}{8}{1}
+\ganttcon{9}{119}{9}{121}
+\ganttbar{  \%54 = mul nsw i32 \%53, \%52}{8}{1}
+\ganttcon{9}{120}{9}{121}
+\ganttbar{  \%55 = add nsw i32 \%51, \%54}{9}{1}
+\ganttcon{10}{121}{9}{122}
+\ganttbar{  \%56 = ashr i32 \%55, 14}{9}{1}
+\ganttcon{10}{122}{37}{152}
+\ganttcon{10}{122}{9}{123}
+\ganttbar{  \%60 = add nsw i32 \%59, \%56}{9}{1}
+\ganttcon{10}{123}{37}{155}
+\ganttcon{10}{123}{11}{128}
+\ganttbar{  \%68 = getelementptr inbounds [64 x i32]* @qq6\_code6\_table, i32 0, i32 \%67}{9}{1}
+\ganttcon{10}{124}{9}{125}
+\ganttbar{  \%69 = load i32* \%68, align 4, !tbaa !1}{9}{1}
+\ganttcon{10}{125}{10}{126}
+\ganttbar{  \%70 = mul nsw i32 \%69, \%dec\_detl.0}{10}{1}
+\ganttcon{11}{126}{11}{127}
+\ganttbar{  \%71 = ashr i32 \%70, 15}{11}{1}
+\ganttcon{12}{127}{11}{128}
+\ganttbar{  \%72 = add nsw i32 \%71, \%60}{11}{1}
+\ganttcon{12}{128}{52}{230}
+\ganttcon{12}{128}{52}{229}
+\ganttbar{  \%30 = getelementptr inbounds [1000 x i32]* @compressed, i32 0, i32 \%29}{33}{1}
+\ganttcon{34}{129}{33}{130}
+\ganttbar{  \%31 = load i32* \%30, align 4, !tbaa !1}{33}{1}
+\ganttcon{34}{130}{34}{132}
+\ganttcon{34}{130}{34}{131}
+\ganttbar{  \%32 = ashr i32 \%31, 6}{34}{1}
+\ganttcon{35}{131}{35}{138}
+\ganttbar{  \%61 = lshr i32 \%31, 2}{34}{1}
+\ganttcon{35}{132}{34}{133}
+\ganttbar{  \%62 = and i32 \%61, 15}{34}{1}
+\ganttcon{35}{133}{34}{136}
+\ganttcon{35}{133}{34}{134}
+\ganttbar{  \%63 = getelementptr inbounds [16 x i32]* @qq4\_code4\_table, i32 0, i32 \%62}{34}{1}
+\ganttcon{35}{134}{34}{135}
+\ganttbar{  \%64 = load i32* \%63, align 4, !tbaa !1}{34}{2}
+\ganttcon{36}{135}{36}{139}
+\ganttbar{  \%75 = getelementptr inbounds [16 x i32]* @wl\_code\_table, i32 0, i32 \%62}{34}{1}
+\ganttcon{35}{136}{34}{137}
+\ganttbar{  \%76 = load i32* \%75, align 4, !tbaa !1}{34}{2}
+\ganttcon{36}{137}{36}{140}
+\ganttbar{  store i32 \%32, i32* @ih, align 4, !tbaa !1}{35}{1}
+\ganttbar{  \%65 = mul nsw i32 \%64, \%dec\_detl.0}{36}{1}
+\ganttcon{37}{139}{37}{149}
+\ganttbar{  \%77 = add nsw i32 \%74, \%76}{36}{1}
+\ganttcon{37}{140}{36}{142}
+\ganttcon{37}{140}{36}{141}
+\ganttbar{  \%78 = icmp slt i32 \%77, 0}{36}{1}
+\ganttcon{37}{141}{36}{142}
+\ganttbar{  \%..i12.i.i = select i1 \%78, i32 0, i32 \%77}{36}{1}
+\ganttcon{37}{142}{36}{144}
+\ganttcon{37}{142}{36}{143}
+\ganttbar{  \%79 = icmp sgt i32 \%..i12.i.i, 18432}{36}{1}
+\ganttcon{37}{143}{36}{144}
+\ganttbar{  \%...i13.i.i = select i1 \%79, i32 18432, i32 \%..i12.i.i}{36}{1}
+\ganttcon{37}{144}{36}{147}
+\ganttcon{37}{144}{36}{145}
+\ganttcon{37}{144}{1}{34}
+\ganttbar{  \%80 = lshr i32 \%...i13.i.i, 6}{36}{1}
+\ganttcon{37}{145}{36}{146}
+\ganttbar{  \%81 = and i32 \%80, 31}{36}{1}
+\ganttcon{37}{146}{37}{150}
+\ganttbar{  \%82 = ashr i32 \%...i13.i.i, 11}{36}{1}
+\ganttcon{37}{147}{36}{148}
+\ganttbar{  \%85 = sub i32 9, \%82}{36}{1}
+\ganttcon{37}{148}{39}{169}
+\ganttbar{  \%66 = ashr i32 \%65, 15}{37}{1}
+\ganttcon{38}{149}{37}{155}
+\ganttcon{38}{149}{40}{177}
+\ganttcon{38}{149}{37}{152}
+\ganttbar{  \%83 = getelementptr inbounds [32 x i32]* @ilb\_table, i32 0, i32 \%81}{37}{1}
+\ganttcon{38}{150}{37}{151}
+\ganttbar{  \%84 = load i32* \%83, align 4, !tbaa !1}{37}{2}
+\ganttcon{39}{151}{39}{169}
+\ganttbar{  \%88 = add nsw i32 \%56, \%66}{37}{1}
+\ganttcon{38}{152}{37}{154}
+\ganttcon{38}{152}{37}{153}
+\ganttcon{38}{152}{1}{33}
+\ganttbar{  \%90 = mul nsw i32 \%dec\_plt1.0, \%88}{37}{1}
+\ganttcon{38}{153}{38}{166}
+\ganttcon{38}{153}{38}{156}
+\ganttbar{  \%94 = mul nsw i32 \%dec\_plt2.0, \%88}{37}{1}
+\ganttcon{38}{154}{38}{159}
+\ganttbar{  \%112 = add nsw i32 \%66, \%60}{37}{1}
+\ganttcon{38}{155}{1}{39}
+\ganttbar{  \%91 = icmp sgt i32 \%90, -1}{38}{1}
+\ganttcon{39}{156}{38}{157}
+\ganttbar{  \%.1.i8.i.i = select i1 \%91, i32 \%92, i32 \%89}{38}{1}
+\ganttcon{39}{157}{38}{158}
+\ganttbar{  \%93 = ashr i32 \%.1.i8.i.i, 7}{38}{1}
+\ganttcon{39}{158}{38}{162}
+\ganttbar{  \%95 = ashr i32 \%94, 31}{38}{1}
+\ganttcon{39}{159}{38}{160}
+\ganttbar{  \%96 = and i32 \%95, -256}{38}{1}
+\ganttcon{39}{160}{38}{161}
+\ganttbar{  \%97 = or i32 \%96, 128}{38}{1}
+\ganttcon{39}{161}{38}{163}
+\ganttbar{  \%wd4.0.i9.i.i = add nsw i32 \%93, \%99}{38}{1}
+\ganttcon{39}{162}{38}{163}
+\ganttbar{  \%100 = add nsw i32 \%wd4.0.i9.i.i, \%97}{38}{1}
+\ganttcon{39}{163}{38}{165}
+\ganttcon{39}{163}{38}{164}
+\ganttbar{  \%101 = icmp sgt i32 \%100, 12288}{38}{1}
+\ganttcon{39}{164}{38}{165}
+\ganttbar{  \%..i10.i.i = select i1 \%101, i32 12288, i32 \%100}{38}{1}
+\ganttcon{39}{165}{39}{172}
+\ganttcon{39}{165}{39}{171}
+\ganttbar{  \%105 = ashr i32 \%90, 31}{38}{1}
+\ganttcon{39}{166}{38}{167}
+\ganttbar{  \%106 = and i32 \%105, -384}{38}{1}
+\ganttcon{39}{167}{38}{168}
+\ganttbar{  \%apl1.0.i5.i.i = add nsw i32 \%107, \%106}{38}{1}
+\ganttcon{39}{168}{39}{175}
+\ganttcon{39}{168}{39}{174}
+\ganttbar{  \%86 = ashr i32 \%84, \%85}{39}{1}
+\ganttcon{40}{169}{39}{170}
+\ganttbar{  \%87 = shl i32 \%86, 3}{39}{1}
+\ganttcon{40}{170}{1}{35}
+\ganttbar{  \%102 = icmp slt i32 \%..i10.i.i, -12288}{39}{1}
+\ganttcon{40}{171}{39}{172}
+\ganttbar{  \%...i11.i.i = select i1 \%102, i32 -12288, i32 \%..i10.i.i}{39}{1}
+\ganttcon{40}{172}{39}{173}
+\ganttcon{40}{172}{1}{36}
+\ganttbar{  \%108 = sub nsw i32 15360, \%...i11.i.i}{39}{1}
+\ganttcon{40}{173}{39}{176}
+\ganttcon{40}{173}{39}{175}
+\ganttcon{40}{173}{39}{174}
+\ganttbar{  \%109 = icmp sgt i32 \%apl1.0.i5.i.i, \%108}{39}{1}
+\ganttcon{40}{174}{39}{175}
+\ganttbar{  \%.apl1.0.i6.i.i = select i1 \%109, i32 \%108, i32 \%apl1.0.i5.i.i}{39}{1}
+\ganttcon{40}{175}{41}{179}
+\ganttcon{40}{175}{41}{178}
+\ganttbar{  \%110 = sub nsw i32 0, \%108}{39}{1}
+\ganttcon{40}{176}{41}{179}
+\ganttcon{40}{176}{41}{178}
+\ganttbar{  tail call fastcc void @upzero(i32 \%66, i32* getelementptr inbounds ([6 x i32]...}{40}{1}
+\ganttbar{  \%111 = icmp slt i32 \%.apl1.0.i6.i.i, \%110}{41}{1}
+\ganttcon{42}{178}{41}{179}
+\ganttbar{  \%apl1.2.i7.i.i = select i1 \%111, i32 \%110, i32 \%.apl1.0.i6.i.i}{41}{1}
+\ganttcon{42}{179}{1}{38}
+\ganttbar{  \%141 = load i32* @ih, align 4, !tbaa !1}{41}{2}
+\ganttcon{43}{180}{43}{184}
+\ganttcon{43}{180}{43}{183}
+\ganttbar{  \%113 = load i32* getelementptr inbounds ([6 x i32]* @dec\_del\_bph, i32 0, i3...}{42}{2}
+\ganttcon{44}{181}{46}{199}
+\ganttbar{  \%116 = load i32* getelementptr inbounds ([6 x i32]* @dec\_del\_bph, i32 0, i3...}{43}{2}
+\ganttcon{45}{182}{47}{203}
+\ganttbar{  \%142 = getelementptr inbounds [4 x i32]* @qq2\_code2\_table, i32 0, i32 \%141}{43}{1}
+\ganttcon{44}{183}{48}{209}
+\ganttbar{  \%148 = getelementptr inbounds [4 x i32]* @wh\_code\_table, i32 0, i32 \%141}{43}{1}
+\ganttcon{44}{184}{43}{185}
+\ganttbar{  \%149 = load i32* \%148, align 4, !tbaa !1}{43}{2}
+\ganttcon{45}{185}{45}{190}
+\ganttbar{  \%114 = load i32* getelementptr inbounds ([6 x i32]* @dec\_del\_dhx, i32 0, i3...}{44}{2}
+\ganttcon{46}{186}{46}{199}
+\ganttbar{  \%120 = load i32* getelementptr inbounds ([6 x i32]* @dec\_del\_bph, i32 0, i3...}{44}{2}
+\ganttcon{46}{187}{48}{207}
+\ganttbar{  \%117 = load i32* getelementptr inbounds ([6 x i32]* @dec\_del\_dhx, i32 0, i3...}{45}{2}
+\ganttcon{47}{188}{47}{203}
+\ganttbar{  \%124 = load i32* getelementptr inbounds ([6 x i32]* @dec\_del\_bph, i32 0, i3...}{45}{2}
+\ganttcon{47}{189}{49}{211}
+\ganttbar{  \%150 = add nsw i32 \%147, \%149}{45}{1}
+\ganttcon{46}{190}{45}{192}
+\ganttcon{46}{190}{45}{191}
+\ganttbar{  \%151 = icmp slt i32 \%150, 0}{45}{1}
+\ganttcon{46}{191}{45}{192}
+\ganttbar{  \%..i1.i.i = select i1 \%151, i32 0, i32 \%150}{45}{1}
+\ganttcon{46}{192}{45}{194}
+\ganttcon{46}{192}{45}{193}
+\ganttbar{  \%152 = icmp sgt i32 \%..i1.i.i, 22528}{45}{1}
+\ganttcon{46}{193}{45}{194}
+\ganttbar{  \%...i2.i.i = select i1 \%152, i32 22528, i32 \%..i1.i.i}{45}{1}
+\ganttcon{46}{194}{45}{197}
+\ganttcon{46}{194}{45}{195}
+\ganttcon{46}{194}{1}{26}
+\ganttbar{  \%153 = lshr i32 \%...i2.i.i, 6}{45}{1}
+\ganttcon{46}{195}{45}{196}
+\ganttbar{  \%154 = and i32 \%153, 31}{45}{1}
+\ganttcon{46}{196}{46}{202}
+\ganttbar{  \%155 = ashr i32 \%...i2.i.i, 11}{45}{1}
+\ganttcon{46}{197}{45}{198}
+\ganttbar{  \%158 = sub i32 11, \%155}{45}{1}
+\ganttcon{46}{198}{52}{223}
+\ganttbar{  \%115 = mul nsw i32 \%114, \%113}{46}{1}
+\ganttcon{47}{199}{48}{206}
+\ganttbar{  \%121 = load i32* getelementptr inbounds ([6 x i32]* @dec\_del\_dhx, i32 0, i3...}{46}{2}
+\ganttcon{48}{200}{48}{207}
+\ganttbar{  \%128 = load i32* getelementptr inbounds ([6 x i32]* @dec\_del\_bph, i32 0, i3...}{46}{2}
+\ganttcon{48}{201}{50}{214}
+\ganttbar{  \%156 = getelementptr inbounds [32 x i32]* @ilb\_table, i32 0, i32 \%154}{46}{1}
+\ganttcon{47}{202}{50}{216}
+\ganttbar{  \%118 = mul nsw i32 \%117, \%116}{47}{1}
+\ganttcon{48}{203}{48}{206}
+\ganttbar{  \%125 = load i32* getelementptr inbounds ([6 x i32]* @dec\_del\_dhx, i32 0, i3...}{47}{2}
+\ganttcon{49}{204}{49}{211}
+\ganttbar{  \%132 = load i32* getelementptr inbounds ([6 x i32]* @dec\_del\_bph, i32 0, i3...}{47}{2}
+\ganttcon{49}{205}{51}{218}
+\ganttbar{  \%119 = add nsw i32 \%118, \%115}{48}{1}
+\ganttcon{49}{206}{49}{210}
+\ganttbar{  \%122 = mul nsw i32 \%121, \%120}{48}{1}
+\ganttcon{49}{207}{49}{210}
+\ganttbar{  \%129 = load i32* getelementptr inbounds ([6 x i32]* @dec\_del\_dhx, i32 0, i3...}{48}{2}
+\ganttcon{50}{208}{50}{214}
+\ganttbar{  \%143 = load i32* \%142, align 4, !tbaa !1}{48}{2}
+\ganttcon{50}{209}{50}{215}
+\ganttbar{  \%123 = add nsw i32 \%119, \%122}{49}{1}
+\ganttcon{50}{210}{50}{213}
+\ganttbar{  \%126 = mul nsw i32 \%125, \%124}{49}{1}
+\ganttcon{50}{211}{50}{213}
+\ganttbar{  \%133 = load i32* getelementptr inbounds ([6 x i32]* @dec\_del\_dhx, i32 0, i3...}{49}{2}
+\ganttcon{51}{212}{51}{218}
+\ganttbar{  \%127 = add nsw i32 \%123, \%126}{50}{1}
+\ganttcon{51}{213}{51}{217}
+\ganttbar{  \%130 = mul nsw i32 \%129, \%128}{50}{1}
+\ganttcon{51}{214}{51}{217}
+\ganttbar{  \%144 = mul nsw i32 \%143, \%dec\_deth.0}{50}{1}
+\ganttcon{51}{215}{51}{219}
+\ganttbar{  \%157 = load i32* \%156, align 4, !tbaa !1}{50}{2}
+\ganttcon{52}{216}{52}{223}
+\ganttbar{  \%131 = add nsw i32 \%127, \%130}{51}{1}
+\ganttcon{52}{217}{52}{220}
+\ganttbar{  \%134 = mul nsw i32 \%133, \%132}{51}{1}
+\ganttcon{52}{218}{52}{220}
+\ganttbar{  \%145 = ashr i32 \%144, 15}{51}{1}
+\ganttcon{52}{219}{52}{228}
+\ganttcon{52}{219}{53}{233}
+\ganttcon{52}{219}{52}{225}
+\ganttbar{  \%135 = add nsw i32 \%131, \%134}{52}{1}
+\ganttcon{53}{220}{52}{221}
+\ganttbar{  \%136 = ashr i32 \%135, 14}{52}{1}
+\ganttcon{53}{221}{52}{225}
+\ganttcon{53}{221}{52}{222}
+\ganttbar{  \%140 = add nsw i32 \%139, \%136}{52}{1}
+\ganttcon{53}{222}{52}{228}
+\ganttbar{  \%159 = ashr i32 \%157, \%158}{52}{1}
+\ganttcon{53}{223}{52}{224}
+\ganttbar{  \%160 = shl i32 \%159, 3}{52}{1}
+\ganttcon{53}{224}{1}{27}
+\ganttbar{  \%161 = add nsw i32 \%136, \%145}{52}{1}
+\ganttcon{53}{225}{52}{227}
+\ganttcon{53}{225}{52}{226}
+\ganttcon{53}{225}{1}{25}
+\ganttbar{  \%163 = mul nsw i32 \%dec\_ph1.0, \%161}{52}{1}
+\ganttcon{53}{226}{54}{244}
+\ganttcon{53}{226}{54}{234}
+\ganttbar{  \%167 = mul nsw i32 \%dec\_ph2.0, \%161}{52}{1}
+\ganttcon{53}{227}{54}{237}
+\ganttbar{  \%185 = add nsw i32 \%145, \%140}{52}{1}
+\ganttcon{53}{228}{52}{230}
+\ganttcon{53}{228}{52}{229}
+\ganttcon{53}{228}{1}{31}
+\ganttbar{  \%186 = sub nsw i32 \%72, \%185}{52}{1}
+\ganttcon{53}{229}{52}{231}
+\ganttcon{53}{229}{1}{23}
+\ganttbar{  \%187 = add nsw i32 \%185, \%72}{52}{1}
+\ganttcon{53}{230}{52}{232}
+\ganttcon{53}{230}{1}{12}
+\ganttbar{  \%188 = mul nsw i32 \%186, 12}{52}{1}
+\ganttcon{53}{231}{54}{247}
+\ganttbar{  \%189 = mul nsw i32 \%187, -44}{52}{1}
+\ganttcon{53}{232}{54}{248}
+\ganttbar{  tail call fastcc void @upzero(i32 \%145, i32* getelementptr inbounds ([6 x i32...}{53}{1}
+\ganttbar{  \%164 = icmp sgt i32 \%163, -1}{54}{1}
+\ganttcon{55}{234}{54}{235}
+\ganttbar{  \%.1.i.i.i = select i1 \%164, i32 \%165, i32 \%162}{54}{1}
+\ganttcon{55}{235}{54}{236}
+\ganttbar{  \%166 = ashr i32 \%.1.i.i.i, 7}{54}{1}
+\ganttcon{55}{236}{54}{240}
+\ganttbar{  \%168 = ashr i32 \%167, 31}{54}{1}
+\ganttcon{55}{237}{54}{238}
+\ganttbar{  \%169 = and i32 \%168, -256}{54}{1}
+\ganttcon{55}{238}{54}{239}
+\ganttbar{  \%170 = or i32 \%169, 128}{54}{1}
+\ganttcon{55}{239}{54}{241}
+\ganttbar{  \%wd4.0.i.i.i = add nsw i32 \%166, \%172}{54}{1}
+\ganttcon{55}{240}{54}{241}
+\ganttbar{  \%173 = add nsw i32 \%wd4.0.i.i.i, \%170}{54}{1}
+\ganttcon{55}{241}{54}{243}
+\ganttcon{55}{241}{54}{242}
+\ganttbar{  \%174 = icmp sgt i32 \%173, 12288}{54}{1}
+\ganttcon{55}{242}{54}{243}
+\ganttbar{  \%..i.i.i = select i1 \%174, i32 12288, i32 \%173}{54}{1}
+\ganttcon{55}{243}{55}{264}
+\ganttcon{55}{243}{55}{263}
+\ganttbar{  \%178 = ashr i32 \%163, 31}{54}{1}
+\ganttcon{55}{244}{54}{245}
+\ganttbar{  \%179 = and i32 \%178, -384}{54}{1}
+\ganttcon{55}{245}{54}{246}
+\ganttbar{  \%apl1.0.i.i.i = add nsw i32 \%180, \%179}{54}{1}
+\ganttcon{55}{246}{55}{267}
+\ganttcon{55}{246}{55}{266}
+\ganttbar{  \%191 = add nsw i32 \%190, \%188}{54}{1}
+\ganttcon{55}{247}{54}{249}
+\ganttbar{  \%193 = add nsw i32 \%192, \%189}{54}{1}
+\ganttcon{55}{248}{54}{250}
+\ganttbar{  \%195 = add nsw i32 \%194, \%191}{54}{1}
+\ganttcon{55}{249}{54}{251}
+\ganttbar{  \%197 = add nsw i32 \%196, \%193}{54}{1}
+\ganttcon{55}{250}{54}{252}
+\ganttbar{  \%199 = add nsw i32 \%198, \%195}{54}{1}
+\ganttcon{55}{251}{54}{253}
+\ganttbar{  \%201 = add nsw i32 \%200, \%197}{54}{1}
+\ganttcon{55}{252}{54}{254}
+\ganttbar{  \%203 = add nsw i32 \%202, \%199}{54}{1}
+\ganttcon{55}{253}{54}{255}
+\ganttbar{  \%205 = add nsw i32 \%204, \%201}{54}{1}
+\ganttcon{55}{254}{54}{256}
+\ganttbar{  \%207 = add nsw i32 \%206, \%203}{54}{1}
+\ganttcon{55}{255}{54}{257}
+\ganttbar{  \%209 = add nsw i32 \%208, \%205}{54}{1}
+\ganttcon{55}{256}{54}{258}
+\ganttbar{  \%211 = add nsw i32 \%210, \%207}{54}{1}
+\ganttcon{55}{257}{54}{259}
+\ganttbar{  \%213 = add nsw i32 \%212, \%209}{54}{1}
+\ganttcon{55}{258}{54}{260}
+\ganttbar{  \%215 = add nsw i32 \%214, \%211}{54}{1}
+\ganttcon{55}{259}{54}{261}
+\ganttbar{  \%217 = add nsw i32 \%216, \%213}{54}{1}
+\ganttcon{55}{260}{54}{262}
+\ganttbar{  \%219 = add nsw i32 \%218, \%215}{54}{1}
+\ganttcon{55}{261}{55}{269}
+\ganttbar{  \%221 = add nsw i32 \%220, \%217}{54}{1}
+\ganttcon{55}{262}{55}{270}
+\ganttbar{  \%175 = icmp slt i32 \%..i.i.i, -12288}{55}{1}
+\ganttcon{56}{263}{55}{264}
+\ganttbar{  \%...i.i.i = select i1 \%175, i32 -12288, i32 \%..i.i.i}{55}{1}
+\ganttcon{56}{264}{55}{265}
+\ganttcon{56}{264}{1}{28}
+\ganttbar{  \%181 = sub nsw i32 15360, \%...i.i.i}{55}{1}
+\ganttcon{56}{265}{55}{268}
+\ganttcon{56}{265}{55}{267}
+\ganttcon{56}{265}{55}{266}
+\ganttbar{  \%182 = icmp sgt i32 \%apl1.0.i.i.i, \%181}{55}{1}
+\ganttcon{56}{266}{55}{267}
+\ganttbar{  \%.apl1.0.i.i.i = select i1 \%182, i32 \%181, i32 \%apl1.0.i.i.i}{55}{1}
+\ganttcon{56}{267}{56}{280}
+\ganttcon{56}{267}{56}{279}
+\ganttbar{  \%183 = sub nsw i32 0, \%181}{55}{1}
+\ganttcon{56}{268}{56}{280}
+\ganttcon{56}{268}{56}{279}
+\ganttbar{  \%223 = add nsw i32 \%222, \%219}{55}{1}
+\ganttcon{56}{269}{55}{271}
+\ganttbar{  \%225 = add nsw i32 \%224, \%221}{55}{1}
+\ganttcon{56}{270}{55}{272}
+\ganttbar{  \%227 = add nsw i32 \%226, \%223}{55}{1}
+\ganttcon{56}{271}{55}{273}
+\ganttbar{  \%229 = add nsw i32 \%228, \%225}{55}{1}
+\ganttcon{56}{272}{55}{274}
+\ganttbar{  \%231 = add nsw i32 \%230, \%227}{55}{1}
+\ganttcon{56}{273}{55}{275}
+\ganttbar{  \%233 = add nsw i32 \%232, \%229}{55}{1}
+\ganttcon{56}{274}{55}{276}
+\ganttbar{  \%234 = ashr i32 \%231, 14}{55}{1}
+\ganttcon{56}{275}{55}{277}
+\ganttbar{  \%235 = ashr i32 \%233, 14}{55}{1}
+\ganttcon{56}{276}{55}{278}
+\ganttbar{  store i32 \%234, i32* \%scevgep7, align 4, !tbaa !1}{55}{1}
+\ganttbar{  store i32 \%235, i32* \%scevgep6, align 4, !tbaa !1}{55}{1}
+\ganttbar{  \%184 = icmp slt i32 \%.apl1.0.i.i.i, \%183}{56}{1}
+\ganttcon{57}{279}{56}{280}
+\ganttbar{  \%apl1.2.i.i.i = select i1 \%184, i32 \%183, i32 \%.apl1.0.i.i.i}{56}{1}
+\ganttcon{57}{280}{1}{30}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{2}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  br label \%adpcm\_main.exit}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{13}{3}
+\begin{ganttitle}
+\numtitle{0}{1}{2}{1}
+\end{ganttitle}
+\ganttbar{  \%main\_result.04 = phi i32 [ \%.main\_result.0, \%adpcm\_main.exit ], [ 0, \%...}{1}{1}
+\ganttcon{2}{1}{2}{12}
+\ganttbar{  \%i.03 = phi i32 [ \%240, \%adpcm\_main.exit ], [ 0, \%adpcm\_main.exit.prehea...}{1}{1}
+\ganttcon{2}{2}{1}{7}
+\ganttcon{2}{2}{1}{4}
+\ganttcon{2}{2}{1}{3}
+\ganttbar{  \%scevgep3 = getelementptr [1000 x i32]* @test\_compressed, i32 0, i32 \%i.03}{1}{1}
+\ganttcon{2}{3}{1}{6}
+\ganttbar{  \%scevgep4 = getelementptr [1000 x i32]* @compressed, i32 0, i32 \%i.03}{1}{1}
+\ganttcon{2}{4}{1}{5}
+\ganttbar{  \%236 = load i32* \%scevgep4, align 4, !tbaa !1}{1}{1}
+\ganttcon{2}{5}{2}{10}
+\ganttbar{  \%237 = load i32* \%scevgep3, align 4, !tbaa !1}{1}{1}
+\ganttcon{2}{6}{2}{10}
+\ganttbar{  \%240 = add nsw i32 \%i.03, 1}{1}{1}
+\ganttcon{2}{7}{1}{8}
+\ganttcon{2}{7}{1}{2}
+\ganttbar{  \%exitcond = icmp eq i32 \%240, 500}{1}{1}
+\ganttcon{2}{8}{1}{9}
+\ganttbar{  br i1 \%exitcond, label \%.preheader.preheader, label \%adpcm\_main.exit}{1}{1}
+\ganttbar{  \%238 = icmp eq i32 \%236, \%237}{2}{1}
+\ganttcon{3}{10}{2}{11}
+\ganttbar{  \%239 = zext i1 \%238 to i32}{2}{1}
+\ganttcon{3}{11}{2}{12}
+\ganttbar{  \%.main\_result.0 = add nsw i32 \%239, \%main\_result.04}{2}{1}
+\ganttcon{3}{12}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{2}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  br label \%.preheader}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{13}{3}
+\begin{ganttitle}
+\numtitle{0}{1}{2}{1}
+\end{ganttitle}
+\ganttbar{  \%main\_result.22 = phi i32 [ \%.main\_result.2, \%.preheader ], [ \%.main\_re...}{1}{1}
+\ganttcon{2}{1}{2}{12}
+\ganttbar{  \%i.11 = phi i32 [ \%245, \%.preheader ], [ 0, \%.preheader.preheader ]}{1}{1}
+\ganttcon{2}{2}{1}{7}
+\ganttcon{2}{2}{1}{4}
+\ganttcon{2}{2}{1}{3}
+\ganttbar{  \%scevgep = getelementptr [1000 x i32]* @test\_result, i32 0, i32 \%i.11}{1}{1}
+\ganttcon{2}{3}{1}{6}
+\ganttbar{  \%scevgep2 = getelementptr [1000 x i32]* @result, i32 0, i32 \%i.11}{1}{1}
+\ganttcon{2}{4}{1}{5}
+\ganttbar{  \%241 = load i32* \%scevgep2, align 4, !tbaa !1}{1}{1}
+\ganttcon{2}{5}{2}{10}
+\ganttbar{  \%242 = load i32* \%scevgep, align 4, !tbaa !1}{1}{1}
+\ganttcon{2}{6}{2}{10}
+\ganttbar{  \%245 = add nsw i32 \%i.11, 1}{1}{1}
+\ganttcon{2}{7}{1}{8}
+\ganttcon{2}{7}{1}{2}
+\ganttbar{  \%exitcond1 = icmp eq i32 \%245, 1000}{1}{1}
+\ganttcon{2}{8}{1}{9}
+\ganttbar{  br i1 \%exitcond1, label \%246, label \%.preheader}{1}{1}
+\ganttbar{  \%243 = icmp eq i32 \%241, \%242}{2}{1}
+\ganttcon{3}{10}{2}{11}
+\ganttbar{  \%244 = zext i1 \%243 to i32}{2}{1}
+\ganttcon{3}{11}{2}{12}
+\ganttbar{  \%.main\_result.2 = add nsw i32 \%244, \%main\_result.22}{2}{1}
+\ganttcon{3}{12}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{4}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%247 = tail call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([12 x i8...}{1}{1}
+\ganttbar{  \%248 = icmp eq i32 \%.main\_result.2, 496}{1}{1}
+\ganttcon{2}{2}{1}{3}
+\ganttbar{  br i1 \%248, label \%249, label \%251}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{3}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%250 = tail call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([17 x i8...}{1}{1}
+\ganttbar{  br label \%253}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{3}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%252 = tail call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([13 x i8...}{1}{1}
+\ganttbar{  br label \%253}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{2}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  ret i32 \%.main\_result.2}{1}{1}
+\end{gantt}
+\end{figure}
+\end{document}

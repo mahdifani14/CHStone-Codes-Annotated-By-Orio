@@ -1,0 +1,31 @@
+digraph {
+	graph [fontname=Arial, nodesep=0.125, ranksep=0.25];
+	node [fontcolor=white, fontname=Arial, height=0, shape=box, style=filled, width=0];
+	edge [fontname=Arial];
+	1 [color="#ff0000", fontcolor="#ffffff", fontsize="10.00", label="gsm_mult_r\n100.00%\n(100.00%)\n223×"];
+	2 [color="#ff0000", fontcolor="#ffffff", fontsize="10.00", label="gsm_abs\n100.00%\n(100.00%)\n176×"];
+	3 [color="#ff0000", fontcolor="#ffffff", fontsize="10.00", label="gsm_add\n100.00%\n(100.00%)\n79×"];
+	4 [color="#ff0000", fontcolor="#ffffff", fontsize="10.00", label="gsm_div\n100.00%\n(100.00%)\n8×"];
+	5 [color="#ff0000", fontcolor="#ffffff", fontsize="10.00", label="gsm_mult\n100.00%\n(100.00%)\n8×"];
+	6 [color="#ff0000", fontcolor="#ffffff", fontsize="10.00", label="gsm_norm\n100.00%\n(100.00%)\n2×"];
+	7 [color="#ff0000", fontcolor="#ffffff", fontsize="10.00", label="Autocorrelation\n100.00%\n(100.00%)\n1×"];
+	7 -> 1 [arrowsize="1.00", color="#ff0000", fontcolor="#ff0000", fontsize="10.00", label="100.00%\n160×", labeldistance="4.00", penwidth="4.00"];
+	7 -> 2 [arrowsize="1.00", color="#ff0000", fontcolor="#ff0000", fontsize="10.00", label="100.00%\n160×", labeldistance="4.00", penwidth="4.00"];
+	7 -> 6 [arrowsize="1.00", color="#ff0000", fontcolor="#ff0000", fontsize="10.00", label="100.00%\n1×", labeldistance="4.00", penwidth="4.00"];
+	8 [color="#ff0000", fontcolor="#ffffff", fontsize="10.00", label="Gsm_LPC_Analysis\n100.00%\n(100.00%)\n1×"];
+	8 -> 7 [arrowsize="1.00", color="#ff0000", fontcolor="#ff0000", fontsize="10.00", label="100.00%\n1×", labeldistance="4.00", penwidth="4.00"];
+	8 -> 9 [arrowsize="1.00", color="#ff0000", fontcolor="#ff0000", fontsize="10.00", label="100.00%\n1×", labeldistance="4.00", penwidth="4.00"];
+	8 -> 10 [arrowsize="1.00", color="#ff0000", fontcolor="#ff0000", fontsize="10.00", label="100.00%\n1×", labeldistance="4.00", penwidth="4.00"];
+	8 -> 11 [arrowsize="1.00", color="#ff0000", fontcolor="#ff0000", fontsize="10.00", label="100.00%\n1×", labeldistance="4.00", penwidth="4.00"];
+	9 [color="#ff0000", fontcolor="#ffffff", fontsize="10.00", label="Quantization_and_coding\n100.00%\n(100.00%)\n1×"];
+	9 -> 3 [arrowsize="1.00", color="#ff0000", fontcolor="#ff0000", fontsize="10.00", label="100.00%\n16×", labeldistance="4.00", penwidth="4.00"];
+	9 -> 5 [arrowsize="1.00", color="#ff0000", fontcolor="#ff0000", fontsize="10.00", label="100.00%\n8×", labeldistance="4.00", penwidth="4.00"];
+	10 [color="#ff0000", fontcolor="#ffffff", fontsize="10.00", label="Reflection_coefficients\n100.00%\n(100.00%)\n1×"];
+	10 -> 1 [arrowsize="1.00", color="#ff0000", fontcolor="#ff0000", fontsize="10.00", label="100.00%\n63×", labeldistance="4.00", penwidth="4.00"];
+	10 -> 2 [arrowsize="1.00", color="#ff0000", fontcolor="#ff0000", fontsize="10.00", label="100.00%\n8×", labeldistance="4.00", penwidth="4.00"];
+	10 -> 3 [arrowsize="1.00", color="#ff0000", fontcolor="#ff0000", fontsize="10.00", label="100.00%\n63×", labeldistance="4.00", penwidth="4.00"];
+	10 -> 4 [arrowsize="1.00", color="#ff0000", fontcolor="#ff0000", fontsize="10.00", label="100.00%\n8×", labeldistance="4.00", penwidth="4.00"];
+	10 -> 6 [arrowsize="1.00", color="#ff0000", fontcolor="#ff0000", fontsize="10.00", label="100.00%\n1×", labeldistance="4.00", penwidth="4.00"];
+	11 [color="#ff0000", fontcolor="#ffffff", fontsize="10.00", label="Transformation_to_Log_Area_Ratios\n100.00%\n(100.00%)\n1×"];
+	11 -> 2 [arrowsize="1.00", color="#ff0000", fontcolor="#ff0000", fontsize="10.00", label="100.00%\n8×", labeldistance="4.00", penwidth="4.00"];
+}

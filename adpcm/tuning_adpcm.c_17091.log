@@ -1,0 +1,150 @@
+
+====== START ORIO ======
+Processing adpcm.c,_adpcm.c
+
+----- begin reading the source file: adpcm.c -----
+----- finished reading the source file -----
+
+----- begin reading the tuning specification file: adpcm.spec -----
+----- finished reading the tuning specification -----
+
+----- begin parsing annotations -----
+PARSING ANNOTATION [[("/*@ begin PerfTuning (spec unroll_vectorize {\n def build {\n   arg build_command = 'clang';\n   arg libs = 'libclang_rt.san-x86_64';\n}\n def performance_counter {\n   #arg method = 'bgp counter';\n   arg repetitions = 50;\n }\n def performance_params {\n   param UF[] = range(1,10);\n   param VEC[] = [False,True];\n   param CFLAGS[] = [ '-O1','-O2','-O3'];\n   #constraint divisible_by_two = (UF % 2 == 0);\n }\n def input_params {\n   param SIZE[] = [100];\n   param IN_END[] = [100];\n }\n def input_vars {\n   decl dynamic int accumc[11] = random;\n   decl dynamic int accumd[11] = random;\n   decl dynamic int tqmf[24] = random;\n   decl dynamic int delay_bpl[6] = random;\n   decl dynamic int delay_bph[6] = random;\n   decl dynamic int dec_del_bpl[6] = random;\n   decl dynamic int dec_del_bph[6] = random;\n   decl dynamic int delay_dltx[6] = random;\n   decl dynamic int delay_dhx[6] = random;\n   decl dynamic int dec_del_dltx[6] = random;\n   decl dynamic int dec_del_dhx[6] = random;\n }\n def search {\n  arg algorithm = 'Randomsearch';\n  arg total_runs = 300;\n }\n}\n\n)\n@*/", 1, 0, True), [('\n#include <stdio.h>\n\nint tqmf[24];\n\nconst int h[24] = {\n  12, -44, -44, 212, 48, -624, 128, 1448,\n  -840, -3220, 3804, 15504, 15504, 3804, -3220, -840,\n  1448, 128, -624, 48, 212, -44, -44, 12\n};\n\nint xl, xh;\n\nint accumc[11], accumd[11];\n\nint xout1, xout2;\n\nint xs, xd;\n\n\nint il, szl, spl, sl, el;\n\nconst int qq4_code4_table[16] = {\n  0, -20456, -12896, -8968, -6288, -4240, -2584, -1200,\n  20456, 12896, 8968, 6288, 4240, 2584, 1200, 0\n};\n\n\nconst int qq6_code6_table[64] = {\n  -136, -136, -136, -136, -24808, -21904, -19008, -16704,\n  -14984, -13512, -12280, -11192, -10232, -9360, -8576, -7856,\n  -7192, -6576, -6000, -5456, -4944, -4464, -4008, -3576,\n  -3168, -2776, -2400, -2032, -1688, -1360, -1040, -728,\n  24808, 21904, 19008, 16704, 14984, 13512, 12280, 11192,\n  10232, 9360, 8576, 7856, 7192, 6576, 6000, 5456,\n  4944, 4464, 4008, 3576, 3168, 2776, 2400, 2032,\n  1688, 1360, 1040, 728, 432, 136, -432, -136\n};\n\nint delay_bpl[6];\n\nint delay_dltx[6];\n\nconst int wl_code_table[16] = {\n  -60, 3042, 1198, 538, 334, 172, 58, -30,\n  3042, 1198, 538, 334, 172, 58, -30, -60\n};\n\nconst int ilb_table[32] = {\n  2048, 2093, 2139, 2186, 2233, 2282, 2332, 2383,\n  2435, 2489, 2543, 2599, 2656, 2714, 2774, 2834,\n  2896, 2960, 3025, 3091, 3158, 3228, 3298, 3371,\n  3444, 3520, 3597, 3676, 3756, 3838, 3922, 4008\n};\n\nint nbl;\nint al1, al2;\nint plt, plt1, plt2;\nint dlt;\nint rlt, rlt1, rlt2;\n\nconst int decis_levl[30] = {\n  280, 576, 880, 1200, 1520, 1864, 2208, 2584,\n  2960, 3376, 3784, 4240, 4696, 5200, 5712, 6288,\n  6864, 7520, 8184, 8968, 9752, 10712, 11664, 12896,\n  14120, 15840, 17560, 20456, 23352, 32767\n};\n\nint detl;\n\nconst int quant26bt_pos[31] = {\n  61, 60, 59, 58, 57, 56, 55, 54,\n  53, 52, 51, 50, 49, 48, 47, 46,\n  45, 44, 43, 42, 41, 40, 39, 38,\n  37, 36, 35, 34, 33, 32, 32\n};\n\nconst int quant26bt_neg[31] = {\n  63, 62, 31, 30, 29, 28, 27, 26,\n  25, 24, 23, 22, 21, 20, 19, 18,\n  17, 16, 15, 14, 13, 12, 11, 10,\n  9, 8, 7, 6, 5, 4, 4\n};\n\n\nint deth;\nint sh;\nint eh;\n\nconst int qq2_code2_table[4] = {\n  -7408, -1616, 7408, 1616\n};\n\nconst int wh_code_table[4] = {\n  798, -214, 798, -214\n};\n\n\nint dh, ih;\nint nbh, szh;\nint sph, ph, yh, rh;\n\nint delay_dhx[6];\n\nint delay_bph[6];\n\nint ah1, ah2;\nint ph1, ph2;\nint rh1, rh2;\n\nint ilr, rl;\nint dec_deth, dec_detl, dec_dlt;\n\nint dec_del_bpl[6];\n\nint dec_del_dltx[6];\n\nint dec_plt, dec_plt1, dec_plt2;\nint dec_szl, dec_spl, dec_sl;\nint dec_rlt1, dec_rlt2, dec_rlt;\nint dec_al1, dec_al2;\nint dl;\nint dec_nbl, dec_dh, dec_nbh;\n\nint dec_del_bph[6];\n\nint dec_del_dhx[6];\n\nint dec_szh;\nint dec_rh1, dec_rh2;\nint dec_ah1, dec_ah2;\nint dec_ph, dec_sph;\n\nint dec_sh;\n\nint dec_ph1, dec_ph2;\n\nint abs (int n)\n{\n  int m;\n\n  if (n >= 0)\n    m = n;\n  else\n    m = -n;\n  return m;\n}\n\nint filtez (int *bpl, int *dlt)\n{\n  int i;\n  long int zl;\n  zl = (long) (*bpl++) * (*dlt++);\n  for (i = 1; i < 6; i++)\n    zl += (long) (*bpl++) * (*dlt++);\n\n  return ((int) (zl >> 14));\n}\n\n\nint filtep (int rlt1, int al1, int rlt2, int al2)\n{\n  long int pl, pl2;\n  pl = 2 * rlt1;\n  pl = (long) al1 *pl;\n  pl2 = 2 * rlt2;\n  pl += (long) al2 *pl2;\n  return ((int) (pl >> 15));\n}\n\nint quantl (int el, int detl)\n{\n  int ril, mil;\n  long int wd, decis;\n\n\n  wd = abs (el);\n\n  for (mil = 0; mil < 30; mil++)\n    {\n      decis = (decis_levl[mil] * (long) detl) >> 15L;\n      if (wd <= decis)\n\tbreak;\n    }\n\n  if (el >= 0)\n    ril = quant26bt_pos[mil];\n  else\n    ril = quant26bt_neg[mil];\n  return (ril);\n}\n\n\nint logscl (int il, int nbl)\n{\n  long int wd;\n  wd = ((long) nbl * 127L) >> 7L;\n  nbl = (int) wd + wl_code_table[il >> 2];\n  if (nbl < 0)\n    nbl = 0;\n  if (nbl > 18432)\n    nbl = 18432;\n  return (nbl);\n}\n\n\nint scalel (int nbl, int shift_constant)\n{\n  int wd1, wd2, wd3;\n  wd1 = (nbl >> 6) & 31;\n  wd2 = nbl >> 11;\n  wd3 = ilb_table[wd1] >> (shift_constant + 1 - wd2);\n  return (wd3 << 3);\n}\n\nvoid upzero (int dlt, int *dlti, int *bli)\n{\n  int i, wd2, wd3;\n\n  if (dlt == 0)\n    {\n      for (i = 0; i < 6; i++)\n\t{\n\t  bli[i] = (int) ((255L * bli[i]) >> 8L);\n\t}\n    }\n  else\n    {\n      for (i = 0; i < 6; i++)\n\t{\n\t  if ((long) dlt * dlti[i] >= 0)\n\t    wd2 = 128;\n\t  else\n\t    wd2 = -128;\n\t  wd3 = (int) ((255L * bli[i]) >> 8L);\n\t  bli[i] = wd2 + wd3;\n\t}\n    }\n\n  dlti[5] = dlti[4];\n  dlti[4] = dlti[3];\n  dlti[3] = dlti[2];\n  dlti[1] = dlti[0];\n  dlti[0] = dlt;\n}\n\n\nint uppol2 (int al1, int al2, int plt, int plt1, int plt2)\n{\n  long int wd2, wd4;\n  int apl2;\n  wd2 = 4L * (long) al1;\n  if ((long) plt * plt1 >= 0L)\n    wd2 = -wd2;\n  wd2 = wd2 >> 7;\n  if ((long) plt * plt2 >= 0L)\n    {\n      wd4 = wd2 + 128;\n    }\n  else\n    {\n      wd4 = wd2 - 128;\n    }\n  apl2 = wd4 + (127L * (long) al2 >> 7L);\n\n\n  if (apl2 > 12288)\n    apl2 = 12288;\n  if (apl2 < -12288)\n    apl2 = -12288;\n  return (apl2);\n}\n\n\nint uppol1 (int al1, int apl2, int plt, int plt1)\n{\n  long int wd2;\n  int wd3, apl1;\n  wd2 = ((long) al1 * 255L) >> 8L;\n  if ((long) plt * plt1 >= 0L)\n    {\n      apl1 = (int) wd2 + 192;\n    }\n  else\n    {\n      apl1 = (int) wd2 - 192;\n    }\n\n  wd3 = 15360 - apl2;\n  if (apl1 > wd3)\n    apl1 = wd3;\n  if (apl1 < -wd3)\n    apl1 = -wd3;\n  return (apl1);\n}\n\n\nint logsch (int ih, int nbh)\n{\n  int wd;\n  wd = ((long) nbh * 127L) >> 7L;\n  nbh = wd + wh_code_table[ih];\n  if (nbh < 0)\n    nbh = 0;\n  if (nbh > 22528)\n    nbh = 22528;\n  return (nbh);\n}\n\n\nint encode (int xin1, int xin2)\n{\n  int i;\n  const int *h_ptr;\n  int *tqmf_ptr, *tqmf_ptr1;\n  long int xa, xb;\n  int decis;\n\n  h_ptr = h;\n  tqmf_ptr = tqmf;\n  xa = (long) (*tqmf_ptr++) * (*h_ptr++);\n  xb = (long) (*tqmf_ptr++) * (*h_ptr++);\n\n  for (i = 0; i < 10; i++)\n    {\n      xa += (long) (*tqmf_ptr++) * (*h_ptr++);\n      xb += (long) (*tqmf_ptr++) * (*h_ptr++);\n    }\n\n  xa += (long) (*tqmf_ptr++) * (*h_ptr++);\n  xb += (long) (*tqmf_ptr) * (*h_ptr++);\n\n\n  tqmf_ptr1 = tqmf_ptr - 2;\n  for (i = 0; i < 22; i++)\n    *tqmf_ptr-- = *tqmf_ptr1--;\n  *tqmf_ptr-- = xin1;\n  *tqmf_ptr = xin2;\n\n\n  xl = (xa + xb) >> 15;\n  xh = (xa - xb) >> 15;\n\n  szl = filtez (delay_bpl, delay_dltx);\n\n  spl = filtep (rlt1, al1, rlt2, al2);\n\n  sl = szl + spl;\n  el = xl - sl;\n\n  il = quantl (el, detl);\n\n  dlt = ((long) detl * qq4_code4_table[il >> 2]) >> 15;\n\n  nbl = logscl (il, nbl);\n\n  detl = scalel (nbl, 8);\n\n  plt = dlt + szl;\n\n  upzero (dlt, delay_dltx, delay_bpl);\n\n  al2 = uppol2 (al1, al2, plt, plt1, plt2);\n\n  al1 = uppol1 (al1, al2, plt, plt1);\n\n  rlt = sl + dlt;\n\n  rlt2 = rlt1;\n  rlt1 = rlt;\n  plt2 = plt1;\n  plt1 = plt;\n\n\n  szh = filtez (delay_bph, delay_dhx);\n\n  sph = filtep (rh1, ah1, rh2, ah2);\n\n  sh = sph + szh;\n\n  eh = xh - sh;\n\n  if (eh >= 0)\n    {\n      ih = 3;\n    }\n  else\n    {\n      ih = 1;\n    }\n  decis = (564L * (long) deth) >> 12L;\n  if (abs (eh) > decis)\n    ih--;\n\n  dh = ((long) deth * qq2_code2_table[ih]) >> 15L;\n\n\n  nbh = logsch (ih, nbh);\n\n\n  deth = scalel (nbh, 10);\n\n\n  ph = dh + szh;\n\n  upzero (dh, delay_dhx, delay_bph);\n\n  ah2 = uppol2 (ah1, ah2, ph, ph1, ph2);\n\n  ah1 = uppol1 (ah1, ah2, ph, ph1);\n\n  yh = sh + dh;\n\n  rh2 = rh1;\n  rh1 = yh;\n  ph2 = ph1;\n  ph1 = ph;\n\n  return (il | (ih << 6));\n}\n\n\nvoid decode (int input)\n{\n  int i;\n  long int xa1, xa2;\n  const int *h_ptr;\n  int *ac_ptr, *ac_ptr1, *ad_ptr, *ad_ptr1;\n\n  ilr = input & 0x3f;\n  ih = input >> 6;\n\n  dec_szl = filtez (dec_del_bpl, dec_del_dltx);\n\n  dec_spl = filtep (dec_rlt1, dec_al1, dec_rlt2, dec_al2);\n\n  dec_sl = dec_spl + dec_szl;\n\n  dec_dlt = ((long) dec_detl * qq4_code4_table[ilr >> 2]) >> 15;\n\n  dl = ((long) dec_detl * qq6_code6_table[il]) >> 15;\n\n  rl = dl + dec_sl;\n\n  dec_nbl = logscl (ilr, dec_nbl);\n\n  dec_detl = scalel (dec_nbl, 8);\n\n  dec_plt = dec_dlt + dec_szl;\n\n  upzero (dec_dlt, dec_del_dltx, dec_del_bpl);\n\n\n  dec_al2 = uppol2 (dec_al1, dec_al2, dec_plt, dec_plt1, dec_plt2);\n\n\n  dec_al1 = uppol1 (dec_al1, dec_al2, dec_plt, dec_plt1);\n\n\n  dec_rlt = dec_sl + dec_dlt;\n\n\n  dec_rlt2 = dec_rlt1;\n  dec_rlt1 = dec_rlt;\n  dec_plt2 = dec_plt1;\n  dec_plt1 = dec_plt;\n\n  dec_szh = filtez (dec_del_bph, dec_del_dhx);\n\n  dec_sph = filtep (dec_rh1, dec_ah1, dec_rh2, dec_ah2);\n\n  dec_sh = dec_sph + dec_szh;\n\n  dec_dh = ((long) dec_deth * qq2_code2_table[ih]) >> 15L;\n\n  dec_nbh = logsch (ih, dec_nbh);\n\n\n  dec_deth = scalel (dec_nbh, 10);\n\n\n  dec_ph = dec_dh + dec_szh;\n\n\n  upzero (dec_dh, dec_del_dhx, dec_del_bph);\n\n\n  dec_ah2 = uppol2 (dec_ah1, dec_ah2, dec_ph, dec_ph1, dec_ph2);\n\n\n  dec_ah1 = uppol1 (dec_ah1, dec_ah2, dec_ph, dec_ph1);\n\n\n  rh = dec_sh + dec_dh;\n\n\n  dec_rh2 = dec_rh1;\n  dec_rh1 = rh;\n  dec_ph2 = dec_ph1;\n  dec_ph1 = dec_ph;\n\n\n\n  xd = rl - rh;\n  xs = rl + rh;\n\n  h_ptr = h;\n  ac_ptr = accumc;\n  ad_ptr = accumd;\n  xa1 = (long) xd *(*h_ptr++);\n  xa2 = (long) xs *(*h_ptr++);\n\n  for (i = 0; i < 10; i++)\n    {\n      xa1 += (long) (*ac_ptr++) * (*h_ptr++);\n      xa2 += (long) (*ad_ptr++) * (*h_ptr++);\n    }\n\n  xa1 += (long) (*ac_ptr) * (*h_ptr++);\n  xa2 += (long) (*ad_ptr) * (*h_ptr++);\n\n\n  xout1 = xa1 >> 14;\n  xout2 = xa2 >> 14;\n\n\n  ac_ptr1 = ac_ptr - 1;\n  ad_ptr1 = ad_ptr - 1;\n  for (i = 0; i < 10; i++)\n    {\n      *ac_ptr-- = *ac_ptr1--;\n      *ad_ptr-- = *ad_ptr1--;\n    }\n  *ac_ptr = xd;\n  *ad_ptr = xs;\n}\n\n\nvoid reset ()\n{\n  int i;\n\n  detl = dec_detl = 32;\n  deth = dec_deth = 8;\n  nbl = al1 = al2 = plt1 = plt2 = rlt1 = rlt2 = 0;\n  nbh = ah1 = ah2 = ph1 = ph2 = rh1 = rh2 = 0;\n  dec_nbl = dec_al1 = dec_al2 = dec_plt1 = dec_plt2 = dec_rlt1 = dec_rlt2 = 0;\n  dec_nbh = dec_ah1 = dec_ah2 = dec_ph1 = dec_ph2 = dec_rh1 = dec_rh2 = 0;\n\n  for (i = 0; i < 6; i++)\n    {\n      delay_dltx[i] = 0;\n      delay_dhx[i] = 0;\n      dec_del_dltx[i] = 0;\n      dec_del_dhx[i] = 0;\n    }\n\n  for (i = 0; i < 6; i++)\n    {\n      delay_bpl[i] = 0;\n      delay_bph[i] = 0;\n      dec_del_bpl[i] = 0;\n      dec_del_bph[i] = 0;\n    }\n\n  for (i = 0; i < 24; i++)\n    tqmf[i] = 0;\n\n  for (i = 0; i < 11; i++)\n    {\n      accumc[i] = 0;\n      accumd[i] = 0;\n    }\n}\n\n#define SIZE 100\n#define IN_END 100\n\nconst int test_data[SIZE] = {\n  0x44, 0x44, 0x44, 0x44, 0x44,\n  0x44, 0x44, 0x44, 0x44, 0x44,\n  0x44, 0x44, 0x44, 0x44, 0x44,\n  0x44, 0x44, 0x43, 0x43, 0x43,\n  0x43, 0x43, 0x43, 0x43, 0x42,\n  0x42, 0x42, 0x42, 0x42, 0x42,\n  0x41, 0x41, 0x41, 0x41, 0x41,\n  0x40, 0x40, 0x40, 0x40, 0x40,\n  0x40, 0x40, 0x40, 0x3f, 0x3f,\n  0x3f, 0x3f, 0x3f, 0x3e, 0x3e,\n  0x3e, 0x3e, 0x3e, 0x3e, 0x3d,\n  0x3d, 0x3d, 0x3d, 0x3d, 0x3d,\n  0x3c, 0x3c, 0x3c, 0x3c, 0x3c,\n  0x3c, 0x3c, 0x3c, 0x3c, 0x3b,\n  0x3b, 0x3b, 0x3b, 0x3b, 0x3b,\n  0x3b, 0x3b, 0x3b, 0x3b, 0x3b,\n  0x3b, 0x3b, 0x3b, 0x3b, 0x3b,\n  0x3b, 0x3b, 0x3b, 0x3b, 0x3b,\n  0x3b, 0x3b, 0x3c, 0x3c, 0x3c,\n  0x3c, 0x3c, 0x3c, 0x3c, 0x3c\n};\nint compressed[SIZE], result[SIZE];\nconst int test_compressed[SIZE] = {\n  253, 222, 119, 186, 244,\n  146, 32, 160, 236, 237,\n  238, 240, 241, 241, 242,\n  243, 244, 243, 244, 245,\n  244, 244, 245, 245, 245,\n  246, 246, 247, 247, 247,\n  247, 248, 246, 247, 249,\n  247, 248, 247, 248, 247,\n  248, 247, 248, 247, 248,\n  248, 246, 248, 247, 248,\n  0, 0, 0, 0, 0,\n  0, 0, 0, 0, 0,\n  0, 0, 0, 0, 0,\n  0, 0, 0, 0, 0,\n  0, 0, 0, 0, 0,\n  0, 0, 0, 0, 0,\n  0, 0, 0, 0, 0,\n  0, 0, 0, 0, 0,\n  0, 0, 0, 0, 0,\n  0, 0, 0, 0, 0\n};\nconst int test_result[SIZE] = {\n  0, -1, -1, 0, 0,\n  -1, 0, 0, -1, -1,\n  0, 0, 1, 1, 0,\n  -2, -1, -2, 0, -3,\n  1, 0, 0, -4, 1,\n  1, 2, 11, 20, 18,\n  20, 22, 28, 27, 31,\n  31, 34, 31, 34, 34,\n  38, 37, 42, 42, 44,\n  41, 43, 42, 47, 45,\n  47, 44, 45, 43, 46,\n  45, 48, 46, 49, 48,\n  51, 49, 52, 52, 55,\n  53, 56, 55, 58, 57,\n  59, 57, 60, 60, 60,\n  54, 54, 53, 60, 62,\n  62, 54, 55, 56, 59,\n  53, 54, 56, 59, 53,\n  56, 58, 59, 53, 56,\n  58, 60, 54, 55, 57\n};\n\nvoid adpcm_main ()\n{\n  int i, j;\n\n  reset ();\n\n  j = 10;\n\n  ', 40, 0, False), [("/*@ begin Loop (\n      transform Composite(\n        unrolljam = (['i'],[UF]),\n        vector = (VEC, ['ivdep','vector always'])\n       )\n     for (i=0; i <= (IN_END-1); i=i+2)\n       {\n         j = i/2;\n         compressed[j] = encode (test_data[i], test_data[i + 1]);\n       }\n  ) @*/", 694, 2, True), [('\n\n  for (i = 0; i <= (IN_END-1); i=i+2)\n    {\n      j = i/2;\n      compressed[j] = encode (test_data[i], test_data[i + 1]);\n    }\n\n  ', 704, 0, False)], ('/*@ end @*/', 712, 2, True)], ('\n\n  for (i = 0; i < IN_END; i += 2)\n    {\n      decode (compressed[i / 2]);\n      result[i] = xout1;\n      result[i + 1] = xout2;\n    }\n}\n\nint main ()\n{\n  int i;\n  int main_result;\n\n      main_result = 0;\n      adpcm_main ();\n      for (i = 0; i < IN_END / 2; i++)\n\t{\n\t  if (compressed[i] == test_compressed[i])\n\t    {\n\t      main_result++;\n\t    }\n\t}\n      for (i = 0; i < IN_END; i++)\n\t{\n\t  if (result[i] == test_result[i])\n\t    {\n\t      main_result++;\n\t    }\n\t}\n      printf ("Result: %d ", main_result);\n      if (main_result == 150) {\n          printf("RESULT: PASS ");\n      } else {\n          printf("RESULT: FAIL");\n      }\n      return main_result;\n}\n\n\n', 712, 0, False)], ('/*@ end @*/', 753, 0, True)], ('\n', 753, 0, False)]
+----- finished parsing annotations -----
+
+----- begin optimizations -----
+__optimizeCodeFrag: code_frag type is AnnCodeRegion
+OptDriver line 113: PerfTuning
+OptDriver line 116, detected tuning spec
+tune_info TuningInfo pparam_params[('UF', [1, 2, 3, 4, 5, 6, 7, 8, 9]), ('VEC', [False, True]), ('CFLAGS', ['-O1', '-O2', '-O3'])]
+BUILDING COORD SYSTEM
+Search_Space         = 5.400e+01
+Number_of_Parameters = 03
+Numeric_Parameters   = 02
+Binary_Parameters    = 01
+['UF', 'VEC', 'CFLAGS']
+[[1, 2, 3, 4, 5, 6, 7, 8, 9], [False, True], ['-O1', '-O2', '-O3']]
+
+----- begin empirical tuning for problem size -----
+ IN_END = 100
+ SIZE = 100
+[('SIZE', 100), ('IN_END', 100)]
+[Search] performance parameters: {'search_total_runs': 300, 'cfrags': [<orio.main.code_frag.NonAnn instance at 0x7fb88bf92b48>, <orio.main.code_frag.AnnCodeRegion instance at 0x7fb88bf92c68>, <orio.main.code_frag.NonAnn instance at 0x7fb88bf92cb0>], 'ptdriver': <orio.main.tuner.ptest_driver.PerfTestDriver instance at 0x7fb88b8df098>, 'search_resume': False, 'input_params': [('SIZE', 100), ('IN_END', 100)], 'axis_names': ['UF', 'VEC', 'CFLAGS'], 'ptcodegen': <orio.main.tuner.ptest_codegen.PerfTestCodeGen object at 0x7fb88b9352d0>, 'pparam_constraint': 'True', 'axis_val_ranges': [[1, 2, 3, 4, 5, 6, 7, 8, 9], [False, True], ['-O1', '-O2', '-O3']], 'search_time_limit': -60, 'odriver': <orio.main.opt_driver.OptDriver instance at 0x7fb88bf92ab8>, 'use_parallel_search': False, 'search_opts': {}}
+
+
+----- begin random search -----
+sample-point:[0, 0, 0]
+sample-point:[1, 1, 2]
+sample-point:[2, 0, 1]
+sample-point:[5, 1, 0]
+sample-point:[0, 1, 1]
+sample-point:[6, 0, 1]
+sample-point:[6, 0, 2]
+sample-point:[8, 0, 0]
+sample-point:[4, 1, 1]
+sample-point:[1, 0, 0]
+sample-point:[1, 0, 1]
+sample-point:[2, 0, 0]
+sample-point:[4, 0, 0]
+sample-point:[7, 1, 1]
+sample-point:[1, 0, 2]
+sample-point:[6, 1, 1]
+sample-point:[7, 1, 0]
+sample-point:[5, 1, 2]
+sample-point:[4, 1, 0]
+sample-point:[2, 1, 1]
+sample-point:[3, 0, 0]
+sample-point:[0, 1, 2]
+sample-point:[5, 0, 0]
+sample-point:[4, 1, 2]
+sample-point:[4, 0, 1]
+sample-point:[8, 0, 2]
+sample-point:[7, 1, 2]
+sample-point:[3, 0, 2]
+sample-point:[5, 0, 1]
+sample-point:[2, 1, 2]
+sample-point:[6, 0, 0]
+sample-point:[1, 1, 0]
+sample-point:[6, 1, 0]
+sample-point:[8, 1, 1]
+sample-point:[0, 0, 2]
+sample-point:[7, 0, 2]
+sample-point:[8, 1, 0]
+sample-point:[1, 1, 1]
+sample-point:[7, 0, 0]
+sample-point:[6, 1, 2]
+sample-point:[3, 1, 2]
+sample-point:[5, 1, 1]
+sample-point:[8, 0, 1]
+sample-point:[8, 1, 2]
+sample-point:[5, 0, 2]
+sample-point:[2, 1, 0]
+sample-point:[3, 1, 0]
+sample-point:[2, 0, 2]
+sample-point:[0, 0, 1]
+sample-point:[3, 1, 1]
+sample-point:[4, 0, 2]
+sample-point:[7, 0, 1]
+sample-point:[3, 0, 1]
+sample-point:[0, 1, 0]
+__optimizeCodeFrag: code_frag type is NonAnn
+OptDriver::__optimizeCodeFrag line 106
+__optimizeCodeFrag: code_frag type is AnnCodeRegion
+OptDriver line 113: Loop
+OptDriver line 142, detected code annotated for tuning
+__optimizeCodeFrag: code_frag type is NonAnn
+OptDriver::__optimizeCodeFrag line 106
+about to load module.class orio.module.loop.loop.Loop corresponding to annotation Loop
+about to instantiate transformation class: orio.module.loop.loop.Loop
+successfully instantiated transformation class: orio.module.loop.loop.Loop
+applying array copy
+Code stats:
+        Number of loops: 	1
+        Max loop nest depth: 	1
+        Additions: 		3
+        Multiplications: 	0
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			13
+        Writes: 		4
+        Comparisons:		1
+        Gotos: 			0
+        
+__optimizeCodeFrag: code_frag type is NonAnn
+OptDriver::__optimizeCodeFrag line 106
+ building the original code:
+	clang  -DORIO_REPS=50 -DORIGINAL -o __orio_perftest_original.exe __orio_perftest1.c timer_cpu.o libclang_rt.san-x86_64
+orio.main.tuner.ptest_driver:  failed to compile the original version of the code: "clang  -DORIO_REPS=50 -DORIGINAL -o __orio_perftest_original.exe __orio_perftest1.c timer_cpu.o libclang_rt.san-x86_64"
+  File "/usr/local/bin/orcc", line 27, in <module>
+    orio.main.orio_main.start(sys.argv, orio.main.orio_main.C_CPP)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/orio_main.py", line 109, in start
+    optimized_code_seq = odriver.optimizeCodeFrags(cfrags, True)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/opt_driver.py", line 45, in optimizeCodeFrags
+    cur_seq = self.__optimizeCodeFrag(cf, perf_params)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/opt_driver.py", line 120, in __optimizeCodeFrag
+    cfrag.cfrags)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/tuner.py", line 152, in tune
+    best_perf_params, best_perf_cost = search_eng.search()
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/search.py", line 119, in search
+    best_coord,best_perf,search_time,runs = self.searchBestCoord(startCoord)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/randomsearch/randomsearch.py", line 164, in searchBestCoord
+    perf_costs = self.getPerfCosts([coord])
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/search.py", line 307, in getPerfCosts
+    new_perf_costs = self.ptdriver.run(test_code, perf_params=perf_params,coord=coord_key)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/ptest_driver.py", line 481, in run
+    self.__build(perf_params=perf_params,coord=coord)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/ptest_driver.py", line 256, in __build
+    err('orio.main.tuner.ptest_driver:  failed to compile the original version of the code: "%s"' % cmd)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/util/globals.py", line 317, in err
+    Globals().loggers['TuningLog'].error(errmsg + '\n' + '\n'.join(traceback.format_stack()))
+

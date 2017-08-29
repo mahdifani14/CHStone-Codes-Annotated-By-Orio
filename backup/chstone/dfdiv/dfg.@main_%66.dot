@@ -1,0 +1,24 @@
+digraph {
+Node0x3859d10[label="  %67 = lshr i64 %9, 32"];
+Node0x3859d10 -> Node0x3859d10[label="D:0.00ns L:0",color=blue];
+Node0x3859d10 -> Node0x3859d10[label="D:0.00ns L:0",color=blue];
+Node0x3859df0[label="  %extract.t.i.i5.i = trunc i64 %67 to i..."];
+Node0x3859df0 -> Node0x3859df0[label="D:0.00ns L:0",color=blue];
+Node0x3859df0 -> Node0x3859df0[label="D:0.00ns L:0",color=blue];
+Node0x3859ed0[label="  %68 = icmp ult i32 %extract.t.i.i5.i, ..."];
+Node0x3859ed0 -> Node0x3859ed0[label="D:2.92ns L:0",color=blue];
+Node0x3859ed0 -> Node0x3859ed0[label="D:2.92ns L:0",color=blue];
+Node0x3859fe0[label="  %69 = shl nuw nsw i64 %67, 16"];
+Node0x3859fe0 -> Node0x3859fe0[label="D:0.00ns L:0",color=blue];
+Node0x385a0c0[label="  %70 = trunc i64 %69 to i32"];
+Node0x385a0c0 -> Node0x385a0c0[label="D:0.00ns L:0",color=blue];
+Node0x385a1a0[label="  %.a.i.i.i6.i = select i1 %68, i32 %70,..."];
+Node0x385a1a0 -> Node0x385a1a0[label="D:3.99ns L:0",color=blue];
+Node0x385a1a0 -> Node0x385a1a0[label="D:3.99ns L:0",color=blue];
+Node0x385a1a0 -> Node0x385a1a0[label="D:3.99ns L:0",color=blue];
+Node0x385a2e0[label="  %..i.i.i7.i = select i1 %68, i32 16, i..."];
+Node0x385a2e0 -> Node0x385a2e0[label="D:3.99ns L:0",color=blue];
+Node0x385a2e0 -> Node0x385a2e0[label="D:3.99ns L:0",color=blue];
+Node0x385dad0[label="  %71 = icmp ult i32 %.a.i.i.i6.i, 16777..."];
+Node0x385dad0 -> Node0x385dad0[label="D:2.92ns L:0",color=blue];
+}

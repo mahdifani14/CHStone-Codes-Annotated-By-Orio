@@ -1,0 +1,12 @@
+digraph {
+Node0x3eeb060[label="  %i.24.i.i = phi i32 [ %4, %.preheader1..."];
+Node0x3eeb060 -> Node0x3eeb060[label="D:0.00ns L:0",color=blue];
+Node0x3eeb060 -> Node0x3eeb060[label="D:0.00ns L:0",color=blue];
+Node0x3eeb140[label="  %scevgep57 = getelementptr [24 x i32]*..."];
+Node0x3eeb140 -> Node0x3eeb140[label="D:20.00ns L:0",color=blue];
+Node0x3eeb300[label="  %4 = add nsw i32 %i.24.i.i, 1"];
+Node0x3eeb300 -> Node0x3eeb300[label="D:2.50ns L:0",color=blue];
+Node0x3eeb300 -> Node0x3eeb300[label="D:2.50ns L:0",color=blue];
+Node0x3eeb3e0[label="  %exitcond56 = icmp eq i32 %4, 24"];
+Node0x3eeb3e0 -> Node0x3eeb3e0[label="D:2.49ns L:0",color=blue];
+}

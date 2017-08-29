@@ -1,0 +1,21 @@
+digraph {
+Node0x4037080[label="  %31 = phi i1 [ false, %float64_is_sign..."];
+Node0x4037080 -> Node0x4037080[label="D:0.00ns L:0",color=blue];
+Node0x4037080 -> Node0x4037080[label="D:0.00ns L:0",color=blue];
+Node0x4037160[label="  %32 = or i64 %4, 2251799813685248"];
+Node0x4037160 -> Node0x4037160[label="D:0.00ns L:0",color=blue];
+Node0x4037160 -> Node0x4037160[label="D:0.00ns L:0",color=blue];
+Node0x4037240[label="  %33 = or i64 %5, 2251799813685248"];
+Node0x4037240 -> Node0x4037240[label="D:0.00ns L:0",color=blue];
+Node0x4037240 -> Node0x4037240[label="D:0.00ns L:0",color=blue];
+Node0x4037320[label="  %34 = or i1 %.5, %31"];
+Node0x4037320 -> Node0x4037320[label="D:0.00ns L:0",color=blue];
+Node0x4037320 -> Node0x4037320[label="D:0.00ns L:0",color=blue];
+Node0x4037400[label="  %35 = or i32 %float_exception_flags.0,..."];
+Node0x4037400 -> Node0x4037400[label="D:0.00ns L:0",color=blue];
+Node0x4034530[label="  %.float_exception_flags.0 = select i1 ..."];
+Node0x4034530 -> Node0x4034530[label="D:3.99ns L:0",color=blue];
+Node0x4034530 -> Node0x4034530[label="D:3.99ns L:0",color=blue];
+Node0x4034760[label="  %.mux = select i1 %31, i64 %33, i64 %3..."];
+Node0x4034760 -> Node0x4034760[label="D:4.29ns L:0",color=blue];
+}

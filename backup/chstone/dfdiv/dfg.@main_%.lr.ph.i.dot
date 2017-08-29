@@ -1,0 +1,28 @@
+digraph {
+Node0x3867250[label="  %zSig.037.i = phi i64 [ %185, %.lr.ph...."];
+Node0x3867250 -> Node0x3867250[label="D:0.00ns L:0",color=blue];
+Node0x3867330[label="  %183 = phi i64 [ %overflow_intrinsic_s..."];
+Node0x3867330 -> Node0x3867330[label="D:0.00ns L:0",color=blue];
+Node0x3867410[label="  %184 = phi i64 [ %187, %.lr.ph.i ], [ ..."];
+Node0x3867410 -> Node0x3867410[label="D:0.00ns L:0",color=blue];
+Node0x38674f0[label="  %185 = add i64 %zSig.037.i, -1"];
+Node0x38674f0 -> Node0x38674f0[label="D:3.16ns L:0",color=blue];
+Node0x38674f0 -> Node0x38674f0[label="D:3.16ns L:0",color=blue];
+Node0x38675d0[label="  %overflow_intrinsic16 = zext i64 %183 ..."];
+Node0x38675d0 -> Node0x38675d0[label="D:0.00ns L:0",color=blue];
+Node0x38676b0[label="  %overflow_intrinsic18 = add nuw i65 %o..."];
+Node0x38676b0 -> Node0x38676b0[label="D:20.00ns L:0",color=blue];
+Node0x38676b0 -> Node0x38676b0[label="D:20.00ns L:0",color=blue];
+Node0x3867790[label="  %overflow_intrinsic_sum19 = trunc i65 ..."];
+Node0x3867790 -> Node0x3867790[label="D:0.00ns L:0",color=blue];
+Node0x3867790 -> Node0x3867790[label="D:0.00ns L:0",color=blue];
+Node0x3867870[label="  %overflow_intrinsic20 = lshr i65 %over..."];
+Node0x3867870 -> Node0x3867870[label="D:0.00ns L:0",color=blue];
+Node0x3867950[label="  %186 = trunc i65 %overflow_intrinsic20..."];
+Node0x3867950 -> Node0x3867950[label="D:0.00ns L:0",color=blue];
+Node0x3867a30[label="  %187 = add i64 %186, %184"];
+Node0x3867a30 -> Node0x3867a30[label="D:3.16ns L:0",color=blue];
+Node0x3867a30 -> Node0x3867a30[label="D:3.16ns L:0",color=blue];
+Node0x3867b10[label="  %188 = icmp slt i64 %187, 0"];
+Node0x3867b10 -> Node0x3867b10[label="D:3.50ns L:0",color=blue];
+}

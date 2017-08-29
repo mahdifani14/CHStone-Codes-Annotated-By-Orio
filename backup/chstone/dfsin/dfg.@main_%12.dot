@@ -1,0 +1,27 @@
+digraph {
+Node0x3cc1110[label="  %13 = icmp slt i32 %10, 0"];
+Node0x3cc1110 -> Node0x3cc1110[label="D:3.36ns L:0",color=blue];
+Node0x3cc11f0[label="  %a.lobit.i.i = lshr i32 %10, 31"];
+Node0x3cc11f0 -> Node0x3cc11f0[label="D:0.00ns L:0",color=blue];
+Node0x3cc12d0[label="  %14 = sub nsw i32 0, %10"];
+Node0x3cc12d0 -> Node0x3cc12d0[label="D:2.40ns L:0",color=blue];
+Node0x3cc1400[label="  %15 = select i1 %13, i32 %14, i32 %10"];
+Node0x3cc1400 -> Node0x3cc1400[label="D:3.99ns L:0",color=blue];
+Node0x3cc1400 -> Node0x3cc1400[label="D:3.99ns L:0",color=blue];
+Node0x3cc1400 -> Node0x3cc1400[label="D:3.99ns L:0",color=blue];
+Node0x3cc1400 -> Node0x3cc1400[label="D:3.99ns L:0",color=blue];
+Node0x3cc14e0[label="  %16 = icmp ult i32 %15, 65536"];
+Node0x3cc14e0 -> Node0x3cc14e0[label="D:2.92ns L:0",color=blue];
+Node0x3cc14e0 -> Node0x3cc14e0[label="D:2.92ns L:0",color=blue];
+Node0x3cc15c0[label="  %17 = shl i32 %15, 16"];
+Node0x3cc15c0 -> Node0x3cc15c0[label="D:0.00ns L:0",color=blue];
+Node0x3cc16a0[label="  %.a.i.i.i = select i1 %16, i32 %17, i3..."];
+Node0x3cc16a0 -> Node0x3cc16a0[label="D:3.99ns L:0",color=blue];
+Node0x3cc16a0 -> Node0x3cc16a0[label="D:3.99ns L:0",color=blue];
+Node0x3cc16a0 -> Node0x3cc16a0[label="D:3.99ns L:0",color=blue];
+Node0x3cc1780[label="  %..i.i.i = select i1 %16, i32 16, i32 ..."];
+Node0x3cc1780 -> Node0x3cc1780[label="D:3.99ns L:0",color=blue];
+Node0x3cc1780 -> Node0x3cc1780[label="D:3.99ns L:0",color=blue];
+Node0x3cc1860[label="  %18 = icmp ult i32 %.a.i.i.i, 16777216"];
+Node0x3cc1860 -> Node0x3cc1860[label="D:2.92ns L:0",color=blue];
+}

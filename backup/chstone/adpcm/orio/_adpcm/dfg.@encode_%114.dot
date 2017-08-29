@@ -1,0 +1,20 @@
+digraph {
+Node0x4070710[label="  %115 = phi i32 [ 0, %0 ], [ %112, %111..."];
+Node0x4070710 -> Node0x4070710[label="D:0.00ns L:0",color=blue];
+Node0x4070710 -> Node0x4070710[label="D:0.00ns L:0",color=blue];
+Node0x4070710 -> Node0x4070710[label="D:0.00ns L:0",color=blue];
+Node0x4070710 -> Node0x4070710[label="D:0.00ns L:0",color=blue];
+Node0x40707f0[label="  %116 = add i32 %115, 1"];
+Node0x40707f0 -> Node0x40707f0[label="D:2.50ns L:0",color=blue];
+Node0x40707f0 -> Node0x40707f0[label="D:2.50ns L:0",color=blue];
+Node0x40708d0[label="  %scevgep = getelementptr [30 x i32]* @..."];
+Node0x40708d0 -> Node0x40708d0[label="D:20.00ns L:0",color=blue];
+Node0x40709f0[label="  %117 = load i32* %scevgep, align 4, !t..."];
+Node0x40709f0 -> Node0x40709f0[label="D:0.00ns L:1",color=blue];
+Node0x4070ad0[label="  %118 = mul nsw i32 %117, %108"];
+Node0x4070ad0 -> Node0x4070ad0[label="D:2.59ns L:1",color=blue];
+Node0x4070bf0[label="  %119 = ashr i32 %118, 15"];
+Node0x4070bf0 -> Node0x4070bf0[label="D:0.00ns L:0",color=blue];
+Node0x4070cd0[label="  %120 = icmp sgt i32 %m.0.i.i, %119"];
+Node0x4070cd0 -> Node0x4070cd0[label="D:3.13ns L:0",color=blue];
+}

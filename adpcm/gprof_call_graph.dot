@@ -1,0 +1,38 @@
+digraph {
+	graph [fontname=Arial, nodesep=0.125, ranksep=0.25];
+	node [fontcolor=white, fontname=Arial, height=0, shape=box, style=filled, width=0];
+	edge [fontname=Arial];
+	1 [color="#ff0000", fontcolor="#ffffff", fontsize="10.00", label="filtep\n100.00%\n(100.00%)\n200×"];
+	2 [color="#ff0000", fontcolor="#ffffff", fontsize="10.00", label="filtez\n100.00%\n(100.00%)\n200×"];
+	3 [color="#ff0000", fontcolor="#ffffff", fontsize="10.00", label="scalel\n100.00%\n(100.00%)\n200×"];
+	4 [color="#ff0000", fontcolor="#ffffff", fontsize="10.00", label="uppol1\n100.00%\n(100.00%)\n200×"];
+	5 [color="#ff0000", fontcolor="#ffffff", fontsize="10.00", label="uppol2\n100.00%\n(100.00%)\n200×"];
+	6 [color="#ff0000", fontcolor="#ffffff", fontsize="10.00", label="upzero\n100.00%\n(100.00%)\n200×"];
+	7 [color="#ff0000", fontcolor="#ffffff", fontsize="10.00", label="logsch\n100.00%\n(100.00%)\n100×"];
+	8 [color="#ff0000", fontcolor="#ffffff", fontsize="10.00", label="logscl\n100.00%\n(100.00%)\n100×"];
+	9 [color="#ff0000", fontcolor="#ffffff", fontsize="10.00", label="decode\n100.00%\n(100.00%)\n50×"];
+	9 -> 1 [arrowsize="1.00", color="#ff0000", fontcolor="#ff0000", fontsize="10.00", label="100.00%\n100×", labeldistance="4.00", penwidth="4.00"];
+	9 -> 2 [arrowsize="1.00", color="#ff0000", fontcolor="#ff0000", fontsize="10.00", label="100.00%\n100×", labeldistance="4.00", penwidth="4.00"];
+	9 -> 3 [arrowsize="1.00", color="#ff0000", fontcolor="#ff0000", fontsize="10.00", label="100.00%\n100×", labeldistance="4.00", penwidth="4.00"];
+	9 -> 4 [arrowsize="1.00", color="#ff0000", fontcolor="#ff0000", fontsize="10.00", label="100.00%\n100×", labeldistance="4.00", penwidth="4.00"];
+	9 -> 5 [arrowsize="1.00", color="#ff0000", fontcolor="#ff0000", fontsize="10.00", label="100.00%\n100×", labeldistance="4.00", penwidth="4.00"];
+	9 -> 6 [arrowsize="1.00", color="#ff0000", fontcolor="#ff0000", fontsize="10.00", label="100.00%\n100×", labeldistance="4.00", penwidth="4.00"];
+	9 -> 7 [arrowsize="1.00", color="#ff0000", fontcolor="#ff0000", fontsize="10.00", label="100.00%\n50×", labeldistance="4.00", penwidth="4.00"];
+	9 -> 8 [arrowsize="1.00", color="#ff0000", fontcolor="#ff0000", fontsize="10.00", label="100.00%\n50×", labeldistance="4.00", penwidth="4.00"];
+	10 [color="#ff0000", fontcolor="#ffffff", fontsize="10.00", label="encode\n100.00%\n(100.00%)\n50×"];
+	10 -> 1 [arrowsize="1.00", color="#ff0000", fontcolor="#ff0000", fontsize="10.00", label="100.00%\n100×", labeldistance="4.00", penwidth="4.00"];
+	10 -> 2 [arrowsize="1.00", color="#ff0000", fontcolor="#ff0000", fontsize="10.00", label="100.00%\n100×", labeldistance="4.00", penwidth="4.00"];
+	10 -> 3 [arrowsize="1.00", color="#ff0000", fontcolor="#ff0000", fontsize="10.00", label="100.00%\n100×", labeldistance="4.00", penwidth="4.00"];
+	10 -> 4 [arrowsize="1.00", color="#ff0000", fontcolor="#ff0000", fontsize="10.00", label="100.00%\n100×", labeldistance="4.00", penwidth="4.00"];
+	10 -> 5 [arrowsize="1.00", color="#ff0000", fontcolor="#ff0000", fontsize="10.00", label="100.00%\n100×", labeldistance="4.00", penwidth="4.00"];
+	10 -> 6 [arrowsize="1.00", color="#ff0000", fontcolor="#ff0000", fontsize="10.00", label="100.00%\n100×", labeldistance="4.00", penwidth="4.00"];
+	10 -> 7 [arrowsize="1.00", color="#ff0000", fontcolor="#ff0000", fontsize="10.00", label="100.00%\n50×", labeldistance="4.00", penwidth="4.00"];
+	10 -> 8 [arrowsize="1.00", color="#ff0000", fontcolor="#ff0000", fontsize="10.00", label="100.00%\n50×", labeldistance="4.00", penwidth="4.00"];
+	10 -> 11 [arrowsize="1.00", color="#ff0000", fontcolor="#ff0000", fontsize="10.00", label="100.00%\n50×", labeldistance="4.00", penwidth="4.00"];
+	11 [color="#ff0000", fontcolor="#ffffff", fontsize="10.00", label="quantl\n100.00%\n(100.00%)\n50×"];
+	12 [color="#ff0000", fontcolor="#ffffff", fontsize="10.00", label="adpcm_main\n100.00%\n(100.00%)\n1×"];
+	12 -> 9 [arrowsize="1.00", color="#ff0000", fontcolor="#ff0000", fontsize="10.00", label="100.00%\n50×", labeldistance="4.00", penwidth="4.00"];
+	12 -> 10 [arrowsize="1.00", color="#ff0000", fontcolor="#ff0000", fontsize="10.00", label="100.00%\n50×", labeldistance="4.00", penwidth="4.00"];
+	12 -> 13 [arrowsize="1.00", color="#ff0000", fontcolor="#ff0000", fontsize="10.00", label="100.00%\n1×", labeldistance="4.00", penwidth="4.00"];
+	13 [color="#ff0000", fontcolor="#ffffff", fontsize="10.00", label="reset\n100.00%\n(100.00%)\n1×"];
+}

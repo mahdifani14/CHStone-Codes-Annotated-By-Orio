@@ -1,0 +1,1347 @@
+# source run_sim_nowave.tcl
+# Start time: 16:15:06 on Apr 13,2017
+# vlog legup_system_tb.v 
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# -- Compiling module legup_system_tb
+# 
+# Top level modules:
+# 	legup_system_tb
+# End time: 16:15:06 on Apr 13,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:15:06 on Apr 13,2017
+# vlog ./submodules/220model.v ./submodules/AddressHash.v ./submodules/AddressStack.v ./submodules/CounterStack.v ./submodules/CounterStorage.v ./submodules/CountingBlock.v ./submodules/IncCounter.v ./submodules/LeapProfiler.v ./submodules/LeapTop.v ./submodules/OpDecode.v ./submodules/SerialDivider.v ./submodules/altera_avalon_packets_to_master.v ./submodules/altera_avalon_sc_fifo.v ./submodules/altera_avalon_st_bytes_to_packets.v ./submodules/altera_avalon_st_clock_crosser.v ./submodules/altera_avalon_st_idle_inserter.v ./submodules/altera_avalon_st_idle_remover.v ./submodules/altera_avalon_st_jtag_interface.v ./submodules/altera_avalon_st_packets_to_bytes.v ./submodules/altera_avalon_st_pipeline_base.v ./submodules/altera_jtag_dc_streaming.v ./submodules/altera_jtag_sld_node.v ./submodules/altera_jtag_streaming.v ./submodules/altera_mf.v ./submodules/altera_primitives.v ./submodules/altera_reset_controller.v ./submodules/altera_reset_synchronizer.v ./submodules/altera_sdram_partner_module.v ./submodules/altfp_adder64_13.v ./submodules/altfp_adder64_14.v ./submodules/altfp_adder_13.v ./submodules/altfp_adder_14.v ./submodules/altfp_compare32_1.v ./submodules/altfp_compare64_1.v ./submodules/altfp_divider64_61.v ./submodules/altfp_divider_33.v ./submodules/altfp_extend_2.v ./submodules/altfp_fptosi32_6.v ./submodules/altfp_fptosi64_6.v ./submodules/altfp_multiplier64_11.v ./submodules/altfp_multiplier_11.v ./submodules/altfp_sitofp32_6.v ./submodules/altfp_sitofp64_6.v ./submodules/altfp_subtractor64_14.v ./submodules/altfp_subtractor_14.v ./submodules/altfp_truncate_3.v ./submodules/cyclonev_atoms.v ./submodules/cyclonev_hssi_atoms.v ./submodules/cyclonev_pcie_hip_atoms.v ./submodules/div_signed.v ./submodules/div_unsigned.v ./submodules/leap_sim_controller.v ./submodules/legup_dm_wt_cache.v ./submodules/legup_system.v ./submodules/legup_system_JTAG_UART.v ./submodules/legup_system_JTAG_to_FPGA_Bridge.v ./submodules/legup_system_SDRAM.v ./submodules/legup_system_SDRAM_test_component.v 
+# ./submodules/legup_system_mm_interconnect_0.v ./submodules/legup_system_mm_interconnect_1.v ./submodules/legup_system_mm_interconnect_1_avalon_st_adapter.v ./submodules/legup_system_mm_interconnect_1_avalon_st_adapter_001.v ./submodules/legup_system_mm_interconnect_3.v ./submodules/sgate.v ./submodules/tiger_alu.v ./submodules/tiger_avalon.v ./submodules/tiger_avalon_im.v ./submodules/tiger_branch.v ./submodules/tiger_decode.v ./submodules/tiger_decoder.v ./submodules/tiger_defines.v ./submodules/tiger_div.v ./submodules/tiger_divu.v ./submodules/tiger_execute.v ./submodules/tiger_fetch.v ./submodules/tiger_ff.v ./submodules/tiger_icache.v ./submodules/tiger_icache_av_1port.v ./submodules/tiger_icache_memory.v ./submodules/tiger_icache_mux_param.v ./submodules/tiger_icache_parameters.v ./submodules/tiger_leap_slave_handler.v ./submodules/tiger_memoryaccess.v ./submodules/tiger_mult.v ./submodules/tiger_multu.v ./submodules/tiger_shifter.v ./submodules/tiger_stalllogic.v ./submodules/tiger_tiger.v ./submodules/tiger_top.v ./submodules/tiger_writeback.v ./submodules/true_dual_port_ram_single_clock.v "+incdir+./submodules" 
+# -- Compiling module LPM_MEMORY_INITIALIZATION
+# -- Compiling module LPM_HINT_EVALUATION
+# -- Compiling module LPM_DEVICE_FAMILIES
+# -- Compiling module lpm_constant
+# -- Compiling module lpm_inv
+# -- Compiling module lpm_and
+# -- Compiling module lpm_or
+# -- Compiling module lpm_xor
+# -- Compiling module lpm_bustri
+# -- Compiling module lpm_mux
+# -- Compiling module lpm_decode
+# -- Compiling module lpm_clshift
+# -- Compiling module lpm_add_sub
+# -- Compiling module lpm_compare
+# -- Compiling module lpm_mult
+# -- Compiling module lpm_divide
+# -- Compiling module lpm_abs
+# -- Compiling module lpm_counter
+# -- Compiling module lpm_latch
+# -- Compiling module lpm_ff
+# -- Compiling module lpm_shiftreg
+# -- Compiling module lpm_ram_dq
+# -- Compiling module lpm_ram_dp
+# -- Compiling module lpm_ram_io
+# -- Compiling module lpm_rom
+# -- Compiling module lpm_fifo
+# -- Compiling module lpm_fifo_dc_dffpipe
+# -- Compiling module lpm_fifo_dc_fefifo
+# -- Compiling module lpm_fifo_dc_async
+# -- Compiling module lpm_fifo_dc
+# -- Compiling module lpm_inpad
+# -- Compiling module lpm_outpad
+# -- Compiling module lpm_bipad
+# -- Compiling module AddressHash
+# -- Compiling module AddressStack
+# -- Compiling module CounterStack
+# -- Compiling module CounterStorage
+# -- Compiling module CountingBlock
+# -- Compiling module IncCounter
+# -- Compiling module LeapProfiler
+# -- Compiling module LeapTop
+# -- Compiling module OpDecode
+# -- Compiling module SerialDivider
+# -- Compiling module DFlipFlop
+# -- Compiling module ShiftLeftRegister
+# -- Compiling module DownwardsRunningCounter
+# -- Compiling module altera_avalon_packets_to_master
+# -- Compiling module packets_to_fifo
+# -- Compiling module fifo_buffer_single_clock_fifo
+# -- Compiling module fifo_buffer_scfifo_with_controls
+# -- Compiling module fifo_buffer
+# -- Compiling module fifo_to_packet
+# -- Compiling module packets_to_master
+# -- Compiling module altera_avalon_sc_fifo
+# -- Compiling module altera_avalon_st_bytes_to_packets
+# -- Compiling module altera_avalon_st_clock_crosser
+# -- Compiling module altera_avalon_st_idle_inserter
+# -- Compiling module altera_avalon_st_idle_remover
+# -- Compiling module altera_avalon_st_jtag_interface
+# -- Compiling module altera_avalon_st_packets_to_bytes
+# -- Compiling module altera_avalon_st_pipeline_base
+# -- Compiling module altera_jtag_control_signal_crosser
+# -- Compiling module altera_jtag_src_crosser
+# -- Compiling module altera_jtag_dc_streaming
+# -- Compiling module altera_jtag_sld_node
+# -- Compiling module altera_jtag_streaming
+# -- Compiling module lcell
+# -- Compiling module ALTERA_MF_MEMORY_INITIALIZATION
+# -- Compiling module ALTERA_MF_HINT_EVALUATION
+# -- Compiling module ALTERA_DEVICE_FAMILIES
+# -- Compiling module dffp
+# -- Compiling module pll_iobuf
+# -- Compiling module stx_m_cntr
+# -- Compiling module stx_n_cntr
+# -- Compiling module stx_scale_cntr
+# -- Compiling module MF_pll_reg
+# -- Compiling module MF_stratix_pll
+# -- Compiling module arm_m_cntr
+# -- Compiling module arm_n_cntr
+# -- Compiling module arm_scale_cntr
+# -- Compiling module MF_stratixii_pll
+# -- Compiling module ttn_m_cntr
+# -- Compiling module ttn_n_cntr
+# -- Compiling module ttn_scale_cntr
+# -- Compiling module MF_stratixiii_pll
+# -- Compiling module cda_m_cntr
+# -- Compiling module cda_n_cntr
+# -- Compiling module cda_scale_cntr
+# -- Compiling module MF_cycloneiii_pll
+# -- Compiling module MF_cycloneiiigl_m_cntr
+# -- Compiling module MF_cycloneiiigl_n_cntr
+# -- Compiling module MF_cycloneiiigl_scale_cntr
+# -- Compiling module cycloneiiigl_post_divider
+# -- Compiling module MF_cycloneiiigl_pll
+# -- Compiling module altpll
+# -- Compiling module altlvds_rx
+# -- Compiling module stratix_lvds_rx
+# -- Compiling module stratixgx_dpa_lvds_rx
+# -- Compiling module stratixii_lvds_rx
+# -- Compiling module flexible_lvds_rx
+# -- Compiling module stratixiii_lvds_rx
+# -- Compiling module stratixiii_lvds_rx_channel
+# -- Compiling module stratixiii_lvds_rx_dpa
+# -- Compiling module altlvds_tx
+# -- Compiling module stratixv_local_clk_divider
+# -- Compiling module stratix_tx_outclk
+# -- Compiling module stratixii_tx_outclk
+# -- Compiling module flexible_lvds_tx
+# -- Compiling module dcfifo_dffpipe
+# -- Compiling module dcfifo_fefifo
+# -- Compiling module dcfifo_async
+# -- Compiling module dcfifo_sync
+# -- Compiling module dcfifo_low_latency
+# -- Compiling module dcfifo_mixed_widths
+# -- Compiling module dcfifo
+# -- Compiling module altaccumulate
+# -- Compiling module altmult_accum
+# -- Compiling module altmult_add
+# -- Compiling module altfp_mult
+# -- Compiling module altsqrt
+# -- Compiling module altclklock
+# -- Compiling module altddio_in
+# -- Compiling module altddio_out
+# -- Compiling module altddio_bidir
+# -- Compiling module altdpram
+# -- Compiling module altsyncram
+# -- Compiling module alt3pram
+# -- Compiling module parallel_add
+# -- Compiling module scfifo
+# -- Compiling module altshift_taps
+# -- Compiling module a_graycounter
+# -- Compiling module altsquare
+# -- Compiling module altera_std_synchronizer
+# -- Compiling module altera_std_synchronizer_bundle
+# -- Compiling module alt_cal
+# -- Compiling module alt_cal_mm
+# -- Compiling module alt_cal_c3gxb
+# -- Compiling module alt_cal_sv
+# -- Compiling module alt_cal_av
+# -- Compiling module alt_aeq_s4
+# -- Compiling module alt_eyemon
+# -- Compiling module alt_dfe
+# -- Compiling module signal_gen
+# -- Compiling module jtag_tap_controller
+# -- Compiling module dummy_hub
+# -- Compiling module sld_virtual_jtag
+# -- Compiling module sld_signaltap
+# -- Compiling module altstratixii_oct
+# -- Compiling module altparallel_flash_loader
+# -- Compiling module altserial_flash_loader
+# -- Compiling module sld_virtual_jtag_basic
+# -- Compiling module altsource_probe
+# -- Compiling module global
+# -- Compiling module carry
+# -- Compiling module cascade
+# -- Compiling module carry_sum
+# -- Compiling module exp
+# -- Compiling module soft
+# -- Compiling module opndrn
+# -- Compiling module row_global
+# -- Compiling module TRI
+# -- Compiling module lut_input
+# -- Compiling module lut_output
+# -- Compiling module latch
+# -- Compiling module dlatch
+# -- Compiling module prim_gdff
+# -- Compiling module dff
+# -- Compiling module dffe
+# -- Compiling module dffea
+# -- Compiling module dffeas
+# -- Compiling module prim_gtff
+# -- Compiling module tff
+# -- Compiling module tffe
+# -- Compiling module prim_gjkff
+# -- Compiling module jkff
+# -- Compiling module jkffe
+# -- Compiling module prim_gsrff
+# -- Compiling module srff
+# -- Compiling module srffe
+# -- Compiling module clklock
+# -- Compiling module alt_inbuf
+# -- Compiling module alt_outbuf
+# -- Compiling module alt_outbuf_tri
+# -- Compiling module alt_iobuf
+# -- Compiling module alt_inbuf_diff
+# -- Compiling module alt_outbuf_diff
+# -- Compiling module alt_outbuf_tri_diff
+# -- Compiling module alt_iobuf_diff
+# -- Compiling module alt_bidir_diff
+# -- Compiling module alt_bidir_buf
+# -- Compiling UDP PRIM_GDFF_LOW
+# -- Compiling UDP PRIM_GDFF_HIGH
+# -- Compiling module altera_reset_controller
+# -- Compiling module altera_reset_synchronizer
+# -- Compiling module altera_sdram_partner_module
+# -- Compiling module altfp_adder64_13
+# -- Compiling module fadd64_altbarrel_shift_32e
+# -- Compiling module fadd64_altbarrel_shift_95g
+# -- Compiling module fadd64_altpriority_encoder_3e8
+# -- Compiling module fadd64_altpriority_encoder_6e8
+# -- Compiling module fadd64_altpriority_encoder_be8
+# -- Compiling module fadd64_altpriority_encoder_rf8
+# -- Compiling module fadd64_altpriority_encoder_3v7
+# -- Compiling module fadd64_altpriority_encoder_6v7
+# -- Compiling module fadd64_altpriority_encoder_bv7
+# -- Compiling module fadd64_altpriority_encoder_r08
+# -- Compiling module fadd64_altpriority_encoder_tv8
+# -- Compiling module fadd64_altpriority_encoder_te9
+# -- Compiling module fadd64_altpriority_encoder_uu8
+# -- Compiling module fadd64_altpriority_encoder_nh8
+# -- Compiling module fadd64_altpriority_encoder_qh8
+# -- Compiling module fadd64_altpriority_encoder_vh8
+# -- Compiling module fadd64_altpriority_encoder_fj8
+# -- Compiling module fadd64_altpriority_encoder_hi9
+# -- Compiling module fadd64_altpriority_encoder_n28
+# -- Compiling module fadd64_altpriority_encoder_q28
+# -- Compiling module fadd64_altpriority_encoder_v28
+# -- Compiling module fadd64_altpriority_encoder_f48
+# -- Compiling module fadd64_altpriority_encoder_h39
+# -- Compiling module fadd64_altpriority_encoder_ina
+# -- Compiling module fadd64_altfp_add_sub_m1l
+# -- Compiling module fadd64
+# -- Compiling module altfp_adder64_altbarrel_shift_k0e
+# -- Compiling module altfp_adder64_altbarrel_shift_q3g
+# -- Compiling module altfp_adder64_altpriority_encoder_3e8
+# -- Compiling module altfp_adder64_altpriority_encoder_6e8
+# -- Compiling module altfp_adder64_altpriority_encoder_be8
+# -- Compiling module altfp_adder64_altpriority_encoder_rf8
+# -- Compiling module altfp_adder64_altpriority_encoder_3v7
+# -- Compiling module altfp_adder64_altpriority_encoder_6v7
+# -- Compiling module altfp_adder64_altpriority_encoder_bv7
+# -- Compiling module altfp_adder64_altpriority_encoder_r08
+# -- Compiling module altfp_adder64_altpriority_encoder_tv8
+# -- Compiling module altfp_adder64_altpriority_encoder_te9
+# -- Compiling module altfp_adder64_altpriority_encoder_uu8
+# -- Compiling module altfp_adder64_altpriority_encoder_nh8
+# -- Compiling module altfp_adder64_altpriority_encoder_qh8
+# -- Compiling module altfp_adder64_altpriority_encoder_vh8
+# -- Compiling module altfp_adder64_altpriority_encoder_fj8
+# -- Compiling module altfp_adder64_altpriority_encoder_hi9
+# -- Compiling module altfp_adder64_altpriority_encoder_n28
+# -- Compiling module altfp_adder64_altpriority_encoder_q28
+# -- Compiling module altfp_adder64_altpriority_encoder_v28
+# -- Compiling module altfp_adder64_altpriority_encoder_f48
+# -- Compiling module altfp_adder64_altpriority_encoder_h39
+# -- Compiling module altfp_adder64_altpriority_encoder_ina
+# -- Compiling module altfp_adder64_altfp_add_sub_pnj
+# -- Compiling module altfp_adder64_14
+# -- Compiling module altfp_adder_13
+# -- Compiling module fadd_altbarrel_shift_02e
+# -- Compiling module fadd_altbarrel_shift_65g
+# -- Compiling module fadd_altpriority_encoder_3e8
+# -- Compiling module fadd_altpriority_encoder_6e8
+# -- Compiling module fadd_altpriority_encoder_be8
+# -- Compiling module fadd_altpriority_encoder_3v7
+# -- Compiling module fadd_altpriority_encoder_6v7
+# -- Compiling module fadd_altpriority_encoder_bv7
+# -- Compiling module fadd_altpriority_encoder_uv8
+# -- Compiling module fadd_altpriority_encoder_ue9
+# -- Compiling module fadd_altpriority_encoder_ou8
+# -- Compiling module fadd_altpriority_encoder_nh8
+# -- Compiling module fadd_altpriority_encoder_qh8
+# -- Compiling module fadd_altpriority_encoder_vh8
+# -- Compiling module fadd_altpriority_encoder_ii9
+# -- Compiling module fadd_altpriority_encoder_n28
+# -- Compiling module fadd_altpriority_encoder_q28
+# -- Compiling module fadd_altpriority_encoder_v28
+# -- Compiling module fadd_altpriority_encoder_i39
+# -- Compiling module fadd_altpriority_encoder_cna
+# -- Compiling module fadd_altfp_add_sub_a0l
+# -- Compiling module fadd
+# -- Compiling module altfp_adder_altbarrel_shift_h0e
+# -- Compiling module altfp_adder_altbarrel_shift_n3g
+# -- Compiling module altfp_adder_altpriority_encoder_3e8
+# -- Compiling module altfp_adder_altpriority_encoder_6e8
+# -- Compiling module altfp_adder_altpriority_encoder_be8
+# -- Compiling module altfp_adder_altpriority_encoder_3v7
+# -- Compiling module altfp_adder_altpriority_encoder_6v7
+# -- Compiling module altfp_adder_altpriority_encoder_bv7
+# -- Compiling module altfp_adder_altpriority_encoder_uv8
+# -- Compiling module altfp_adder_altpriority_encoder_ue9
+# -- Compiling module altfp_adder_altpriority_encoder_ou8
+# -- Compiling module altfp_adder_altpriority_encoder_nh8
+# -- Compiling module altfp_adder_altpriority_encoder_qh8
+# -- Compiling module altfp_adder_altpriority_encoder_vh8
+# -- Compiling module altfp_adder_altpriority_encoder_ii9
+# -- Compiling module altfp_adder_altpriority_encoder_n28
+# -- Compiling module altfp_adder_altpriority_encoder_q28
+# -- Compiling module altfp_adder_altpriority_encoder_v28
+# -- Compiling module altfp_adder_altpriority_encoder_i39
+# -- Compiling module altfp_adder_altpriority_encoder_cna
+# -- Compiling module altfp_adder_altfp_add_sub_dmj
+# -- Compiling module altfp_adder_14
+# -- Compiling module altfp_compare32_altfp_compare_lke
+# -- Compiling module altfp_compare32_1
+# -- Compiling module altfp_compare64_altfp_compare_1me
+# -- Compiling module altfp_compare64_1
+# -- Compiling module altfp_divider64_altfp_div_csa_ivc
+# -- Compiling module altfp_divider64_altfp_div_csa_92c
+# -- Compiling module altfp_divider64_altfp_div_csa_k0f
+# -- Compiling module altfp_divider64_altfp_div_csa_d3c
+# -- Compiling module altfp_divider64_altfp_div_csa_c2c
+# -- Compiling module altfp_divider64_qds_block_7o8
+# -- Compiling module altfp_divider64_srt_block_int_8fk
+# -- Compiling module altfp_divider64_qds_block_6a7
+# -- Compiling module altfp_divider64_srt_block_int_ghk
+# -- Compiling module altfp_divider64_srt_block_int_nbk
+# -- Compiling module altfp_divider64_altfp_div_srt_ext_e3f
+# -- Compiling module altfp_divider64_altfp_div_1vh
+# -- Compiling module altfp_divider64_61
+# -- Compiling module altfp_divider_altfp_div_csa_gvc
+# -- Compiling module altfp_divider_altfp_div_csa_72c
+# -- Compiling module altfp_divider_altfp_div_csa_j0f
+# -- Compiling module altfp_divider_altfp_div_csa_c3c
+# -- Compiling module altfp_divider_altfp_div_csa_a2c
+# -- Compiling module altfp_divider_altfp_div_csa_b3c
+# -- Compiling module altfp_divider_qds_block_7o8
+# -- Compiling module altfp_divider_srt_block_int_2fk
+# -- Compiling module altfp_divider_qds_block_6a7
+# -- Compiling module altfp_divider_srt_block_int_ahk
+# -- Compiling module altfp_divider_srt_block_int_hbk
+# -- Compiling module altfp_divider_altfp_div_srt_ext_73f
+# -- Compiling module altfp_divider_altfp_div_kth
+# -- Compiling module altfp_divider_33
+# -- Compiling module altfp_extend_altfp_convert_bpn
+# -- Compiling module altfp_extend_2
+# -- Compiling module altfp_fptosi32_altbarrel_shift_grf
+# -- Compiling module altfp_fptosi32_altfp_convert_fhn
+# -- Compiling module altfp_fptosi32_6
+# -- Compiling module altfp_fptosi64_altbarrel_shift_jrf
+# -- Compiling module altfp_fptosi64_altfp_convert_0jn
+# -- Compiling module altfp_fptosi64_6
+# -- Compiling module altfp_multiplier64_altfp_mult_geo
+# -- Compiling module altfp_multiplier64_11
+# -- Compiling module altfp_multiplier_altfp_mult_4do
+# -- Compiling module altfp_multiplier_11
+# -- Compiling module altfp_sitofp32_altbarrel_shift_brf
+# -- Compiling module altfp_sitofp32_altpriority_encoder_3e8
+# -- Compiling module altfp_sitofp32_altpriority_encoder_6e8
+# -- Compiling module altfp_sitofp32_altpriority_encoder_be8
+# -- Compiling module altfp_sitofp32_altpriority_encoder_rf8
+# -- Compiling module altfp_sitofp32_altpriority_encoder_3v7
+# -- Compiling module altfp_sitofp32_altpriority_encoder_6v7
+# -- Compiling module altfp_sitofp32_altpriority_encoder_bv7
+# -- Compiling module altfp_sitofp32_altpriority_encoder_r08
+# -- Compiling module altfp_sitofp32_altpriority_encoder_qb6
+# -- Compiling module altfp_sitofp32_altfp_convert_fhn
+# -- Compiling module altfp_sitofp32_6
+# -- Compiling module altfp_sitofp64_altbarrel_shift_brf
+# -- Compiling module altfp_sitofp64_altpriority_encoder_3v7
+# -- Compiling module altfp_sitofp64_altpriority_encoder_3e8
+# -- Compiling module altfp_sitofp64_altpriority_encoder_6v7
+# -- Compiling module altfp_sitofp64_altpriority_encoder_6e8
+# -- Compiling module altfp_sitofp64_altpriority_encoder_bv7
+# -- Compiling module altfp_sitofp64_altpriority_encoder_be8
+# -- Compiling module altfp_sitofp64_altpriority_encoder_r08
+# -- Compiling module altfp_sitofp64_altpriority_encoder_rf8
+# -- Compiling module altfp_sitofp64_altpriority_encoder_qb6
+# -- Compiling module altfp_sitofp64_altfp_convert_0jn
+# -- Compiling module altfp_sitofp64_6
+# -- Compiling module altfp_subtractor64_altbarrel_shift_k0e
+# -- Compiling module altfp_subtractor64_altbarrel_shift_q3g
+# -- Compiling module altfp_subtractor64_altpriority_encoder_3e8
+# -- Compiling module altfp_subtractor64_altpriority_encoder_6e8
+# -- Compiling module altfp_subtractor64_altpriority_encoder_be8
+# -- Compiling module altfp_subtractor64_altpriority_encoder_rf8
+# -- Compiling module altfp_subtractor64_altpriority_encoder_3v7
+# -- Compiling module altfp_subtractor64_altpriority_encoder_6v7
+# -- Compiling module altfp_subtractor64_altpriority_encoder_bv7
+# -- Compiling module altfp_subtractor64_altpriority_encoder_r08
+# -- Compiling module altfp_subtractor64_altpriority_encoder_tv8
+# -- Compiling module altfp_subtractor64_altpriority_encoder_te9
+# -- Compiling module altfp_subtractor64_altpriority_encoder_uu8
+# -- Compiling module altfp_subtractor64_altpriority_encoder_nh8
+# -- Compiling module altfp_subtractor64_altpriority_encoder_qh8
+# -- Compiling module altfp_subtractor64_altpriority_encoder_vh8
+# -- Compiling module altfp_subtractor64_altpriority_encoder_fj8
+# -- Compiling module altfp_subtractor64_altpriority_encoder_hi9
+# -- Compiling module altfp_subtractor64_altpriority_encoder_n28
+# -- Compiling module altfp_subtractor64_altpriority_encoder_q28
+# -- Compiling module altfp_subtractor64_altpriority_encoder_v28
+# -- Compiling module altfp_subtractor64_altpriority_encoder_f48
+# -- Compiling module altfp_subtractor64_altpriority_encoder_h39
+# -- Compiling module altfp_subtractor64_altpriority_encoder_ina
+# -- Compiling module altfp_subtractor64_altfp_add_sub_qoj
+# -- Compiling module altfp_subtractor64_14
+# -- Compiling module altfp_subtractor_altbarrel_shift_h0e
+# -- Compiling module altfp_subtractor_altbarrel_shift_n3g
+# -- Compiling module altfp_subtractor_altpriority_encoder_3e8
+# -- Compiling module altfp_subtractor_altpriority_encoder_6e8
+# -- Compiling module altfp_subtractor_altpriority_encoder_be8
+# -- Compiling module altfp_subtractor_altpriority_encoder_3v7
+# -- Compiling module altfp_subtractor_altpriority_encoder_6v7
+# -- Compiling module altfp_subtractor_altpriority_encoder_bv7
+# -- Compiling module altfp_subtractor_altpriority_encoder_uv8
+# -- Compiling module altfp_subtractor_altpriority_encoder_ue9
+# -- Compiling module altfp_subtractor_altpriority_encoder_ou8
+# -- Compiling module altfp_subtractor_altpriority_encoder_nh8
+# -- Compiling module altfp_subtractor_altpriority_encoder_qh8
+# -- Compiling module altfp_subtractor_altpriority_encoder_vh8
+# -- Compiling module altfp_subtractor_altpriority_encoder_ii9
+# -- Compiling module altfp_subtractor_altpriority_encoder_n28
+# -- Compiling module altfp_subtractor_altpriority_encoder_q28
+# -- Compiling module altfp_subtractor_altpriority_encoder_v28
+# -- Compiling module altfp_subtractor_altpriority_encoder_i39
+# -- Compiling module altfp_subtractor_altpriority_encoder_cna
+# -- Compiling module altfp_subtractor_altfp_add_sub_enj
+# -- Compiling module altfp_subtractor_14
+# -- Compiling module altfp_truncate_altfp_convert_bpn
+# -- Compiling module altfp_truncate_3
+# -- Compiling UDP CYCLONEV_PRIM_DFFE
+# -- Compiling UDP CYCLONEV_PRIM_DFFEAS
+# -- Compiling UDP CYCLONEV_PRIM_DFFEAS_HIGH
+# -- Compiling module cyclonev_dffe
+# -- Compiling module cyclonev_mux21
+# -- Compiling module cyclonev_mux41
+# -- Compiling module cyclonev_and1
+# -- Compiling module cyclonev_and16
+# -- Compiling module cyclonev_bmux21
+# -- Compiling module cyclonev_b17mux21
+# -- Compiling module cyclonev_nmux21
+# -- Compiling module cyclonev_b5mux21
+# -- Compiling module cyclonev_ff
+# -- Compiling module cyclonev_lcell_comb
+# -- Compiling module cyclonev_routing_wire
+# -- Compiling module cyclonev_ram_block
+# -- Compiling module cyclonev_mlab_cell
+# -- Compiling module cyclonev_io_ibuf
+# -- Compiling module cyclonev_io_obuf
+# -- Compiling module cyclonev_ddio_out
+# -- Compiling module cyclonev_ddio_oe
+# -- Compiling module cyclonev_ddio_in
+# -- Compiling module cyclonev_io_pad
+# -- Compiling module cyclonev_pseudo_diff_out
+# -- Compiling module cyclonev_bias_logic
+# -- Compiling module cyclonev_bias_generator
+# -- Compiling module cyclonev_bias_block
+# -- Compiling module cyclonev_clk_phase_select
+# -- Compiling module cyclonev_clkena
+# -- Compiling module cyclonev_clkselect
+# -- Compiling module cyclonev_delay_chain
+# -- Compiling module cyclonev_dll_offset_ctrl
+# -- Compiling module cyclonev_dll
+# -- Compiling module cyclonev_dqs_config
+# -- Compiling module cyclonev_dqs_delay_chain
+# -- Compiling module cyclonev_dqs_enable_ctrl
+# -- Compiling module cyclonev_duty_cycle_adjustment
+# -- Compiling module cyclonev_fractional_pll
+# -- Compiling module cyclonev_half_rate_input
+# -- Compiling module cyclonev_input_phase_alignment
+# -- Compiling module cyclonev_io_clock_divider
+# -- Compiling module cyclonev_io_config
+# -- Compiling module cyclonev_leveling_delay_chain
+# -- Compiling module cyclonev_pll_dll_output
+# -- Compiling module cyclonev_pll_dpa_output
+# -- Compiling module cyclonev_pll_extclk_output
+# -- Compiling module cyclonev_pll_lvds_output
+# -- Compiling module cyclonev_pll_output_counter
+# -- Compiling module cyclonev_pll_reconfig
+# -- Compiling module cyclonev_pll_refclk_select
+# -- Compiling module cyclonev_termination_logic
+# -- Compiling module cyclonev_termination
+# -- Compiling module cyclonev_asmiblock
+# -- Compiling module cyclonev_chipidblock
+# -- Compiling module cyclonev_controller
+# -- Compiling module cyclonev_crcblock
+# -- Compiling module cyclonev_jtag
+# -- Compiling module cyclonev_prblock
+# -- Compiling module cyclonev_rublock
+# -- Compiling module cyclonev_tsdblock
+# -- Compiling module cyclonev_read_fifo
+# -- Compiling module cyclonev_read_fifo_read_enable
+# -- Compiling module cyclonev_phy_clkbuf
+# -- Compiling module cyclonev_ir_fifo_userdes
+# -- Compiling module cyclonev_read_fifo_read_clock_select
+# -- Compiling module cyclonev_lfifo
+# -- Compiling module cyclonev_vfifo
+# -- Compiling module cyclonev_mac
+# -- Compiling module cyclonev_mem_phy
+# -- Compiling module cyclonev_oscillator
+# -- Compiling module cyclonev_hps_interface_fpga2sdram
+# -- Compiling module cyclonev_hssi_8g_pcs_aggregate
+# -- Compiling module cyclonev_hssi_8g_rx_pcs
+# -- Compiling module cyclonev_hssi_8g_tx_pcs
+# -- Compiling module cyclonev_hssi_common_pcs_pma_interface
+# -- Compiling module cyclonev_hssi_common_pld_pcs_interface
+# -- Compiling module cyclonev_hssi_pipe_gen1_2
+# -- Compiling module cyclonev_hssi_pma_aux
+# -- Compiling module cyclonev_hssi_pma_int
+# -- Compiling module cyclonev_hssi_pma_rx_buf
+# -- Compiling module cyclonev_hssi_pma_rx_deser
+# -- Compiling module cyclonev_hssi_pma_tx_buf
+# -- Compiling module cyclonev_hssi_pma_tx_cgb
+# -- Compiling module cyclonev_hssi_pma_tx_ser
+# -- Compiling module cyclonev_hssi_pma_cdr_refclk_select_mux
+# -- Compiling module cyclonev_hssi_rx_pcs_pma_interface
+# -- Compiling module cyclonev_hssi_rx_pld_pcs_interface
+# -- Compiling module cyclonev_hssi_tx_pcs_pma_interface
+# -- Compiling module cyclonev_hssi_tx_pld_pcs_interface
+# -- Compiling module cyclonev_hssi_refclk_divider
+# -- Compiling module cyclonev_pll_aux
+# -- Compiling module cyclonev_channel_pll
+# -- Compiling module cyclonev_hssi_avmm_interface
+# -- Compiling module cyclonev_hssi_pma_hi_pmaif
+# -- Compiling module cyclonev_hssi_pma_hi_xcvrif
+# -- Compiling module arriav_hssi_8g_pcs_aggregate
+# -- Compiling module arriav_hssi_8g_rx_pcs
+# -- Compiling module arriav_hssi_8g_tx_pcs
+# -- Compiling module arriav_hssi_common_pcs_pma_interface
+# -- Compiling module arriav_hssi_common_pld_pcs_interface
+# -- Compiling module arriav_hssi_pipe_gen1_2
+# -- Compiling module arriav_hssi_pma_aux
+# -- Compiling module arriav_hssi_pma_int
+# -- Compiling module arriav_hssi_pma_rx_buf
+# -- Compiling module arriav_hssi_pma_rx_deser
+# -- Compiling module arriav_hssi_pma_tx_buf
+# -- Compiling module arriav_hssi_pma_tx_cgb
+# -- Compiling module arriav_hssi_pma_tx_ser
+# -- Compiling module arriav_hssi_pma_cdr_refclk_select_mux
+# -- Compiling module arriav_hssi_rx_pcs_pma_interface
+# -- Compiling module arriav_hssi_rx_pld_pcs_interface
+# -- Compiling module arriav_hssi_tx_pcs_pma_interface
+# -- Compiling module arriav_hssi_tx_pld_pcs_interface
+# -- Compiling module arriav_hssi_refclk_divider
+# -- Compiling module arriav_pll_aux
+# -- Compiling module arriav_channel_pll
+# -- Compiling module arriav_hssi_avmm_interface
+# -- Compiling module arriav_hssi_pma_hi_pmaif
+# -- Compiling module arriav_hssi_pma_hi_xcvrif
+# -- Compiling module arriav_hd_altpe2_hip_top
+# -- Compiling module div_signed
+# -- Compiling module div_unsigned
+# -- Compiling module leap_sim_controller
+# -- Compiling module legup_dm_wt_cache
+# -- Compiling module legup_system
+# -- Compiling module legup_system_JTAG_UART_sim_scfifo_w
+# -- Compiling module legup_system_JTAG_UART_scfifo_w
+# -- Compiling module legup_system_JTAG_UART_sim_scfifo_r
+# -- Compiling module legup_system_JTAG_UART_scfifo_r
+# -- Compiling module legup_system_JTAG_UART
+# -- Compiling module legup_system_JTAG_to_FPGA_Bridge
+# -- Compiling module legup_system_SDRAM_input_efifo_module
+# -- Compiling module legup_system_SDRAM
+# -- Compiling module legup_system_SDRAM_test_component_ram_module
+# -- Compiling module legup_system_SDRAM_test_component
+# -- Compiling module legup_system_mm_interconnect_0
+# -- Compiling module legup_system_mm_interconnect_1
+# -- Compiling module legup_system_mm_interconnect_1_avalon_st_adapter
+# -- Compiling module legup_system_mm_interconnect_1_avalon_st_adapter_001
+# -- Compiling module legup_system_mm_interconnect_3
+# -- Compiling module oper_add
+# -- Compiling module oper_addsub
+# -- Compiling module mux21
+# -- Compiling module io_buf_tri
+# -- Compiling module io_buf_opdrn
+# -- Compiling module oper_mult
+# -- Compiling module tri_bus
+# -- Compiling module oper_div
+# -- Compiling module oper_mod
+# -- Compiling module oper_left_shift
+# -- Compiling module oper_right_shift
+# -- Compiling module oper_rotate_left
+# -- Compiling module oper_rotate_right
+# -- Compiling module oper_less_than
+# -- Compiling module oper_mux
+# -- Compiling module oper_selector
+# -- Compiling module oper_decoder
+# -- Compiling module oper_bus_mux
+# -- Compiling module oper_latch
+# -- Compiling module tiger_alu
+# -- Compiling module tiger_avalon
+# -- Compiling module tiger_avalon_im
+# -- Compiling module tiger_branch
+# -- Compiling module tiger_decode
+# -- Compiling module tiger_decoder
+# -- Compiling module tiger_div
+# -- Compiling module tiger_divu
+# -- Compiling module tiger_execute
+# -- Compiling module tiger_fetch
+# -- Compiling module tiger_ff
+# -- Compiling module tiger_ff_compare
+# -- Compiling module tiger_icache
+# -- Compiling module tiger_icache_av_1port
+# -- Compiling module tiger_icache_memory
+# -- Compiling module tiger_icache_mux_param
+# -- Compiling module tiger_leap_slave_handler
+# -- Compiling module tiger_memoryaccess
+# -- Compiling module tiger_mult
+# -- Compiling module tiger_multu
+# -- Compiling module tiger_shifter
+# -- Compiling module tiger_stalllogic
+# -- Compiling module tiger_tiger
+# -- Compiling module tiger_top
+# -- Compiling module tiger_writeback
+# -- Compiling module true_dual_port_ram_single_clock
+# 
+# Top level modules:
+# 	lpm_constant
+# 	lpm_inv
+# 	lpm_and
+# 	lpm_or
+# 	lpm_xor
+# 	lpm_bustri
+# 	lpm_abs
+# 	lpm_counter
+# 	lpm_latch
+# 	lpm_ff
+# 	lpm_shiftreg
+# 	lpm_ram_dq
+# 	lpm_ram_dp
+# 	lpm_ram_io
+# 	lpm_rom
+# 	lpm_fifo
+# 	lpm_fifo_dc
+# 	lpm_inpad
+# 	lpm_outpad
+# 	lpm_bipad
+# 	LeapProfiler
+# 	SerialDivider
+# 	lcell
+# 	altpll
+# 	altlvds_rx
+# 	altlvds_tx
+# 	dcfifo
+# 	altaccumulate
+# 	altmult_accum
+# 	altmult_add
+# 	altfp_mult
+# 	altsqrt
+# 	altclklock
+# 	altddio_bidir
+# 	altdpram
+# 	alt3pram
+# 	parallel_add
+# 	altshift_taps
+# 	a_graycounter
+# 	altsquare
+# 	altera_std_synchronizer_bundle
+# 	alt_cal
+# 	alt_cal_mm
+# 	alt_cal_c3gxb
+# 	alt_cal_sv
+# 	alt_cal_av
+# 	alt_aeq_s4
+# 	alt_eyemon
+# 	alt_dfe
+# 	sld_virtual_jtag
+# 	sld_signaltap
+# 	altstratixii_oct
+# 	altparallel_flash_loader
+# 	altserial_flash_loader
+# 	sld_virtual_jtag_basic
+# 	altsource_probe
+# 	global
+# 	carry
+# 	cascade
+# 	carry_sum
+# 	exp
+# 	soft
+# 	opndrn
+# 	row_global
+# 	TRI
+# 	lut_input
+# 	lut_output
+# 	latch
+# 	dlatch
+# 	dff
+# 	dffe
+# 	dffea
+# 	tff
+# 	tffe
+# 	jkff
+# 	jkffe
+# 	srff
+# 	srffe
+# 	clklock
+# 	alt_inbuf
+# 	alt_outbuf
+# 	alt_outbuf_tri
+# 	alt_iobuf
+# 	alt_inbuf_diff
+# 	alt_outbuf_diff
+# 	alt_outbuf_tri_diff
+# 	alt_iobuf_diff
+# 	alt_bidir_diff
+# 	alt_bidir_buf
+# 	altera_sdram_partner_module
+# 	altfp_adder64_13
+# 	altfp_adder64_14
+# 	altfp_adder_13
+# 	altfp_adder_14
+# 	altfp_compare32_1
+# 	altfp_compare64_1
+# 	altfp_divider64_61
+# 	altfp_divider_33
+# 	altfp_extend_2
+# 	altfp_fptosi32_6
+# 	altfp_fptosi64_6
+# 	altfp_multiplier64_11
+# 	altfp_multiplier_11
+# 	altfp_sitofp32_6
+# 	altfp_sitofp64_6
+# 	altfp_subtractor64_14
+# 	altfp_subtractor_14
+# 	altfp_truncate_3
+# 	cyclonev_dffe
+# 	cyclonev_mux41
+# 	cyclonev_and1
+# 	cyclonev_and16
+# 	cyclonev_bmux21
+# 	cyclonev_b17mux21
+# 	cyclonev_nmux21
+# 	cyclonev_b5mux21
+# 	cyclonev_ff
+# 	cyclonev_lcell_comb
+# 	cyclonev_routing_wire
+# 	cyclonev_ram_block
+# 	cyclonev_mlab_cell
+# 	cyclonev_io_ibuf
+# 	cyclonev_io_obuf
+# 	cyclonev_ddio_out
+# 	cyclonev_ddio_oe
+# 	cyclonev_ddio_in
+# 	cyclonev_io_pad
+# 	cyclonev_pseudo_diff_out
+# 	cyclonev_bias_block
+# 	cyclonev_clk_phase_select
+# 	cyclonev_clkena
+# 	cyclonev_clkselect
+# 	cyclonev_delay_chain
+# 	cyclonev_dll_offset_ctrl
+# 	cyclonev_dll
+# 	cyclonev_dqs_config
+# 	cyclonev_dqs_delay_chain
+# 	cyclonev_dqs_enable_ctrl
+# 	cyclonev_duty_cycle_adjustment
+# 	cyclonev_fractional_pll
+# 	cyclonev_half_rate_input
+# 	cyclonev_input_phase_alignment
+# 	cyclonev_io_clock_divider
+# 	cyclonev_io_config
+# 	cyclonev_leveling_delay_chain
+# 	cyclonev_pll_dll_output
+# 	cyclonev_pll_dpa_output
+# 	cyclonev_pll_extclk_output
+# 	cyclonev_pll_lvds_output
+# 	cyclonev_pll_output_counter
+# 	cyclonev_pll_reconfig
+# 	cyclonev_pll_refclk_select
+# 	cyclonev_termination_logic
+# 	cyclonev_termination
+# 	cyclonev_asmiblock
+# 	cyclonev_chipidblock
+# 	cyclonev_controller
+# 	cyclonev_crcblock
+# 	cyclonev_jtag
+# 	cyclonev_prblock
+# 	cyclonev_rublock
+# 	cyclonev_tsdblock
+# 	cyclonev_read_fifo
+# 	cyclonev_read_fifo_read_enable
+# 	cyclonev_phy_clkbuf
+# 	cyclonev_ir_fifo_userdes
+# 	cyclonev_read_fifo_read_clock_select
+# 	cyclonev_lfifo
+# 	cyclonev_vfifo
+# 	cyclonev_mac
+# 	cyclonev_mem_phy
+# 	cyclonev_oscillator
+# 	cyclonev_hps_interface_fpga2sdram
+# 	cyclonev_hssi_8g_pcs_aggregate
+# 	cyclonev_hssi_8g_rx_pcs
+# 	cyclonev_hssi_8g_tx_pcs
+# 	cyclonev_hssi_common_pcs_pma_interface
+# 	cyclonev_hssi_common_pld_pcs_interface
+# 	cyclonev_hssi_pipe_gen1_2
+# 	cyclonev_hssi_pma_aux
+# 	cyclonev_hssi_pma_int
+# 	cyclonev_hssi_pma_rx_buf
+# 	cyclonev_hssi_pma_rx_deser
+# 	cyclonev_hssi_pma_tx_buf
+# 	cyclonev_hssi_pma_tx_cgb
+# 	cyclonev_hssi_pma_tx_ser
+# 	cyclonev_hssi_pma_cdr_refclk_select_mux
+# 	cyclonev_hssi_rx_pcs_pma_interface
+# 	cyclonev_hssi_rx_pld_pcs_interface
+# 	cyclonev_hssi_tx_pcs_pma_interface
+# 	cyclonev_hssi_tx_pld_pcs_interface
+# 	cyclonev_hssi_refclk_divider
+# 	cyclonev_pll_aux
+# 	cyclonev_channel_pll
+# 	cyclonev_hssi_avmm_interface
+# 	cyclonev_hssi_pma_hi_pmaif
+# 	cyclonev_hssi_pma_hi_xcvrif
+# 	arriav_hssi_8g_pcs_aggregate
+# 	arriav_hssi_8g_rx_pcs
+# 	arriav_hssi_8g_tx_pcs
+# 	arriav_hssi_common_pcs_pma_interface
+# 	arriav_hssi_common_pld_pcs_interface
+# 	arriav_hssi_pipe_gen1_2
+# 	arriav_hssi_pma_aux
+# 	arriav_hssi_pma_int
+# 	arriav_hssi_pma_rx_buf
+# 	arriav_hssi_pma_rx_deser
+# 	arriav_hssi_pma_tx_buf
+# 	arriav_hssi_pma_tx_cgb
+# 	arriav_hssi_pma_tx_ser
+# 	arriav_hssi_pma_cdr_refclk_select_mux
+# 	arriav_hssi_rx_pcs_pma_interface
+# 	arriav_hssi_rx_pld_pcs_interface
+# 	arriav_hssi_tx_pcs_pma_interface
+# 	arriav_hssi_tx_pld_pcs_interface
+# 	arriav_hssi_refclk_divider
+# 	arriav_pll_aux
+# 	arriav_channel_pll
+# 	arriav_hssi_avmm_interface
+# 	arriav_hssi_pma_hi_pmaif
+# 	arriav_hssi_pma_hi_xcvrif
+# 	arriav_hd_altpe2_hip_top
+# 	div_signed
+# 	div_unsigned
+# 	legup_system
+# 	legup_system_SDRAM_test_component
+# 	oper_add
+# 	oper_addsub
+# 	mux21
+# 	io_buf_tri
+# 	io_buf_opdrn
+# 	oper_mult
+# 	tri_bus
+# 	oper_div
+# 	oper_mod
+# 	oper_left_shift
+# 	oper_right_shift
+# 	oper_rotate_left
+# 	oper_rotate_right
+# 	oper_less_than
+# 	oper_mux
+# 	oper_selector
+# 	oper_decoder
+# 	oper_bus_mux
+# 	oper_latch
+# End time: 16:15:09 on Apr 13,2017, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:15:09 on Apr 13,2017
+# vlog -sv ./submodules/verbosity_pkg.sv "+incdir+./submodules" 
+# -- Compiling package verbosity_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 16:15:09 on Apr 13,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:15:09 on Apr 13,2017
+# vlog -sv ./submodules/altera_avalon_clock_source.sv ./submodules/altera_avalon_reset_source.sv ./submodules/altera_avalon_st_pipeline_stage.sv ./submodules/altera_conduit_bfm.sv ./submodules/altera_conduit_bfm_0002.sv ./submodules/altera_default_burst_converter.sv ./submodules/altera_incr_burst_converter.sv ./submodules/altera_lnsim.sv ./submodules/altera_merlin_address_alignment.sv ./submodules/altera_merlin_arbitrator.sv ./submodules/altera_merlin_burst_adapter.sv ./submodules/altera_merlin_burst_adapter_13_1.sv ./submodules/altera_merlin_burst_adapter_new.sv ./submodules/altera_merlin_burst_adapter_uncmpr.sv ./submodules/altera_merlin_burst_uncompressor.sv ./submodules/altera_merlin_master_agent.sv ./submodules/altera_merlin_master_translator.sv ./submodules/altera_merlin_reorder_memory.sv ./submodules/altera_merlin_slave_agent.sv ./submodules/altera_merlin_slave_translator.sv ./submodules/altera_merlin_traffic_limiter.sv ./submodules/altera_merlin_width_adapter.sv ./submodules/altera_wrap_burst_converter.sv ./submodules/cyclonev_hps_atoms.sv ./submodules/legup_system_JTAG_to_FPGA_Bridge_b2p_adapter.sv ./submodules/legup_system_JTAG_to_FPGA_Bridge_p2b_adapter.sv ./submodules/legup_system_JTAG_to_FPGA_Bridge_timing_adt.sv ./submodules/legup_system_mm_interconnect_1_avalon_st_adapter_001_error_adapter_0.sv ./submodules/legup_system_mm_interconnect_1_avalon_st_adapter_error_adapter_0.sv ./submodules/legup_system_mm_interconnect_1_cmd_demux.sv ./submodules/legup_system_mm_interconnect_1_cmd_demux_002.sv ./submodules/legup_system_mm_interconnect_1_cmd_demux_003.sv ./submodules/legup_system_mm_interconnect_1_cmd_mux.sv ./submodules/legup_system_mm_interconnect_1_cmd_mux_001.sv ./submodules/legup_system_mm_interconnect_1_cmd_mux_002.sv ./submodules/legup_system_mm_interconnect_1_router.sv ./submodules/legup_system_mm_interconnect_1_router_002.sv ./submodules/legup_system_mm_interconnect_1_router_003.sv ./submodules/legup_system_mm_interconnect_1_router_004.sv ./submodules/legup_system_mm_interconnect_1_router_005.sv 
+# ./submodules/legup_system_mm_interconnect_1_router_006.sv ./submodules/legup_system_mm_interconnect_1_router_007.sv ./submodules/legup_system_mm_interconnect_1_rsp_demux.sv ./submodules/legup_system_mm_interconnect_1_rsp_demux_001.sv ./submodules/legup_system_mm_interconnect_1_rsp_mux.sv ./submodules/legup_system_mm_interconnect_1_rsp_mux_002.sv ./submodules/legup_system_mm_interconnect_1_rsp_mux_003.sv ./submodules/verbosity_pkg.sv "+incdir+./submodules" 
+# -- Compiling module altera_avalon_clock_source
+# -- Importing package verbosity_pkg
+# -- Compiling module altera_avalon_reset_source
+# -- Compiling module altera_avalon_st_pipeline_stage
+# -- Compiling module altera_conduit_bfm
+# -- Compiling module altera_conduit_bfm_0002
+# -- Compiling module altera_default_burst_converter
+# ** Warning: ./submodules/altera_default_burst_converter.sv(102): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# -- Compiling module altera_incr_burst_converter
+# ** Warning: ./submodules/altera_incr_burst_converter.sv(266): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_incr_burst_converter.sv(268): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_incr_burst_converter.sv(283): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_incr_burst_converter.sv(285): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# -- Compiling package altera_lnsim_functions
+# -- Compiling module altera_pll
+# -- Importing package altera_lnsim_functions
+# -- Compiling module dps_extra_kick
+# -- Compiling module dprio_init
+# -- Compiling module pll_dps_lcell_comb
+# -- Compiling module altera_stratixv_pll
+# -- Compiling module altera_arriav_pll
+# -- Compiling module altera_arriavgz_pll
+# -- Compiling module altera_cyclonev_pll
+# -- Compiling package altera_generic_pll_functions
+# -- Compiling module generic_pll
+# -- Importing package altera_generic_pll_functions
+# -- Compiling module generic_cdr
+# -- Compiling module common_28nm_ram_pulse_generator
+# -- Compiling module common_28nm_ram_register
+# -- Compiling module common_28nm_ram_block
+# -- Compiling module generic_m20k
+# -- Compiling module generic_m10k
+# -- Compiling module common_28nm_mlab_cell_pulse_generator
+# -- Compiling module common_28nm_mlab_latch
+# -- Compiling module common_28nm_mlab_cell_core
+# -- Compiling module common_porta_latches
+# -- Compiling module generic_28nm_hp_mlab_cell_impl
+# -- Compiling module common_porta_registers
+# -- Compiling module generic_28nm_lc_mlab_cell_impl
+# -- Compiling module generic_mux
+# -- Compiling module generic_device_pll
+# -- Compiling module altera_mult_add
+# -- Compiling module altera_mult_add_rtl
+# -- Compiling module ama_signed_extension_function
+# -- Compiling module ama_dynamic_signed_function
+# -- Compiling module ama_register_function
+# -- Compiling module ama_register_with_ext_function
+# -- Compiling module ama_data_split_reg_ext_function
+# -- Compiling module ama_coef_reg_ext_function
+# -- Compiling module ama_adder_function
+# -- Compiling module ama_multiplier_function
+# -- Compiling module ama_preadder_function
+# -- Compiling module ama_accumulator_function
+# -- Compiling module ama_systolic_adder_function
+# -- Compiling module ama_scanchain
+# -- Compiling module altera_pll_reconfig_tasks
+# -- Compiling module altera_merlin_address_alignment
+# -- Compiling module altera_merlin_arbitrator
+# -- Compiling module altera_merlin_arb_adder
+# -- Compiling module altera_merlin_burst_adapter
+# -- Compiling module altera_merlin_burst_adapter_burstwrap_increment
+# -- Compiling module altera_merlin_burst_adapter_adder
+# -- Compiling module altera_merlin_burst_adapter_subtractor
+# -- Compiling module altera_merlin_burst_adapter_min
+# -- Compiling module altera_merlin_burst_adapter_13_1
+# -- Compiling module altera_merlin_burst_adapter_new
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(500): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(501): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(502): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(503): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(504): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(505): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(506): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(507): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(508): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(509): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(511): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(512): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(513): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(514): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(515): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(516): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(517): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(518): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(519): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(520): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(521): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(522): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(523): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(526): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(527): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(614): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(615): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(616): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(617): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(618): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(619): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(620): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(621): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(622): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(623): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(624): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(625): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(746): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(762): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(860): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(861): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(862): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(863): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(864): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(865): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(866): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(867): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(900): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(901): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(902): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(903): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(940): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(942): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(945): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(947): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(1040): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(1041): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(1042): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(1043): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(1044): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(1045): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(1046): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(1047): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(1048): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(1049): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(1084): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(1085): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(1086): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(1087): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(1088): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(1089): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(1104): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(1106): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(1206): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(1207): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(1208): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(1209): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(1210): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(1211): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(1212): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(1213): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(1214): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(1215): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(1216): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(1256): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(1257): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(1258): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(1259): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(1260): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(1261): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(1291): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_burst_adapter_new.sv(1294): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# -- Compiling module altera_merlin_burst_adapter_uncompressed_only
+# -- Compiling module altera_merlin_burst_uncompressor
+# -- Compiling module altera_merlin_master_agent
+# -- Compiling module altera_merlin_master_translator
+# -- Compiling module altera_merlin_reorder_memory
+# -- Compiling module memory_pointer_controller
+# -- Compiling module altera_merlin_slave_agent
+# ** Warning: ./submodules/altera_merlin_slave_agent.sv(618): (vlog-2186) SystemVerilog testbench feature
+# (randomization, coverage or assertion) detected in the design.
+# These features are only supported in Questasim.
+# ** Warning: ./submodules/altera_merlin_slave_agent.sv(488): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_slave_agent.sv(489): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_slave_agent.sv(490): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_slave_agent.sv(491): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_slave_agent.sv(34): (vlog-2186) SystemVerilog testbench feature
+# (randomization, coverage or assertion) detected in the design.
+# These features are only supported in Questasim.
+# -- Compiling module altera_merlin_slave_translator
+# -- Compiling module altera_merlin_traffic_limiter
+# ** Warning: ./submodules/altera_merlin_traffic_limiter.sv(531): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_traffic_limiter.sv(602): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_traffic_limiter.sv(603): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_traffic_limiter.sv(604): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_traffic_limiter.sv(605): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_traffic_limiter.sv(606): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_traffic_limiter.sv(607): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_traffic_limiter.sv(612): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_traffic_limiter.sv(614): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_traffic_limiter.sv(617): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_traffic_limiter.sv(618): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_traffic_limiter.sv(644): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_traffic_limiter.sv(646): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_traffic_limiter.sv(647): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_traffic_limiter.sv(648): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_traffic_limiter.sv(649): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_traffic_limiter.sv(650): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_traffic_limiter.sv(655): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_traffic_limiter.sv(657): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_traffic_limiter.sv(660): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: ./submodules/altera_merlin_traffic_limiter.sv(661): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# -- Compiling module altera_merlin_width_adapter
+# -- Compiling module altera_wrap_burst_converter
+# -- Compiling module cyclonev_hps_interface_hps2fpga
+# -- Compiling module legup_system_JTAG_to_FPGA_Bridge_b2p_adapter
+# -- Compiling module legup_system_JTAG_to_FPGA_Bridge_p2b_adapter
+# -- Compiling module legup_system_JTAG_to_FPGA_Bridge_timing_adt
+# -- Compiling module legup_system_mm_interconnect_1_avalon_st_adapter_001_error_adapter_0
+# -- Compiling module legup_system_mm_interconnect_1_avalon_st_adapter_error_adapter_0
+# -- Compiling module legup_system_mm_interconnect_1_cmd_demux
+# -- Compiling module legup_system_mm_interconnect_1_cmd_demux_002
+# -- Compiling module legup_system_mm_interconnect_1_cmd_demux_003
+# -- Compiling module legup_system_mm_interconnect_1_cmd_mux
+# -- Compiling module legup_system_mm_interconnect_1_cmd_mux_001
+# -- Compiling module legup_system_mm_interconnect_1_cmd_mux_002
+# -- Compiling module legup_system_mm_interconnect_1_router_default_decode
+# -- Compiling module legup_system_mm_interconnect_1_router
+# -- Compiling module legup_system_mm_interconnect_1_router_002_default_decode
+# -- Compiling module legup_system_mm_interconnect_1_router_002
+# -- Compiling module legup_system_mm_interconnect_1_router_003_default_decode
+# -- Compiling module legup_system_mm_interconnect_1_router_003
+# -- Compiling module legup_system_mm_interconnect_1_router_004_default_decode
+# -- Compiling module legup_system_mm_interconnect_1_router_004
+# -- Compiling module legup_system_mm_interconnect_1_router_005_default_decode
+# -- Compiling module legup_system_mm_interconnect_1_router_005
+# -- Compiling module legup_system_mm_interconnect_1_router_006_default_decode
+# -- Compiling module legup_system_mm_interconnect_1_router_006
+# -- Compiling module legup_system_mm_interconnect_1_router_007_default_decode
+# -- Compiling module legup_system_mm_interconnect_1_router_007
+# -- Compiling module legup_system_mm_interconnect_1_rsp_demux
+# -- Compiling module legup_system_mm_interconnect_1_rsp_demux_001
+# -- Compiling module legup_system_mm_interconnect_1_rsp_mux
+# -- Compiling module legup_system_mm_interconnect_1_rsp_mux_002
+# -- Compiling module legup_system_mm_interconnect_1_rsp_mux_003
+# -- Compiling package verbosity_pkg
+# 
+# Top level modules:
+# 	altera_avalon_clock_source
+# 	altera_avalon_reset_source
+# 	altera_conduit_bfm
+# 	altera_conduit_bfm_0002
+# 	altera_pll
+# 	generic_cdr
+# 	generic_m20k
+# 	generic_m10k
+# 	common_porta_latches
+# 	generic_28nm_hp_mlab_cell_impl
+# 	generic_28nm_lc_mlab_cell_impl
+# 	generic_mux
+# 	generic_device_pll
+# 	altera_mult_add
+# 	altera_pll_reconfig_tasks
+# 	altera_merlin_burst_adapter
+# 	altera_merlin_master_agent
+# 	altera_merlin_master_translator
+# 	altera_merlin_slave_agent
+# 	altera_merlin_slave_translator
+# 	altera_merlin_traffic_limiter
+# 	altera_merlin_width_adapter
+# 	cyclonev_hps_interface_hps2fpga
+# 	legup_system_JTAG_to_FPGA_Bridge_b2p_adapter
+# 	legup_system_JTAG_to_FPGA_Bridge_p2b_adapter
+# 	legup_system_JTAG_to_FPGA_Bridge_timing_adt
+# 	legup_system_mm_interconnect_1_avalon_st_adapter_001_error_adapter_0
+# 	legup_system_mm_interconnect_1_avalon_st_adapter_error_adapter_0
+# 	legup_system_mm_interconnect_1_cmd_demux
+# 	legup_system_mm_interconnect_1_cmd_demux_002
+# 	legup_system_mm_interconnect_1_cmd_demux_003
+# 	legup_system_mm_interconnect_1_cmd_mux
+# 	legup_system_mm_interconnect_1_cmd_mux_001
+# 	legup_system_mm_interconnect_1_cmd_mux_002
+# 	legup_system_mm_interconnect_1_router
+# 	legup_system_mm_interconnect_1_router_002
+# 	legup_system_mm_interconnect_1_router_003
+# 	legup_system_mm_interconnect_1_router_004
+# 	legup_system_mm_interconnect_1_router_005
+# 	legup_system_mm_interconnect_1_router_006
+# 	legup_system_mm_interconnect_1_router_007
+# 	legup_system_mm_interconnect_1_rsp_demux
+# 	legup_system_mm_interconnect_1_rsp_demux_001
+# 	legup_system_mm_interconnect_1_rsp_mux
+# 	legup_system_mm_interconnect_1_rsp_mux_002
+# 	legup_system_mm_interconnect_1_rsp_mux_003
+# End time: 16:15:10 on Apr 13,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 124
+# vsim -c -do "source run_sim_nowave.tcl; quit;" 
+# Start time: 16:15:10 on Apr 13,2017
+# Loading work.legup_system_tb
+# Loading work.altera_sdram_partner_module
+# Loading work.legup_system
+# Loading work.legup_dm_wt_cache
+# Loading work.true_dual_port_ram_single_clock
+# Loading work.legup_system_JTAG_UART
+# Loading work.legup_system_JTAG_UART_scfifo_w
+# Loading work.legup_system_JTAG_UART_sim_scfifo_w
+# Loading work.legup_system_JTAG_UART_scfifo_r
+# Loading work.legup_system_JTAG_UART_sim_scfifo_r
+# Loading work.legup_system_JTAG_to_FPGA_Bridge
+# Loading work.altera_avalon_st_jtag_interface
+# Loading sv_std.std
+# Loading work.legup_system_JTAG_to_FPGA_Bridge_timing_adt
+# Loading work.altera_avalon_sc_fifo
+# Loading work.altera_avalon_st_bytes_to_packets
+# Loading work.altera_avalon_st_packets_to_bytes
+# Loading work.altera_avalon_packets_to_master
+# Loading work.legup_system_JTAG_to_FPGA_Bridge_b2p_adapter
+# Loading work.legup_system_JTAG_to_FPGA_Bridge_p2b_adapter
+# Loading work.altera_reset_controller
+# Loading work.LeapTop
+# Loading work.tiger_leap_slave_handler
+# Loading work.leap_sim_controller
+# Loading work.legup_system_SDRAM
+# Loading work.legup_system_SDRAM_input_efifo_module
+# Loading work.tiger_icache_av_1port
+# Loading work.tiger_icache
+# Loading work.tiger_top
+# Loading work.tiger_tiger
+# Loading work.tiger_stalllogic
+# Loading work.tiger_fetch
+# Loading work.tiger_decode
+# Loading work.tiger_decoder
+# Loading work.tiger_branch
+# Loading work.tiger_ff
+# Loading work.tiger_ff_compare
+# Loading work.tiger_execute
+# Loading work.tiger_mult
+# Loading work.lpm_mult
+# Loading work.LPM_HINT_EVALUATION
+# Loading work.tiger_multu
+# Loading work.tiger_div
+# Loading work.lpm_divide
+# Loading work.tiger_divu
+# Loading work.tiger_alu
+# Loading work.tiger_shifter
+# Loading work.tiger_memoryaccess
+# Loading work.tiger_writeback
+# Loading work.tiger_avalon_im
+# Loading work.tiger_avalon
+# Loading work.legup_system_mm_interconnect_0
+# Loading work.altera_merlin_master_translator
+# Loading work.altera_merlin_slave_translator
+# Loading work.legup_system_mm_interconnect_1
+# Loading work.altera_merlin_master_agent
+# Loading work.altera_merlin_slave_agent
+# Loading work.altera_merlin_burst_uncompressor
+# Loading work.legup_system_mm_interconnect_1_router
+# Loading work.legup_system_mm_interconnect_1_router_default_decode
+# Loading work.legup_system_mm_interconnect_1_router_002
+# Loading work.legup_system_mm_interconnect_1_router_002_default_decode
+# Loading work.legup_system_mm_interconnect_1_router_003
+# Loading work.legup_system_mm_interconnect_1_router_003_default_decode
+# Loading work.legup_system_mm_interconnect_1_router_004
+# Loading work.legup_system_mm_interconnect_1_router_004_default_decode
+# Loading work.legup_system_mm_interconnect_1_router_005
+# Loading work.legup_system_mm_interconnect_1_router_005_default_decode
+# Loading work.legup_system_mm_interconnect_1_router_006
+# Loading work.legup_system_mm_interconnect_1_router_006_default_decode
+# Loading work.legup_system_mm_interconnect_1_router_007
+# Loading work.legup_system_mm_interconnect_1_router_007_default_decode
+# Loading work.altera_merlin_traffic_limiter
+# Loading work.altera_merlin_burst_adapter
+# Loading work.legup_system_mm_interconnect_1_cmd_demux
+# Loading work.legup_system_mm_interconnect_1_cmd_demux_002
+# Loading work.legup_system_mm_interconnect_1_cmd_demux_003
+# Loading work.legup_system_mm_interconnect_1_cmd_mux
+# Loading work.altera_merlin_arbitrator
+# Loading work.altera_merlin_arb_adder
+# Loading work.legup_system_mm_interconnect_1_cmd_mux_001
+# Loading work.legup_system_mm_interconnect_1_cmd_mux_002
+# Loading work.legup_system_mm_interconnect_1_rsp_demux
+# Loading work.legup_system_mm_interconnect_1_rsp_demux_001
+# Loading work.legup_system_mm_interconnect_1_rsp_mux
+# Loading work.legup_system_mm_interconnect_1_rsp_mux_002
+# Loading work.legup_system_mm_interconnect_1_rsp_mux_003
+# Loading work.altera_merlin_width_adapter
+# Loading work.legup_system_mm_interconnect_1_avalon_st_adapter
+# Loading work.legup_system_mm_interconnect_1_avalon_st_adapter_error_adapter_0
+# Loading work.legup_system_mm_interconnect_1_avalon_st_adapter_001
+# Loading work.legup_system_mm_interconnect_1_avalon_st_adapter_001_error_adapter_0
+# Loading work.legup_system_mm_interconnect_3
+# Loading work.verbosity_pkg
+# Loading work.altera_avalon_clock_source
+# Loading work.altera_conduit_bfm
+# Loading work.altera_conduit_bfm_0002
+# Loading work.altera_avalon_reset_source
+# Loading work.altera_jtag_sld_node
+# Loading work.altera_jtag_dc_streaming
+# Loading work.altera_std_synchronizer
+# Loading work.altera_jtag_streaming
+# Loading work.altera_avalon_st_idle_remover
+# Loading work.altera_avalon_st_idle_inserter
+# Loading work.altera_avalon_st_clock_crosser
+# Loading work.altera_jtag_src_crosser
+# Loading work.altera_jtag_control_signal_crosser
+# Loading work.packets_to_master
+# Loading work.altera_reset_synchronizer
+# Loading work.tiger_icache_memory
+# Loading work.altsyncram
+# Loading work.ALTERA_DEVICE_FAMILIES
+# Loading work.ALTERA_MF_MEMORY_INITIALIZATION
+# Loading work.tiger_icache_mux_param
+# Loading work.altera_merlin_burst_adapter_13_1
+# Loading work.altera_merlin_address_alignment
+# Loading work.altera_merlin_burst_adapter_burstwrap_increment
+# Loading work.altera_merlin_burst_adapter_min
+# Loading work.altera_merlin_burst_adapter_subtractor
+# Loading work.altera_merlin_burst_adapter_adder
+# Loading work.altera_avalon_st_pipeline_base
+# ** Warning: (vsim-8311) System Verilog assertions are supported only in Questasim.
+# ** Warning: (vsim-3017) ./submodules/legup_system.v(122): [TFMPC] - Too few port connections. Expected 20, found 19.
+#         Region: /legup_system_tb/legup_system_inst/dcache
+# ** Warning: (vsim-3722) ./submodules/legup_system.v(122): [TFMPC] - Missing connection for port 'avm_cache_beginbursttransfer'.
+# ** Warning: (vsim-3015) ./submodules/legup_dm_wt_cache.v(298): [PCDPC] - Port size (9) does not match connection size (10) for port 'addr_a'. The port definition is at: ./submodules/true_dual_port_ram_single_clock.v(8).
+#         Region: /legup_system_tb/legup_system_inst/dcache/tag_memory
+# ** Warning: (vsim-3015) ./submodules/legup_dm_wt_cache.v(298): [PCDPC] - Port size (32) does not match connection size (19) for port 'data_b'. The port definition is at: ./submodules/true_dual_port_ram_single_clock.v(7).
+#         Region: /legup_system_tb/legup_system_inst/dcache/tag_memory
+# ** Warning: (vsim-3015) ./submodules/legup_dm_wt_cache.v(298): [PCDPC] - Port size (32) does not match connection size (19) for port 'q_a'. The port definition is at: ./submodules/true_dual_port_ram_single_clock.v(10).
+#         Region: /legup_system_tb/legup_system_inst/dcache/tag_memory
+# ** Warning: (vsim-3017) ./submodules/legup_system.v(144): [TFMPC] - Too few port connections. Expected 12, found 10.
+#         Region: /legup_system_tb/legup_system_inst/jtag_uart
+# ** Warning: (vsim-3722) ./submodules/legup_system.v(144): [TFMPC] - Missing connection for port 'dataavailable'.
+# ** Warning: (vsim-3722) ./submodules/legup_system.v(144): [TFMPC] - Missing connection for port 'readyfordata'.
+# ** Warning: (vsim-3017) ./submodules/legup_system_JTAG_to_FPGA_Bridge.v(105): [TFMPC] - Too few port connections. Expected 40, found 39.
+#         Region: /legup_system_tb/legup_system_inst/jtag_to_fpga_bridge/jtag_phy_embedded_in_jtag_master
+# ** Warning: (vsim-3722) ./submodules/legup_system_JTAG_to_FPGA_Bridge.v(105): [TFMPC] - Missing connection for port 'debug_reset'.
+# ** Warning: (vsim-3015) ./submodules/altera_avalon_st_jtag_interface.v(87): [PCDPC] - Port size (3) does not match connection size (1) for port 'ir_out'. The port definition is at: ./submodules/altera_jtag_sld_node.v(18).
+#         Region: /legup_system_tb/legup_system_inst/jtag_to_fpga_bridge/jtag_phy_embedded_in_jtag_master/genblk1/node
+# ** Warning: (vsim-3015) ./submodules/LeapTop.v(167): [PCDPC] - Port size (8) does not match connection size (30) for port 'avs_leapSlave_address'. The port definition is at: ./submodules/tiger_leap_slave_handler.v(9).
+#         Region: /legup_system_tb/legup_system_inst/leap_profiler/slave_handler
+# ** Warning: (vsim-3017) ./submodules/legup_system.v(214): [TFMPC] - Too few port connections. Expected 16, found 14.
+#         Region: /legup_system_tb/legup_system_inst/leap_sim_control
+# ** Warning: (vsim-3722) ./submodules/legup_system.v(214): [TFMPC] - Missing connection for port 'avs_bridge_slave_byteenable'.
+# ** Warning: (vsim-3722) ./submodules/legup_system.v(214): [TFMPC] - Missing connection for port 'avs_bridge_slave_waitrequest'.
+# ** Warning: (vsim-3015) ./submodules/tiger_top.v(112): [PCDPC] - Port size (1) does not match connection size (32) for port 'irq'. The port definition is at: ./submodules/tiger_tiger.v(40).
+#         Region: /legup_system_tb/legup_system_inst/tiger_mips/core
+# ** Warning: (vsim-3015) ./submodules/tiger_top.v(112): [PCDPC] - Port size (6) does not match connection size (32) for port 'irqNumber'. The port definition is at: ./submodules/tiger_tiger.v(41).
+#         Region: /legup_system_tb/legup_system_inst/tiger_mips/core
+# ** Warning: (vsim-3017) legup_system_tb.v(63): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /legup_system_tb/legup_system_inst_leap_debug_port_bfm
+# ** Warning: (vsim-3722) legup_system_tb.v(63): [TFMPC] - Missing connection for port 'reset_n'.
+# ** Warning: (vsim-3017) legup_system_tb.v(70): [TFMPC] - Too few port connections. Expected 5, found 4.
+#         Region: /legup_system_tb/legup_system_inst_leap_profiling_signals_bfm
+# ** Warning: (vsim-3722) legup_system_tb.v(70): [TFMPC] - Missing connection for port 'reset_n'.
+# ** Warning: Design size of 11727 statements exceeds ModelSim Altera Starter recommended capacity.
+# Expect performance to be adversely affected.
+# 
+# ************************************************************
+# This testbench includes an SOPC Builder Generated Altera model:
+# 'altera_sdram_partner_module.v', to simulate accesses to SDRAM.
+# Initial contents are loaded from the file: 'altera_sdram_partner_module.dat'.
+# ************************************************************
+#                    0: INFO: legup_system_tb.legup_system_inst_clk_bfm.__hello: - Hello from altera_clock_source.
+#                    0: INFO: legup_system_tb.legup_system_inst_clk_bfm.__hello: -   $Revision: #1 $
+#                    0: INFO: legup_system_tb.legup_system_inst_clk_bfm.__hello: -   $Date: 2015/02/08 $
+#                    0: INFO: legup_system_tb.legup_system_inst_clk_bfm.__hello: -   CLOCK_RATE = 50000000 Hz
+#                    0: INFO: ------------------------------------------------------------
+#                    0: INFO: legup_system_tb.legup_system_inst_reset_bfm.__hello: - Hello from altera_reset_source
+#                    0: INFO: legup_system_tb.legup_system_inst_reset_bfm.__hello: -   $Revision: #1 $
+#                    0: INFO: legup_system_tb.legup_system_inst_reset_bfm.__hello: -   $Date: 2015/02/08 $
+#                    0: INFO: legup_system_tb.legup_system_inst_reset_bfm.__hello: -   ASSERT_HIGH_RESET = 0
+#                    0: INFO: legup_system_tb.legup_system_inst_reset_bfm.__hello: -   INITIAL_RESET_CYCLES = 50
+#                    0: INFO: ------------------------------------------------------------
+#                    0: INFO: legup_system_tb.legup_system_inst_reset_bfm.reset_assert: Reset asserted
+#               990000: INFO: legup_system_tb.legup_system_inst_reset_bfm.reset_deassert: Reset deasserted
+# ************************
+# *** Resetting Tiger at 00000000001e5d70
+# ************************
+# ************************
+# *** Releasing reset of Tiger at 00000000001eab90
+# ************************
+# Result: 150
+# 
+# RESULT: PASS
+# 
+# counter =               197395
+# ** Note: $finish    : ./submodules/tiger_top.v(219)
+#    Time: 4049750 ns  Iteration: 1  Instance: /legup_system_tb/legup_system_inst/tiger_mips
+# End time: 16:27:10 on Apr 13,2017, Elapsed time: 0:12:00
+# Errors: 0, Warnings: 23

@@ -1,0 +1,775 @@
+
+====== START ORIO ======
+
+----- begin reading the source file: adpcm.c -----
+----- finished reading the source file -----
+
+----- begin reading the tuning specification file: adpcm.spec -----
+----- finished reading the tuning specification -----
+
+----- begin parsing annotations -----
+----- finished parsing annotations -----
+
+----- begin optimizations -----
+Search_Space         = 5.400e+01
+Number_of_Parameters = 03
+Numeric_Parameters   = 02
+Binary_Parameters    = 01
+['UF', 'VEC', 'CFLAGS']
+[[1, 2, 3, 4, 5, 6, 7, 8, 9], [False, True], ['-O1', '-O2', '-O3']]
+
+----- begin empirical tuning for problem size -----
+ IN_END = 100
+ SIZE = 100
+
+----- begin random search -----
+Code stats:
+        Number of loops: 	1
+        Max loop nest depth: 	1
+        Additions: 		3
+        Multiplications: 	0
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			13
+        Writes: 		4
+        Comparisons:		1
+        Gotos: 			0
+        
+ building the original code:
+	llvm-link  -DORIO_REPS=50 -DORIGINAL -o __orio_perftest_original.exe __orio_perftest1.c timer_cpu.o 
+orio.main.tuner.ptest_driver:  failed to compile the original version of the code: "llvm-link  -DORIO_REPS=50 -DORIGINAL -o __orio_perftest_original.exe __orio_perftest1.c timer_cpu.o "
+  File "/usr/local/bin/orcc", line 27, in <module>
+    orio.main.orio_main.start(sys.argv, orio.main.orio_main.C_CPP)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/orio_main.py", line 109, in start
+    optimized_code_seq = odriver.optimizeCodeFrags(cfrags, True)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/opt_driver.py", line 45, in optimizeCodeFrags
+    cur_seq = self.__optimizeCodeFrag(cf, perf_params)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/opt_driver.py", line 120, in __optimizeCodeFrag
+    cfrag.cfrags)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/tuner.py", line 152, in tune
+    best_perf_params, best_perf_cost = search_eng.search()
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/search.py", line 119, in search
+    best_coord,best_perf,search_time,runs = self.searchBestCoord(startCoord)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/randomsearch/randomsearch.py", line 164, in searchBestCoord
+    perf_costs = self.getPerfCosts([coord])
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/search.py", line 307, in getPerfCosts
+    new_perf_costs = self.ptdriver.run(test_code, perf_params=perf_params,coord=coord_key)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/ptest_driver.py", line 481, in run
+    self.__build(perf_params=perf_params,coord=coord)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/ptest_driver.py", line 256, in __build
+    err('orio.main.tuner.ptest_driver:  failed to compile the original version of the code: "%s"' % cmd)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/util/globals.py", line 317, in err
+    Globals().loggers['TuningLog'].error(errmsg + '\n' + '\n'.join(traceback.format_stack()))
+
+ building test:
+	llvm-link  -DORIO_REPS=50 -o __orio_perftest1.exe __orio_perftest1.c timer_cpu.o 
+orio.main.tuner.ptest_driver:  failed to compile the testing code: "llvm-link  -DORIO_REPS=50 -o __orio_perftest1.exe __orio_perftest1.c timer_cpu.o "
+  File "/usr/local/bin/orcc", line 27, in <module>
+    orio.main.orio_main.start(sys.argv, orio.main.orio_main.C_CPP)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/orio_main.py", line 109, in start
+    optimized_code_seq = odriver.optimizeCodeFrags(cfrags, True)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/opt_driver.py", line 45, in optimizeCodeFrags
+    cur_seq = self.__optimizeCodeFrag(cf, perf_params)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/opt_driver.py", line 120, in __optimizeCodeFrag
+    cfrag.cfrags)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/tuner.py", line 152, in tune
+    best_perf_params, best_perf_cost = search_eng.search()
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/search.py", line 119, in search
+    best_coord,best_perf,search_time,runs = self.searchBestCoord(startCoord)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/randomsearch/randomsearch.py", line 164, in searchBestCoord
+    perf_costs = self.getPerfCosts([coord])
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/search.py", line 307, in getPerfCosts
+    new_perf_costs = self.ptdriver.run(test_code, perf_params=perf_params,coord=coord_key)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/ptest_driver.py", line 481, in run
+    self.__build(perf_params=perf_params,coord=coord)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/ptest_driver.py", line 285, in __build
+    err('orio.main.tuner.ptest_driver:  failed to compile the testing code: "%s"' % cmd)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/util/globals.py", line 317, in err
+    Globals().loggers['TuningLog'].error(errmsg + '\n' + '\n'.join(traceback.format_stack()))
+
+orio.main.tuner.ptest_driver:  the executable of the test code does not exist
+  File "/usr/local/bin/orcc", line 27, in <module>
+    orio.main.orio_main.start(sys.argv, orio.main.orio_main.C_CPP)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/orio_main.py", line 109, in start
+    optimized_code_seq = odriver.optimizeCodeFrags(cfrags, True)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/opt_driver.py", line 45, in optimizeCodeFrags
+    cur_seq = self.__optimizeCodeFrag(cf, perf_params)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/opt_driver.py", line 120, in __optimizeCodeFrag
+    cfrag.cfrags)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/tuner.py", line 152, in tune
+    best_perf_params, best_perf_cost = search_eng.search()
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/search.py", line 119, in search
+    best_coord,best_perf,search_time,runs = self.searchBestCoord(startCoord)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/randomsearch/randomsearch.py", line 164, in searchBestCoord
+    perf_costs = self.getPerfCosts([coord])
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/search.py", line 307, in getPerfCosts
+    new_perf_costs = self.ptdriver.run(test_code, perf_params=perf_params,coord=coord_key)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/ptest_driver.py", line 484, in run
+    perf_costs = self.__execute(perf_params)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/ptest_driver.py", line 308, in __execute
+    err('orio.main.tuner.ptest_driver:  the executable of the test code does not exist')
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/util/globals.py", line 317, in err
+    Globals().loggers['TuningLog'].error(errmsg + '\n' + '\n'.join(traceback.format_stack()))
+
+ running test:
+	 ./__orio_perftest1.exe  
+orio.main.tuner.ptest_driver:  performance testing failed: " ./__orio_perftest1.exe  "
+  File "/usr/local/bin/orcc", line 27, in <module>
+    orio.main.orio_main.start(sys.argv, orio.main.orio_main.C_CPP)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/orio_main.py", line 109, in start
+    optimized_code_seq = odriver.optimizeCodeFrags(cfrags, True)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/opt_driver.py", line 45, in optimizeCodeFrags
+    cur_seq = self.__optimizeCodeFrag(cf, perf_params)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/opt_driver.py", line 120, in __optimizeCodeFrag
+    cfrag.cfrags)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/tuner.py", line 152, in tune
+    best_perf_params, best_perf_cost = search_eng.search()
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/search.py", line 119, in search
+    best_coord,best_perf,search_time,runs = self.searchBestCoord(startCoord)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/randomsearch/randomsearch.py", line 164, in searchBestCoord
+    perf_costs = self.getPerfCosts([coord])
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/search.py", line 307, in getPerfCosts
+    new_perf_costs = self.ptdriver.run(test_code, perf_params=perf_params,coord=coord_key)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/ptest_driver.py", line 484, in run
+    perf_costs = self.__execute(perf_params)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/ptest_driver.py", line 423, in __execute
+    err('orio.main.tuner.ptest_driver:  performance testing failed: "%s"' % cmd, doexit=False)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/util/globals.py", line 317, in err
+    Globals().loggers['TuningLog'].error(errmsg + '\n' + '\n'.join(traceback.format_stack()))
+
+(run 1) | {"compile_time": 0.004112958908081055, "run": 1, "cost": Infinity, "coordinate": [0, 0, 0], "perf_params": {"UF": 1, "VEC": false, "CFLAGS": "-O1"}, "transform_time": 0.4151930809020996}
+Code stats:
+        Number of loops: 	2
+        Max loop nest depth: 	1
+        Additions: 		24
+        Multiplications: 	6
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			74
+        Writes: 		21
+        Comparisons:		2
+        Gotos: 			0
+        
+ building test:
+	llvm-link  -DORIO_REPS=50 -o __orio_perftest2.exe __orio_perftest2.c timer_cpu.o 
+orio.main.tuner.ptest_driver:  failed to compile the testing code: "llvm-link  -DORIO_REPS=50 -o __orio_perftest2.exe __orio_perftest2.c timer_cpu.o "
+  File "/usr/local/bin/orcc", line 27, in <module>
+    orio.main.orio_main.start(sys.argv, orio.main.orio_main.C_CPP)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/orio_main.py", line 109, in start
+    optimized_code_seq = odriver.optimizeCodeFrags(cfrags, True)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/opt_driver.py", line 45, in optimizeCodeFrags
+    cur_seq = self.__optimizeCodeFrag(cf, perf_params)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/opt_driver.py", line 120, in __optimizeCodeFrag
+    cfrag.cfrags)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/tuner.py", line 152, in tune
+    best_perf_params, best_perf_cost = search_eng.search()
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/search.py", line 119, in search
+    best_coord,best_perf,search_time,runs = self.searchBestCoord(startCoord)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/randomsearch/randomsearch.py", line 164, in searchBestCoord
+    perf_costs = self.getPerfCosts([coord])
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/search.py", line 307, in getPerfCosts
+    new_perf_costs = self.ptdriver.run(test_code, perf_params=perf_params,coord=coord_key)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/ptest_driver.py", line 481, in run
+    self.__build(perf_params=perf_params,coord=coord)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/ptest_driver.py", line 285, in __build
+    err('orio.main.tuner.ptest_driver:  failed to compile the testing code: "%s"' % cmd)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/util/globals.py", line 317, in err
+    Globals().loggers['TuningLog'].error(errmsg + '\n' + '\n'.join(traceback.format_stack()))
+
+orio.main.tuner.ptest_driver:  the executable of the test code does not exist
+  File "/usr/local/bin/orcc", line 27, in <module>
+    orio.main.orio_main.start(sys.argv, orio.main.orio_main.C_CPP)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/orio_main.py", line 109, in start
+    optimized_code_seq = odriver.optimizeCodeFrags(cfrags, True)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/opt_driver.py", line 45, in optimizeCodeFrags
+    cur_seq = self.__optimizeCodeFrag(cf, perf_params)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/opt_driver.py", line 120, in __optimizeCodeFrag
+    cfrag.cfrags)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/tuner.py", line 152, in tune
+    best_perf_params, best_perf_cost = search_eng.search()
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/search.py", line 119, in search
+    best_coord,best_perf,search_time,runs = self.searchBestCoord(startCoord)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/randomsearch/randomsearch.py", line 164, in searchBestCoord
+    perf_costs = self.getPerfCosts([coord])
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/search.py", line 307, in getPerfCosts
+    new_perf_costs = self.ptdriver.run(test_code, perf_params=perf_params,coord=coord_key)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/ptest_driver.py", line 484, in run
+    perf_costs = self.__execute(perf_params)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/ptest_driver.py", line 308, in __execute
+    err('orio.main.tuner.ptest_driver:  the executable of the test code does not exist')
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/util/globals.py", line 317, in err
+    Globals().loggers['TuningLog'].error(errmsg + '\n' + '\n'.join(traceback.format_stack()))
+
+ running test:
+	 ./__orio_perftest2.exe  
+orio.main.tuner.ptest_driver:  performance testing failed: " ./__orio_perftest2.exe  "
+  File "/usr/local/bin/orcc", line 27, in <module>
+    orio.main.orio_main.start(sys.argv, orio.main.orio_main.C_CPP)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/orio_main.py", line 109, in start
+    optimized_code_seq = odriver.optimizeCodeFrags(cfrags, True)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/opt_driver.py", line 45, in optimizeCodeFrags
+    cur_seq = self.__optimizeCodeFrag(cf, perf_params)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/opt_driver.py", line 120, in __optimizeCodeFrag
+    cfrag.cfrags)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/tuner.py", line 152, in tune
+    best_perf_params, best_perf_cost = search_eng.search()
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/search.py", line 119, in search
+    best_coord,best_perf,search_time,runs = self.searchBestCoord(startCoord)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/randomsearch/randomsearch.py", line 164, in searchBestCoord
+    perf_costs = self.getPerfCosts([coord])
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/search.py", line 307, in getPerfCosts
+    new_perf_costs = self.ptdriver.run(test_code, perf_params=perf_params,coord=coord_key)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/ptest_driver.py", line 484, in run
+    perf_costs = self.__execute(perf_params)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/ptest_driver.py", line 423, in __execute
+    err('orio.main.tuner.ptest_driver:  performance testing failed: "%s"' % cmd, doexit=False)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/util/globals.py", line 317, in err
+    Globals().loggers['TuningLog'].error(errmsg + '\n' + '\n'.join(traceback.format_stack()))
+
+(run 2) | {"compile_time": 0.0032761096954345703, "run": 2, "cost": Infinity, "coordinate": [5, 1, 2], "perf_params": {"UF": 6, "VEC": true, "CFLAGS": "-O3"}, "transform_time": 0.1293931007385254}
+Code stats:
+        Number of loops: 	2
+        Max loop nest depth: 	1
+        Additions: 		27
+        Multiplications: 	7
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			82
+        Writes: 		23
+        Comparisons:		2
+        Gotos: 			0
+        
+ building test:
+	llvm-link  -DORIO_REPS=50 -o __orio_perftest3.exe __orio_perftest3.c timer_cpu.o 
+orio.main.tuner.ptest_driver:  failed to compile the testing code: "llvm-link  -DORIO_REPS=50 -o __orio_perftest3.exe __orio_perftest3.c timer_cpu.o "
+  File "/usr/local/bin/orcc", line 27, in <module>
+    orio.main.orio_main.start(sys.argv, orio.main.orio_main.C_CPP)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/orio_main.py", line 109, in start
+    optimized_code_seq = odriver.optimizeCodeFrags(cfrags, True)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/opt_driver.py", line 45, in optimizeCodeFrags
+    cur_seq = self.__optimizeCodeFrag(cf, perf_params)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/opt_driver.py", line 120, in __optimizeCodeFrag
+    cfrag.cfrags)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/tuner.py", line 152, in tune
+    best_perf_params, best_perf_cost = search_eng.search()
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/search.py", line 119, in search
+    best_coord,best_perf,search_time,runs = self.searchBestCoord(startCoord)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/randomsearch/randomsearch.py", line 164, in searchBestCoord
+    perf_costs = self.getPerfCosts([coord])
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/search.py", line 307, in getPerfCosts
+    new_perf_costs = self.ptdriver.run(test_code, perf_params=perf_params,coord=coord_key)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/ptest_driver.py", line 481, in run
+    self.__build(perf_params=perf_params,coord=coord)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/ptest_driver.py", line 285, in __build
+    err('orio.main.tuner.ptest_driver:  failed to compile the testing code: "%s"' % cmd)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/util/globals.py", line 317, in err
+    Globals().loggers['TuningLog'].error(errmsg + '\n' + '\n'.join(traceback.format_stack()))
+
+orio.main.tuner.ptest_driver:  the executable of the test code does not exist
+  File "/usr/local/bin/orcc", line 27, in <module>
+    orio.main.orio_main.start(sys.argv, orio.main.orio_main.C_CPP)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/orio_main.py", line 109, in start
+    optimized_code_seq = odriver.optimizeCodeFrags(cfrags, True)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/opt_driver.py", line 45, in optimizeCodeFrags
+    cur_seq = self.__optimizeCodeFrag(cf, perf_params)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/opt_driver.py", line 120, in __optimizeCodeFrag
+    cfrag.cfrags)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/tuner.py", line 152, in tune
+    best_perf_params, best_perf_cost = search_eng.search()
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/search.py", line 119, in search
+    best_coord,best_perf,search_time,runs = self.searchBestCoord(startCoord)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/randomsearch/randomsearch.py", line 164, in searchBestCoord
+    perf_costs = self.getPerfCosts([coord])
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/search.py", line 307, in getPerfCosts
+    new_perf_costs = self.ptdriver.run(test_code, perf_params=perf_params,coord=coord_key)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/ptest_driver.py", line 484, in run
+    perf_costs = self.__execute(perf_params)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/ptest_driver.py", line 308, in __execute
+    err('orio.main.tuner.ptest_driver:  the executable of the test code does not exist')
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/util/globals.py", line 317, in err
+    Globals().loggers['TuningLog'].error(errmsg + '\n' + '\n'.join(traceback.format_stack()))
+
+ running test:
+	 ./__orio_perftest3.exe  
+orio.main.tuner.ptest_driver:  performance testing failed: " ./__orio_perftest3.exe  "
+  File "/usr/local/bin/orcc", line 27, in <module>
+    orio.main.orio_main.start(sys.argv, orio.main.orio_main.C_CPP)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/orio_main.py", line 109, in start
+    optimized_code_seq = odriver.optimizeCodeFrags(cfrags, True)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/opt_driver.py", line 45, in optimizeCodeFrags
+    cur_seq = self.__optimizeCodeFrag(cf, perf_params)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/opt_driver.py", line 120, in __optimizeCodeFrag
+    cfrag.cfrags)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/tuner.py", line 152, in tune
+    best_perf_params, best_perf_cost = search_eng.search()
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/search.py", line 119, in search
+    best_coord,best_perf,search_time,runs = self.searchBestCoord(startCoord)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/randomsearch/randomsearch.py", line 164, in searchBestCoord
+    perf_costs = self.getPerfCosts([coord])
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/search.py", line 307, in getPerfCosts
+    new_perf_costs = self.ptdriver.run(test_code, perf_params=perf_params,coord=coord_key)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/ptest_driver.py", line 484, in run
+    perf_costs = self.__execute(perf_params)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/ptest_driver.py", line 423, in __execute
+    err('orio.main.tuner.ptest_driver:  performance testing failed: "%s"' % cmd, doexit=False)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/util/globals.py", line 317, in err
+    Globals().loggers['TuningLog'].error(errmsg + '\n' + '\n'.join(traceback.format_stack()))
+
+(run 3) | {"compile_time": 0.0031909942626953125, "run": 3, "cost": Infinity, "coordinate": [6, 1, 1], "perf_params": {"UF": 7, "VEC": true, "CFLAGS": "-O2"}, "transform_time": 0.0973060131072998}
+Code stats:
+        Number of loops: 	2
+        Max loop nest depth: 	1
+        Additions: 		24
+        Multiplications: 	6
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			74
+        Writes: 		21
+        Comparisons:		2
+        Gotos: 			0
+        
+ building test:
+	llvm-link  -DORIO_REPS=50 -o __orio_perftest4.exe __orio_perftest4.c timer_cpu.o 
+orio.main.tuner.ptest_driver:  failed to compile the testing code: "llvm-link  -DORIO_REPS=50 -o __orio_perftest4.exe __orio_perftest4.c timer_cpu.o "
+  File "/usr/local/bin/orcc", line 27, in <module>
+    orio.main.orio_main.start(sys.argv, orio.main.orio_main.C_CPP)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/orio_main.py", line 109, in start
+    optimized_code_seq = odriver.optimizeCodeFrags(cfrags, True)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/opt_driver.py", line 45, in optimizeCodeFrags
+    cur_seq = self.__optimizeCodeFrag(cf, perf_params)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/opt_driver.py", line 120, in __optimizeCodeFrag
+    cfrag.cfrags)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/tuner.py", line 152, in tune
+    best_perf_params, best_perf_cost = search_eng.search()
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/search.py", line 119, in search
+    best_coord,best_perf,search_time,runs = self.searchBestCoord(startCoord)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/randomsearch/randomsearch.py", line 164, in searchBestCoord
+    perf_costs = self.getPerfCosts([coord])
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/search.py", line 307, in getPerfCosts
+    new_perf_costs = self.ptdriver.run(test_code, perf_params=perf_params,coord=coord_key)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/ptest_driver.py", line 481, in run
+    self.__build(perf_params=perf_params,coord=coord)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/ptest_driver.py", line 285, in __build
+    err('orio.main.tuner.ptest_driver:  failed to compile the testing code: "%s"' % cmd)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/util/globals.py", line 317, in err
+    Globals().loggers['TuningLog'].error(errmsg + '\n' + '\n'.join(traceback.format_stack()))
+
+orio.main.tuner.ptest_driver:  the executable of the test code does not exist
+  File "/usr/local/bin/orcc", line 27, in <module>
+    orio.main.orio_main.start(sys.argv, orio.main.orio_main.C_CPP)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/orio_main.py", line 109, in start
+    optimized_code_seq = odriver.optimizeCodeFrags(cfrags, True)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/opt_driver.py", line 45, in optimizeCodeFrags
+    cur_seq = self.__optimizeCodeFrag(cf, perf_params)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/opt_driver.py", line 120, in __optimizeCodeFrag
+    cfrag.cfrags)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/tuner.py", line 152, in tune
+    best_perf_params, best_perf_cost = search_eng.search()
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/search.py", line 119, in search
+    best_coord,best_perf,search_time,runs = self.searchBestCoord(startCoord)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/randomsearch/randomsearch.py", line 164, in searchBestCoord
+    perf_costs = self.getPerfCosts([coord])
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/search.py", line 307, in getPerfCosts
+    new_perf_costs = self.ptdriver.run(test_code, perf_params=perf_params,coord=coord_key)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/ptest_driver.py", line 484, in run
+    perf_costs = self.__execute(perf_params)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/ptest_driver.py", line 308, in __execute
+    err('orio.main.tuner.ptest_driver:  the executable of the test code does not exist')
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/util/globals.py", line 317, in err
+    Globals().loggers['TuningLog'].error(errmsg + '\n' + '\n'.join(traceback.format_stack()))
+
+ running test:
+	 ./__orio_perftest4.exe  
+orio.main.tuner.ptest_driver:  performance testing failed: " ./__orio_perftest4.exe  "
+  File "/usr/local/bin/orcc", line 27, in <module>
+    orio.main.orio_main.start(sys.argv, orio.main.orio_main.C_CPP)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/orio_main.py", line 109, in start
+    optimized_code_seq = odriver.optimizeCodeFrags(cfrags, True)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/opt_driver.py", line 45, in optimizeCodeFrags
+    cur_seq = self.__optimizeCodeFrag(cf, perf_params)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/opt_driver.py", line 120, in __optimizeCodeFrag
+    cfrag.cfrags)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/tuner.py", line 152, in tune
+    best_perf_params, best_perf_cost = search_eng.search()
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/search.py", line 119, in search
+    best_coord,best_perf,search_time,runs = self.searchBestCoord(startCoord)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/randomsearch/randomsearch.py", line 164, in searchBestCoord
+    perf_costs = self.getPerfCosts([coord])
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/search.py", line 307, in getPerfCosts
+    new_perf_costs = self.ptdriver.run(test_code, perf_params=perf_params,coord=coord_key)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/ptest_driver.py", line 484, in run
+    perf_costs = self.__execute(perf_params)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/ptest_driver.py", line 423, in __execute
+    err('orio.main.tuner.ptest_driver:  performance testing failed: "%s"' % cmd, doexit=False)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/util/globals.py", line 317, in err
+    Globals().loggers['TuningLog'].error(errmsg + '\n' + '\n'.join(traceback.format_stack()))
+
+(run 4) | {"compile_time": 0.003287076950073242, "run": 4, "cost": Infinity, "coordinate": [5, 1, 0], "perf_params": {"UF": 6, "VEC": true, "CFLAGS": "-O1"}, "transform_time": 0.09626078605651855}
+Code stats:
+        Number of loops: 	1
+        Max loop nest depth: 	1
+        Additions: 		3
+        Multiplications: 	0
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			15
+        Writes: 		5
+        Comparisons:		1
+        Gotos: 			0
+        
+ building test:
+	llvm-link  -DORIO_REPS=50 -o __orio_perftest5.exe __orio_perftest5.c timer_cpu.o 
+orio.main.tuner.ptest_driver:  failed to compile the testing code: "llvm-link  -DORIO_REPS=50 -o __orio_perftest5.exe __orio_perftest5.c timer_cpu.o "
+  File "/usr/local/bin/orcc", line 27, in <module>
+    orio.main.orio_main.start(sys.argv, orio.main.orio_main.C_CPP)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/orio_main.py", line 109, in start
+    optimized_code_seq = odriver.optimizeCodeFrags(cfrags, True)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/opt_driver.py", line 45, in optimizeCodeFrags
+    cur_seq = self.__optimizeCodeFrag(cf, perf_params)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/opt_driver.py", line 120, in __optimizeCodeFrag
+    cfrag.cfrags)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/tuner.py", line 152, in tune
+    best_perf_params, best_perf_cost = search_eng.search()
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/search.py", line 119, in search
+    best_coord,best_perf,search_time,runs = self.searchBestCoord(startCoord)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/randomsearch/randomsearch.py", line 164, in searchBestCoord
+    perf_costs = self.getPerfCosts([coord])
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/search.py", line 307, in getPerfCosts
+    new_perf_costs = self.ptdriver.run(test_code, perf_params=perf_params,coord=coord_key)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/ptest_driver.py", line 481, in run
+    self.__build(perf_params=perf_params,coord=coord)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/ptest_driver.py", line 285, in __build
+    err('orio.main.tuner.ptest_driver:  failed to compile the testing code: "%s"' % cmd)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/util/globals.py", line 317, in err
+    Globals().loggers['TuningLog'].error(errmsg + '\n' + '\n'.join(traceback.format_stack()))
+
+orio.main.tuner.ptest_driver:  the executable of the test code does not exist
+  File "/usr/local/bin/orcc", line 27, in <module>
+    orio.main.orio_main.start(sys.argv, orio.main.orio_main.C_CPP)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/orio_main.py", line 109, in start
+    optimized_code_seq = odriver.optimizeCodeFrags(cfrags, True)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/opt_driver.py", line 45, in optimizeCodeFrags
+    cur_seq = self.__optimizeCodeFrag(cf, perf_params)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/opt_driver.py", line 120, in __optimizeCodeFrag
+    cfrag.cfrags)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/tuner.py", line 152, in tune
+    best_perf_params, best_perf_cost = search_eng.search()
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/search.py", line 119, in search
+    best_coord,best_perf,search_time,runs = self.searchBestCoord(startCoord)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/randomsearch/randomsearch.py", line 164, in searchBestCoord
+    perf_costs = self.getPerfCosts([coord])
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/search.py", line 307, in getPerfCosts
+    new_perf_costs = self.ptdriver.run(test_code, perf_params=perf_params,coord=coord_key)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/ptest_driver.py", line 484, in run
+    perf_costs = self.__execute(perf_params)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/ptest_driver.py", line 308, in __execute
+    err('orio.main.tuner.ptest_driver:  the executable of the test code does not exist')
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/util/globals.py", line 317, in err
+    Globals().loggers['TuningLog'].error(errmsg + '\n' + '\n'.join(traceback.format_stack()))
+
+ running test:
+	 ./__orio_perftest5.exe  
+orio.main.tuner.ptest_driver:  performance testing failed: " ./__orio_perftest5.exe  "
+  File "/usr/local/bin/orcc", line 27, in <module>
+    orio.main.orio_main.start(sys.argv, orio.main.orio_main.C_CPP)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/orio_main.py", line 109, in start
+    optimized_code_seq = odriver.optimizeCodeFrags(cfrags, True)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/opt_driver.py", line 45, in optimizeCodeFrags
+    cur_seq = self.__optimizeCodeFrag(cf, perf_params)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/opt_driver.py", line 120, in __optimizeCodeFrag
+    cfrag.cfrags)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/tuner.py", line 152, in tune
+    best_perf_params, best_perf_cost = search_eng.search()
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/search.py", line 119, in search
+    best_coord,best_perf,search_time,runs = self.searchBestCoord(startCoord)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/randomsearch/randomsearch.py", line 164, in searchBestCoord
+    perf_costs = self.getPerfCosts([coord])
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/search.py", line 307, in getPerfCosts
+    new_perf_costs = self.ptdriver.run(test_code, perf_params=perf_params,coord=coord_key)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/ptest_driver.py", line 484, in run
+    perf_costs = self.__execute(perf_params)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/ptest_driver.py", line 423, in __execute
+    err('orio.main.tuner.ptest_driver:  performance testing failed: "%s"' % cmd, doexit=False)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/util/globals.py", line 317, in err
+    Globals().loggers['TuningLog'].error(errmsg + '\n' + '\n'.join(traceback.format_stack()))
+
+(run 5) | {"compile_time": 0.0030219554901123047, "run": 5, "cost": Infinity, "coordinate": [0, 1, 1], "perf_params": {"UF": 1, "VEC": true, "CFLAGS": "-O2"}, "transform_time": 0.08795499801635742}
+Code stats:
+        Number of loops: 	2
+        Max loop nest depth: 	1
+        Additions: 		30
+        Multiplications: 	8
+        Divisions: 		1
+        Logical: 		0
+        Reads: 			84
+        Writes: 		22
+        Comparisons:		2
+        Gotos: 			0
+        
+ building test:
+	llvm-link  -DORIO_REPS=50 -o __orio_perftest6.exe __orio_perftest6.c timer_cpu.o 
+orio.main.tuner.ptest_driver:  failed to compile the testing code: "llvm-link  -DORIO_REPS=50 -o __orio_perftest6.exe __orio_perftest6.c timer_cpu.o "
+  File "/usr/local/bin/orcc", line 27, in <module>
+    orio.main.orio_main.start(sys.argv, orio.main.orio_main.C_CPP)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/orio_main.py", line 109, in start
+    optimized_code_seq = odriver.optimizeCodeFrags(cfrags, True)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/opt_driver.py", line 45, in optimizeCodeFrags
+    cur_seq = self.__optimizeCodeFrag(cf, perf_params)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/opt_driver.py", line 120, in __optimizeCodeFrag
+    cfrag.cfrags)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/tuner.py", line 152, in tune
+    best_perf_params, best_perf_cost = search_eng.search()
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/search.py", line 119, in search
+    best_coord,best_perf,search_time,runs = self.searchBestCoord(startCoord)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/randomsearch/randomsearch.py", line 164, in searchBestCoord
+    perf_costs = self.getPerfCosts([coord])
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/search.py", line 307, in getPerfCosts
+    new_perf_costs = self.ptdriver.run(test_code, perf_params=perf_params,coord=coord_key)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/ptest_driver.py", line 481, in run
+    self.__build(perf_params=perf_params,coord=coord)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/ptest_driver.py", line 285, in __build
+    err('orio.main.tuner.ptest_driver:  failed to compile the testing code: "%s"' % cmd)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/util/globals.py", line 317, in err
+    Globals().loggers['TuningLog'].error(errmsg + '\n' + '\n'.join(traceback.format_stack()))
+
+orio.main.tuner.ptest_driver:  the executable of the test code does not exist
+  File "/usr/local/bin/orcc", line 27, in <module>
+    orio.main.orio_main.start(sys.argv, orio.main.orio_main.C_CPP)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/orio_main.py", line 109, in start
+    optimized_code_seq = odriver.optimizeCodeFrags(cfrags, True)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/opt_driver.py", line 45, in optimizeCodeFrags
+    cur_seq = self.__optimizeCodeFrag(cf, perf_params)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/opt_driver.py", line 120, in __optimizeCodeFrag
+    cfrag.cfrags)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/tuner.py", line 152, in tune
+    best_perf_params, best_perf_cost = search_eng.search()
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/search.py", line 119, in search
+    best_coord,best_perf,search_time,runs = self.searchBestCoord(startCoord)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/randomsearch/randomsearch.py", line 164, in searchBestCoord
+    perf_costs = self.getPerfCosts([coord])
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/search.py", line 307, in getPerfCosts
+    new_perf_costs = self.ptdriver.run(test_code, perf_params=perf_params,coord=coord_key)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/ptest_driver.py", line 484, in run
+    perf_costs = self.__execute(perf_params)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/ptest_driver.py", line 308, in __execute
+    err('orio.main.tuner.ptest_driver:  the executable of the test code does not exist')
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/util/globals.py", line 317, in err
+    Globals().loggers['TuningLog'].error(errmsg + '\n' + '\n'.join(traceback.format_stack()))
+
+ running test:
+	 ./__orio_perftest6.exe  
+orio.main.tuner.ptest_driver:  performance testing failed: " ./__orio_perftest6.exe  "
+  File "/usr/local/bin/orcc", line 27, in <module>
+    orio.main.orio_main.start(sys.argv, orio.main.orio_main.C_CPP)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/orio_main.py", line 109, in start
+    optimized_code_seq = odriver.optimizeCodeFrags(cfrags, True)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/opt_driver.py", line 45, in optimizeCodeFrags
+    cur_seq = self.__optimizeCodeFrag(cf, perf_params)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/opt_driver.py", line 120, in __optimizeCodeFrag
+    cfrag.cfrags)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/tuner.py", line 152, in tune
+    best_perf_params, best_perf_cost = search_eng.search()
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/search.py", line 119, in search
+    best_coord,best_perf,search_time,runs = self.searchBestCoord(startCoord)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/randomsearch/randomsearch.py", line 164, in searchBestCoord
+    perf_costs = self.getPerfCosts([coord])
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/search/search.py", line 307, in getPerfCosts
+    new_perf_costs = self.ptdriver.run(test_code, perf_params=perf_params,coord=coord_key)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/ptest_driver.py", line 484, in run
+    perf_costs = self.__execute(perf_params)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/tuner/ptest_driver.py", line 423, in __execute
+    err('orio.main.tuner.ptest_driver:  performance testing failed: "%s"' % cmd, doexit=False)
+
+  File "/usr/local/lib/python2.7/dist-packages/orio/main/util/globals.py", line 317, in err
+    Globals().loggers['TuningLog'].error(errmsg + '\n' + '\n'.join(traceback.format_stack()))
+
+(run 6) | {"compile_time": 0.0035130977630615234, "run": 6, "cost": Infinity, "coordinate": [7, 0, 2], "perf_params": {"UF": 8, "VEC": false, "CFLAGS": "-O3"}, "transform_time": 0.09584403038024902}

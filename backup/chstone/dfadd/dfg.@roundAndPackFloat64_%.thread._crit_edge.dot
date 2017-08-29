@@ -1,0 +1,4 @@
+digraph {
+Node0x345f400[label="  %.pre = load i32* @float_exception_fla..."];
+Node0x345f400 -> Node0x345f400[label="D:0.00ns L:2",color=blue];
+}

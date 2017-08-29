@@ -1,0 +1,17 @@
+digraph {
+Node0x3ef3340[label="  %76 = phi i32 [ %.pre.i.i, %.preheader..."];
+Node0x3ef3340 -> Node0x3ef3340[label="D:0.00ns L:0",color=blue];
+Node0x3ef3420[label="  %i.03.i19.i.i = phi i32 [ %79, %.prehe..."];
+Node0x3ef3420 -> Node0x3ef3420[label="D:0.00ns L:0",color=blue];
+Node0x3ef3420 -> Node0x3ef3420[label="D:0.00ns L:0",color=blue];
+Node0x3ef3420 -> Node0x3ef3420[label="D:0.00ns L:0",color=blue];
+Node0x3ef3420 -> Node0x3ef3420[label="D:0.00ns L:0",color=blue];
+Node0x3ef3500[label="  %scevgep16 = getelementptr [6 x i32]* ..."];
+Node0x3ef3500 -> Node0x3ef3500[label="D:20.00ns L:0",color=blue];
+Node0x3ef35e0[label="  %77 = mul nsw i32 %76, 255"];
+Node0x3ef35e0 -> Node0x3ef35e0[label="D:2.59ns L:1",color=blue];
+Node0x3ef36c0[label="  %78 = ashr i32 %77, 8"];
+Node0x3ef36c0 -> Node0x3ef36c0[label="D:0.00ns L:0",color=blue];
+Node0x3ef3880[label="  %exitcond14 = icmp eq i32 %i.03.i19.i...."];
+Node0x3ef3880 -> Node0x3ef3880[label="D:2.49ns L:0",color=blue];
+}

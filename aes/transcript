@@ -1,0 +1,27 @@
+# vsim -c -do "run 7000000000000000ns; exit;" work.main_tb 
+# Start time: 18:19:45 on May 06,2017
+# Loading work.main_tb
+# Loading work.top
+# Loading work.memory_controller
+# Loading work.ram_dual_port
+# Loading work.ALTERA_MF_MEMORY_INITIALIZATION
+# Loading work.rom_dual_port
+# Loading work.main
+# Loading work.lpm_divide
+# Loading work.LPM_HINT_EVALUATION
+# Loading work.KeySchedule
+# Loading work.ByteSub_ShiftRow
+# Loading work.InversShiftRow_ByteSub
+# ** Warning: Design size of 11625 statements exceeds ModelSim Altera Starter recommended capacity.
+# Expect performance to be adversely affected.
+# run 7000000000000000ns
+# encrypted message 	3925841d02dc09fbdc118597196a0b32
+# decrypto message	3243f6a8885a308d313198a2e0370734
+# Result:          32
+# RESULT: PASS
+# At t=           181030000 clk=1 finish=1 return_val=        32
+# Cycles:                 9049
+# ** Note: $finish    : aes.v(19300)
+#    Time: 181030 ns  Iteration: 2  Instance: /main_tb
+# End time: 18:20:03 on May 06,2017, Elapsed time: 0:00:18
+# Errors: 0, Warnings: 1

@@ -1,0 +1,31 @@
+Depth = 24;
+Width = 8;
+Address_radix = dec;
+Data_radix = hex;
+Content
+Begin
+0: 10;	-- MVtab2[0] = 16
+1: 09;	-- MVtab2[1] = 9
+2: 0F;	-- MVtab2[2] = 15
+3: 09;	-- MVtab2[3] = 9
+4: 0E;	-- MVtab2[4] = 14
+5: 09;	-- MVtab2[5] = 9
+6: 0D;	-- MVtab2[6] = 13
+7: 09;	-- MVtab2[7] = 9
+8: 0C;	-- MVtab2[8] = 12
+9: 09;	-- MVtab2[9] = 9
+10: 0B;	-- MVtab2[10] = 11
+11: 09;	-- MVtab2[11] = 9
+12: 0A;	-- MVtab2[12] = 10
+13: 08;	-- MVtab2[13] = 8
+14: 0A;	-- MVtab2[14] = 10
+15: 08;	-- MVtab2[15] = 8
+16: 09;	-- MVtab2[16] = 9
+17: 08;	-- MVtab2[17] = 8
+18: 09;	-- MVtab2[18] = 9
+19: 08;	-- MVtab2[19] = 8
+20: 08;	-- MVtab2[20] = 8
+21: 08;	-- MVtab2[21] = 8
+22: 08;	-- MVtab2[22] = 8
+23: 08;	-- MVtab2[23] = 8
+End;

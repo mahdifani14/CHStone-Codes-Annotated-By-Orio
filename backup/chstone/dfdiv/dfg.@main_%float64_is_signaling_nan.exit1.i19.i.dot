@@ -1,0 +1,28 @@
+digraph {
+Node0x38588c0[label="  %19 = icmp ult i32 %3, 3"];
+Node0x38588c0 -> Node0x38588c0[label="D:2.92ns L:0",color=blue];
+Node0x38588c0 -> Node0x38588c0[label="D:2.92ns L:0",color=blue];
+Node0x38589a0[label="  %20 = icmp eq i32 %2, 0"];
+Node0x38589a0 -> Node0x38589a0[label="D:2.49ns L:0",color=blue];
+Node0x38589a0 -> Node0x38589a0[label="D:2.49ns L:0",color=blue];
+Node0x3858a80[label="  %.9 = and i1 %19, %20"];
+Node0x3858a80 -> Node0x3858a80[label="D:0.00ns L:0",color=blue];
+Node0x3858b60[label="  %21 = trunc i64 %5 to i63"];
+Node0x3858b60 -> Node0x3858b60[label="D:0.00ns L:0",color=blue];
+Node0x3858c40[label="  %22 = icmp ugt i63 %21, -4503599627370..."];
+Node0x3858c40 -> Node0x3858c40[label="D:20.00ns L:0",color=blue];
+Node0x3858d20[label="  %23 = or i32 %float_exception_flags.0,..."];
+Node0x3858d20 -> Node0x3858d20[label="D:0.00ns L:0",color=blue];
+Node0x3858e00[label="  %.float_exception_flags.0 = select i1 ..."];
+Node0x3858e00 -> Node0x3858e00[label="D:3.99ns L:0",color=blue];
+Node0x3858f10[label="  %not.1.demorgan = and i1 %19, %20"];
+Node0x3858f10 -> Node0x3858f10[label="D:0.00ns L:0",color=blue];
+Node0x3858ff0[label="  %not.1 = xor i1 %not.1.demorgan, true"];
+Node0x3858ff0 -> Node0x3858ff0[label="D:20.00ns L:0",color=blue];
+Node0x38590d0[label="  %. = and i1 %22, %not.1"];
+Node0x38590d0 -> Node0x38590d0[label="D:0.00ns L:0",color=blue];
+Node0x38591b0[label="  %.mux2.v.i23.i = select i1 %., i64 %5,..."];
+Node0x38591b0 -> Node0x38591b0[label="D:4.29ns L:0",color=blue];
+Node0x3859290[label="  %.mux2.i24.i = or i64 %.mux2.v.i23.i, ..."];
+Node0x3859290 -> Node0x3859290[label="D:0.00ns L:0",color=blue];
+}

@@ -1,0 +1,20 @@
+digraph {
+Node0x3cb9ed0[label="  %22 = sub nsw i32 0, %zExp"];
+Node0x3cb9ed0 -> Node0x3cb9ed0[label="D:2.40ns L:0",color=blue];
+Node0x3cba000[label="  %23 = zext i32 %22 to i64"];
+Node0x3cba000 -> Node0x3cba000[label="D:0.00ns L:0",color=blue];
+Node0x3cba0e0[label="  %24 = lshr i64 %zSig, %23"];
+Node0x3cba0e0 -> Node0x3cba0e0[label="D:4.38ns L:0",color=blue];
+Node0x3cba1c0[label="  %25 = and i32 %zExp, 63"];
+Node0x3cba1c0 -> Node0x3cba1c0[label="D:0.00ns L:0",color=blue];
+Node0x3cba2a0[label="  %26 = zext i32 %25 to i64"];
+Node0x3cba2a0 -> Node0x3cba2a0[label="D:0.00ns L:0",color=blue];
+Node0x3cba380[label="  %27 = shl i64 %zSig, %26"];
+Node0x3cba380 -> Node0x3cba380[label="D:4.36ns L:0",color=blue];
+Node0x3cba460[label="  %28 = icmp ne i64 %27, 0"];
+Node0x3cba460 -> Node0x3cba460[label="D:2.90ns L:0",color=blue];
+Node0x3cba540[label="  %29 = zext i1 %28 to i64"];
+Node0x3cba540 -> Node0x3cba540[label="D:0.00ns L:0",color=blue];
+Node0x3cba620[label="  %30 = or i64 %29, %24"];
+Node0x3cba620 -> Node0x3cba620[label="D:0.88ns L:0",color=blue];
+}

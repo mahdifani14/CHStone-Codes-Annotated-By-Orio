@@ -1,0 +1,8 @@
+digraph {
+Node0x306c290[label="  %storemerge1.i38 = phi i8* [ %scevgep...."];
+Node0x306c290 -> Node0x306c290[label="D:0.00ns L:0",color=blue];
+Node0x306c370[label="  %storemerge.i39 = phi i32 [ %226, %.lo..."];
+Node0x306c370 -> Node0x306c370[label="D:0.00ns L:0",color=blue];
+Node0x306c530[label="  %Incnt.2.i.i40 = add i32 %213, 7"];
+Node0x306c530 -> Node0x306c530[label="D:2.50ns L:0",color=blue];
+}

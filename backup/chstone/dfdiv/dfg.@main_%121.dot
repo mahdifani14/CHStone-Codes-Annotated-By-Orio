@@ -1,0 +1,6 @@
+digraph {
+Node0x3860f50[label="  %122 = lshr exact i64 %116, 1"];
+Node0x3860f50 -> Node0x3860f50[label="D:0.00ns L:0",color=blue];
+Node0x3861030[label="  %123 = add nsw i32 %113, 1022"];
+Node0x3861030 -> Node0x3861030[label="D:2.50ns L:0",color=blue];
+}

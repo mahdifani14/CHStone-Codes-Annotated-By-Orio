@@ -1,0 +1,17 @@
+digraph {
+Node0x3864850[label="  %z.0.lcssa.i.i = phi i64 [ %135, %134 ..."];
+Node0x3864850 -> Node0x3864850[label="D:0.00ns L:0",color=blue];
+Node0x3864930[label="  %.lcssa4.i.i = phi i64 [ %142, %134 ],..."];
+Node0x3864930 -> Node0x3864930[label="D:0.00ns L:0",color=blue];
+Node0x3864a10[label="  %.lcssa.i.i = phi i64 [ %145, %134 ], ..."];
+Node0x3864a10 -> Node0x3864a10[label="D:0.00ns L:0",color=blue];
+Node0x3864af0[label="  %156 = shl i64 %.lcssa.i.i, 32"];
+Node0x3864af0 -> Node0x3864af0[label="D:0.00ns L:0",color=blue];
+Node0x3864bd0[label="  %157 = lshr i64 %.lcssa4.i.i, 32"];
+Node0x3864bd0 -> Node0x3864bd0[label="D:0.00ns L:0",color=blue];
+Node0x3864cb0[label="  %158 = or i64 %156, %157"];
+Node0x3864cb0 -> Node0x3864cb0[label="D:0.88ns L:0",color=blue];
+Node0x3864cb0 -> Node0x3864cb0[label="D:0.88ns L:0",color=blue];
+Node0x3864d90[label="  %159 = icmp ugt i64 %129, %158"];
+Node0x3864d90 -> Node0x3864d90[label="D:3.73ns L:0",color=blue];
+}

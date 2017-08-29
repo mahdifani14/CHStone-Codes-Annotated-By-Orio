@@ -1,0 +1,8 @@
+digraph {
+Node0x385c2e0[label="  %57 = zext i32 %8 to i64"];
+Node0x385c2e0 -> Node0x385c2e0[label="D:0.00ns L:0",color=blue];
+Node0x385c3c0[label="  %58 = or i64 %57, %6"];
+Node0x385c3c0 -> Node0x385c3c0[label="D:0.88ns L:0",color=blue];
+Node0x385c4a0[label="  %59 = icmp eq i64 %58, 0"];
+Node0x385c4a0 -> Node0x385c4a0[label="D:2.90ns L:0",color=blue];
+}

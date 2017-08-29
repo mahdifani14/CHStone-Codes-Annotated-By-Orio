@@ -1,6 +1,6 @@
 spec unroll_vectorize {
  def build {
-   arg build_command = 'gcc -O0';
+   arg build_command = 'gcc -O0' ;
    arg libs = '-lrt';
  }
  def performance_counter {

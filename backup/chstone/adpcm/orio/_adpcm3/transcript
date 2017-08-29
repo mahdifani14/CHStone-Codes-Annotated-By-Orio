@@ -1,0 +1,21 @@
+# vsim -c -do "run 7000000000000000ns; exit;" work.main_tb 
+# Start time: 18:16:34 on Jan 28,2017
+# Loading work.main_tb
+# Loading work.top
+# Loading work.memory_controller
+# Loading work.rom_dual_port
+# Loading work.ALTERA_MF_MEMORY_INITIALIZATION
+# Loading work.ram_dual_port
+# Loading work.main
+# Loading work.lpm_divide
+# Loading work.LPM_HINT_EVALUATION
+# Loading work.encode
+# Loading work.upzero
+# ** Warning: Design size of 15640 statements exceeds ModelSim Altera Starter recommended capacity.
+# Expect performance to be adversely affected.
+# run 7000000000000000ns
+# ERROR: Right hand side is 'X'. Assigned to main_legup_memset_4_i64exit_40_reg
+# ** Note: $finish    : _adpcm.v(15039)
+#    Time: 172770 ns  Iteration: 1  Instance: /main_tb/top_inst/main_inst
+# End time: 18:17:04 on Jan 28,2017, Elapsed time: 0:00:30
+# Errors: 0, Warnings: 1

@@ -1,0 +1,10 @@
+digraph {
+Node0x348c070[label="  %26 = trunc i64 %5 to i63"];
+Node0x348c070 -> Node0x348c070[label="D:0.00ns L:0",color=blue];
+Node0x348c150[label="  %27 = icmp ugt i63 %26, -4503599627370..."];
+Node0x348c150 -> Node0x348c150[label="D:20.00ns L:0",color=blue];
+Node0x348f080[label="  %..v = select i1 %27, i64 %5, i64 %4"];
+Node0x348f080 -> Node0x348f080[label="D:4.29ns L:0",color=blue];
+Node0x348f160[label="  %. = or i64 %..v, 2251799813685248"];
+Node0x348f160 -> Node0x348f160[label="D:0.00ns L:0",color=blue];
+}

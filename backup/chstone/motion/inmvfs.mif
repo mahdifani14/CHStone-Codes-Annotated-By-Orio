@@ -1,0 +1,11 @@
+Depth = 4;
+Width = 32;
+Address_radix = dec;
+Data_radix = hex;
+Content
+Begin
+0: 000000E8;	-- inmvfs[0] = 232
+1: 000000C8;	-- inmvfs[1] = 200
+2: 00000020;	-- inmvfs[2] = 32
+3: 000000F0;	-- inmvfs[3] = 240
+End;

@@ -1,0 +1,17 @@
+digraph "callgraph" {
+  F1adcce8 [label="(below main)\n96 761"];
+  F1afc618 [label="_IO_file_xsputn@@GLIBC_2.2.5\n28 457"];
+  F1afdef8 [label="printf\n73 084"];
+  F1afe688 [label="vfprintf\n72 601"];
+  F1ba8d78 [label="_itoa_word\n11 306"];
+  F1be3948 [label="0x0000000000400560\n96 761"];
+  F1c6b248 [label="main\n96 761"];
+  F1d44e78 [label="float64_div\n20 089"];
+  F1adcce8 -> F1c6b248 [weight=2,label="96 761 (1x)"];
+  F1afdef8 -> F1afe688 [weight=2,label="72 601 (23x)"];
+  F1afe688 -> F1afc618 [weight=2,label="28 457 (201x)"];
+  F1afe688 -> F1ba8d78 [weight=2,label="11 306 (89x)"];
+  F1be3948 -> F1adcce8 [weight=2,label="96 761 (1x)"];
+  F1c6b248 -> F1afdef8 [weight=2,label="73 084 (23x)"];
+  F1c6b248 -> F1d44e78 [weight=2,label="20 089 (22x)"];
+}

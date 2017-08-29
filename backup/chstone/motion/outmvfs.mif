@@ -1,0 +1,11 @@
+Depth = 4;
+Width = 32;
+Address_radix = dec;
+Data_radix = hex;
+Content
+Begin
+0: 00000000;	-- outmvfs[0] = 0
+1: 000000C8;	-- outmvfs[1] = 200
+2: 00000000;	-- outmvfs[2] = 0
+3: 000000F0;	-- outmvfs[3] = 240
+End;

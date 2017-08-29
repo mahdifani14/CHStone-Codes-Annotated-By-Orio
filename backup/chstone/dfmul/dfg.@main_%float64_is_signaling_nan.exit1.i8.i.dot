@@ -1,0 +1,20 @@
+digraph {
+Node0x4036520[label="  %21 = lshr i32 13, %2"];
+Node0x4036520 -> Node0x4036520[label="D:3.35ns L:0",color=blue];
+Node0x4036600[label="  %22 = and i32 %21, 1"];
+Node0x4036600 -> Node0x4036600[label="D:0.00ns L:0",color=blue];
+Node0x40366e0[label="  %not.1 = icmp ne i32 %22, 0"];
+Node0x40366e0 -> Node0x40366e0[label="D:2.49ns L:0",color=blue];
+Node0x40367c0[label="  %.5 = and i1 %16, %not.1"];
+Node0x40367c0 -> Node0x40367c0[label="D:0.00ns L:0",color=blue];
+Node0x40368a0[label="  %23 = trunc i64 %5 to i63"];
+Node0x40368a0 -> Node0x40368a0[label="D:0.00ns L:0",color=blue];
+Node0x4036980[label="  %24 = icmp ugt i63 %23, -4503599627370..."];
+Node0x4036980 -> Node0x4036980[label="D:20.00ns L:0",color=blue];
+Node0x4036a60[label="  %25 = lshr i32 98, %2"];
+Node0x4036a60 -> Node0x4036a60[label="D:3.35ns L:0",color=blue];
+Node0x4036b40[label="  %26 = and i32 %25, 1"];
+Node0x4036b40 -> Node0x4036b40[label="D:0.00ns L:0",color=blue];
+Node0x4036c20[label="  %27 = icmp eq i32 %26, 0"];
+Node0x4036c20 -> Node0x4036c20[label="D:2.49ns L:0",color=blue];
+}

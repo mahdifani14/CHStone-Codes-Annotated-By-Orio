@@ -1,0 +1,26 @@
+digraph {
+	graph [fontname=Arial, nodesep=0.125, ranksep=0.25];
+	node [fontcolor=white, fontname=Arial, height=0, shape=box, style=filled, width=0];
+	edge [fontname=Arial];
+	1 [color="#ff0000", fontcolor="#ffffff", fontsize="10.00", label="SubByte\n100.00%\n(100.00%)\n80×"];
+	2 [color="#ff0000", fontcolor="#ffffff", fontsize="10.00", label="ByteSub_ShiftRow\n100.00%\n(100.00%)\n10×"];
+	3 [color="#ff0000", fontcolor="#ffffff", fontsize="10.00", label="InversShiftRow_ByteSub\n100.00%\n(100.00%)\n10×"];
+	4 [color="#ff0000", fontcolor="#ffffff", fontsize="10.00", label="AddRoundKey_InversMixColumn\n100.00%\n(100.00%)\n9×"];
+	5 [color="#ff0000", fontcolor="#ffffff", fontsize="10.00", label="MixColumn_AddRoundKey\n100.00%\n(100.00%)\n9×"];
+	6 [color="#ff0000", fontcolor="#ffffff", fontsize="10.00", label="AddRoundKey\n100.00%\n(100.00%)\n4×"];
+	7 [color="#ff0000", fontcolor="#ffffff", fontsize="10.00", label="KeySchedule\n100.00%\n(100.00%)\n2×"];
+	7 -> 1 [arrowsize="1.00", color="#ff0000", fontcolor="#ff0000", fontsize="10.00", label="100.00%\n80×", labeldistance="4.00", penwidth="4.00"];
+	8 [color="#ff0000", fontcolor="#ffffff", fontsize="10.00", label="aes_main\n100.00%\n(100.00%)\n1×"];
+	8 -> 9 [arrowsize="1.00", color="#ff0000", fontcolor="#ff0000", fontsize="10.00", label="100.00%\n1×", labeldistance="4.00", penwidth="4.00"];
+	8 -> 10 [arrowsize="1.00", color="#ff0000", fontcolor="#ff0000", fontsize="10.00", label="100.00%\n1×", labeldistance="4.00", penwidth="4.00"];
+	9 [color="#ff0000", fontcolor="#ffffff", fontsize="10.00", label="decrypt\n100.00%\n(100.00%)\n1×"];
+	9 -> 3 [arrowsize="1.00", color="#ff0000", fontcolor="#ff0000", fontsize="10.00", label="100.00%\n10×", labeldistance="4.00", penwidth="4.00"];
+	9 -> 4 [arrowsize="1.00", color="#ff0000", fontcolor="#ff0000", fontsize="10.00", label="100.00%\n9×", labeldistance="4.00", penwidth="4.00"];
+	9 -> 6 [arrowsize="1.00", color="#ff0000", fontcolor="#ff0000", fontsize="10.00", label="100.00%\n2×", labeldistance="4.00", penwidth="4.00"];
+	9 -> 7 [arrowsize="1.00", color="#ff0000", fontcolor="#ff0000", fontsize="10.00", label="100.00%\n1×", labeldistance="4.00", penwidth="4.00"];
+	10 [color="#ff0000", fontcolor="#ffffff", fontsize="10.00", label="encrypt\n100.00%\n(100.00%)\n1×"];
+	10 -> 2 [arrowsize="1.00", color="#ff0000", fontcolor="#ff0000", fontsize="10.00", label="100.00%\n10×", labeldistance="4.00", penwidth="4.00"];
+	10 -> 5 [arrowsize="1.00", color="#ff0000", fontcolor="#ff0000", fontsize="10.00", label="100.00%\n9×", labeldistance="4.00", penwidth="4.00"];
+	10 -> 6 [arrowsize="1.00", color="#ff0000", fontcolor="#ff0000", fontsize="10.00", label="100.00%\n2×", labeldistance="4.00", penwidth="4.00"];
+	10 -> 7 [arrowsize="1.00", color="#ff0000", fontcolor="#ff0000", fontsize="10.00", label="100.00%\n1×", labeldistance="4.00", penwidth="4.00"];
+}

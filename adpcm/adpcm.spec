@@ -1,16 +1,16 @@
 spec unroll_vectorize {
  def build {
-   arg build_command = 'gcc -O0';
-   arg libs = '-lrt';
- }
+   arg build_command = 'clang';
+   arg libs = '';
+}
  def performance_counter {
    #arg method = 'bgp counter';
-   arg repetitions = 500;
+   arg repetitions = 50;
  }
  def performance_params {
    param UF[] = range(1,10);
    param VEC[] = [False,True];
-   param CFLAGS[] = ['-O0', '-O1','-O2','-O3'];
+   param CFLAGS[] = [ '-O1','-O2','-O3'];
    #constraint divisible_by_two = (UF % 2 == 0);
  }
  def input_params {

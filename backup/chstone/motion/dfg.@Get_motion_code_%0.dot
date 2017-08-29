@@ -1,0 +1,28 @@
+digraph {
+Node0x305e590[label="  %1 = load i32* @ld_Bfr, align 4"];
+Node0x305e590 -> Node0x305e590[label="D:0.00ns L:2",color=blue];
+Node0x305e590 -> Node0x305e590[label="D:0.00ns L:2",color=blue];
+Node0x305f280[label="  store i32 %2, i32* @ld_Bfr, align 4"];
+Node0x305e590 -> Node0x305f280[label="D:0.00ns L:2",color=red];
+Node0x305e710[label="  %2 = shl i32 %1, 1"];
+Node0x305e710 -> Node0x305e710[label="D:0.00ns L:0",color=blue];
+Node0x305e710 -> Node0x305e710[label="D:0.00ns L:0",color=blue];
+Node0x305e710 -> Node0x305e710[label="D:0.00ns L:0",color=blue];
+Node0x305e710 -> Node0x305e710[label="D:0.00ns L:0",color=blue];
+Node0x305f360[label="  %3 = load i32* @ld_Incnt, align 4"];
+Node0x305f360 -> Node0x305f360[label="D:0.00ns L:2",color=blue];
+Node0x305f360 -> Node0x305f360[label="D:0.00ns L:2",color=blue];
+Node0x305f360 -> Node0x305f360[label="D:0.00ns L:2",color=blue];
+Node0x305f360 -> Node0x305f360[label="D:0.00ns L:2",color=blue];
+Node0x305f360 -> Node0x305f360[label="D:0.00ns L:2",color=blue];
+Node0x305f360 -> Node0x305f360[label="D:0.00ns L:2",color=blue];
+Node0x305f360 -> Node0x305f360[label="D:0.00ns L:2",color=blue];
+Node0x305f360 -> Node0x305f360[label="D:0.00ns L:2",color=blue];
+Node0x305f5d0[label="  store i32 %4, i32* @ld_Incnt, align 4"];
+Node0x305f360 -> Node0x305f5d0[label="D:0.00ns L:2",color=red];
+Node0x305f480[label="  %4 = add nsw i32 %3, -1"];
+Node0x305f480 -> Node0x305f480[label="D:2.50ns L:0",color=blue];
+Node0x305f480 -> Node0x305f480[label="D:2.50ns L:0",color=blue];
+Node0x305f6b0[label="  %5 = icmp slt i32 %3, 26"];
+Node0x305f6b0 -> Node0x305f6b0[label="D:3.36ns L:0",color=blue];
+}

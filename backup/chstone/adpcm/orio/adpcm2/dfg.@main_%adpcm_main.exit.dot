@@ -1,0 +1,28 @@
+digraph {
+Node0x37d4d40[label="  %main_result.04 = phi i32 [ %.main_res..."];
+Node0x37d4d40 -> Node0x37d4d40[label="D:0.00ns L:0",color=blue];
+Node0x37d4e20[label="  %i.03 = phi i32 [ %459, %adpcm_main.ex..."];
+Node0x37d4e20 -> Node0x37d4e20[label="D:0.00ns L:0",color=blue];
+Node0x37d4e20 -> Node0x37d4e20[label="D:0.00ns L:0",color=blue];
+Node0x37d4e20 -> Node0x37d4e20[label="D:0.00ns L:0",color=blue];
+Node0x37d4f00[label="  %scevgep3 = getelementptr [100 x i32]*..."];
+Node0x37d4f00 -> Node0x37d4f00[label="D:20.00ns L:0",color=blue];
+Node0x37d5020[label="  %scevgep4 = getelementptr [100 x i32]*..."];
+Node0x37d5020 -> Node0x37d5020[label="D:20.00ns L:0",color=blue];
+Node0x37d5100[label="  %455 = load i32* %scevgep4, align 4, !..."];
+Node0x37d5100 -> Node0x37d5100[label="D:0.00ns L:1",color=blue];
+Node0x37d51e0[label="  %456 = load i32* %scevgep3, align 4, !..."];
+Node0x37d51e0 -> Node0x37d51e0[label="D:0.00ns L:1",color=blue];
+Node0x37d5320[label="  %457 = icmp eq i32 %455, %456"];
+Node0x37d5320 -> Node0x37d5320[label="D:2.49ns L:0",color=blue];
+Node0x37d5440[label="  %458 = zext i1 %457 to i32"];
+Node0x37d5440 -> Node0x37d5440[label="D:0.00ns L:0",color=blue];
+Node0x37d5520[label="  %.main_result.0 = add nsw i32 %458, %m..."];
+Node0x37d5520 -> Node0x37d5520[label="D:2.50ns L:0",color=blue];
+Node0x37d5520 -> Node0x37d5520[label="D:2.50ns L:0",color=blue];
+Node0x37d5600[label="  %459 = add nsw i32 %i.03, 1"];
+Node0x37d5600 -> Node0x37d5600[label="D:2.50ns L:0",color=blue];
+Node0x37d5600 -> Node0x37d5600[label="D:2.50ns L:0",color=blue];
+Node0x37d56e0[label="  %exitcond = icmp eq i32 %459, 50"];
+Node0x37d56e0 -> Node0x37d56e0[label="D:2.49ns L:0",color=blue];
+}

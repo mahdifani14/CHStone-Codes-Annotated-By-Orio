@@ -1,0 +1,21 @@
+digraph {
+Node0x38682f0[label="  %zSig.1.i = phi i64 [ %191, %._crit_ed..."];
+Node0x38682f0 -> Node0x38682f0[label="D:0.00ns L:0",color=blue];
+Node0x38682f0 -> Node0x38682f0[label="D:0.00ns L:0",color=blue];
+Node0x38682f0 -> Node0x38682f0[label="D:0.00ns L:0",color=blue];
+Node0x38682f0 -> Node0x38682f0[label="D:0.00ns L:0",color=blue];
+Node0x38682f0 -> Node0x38682f0[label="D:0.00ns L:0",color=blue];
+Node0x38682f0 -> Node0x38682f0[label="D:0.00ns L:0",color=blue];
+Node0x38682f0 -> Node0x38682f0[label="D:0.00ns L:0",color=blue];
+Node0x38682f0 -> Node0x38682f0[label="D:0.00ns L:0",color=blue];
+Node0x38683d0[label="  %.tr.i.i = trunc i64 %zSig.1.i to i32"];
+Node0x38683d0 -> Node0x38683d0[label="D:0.00ns L:0",color=blue];
+Node0x38684b0[label="  %192 = and i32 %.tr.i.i, 1023"];
+Node0x38684b0 -> Node0x38684b0[label="D:0.00ns L:0",color=blue];
+Node0x38684b0 -> Node0x38684b0[label="D:0.00ns L:0",color=blue];
+Node0x38684b0 -> Node0x38684b0[label="D:0.00ns L:0",color=blue];
+Node0x3868590[label="  %193 = and i32 %zExp.0.i, 65535"];
+Node0x3868590 -> Node0x3868590[label="D:0.00ns L:0",color=blue];
+Node0x3868670[label="  %194 = icmp ugt i32 %193, 2044"];
+Node0x3868670 -> Node0x3868670[label="D:3.12ns L:0",color=blue];
+}
