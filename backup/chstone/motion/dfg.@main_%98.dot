@@ -1,0 +1,22 @@
+digraph {
+Node0x3109500[label="  %99 = load i32* @ld_Bfr, align 4"];
+Node0x3109500 -> Node0x3109500[label="D:0.00ns L:2",color=blue];
+Node0x31095e0[label="  %100 = lshr i32 %99, 24"];
+Node0x31095e0 -> Node0x31095e0[label="D:0.00ns L:0",color=blue];
+Node0x31095e0 -> Node0x31095e0[label="D:0.00ns L:0",color=blue];
+Node0x31096c0[label="  %101 = load i32* @ld_Incnt, align 4"];
+Node0x31096c0 -> Node0x31096c0[label="D:0.00ns L:2",color=blue];
+Node0x31096c0 -> Node0x31096c0[label="D:0.00ns L:2",color=blue];
+Node0x31096c0 -> Node0x31096c0[label="D:0.00ns L:2",color=blue];
+Node0x31096c0 -> Node0x31096c0[label="D:0.00ns L:2",color=blue];
+Node0x31096c0 -> Node0x31096c0[label="D:0.00ns L:2",color=blue];
+Node0x31096c0 -> Node0x31096c0[label="D:0.00ns L:2",color=blue];
+Node0x31096c0 -> Node0x31096c0[label="D:0.00ns L:2",color=blue];
+Node0x3109900[label="  store i32 %102, i32* @ld_Incnt, align ..."];
+Node0x31096c0 -> Node0x3109900[label="D:0.00ns L:2",color=red];
+Node0x31097e0[label="  %102 = add nsw i32 %101, -200"];
+Node0x31097e0 -> Node0x31097e0[label="D:2.50ns L:0",color=blue];
+Node0x31097e0 -> Node0x31097e0[label="D:2.50ns L:0",color=blue];
+Node0x31099e0[label="  %103 = icmp slt i32 %102, 25"];
+Node0x31099e0 -> Node0x31099e0[label="D:3.36ns L:0",color=blue];
+}

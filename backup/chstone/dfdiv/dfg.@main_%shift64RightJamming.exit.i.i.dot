@@ -1,0 +1,13 @@
+digraph {
+Node0x386a0b0[label="  %z.0.i.i.i = phi i64 [ %219, %210 ], [..."];
+Node0x386a0b0 -> Node0x386a0b0[label="D:0.00ns L:0",color=blue];
+Node0x386a0b0 -> Node0x386a0b0[label="D:0.00ns L:0",color=blue];
+Node0x386a0b0 -> Node0x386a0b0[label="D:0.00ns L:0",color=blue];
+Node0x386a190[label="  %.tr3.i.i = trunc i64 %z.0.i.i.i to i3..."];
+Node0x386a190 -> Node0x386a190[label="D:0.00ns L:0",color=blue];
+Node0x386a270[label="  %223 = and i32 %.tr3.i.i, 1023"];
+Node0x386a270 -> Node0x386a270[label="D:0.00ns L:0",color=blue];
+Node0x386a270 -> Node0x386a270[label="D:0.00ns L:0",color=blue];
+Node0x386a350[label="  %224 = icmp eq i32 %223, 0"];
+Node0x386a350 -> Node0x386a350[label="D:2.49ns L:0",color=blue];
+}

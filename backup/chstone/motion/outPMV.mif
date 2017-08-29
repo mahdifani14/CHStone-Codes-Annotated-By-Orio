@@ -1,0 +1,15 @@
+Depth = 8;
+Width = 32;
+Address_radix = dec;
+Data_radix = hex;
+Content
+Begin
+0: 0000061E;	-- outPMV[0] = 1566
+1: 000000CE;	-- outPMV[1] = 206
+2: 00000046;	-- outPMV[2] = 70
+3: 00000029;	-- outPMV[3] = 41
+4: 0000061E;	-- outPMV[4] = 1566
+5: 000000CE;	-- outPMV[5] = 206
+6: 00000078;	-- outPMV[6] = 120
+7: 000000D8;	-- outPMV[7] = 216
+End;

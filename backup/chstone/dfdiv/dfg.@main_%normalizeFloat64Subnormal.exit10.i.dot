@@ -1,0 +1,23 @@
+digraph {
+Node0x385df30[label="  %.1.i.i.i8.i = phi i32 [ %74, %72 ], [..."];
+Node0x385df30 -> Node0x385df30[label="D:0.00ns L:0",color=blue];
+Node0x385e010[label="  %shiftCount.1.i.i.i9.i = phi i32 [ %73..."];
+Node0x385e010 -> Node0x385e010[label="D:0.00ns L:0",color=blue];
+Node0x385e0f0[label="  %75 = lshr i32 %.1.i.i.i8.i, 24"];
+Node0x385e0f0 -> Node0x385e0f0[label="D:0.00ns L:0",color=blue];
+Node0x385e1d0[label="  %76 = getelementptr inbounds [256 x i3..."];
+Node0x385e1d0 -> Node0x385e1d0[label="D:20.00ns L:0",color=blue];
+Node0x385e2b0[label="  %77 = load i32* %76, align 4, !tbaa !5"];
+Node0x385e2b0 -> Node0x385e2b0[label="D:0.00ns L:1",color=blue];
+Node0x385e390[label="  %78 = add i32 %shiftCount.1.i.i.i9.i, ..."];
+Node0x385e390 -> Node0x385e390[label="D:2.50ns L:0",color=blue];
+Node0x385e390 -> Node0x385e390[label="D:2.50ns L:0",color=blue];
+Node0x385e470[label="  %79 = add nsw i32 %78, -11"];
+Node0x385e470 -> Node0x385e470[label="D:2.50ns L:0",color=blue];
+Node0x385e550[label="  %80 = zext i32 %79 to i64"];
+Node0x385e550 -> Node0x385e550[label="D:0.00ns L:0",color=blue];
+Node0x385e630[label="  %81 = shl i64 %9, %80"];
+Node0x385e630 -> Node0x385e630[label="D:4.36ns L:0",color=blue];
+Node0x385e710[label="  %82 = sub i32 12, %78"];
+Node0x385e710 -> Node0x385e710[label="D:2.40ns L:0",color=blue];
+}

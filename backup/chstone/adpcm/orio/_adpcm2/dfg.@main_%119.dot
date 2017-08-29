@@ -1,0 +1,28 @@
+digraph {
+Node0x3ef87d0[label="  %indvar17 = phi i32 [ %indvar.next18, ..."];
+Node0x3ef87d0 -> Node0x3ef87d0[label="D:0.00ns L:0",color=blue];
+Node0x3ef87d0 -> Node0x3ef87d0[label="D:0.00ns L:0",color=blue];
+Node0x3ef88b0[label="  %zl.05.i6.i.i = phi i32 [ %124, %119 ]..."];
+Node0x3ef88b0 -> Node0x3ef88b0[label="D:0.00ns L:0",color=blue];
+Node0x3ef8990[label="  %120 = add i32 %indvar17, 1"];
+Node0x3ef8990 -> Node0x3ef8990[label="D:2.50ns L:0",color=blue];
+Node0x3ef8990 -> Node0x3ef8990[label="D:2.50ns L:0",color=blue];
+Node0x3ef8a70[label="  %.017.i9.i.i = getelementptr [6 x i32]..."];
+Node0x3ef8a70 -> Node0x3ef8a70[label="D:20.00ns L:0",color=blue];
+Node0x3ef8b50[label="  %.06.i8.i.i = getelementptr [6 x i32]*..."];
+Node0x3ef8b50 -> Node0x3ef8b50[label="D:20.00ns L:0",color=blue];
+Node0x3ef8c30[label="  %121 = load i32* %.017.i9.i.i, align 4..."];
+Node0x3ef8c30 -> Node0x3ef8c30[label="D:0.00ns L:1",color=blue];
+Node0x3ef8d50[label="  %122 = load i32* %.06.i8.i.i, align 4,..."];
+Node0x3ef8d50 -> Node0x3ef8d50[label="D:0.00ns L:1",color=blue];
+Node0x3ef8e70[label="  %123 = mul nsw i32 %122, %121"];
+Node0x3ef8e70 -> Node0x3ef8e70[label="D:2.59ns L:1",color=blue];
+Node0x3ef8fd0[label="  %124 = add nsw i32 %123, %zl.05.i6.i.i"];
+Node0x3ef8fd0 -> Node0x3ef8fd0[label="D:2.50ns L:0",color=blue];
+Node0x3ef8fd0 -> Node0x3ef8fd0[label="D:2.50ns L:0",color=blue];
+Node0x3ef90b0[label="  %indvar.next18 = add i32 %indvar17, 1"];
+Node0x3ef90b0 -> Node0x3ef90b0[label="D:2.50ns L:0",color=blue];
+Node0x3ef90b0 -> Node0x3ef90b0[label="D:2.50ns L:0",color=blue];
+Node0x3ef9190[label="  %exitcond19 = icmp eq i32 %indvar.next..."];
+Node0x3ef9190 -> Node0x3ef9190[label="D:2.49ns L:0",color=blue];
+}

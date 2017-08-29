@@ -1,0 +1,6 @@
+digraph {
+Node0x40b6be0[label="  %6 = tail call fastcc i32 @encode(i32 ..."];
+Node0x40b6be0 -> Node0x40b6be0[label="D:0.00ns L:1",color=blue];
+Node0x40b6cc0[label="  store i32 %6, i32* getelementptr inbou..."];
+Node0x40b6be0 -> Node0x40b6cc0[label="D:0.00ns L:1",color=red];
+}

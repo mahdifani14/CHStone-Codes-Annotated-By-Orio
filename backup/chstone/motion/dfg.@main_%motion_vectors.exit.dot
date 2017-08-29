@@ -1,0 +1,18 @@
+digraph {
+Node0x3110290[label="  %163 = phi i32* [ %153, %152 ], [ %140..."];
+Node0x3110290 -> Node0x3110290[label="D:0.00ns L:0",color=blue];
+Node0x3110370[label="  %vec.3.i4.i.i = phi i32 [ %155, %152 ]..."];
+Node0x3110370 -> Node0x3110370[label="D:0.00ns L:0",color=blue];
+Node0x3110450[label="  %164 = shl i32 %vec.3.i4.i.i, 1"];
+Node0x3110450 -> Node0x3110450[label="D:0.00ns L:0",color=blue];
+Node0x3110450 -> Node0x3110450[label="D:0.00ns L:0",color=blue];
+Node0x3110770[label="  store i32 %95, i32* %165, align 4"];
+Node0x3110530[label="  store i32 %164, i32* %163, align 4"];
+Node0x3110530 -> Node0x3110770[label="D:20.00ns L:1",color=red];
+Node0x31109f0[label="  store i32 %164, i32* %166, align 4"];
+Node0x3110530 -> Node0x31109f0[label="D:20.00ns L:1",color=red];
+Node0x3110610[label="  %165 = getelementptr inbounds [2 x [2 ..."];
+Node0x3110610 -> Node0x3110610[label="D:0.00ns L:0",color=blue];
+Node0x3110890[label="  %166 = getelementptr inbounds [2 x [2 ..."];
+Node0x3110890 -> Node0x3110890[label="D:0.00ns L:0",color=blue];
+}

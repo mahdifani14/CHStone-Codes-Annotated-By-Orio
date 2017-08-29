@@ -1,0 +1,10 @@
+digraph {
+Node0x3d15c80[label="  %388 = add nuw nsw i64 %272, %270"];
+Node0x3d15c80 -> Node0x3d15c80[label="D:3.16ns L:0",color=blue];
+Node0x3d15d60[label="  %389 = lshr exact i64 %388, 9"];
+Node0x3d15d60 -> Node0x3d15d60[label="D:0.00ns L:0",color=blue];
+Node0x3d15e40[label="  %390 = shl nuw i64 %258, 63"];
+Node0x3d15e40 -> Node0x3d15e40[label="D:0.00ns L:0",color=blue];
+Node0x3d15f20[label="  %391 = or i64 %389, %390"];
+Node0x3d15f20 -> Node0x3d15f20[label="D:0.88ns L:0",color=blue];
+}

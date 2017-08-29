@@ -1,0 +1,6 @@
+digraph {
+Node0x38618f0[label="  %132 = udiv i64 %125, %128"];
+Node0x38618f0 -> Node0x38618f0[label="D:20.00ns L:64",color=blue];
+Node0x38619d0[label="  %133 = shl i64 %132, 32"];
+Node0x38619d0 -> Node0x38619d0[label="D:0.00ns L:0",color=blue];
+}

@@ -1,0 +1,10 @@
+digraph {
+Node0x30fe070[label="  %scevgep44 = getelementptr [2 x [2 x [..."];
+Node0x30fe070 -> Node0x30fe070[label="D:20.00ns L:0",color=blue];
+Node0x30fe190[label="  %scevgep43 = getelementptr [2 x [2 x [..."];
+Node0x30fe190 -> Node0x30fe190[label="D:20.00ns L:0",color=blue];
+Node0x30f6610[label="  %9 = load i32* %scevgep44, align 4"];
+Node0x30f6610 -> Node0x30f6610[label="D:0.00ns L:1",color=blue];
+Node0x30f67d0[label="  %10 = add nsw i32 %7, 1"];
+Node0x30f67d0 -> Node0x30f67d0[label="D:2.50ns L:0",color=blue];
+}

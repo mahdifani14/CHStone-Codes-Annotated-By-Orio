@@ -1,0 +1,11 @@
+digraph {
+Node0x3cfcfb0[label="  %121 = zext i32 %39 to i64"];
+Node0x3cfcfb0 -> Node0x3cfcfb0[label="D:0.00ns L:0",color=blue];
+Node0x3cfd090[label="  %122 = or i64 %121, %37"];
+Node0x3cfd090 -> Node0x3cfd090[label="D:0.88ns L:0",color=blue];
+Node0x3cfd170[label="  %123 = icmp eq i64 %122, 0"];
+Node0x3cfd170 -> Node0x3cfd170[label="D:2.90ns L:0",color=blue];
+Node0x3cfd250[label="  %124 = load i32* @float_exception_flag..."];
+Node0x3cfd250 -> Node0x3cfd250[label="D:0.00ns L:2",color=blue];
+Node0x3cfd250 -> Node0x3cfd250[label="D:0.00ns L:2",color=blue];
+}

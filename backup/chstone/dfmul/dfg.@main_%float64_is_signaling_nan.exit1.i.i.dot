@@ -1,0 +1,12 @@
+digraph {
+Node0x4038af0[label="  %51 = trunc i64 %5 to i63"];
+Node0x4038af0 -> Node0x4038af0[label="D:0.00ns L:0",color=blue];
+Node0x4038bd0[label="  %52 = icmp ugt i63 %51, -4503599627370..."];
+Node0x4038bd0 -> Node0x4038bd0[label="D:20.00ns L:0",color=blue];
+Node0x4038cb0[label="  %53 = lshr i32 98, %2"];
+Node0x4038cb0 -> Node0x4038cb0[label="D:3.35ns L:0",color=blue];
+Node0x4038d90[label="  %54 = and i32 %53, 1"];
+Node0x4038d90 -> Node0x4038d90[label="D:0.00ns L:0",color=blue];
+Node0x4038e70[label="  %55 = icmp eq i32 %54, 0"];
+Node0x4038e70 -> Node0x4038e70[label="D:2.49ns L:0",color=blue];
+}

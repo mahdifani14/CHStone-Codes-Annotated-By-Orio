@@ -1,0 +1,27 @@
+digraph {
+Node0x3494180[label="  %aSig.i1.i.1 = phi i64 [ %19, %35 ], [..."];
+Node0x3494180 -> Node0x3494180[label="D:0.00ns L:0",color=blue];
+Node0x3494260[label="  %bSig.i2.i.1 = phi i64 [ %44, %35 ], [..."];
+Node0x3494260 -> Node0x3494260[label="D:0.00ns L:0",color=blue];
+Node0x3494340[label="  %zExp.0.i14.i = phi i32 [ %13, %35 ], ..."];
+Node0x3494340 -> Node0x3494340[label="D:0.00ns L:0",color=blue];
+Node0x3494420[label="  %93 = or i64 %aSig.i1.i.1, 23058430092..."];
+Node0x3494420 -> Node0x3494420[label="D:0.00ns L:0",color=blue];
+Node0x3494500[label="  %94 = add i64 %93, %bSig.i2.i.1"];
+Node0x3494500 -> Node0x3494500[label="D:3.16ns L:0",color=blue];
+Node0x3494500 -> Node0x3494500[label="D:3.16ns L:0",color=blue];
+Node0x34945e0[label="  %95 = shl i64 %94, 1"];
+Node0x34945e0 -> Node0x34945e0[label="D:0.00ns L:0",color=blue];
+Node0x34945e0 -> Node0x34945e0[label="D:0.00ns L:0",color=blue];
+Node0x34946c0[label="  %96 = icmp slt i64 %95, 0"];
+Node0x34946c0 -> Node0x34946c0[label="D:3.50ns L:0",color=blue];
+Node0x34946c0 -> Node0x34946c0[label="D:3.50ns L:0",color=blue];
+Node0x34947a0[label="  %not. = xor i1 %96, true"];
+Node0x34947a0 -> Node0x34947a0[label="D:20.00ns L:0",color=blue];
+Node0x3494880[label="  %97 = sext i1 %not. to i32"];
+Node0x3494880 -> Node0x3494880[label="D:0.00ns L:0",color=blue];
+Node0x3494960[label="  %zExp.0.i14.i. = add nsw i32 %zExp.0.i..."];
+Node0x3494960 -> Node0x3494960[label="D:2.50ns L:0",color=blue];
+Node0x3494a40[label="  %.46 = select i1 %96, i64 %94, i64 %95"];
+Node0x3494a40 -> Node0x3494a40[label="D:4.29ns L:0",color=blue];
+}

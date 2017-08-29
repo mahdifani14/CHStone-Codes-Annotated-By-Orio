@@ -1,0 +1,31 @@
+digraph {
+Node0x3102e10[label="  %32 = call fastcc i32 @Get_motion_code..."];
+Node0x30f8f00[label="  store i8* %22, i8** @ld_Rdptr, align 4"];
+Node0x30f8f00 -> Node0x3102e10[label="D:20.00ns L:1",color=red];
+Node0x31022d0[label="  %27 = lshr i32 %26, 31"];
+Node0x31022d0 -> Node0x31022d0[label="D:0.00ns L:0",color=blue];
+Node0x31022d0 -> Node0x31022d0[label="D:0.00ns L:0",color=blue];
+Node0x31023b0[label="  %28 = shl i32 %26, 1"];
+Node0x31023b0 -> Node0x31023b0[label="D:0.00ns L:0",color=blue];
+Node0x3102490[label="  store i32 %28, i32* @ld_Bfr, align 4"];
+Node0x3102490 -> Node0x3102e10[label="D:20.00ns L:1",color=red];
+Node0x31025b0[label="  store i32 31, i32* @ld_Incnt, align 4"];
+Node0x31025b0 -> Node0x3102e10[label="D:20.00ns L:1",color=red];
+Node0x31026d0[label="  %29 = getelementptr inbounds [2 x [2 x..."];
+Node0x31026d0 -> Node0x31026d0[label="D:0.00ns L:0",color=blue];
+Node0x3102830[label="  store i32 %27, i32* %29, align 4"];
+Node0x3102830 -> Node0x3102e10[label="D:20.00ns L:1",color=red];
+Node0x31029c0[label="  %30 = getelementptr inbounds [2 x [2 x..."];
+Node0x31029c0 -> Node0x31029c0[label="D:0.00ns L:0",color=blue];
+Node0x3102b20[label="  store i32 %27, i32* %30, align 4"];
+Node0x3102b20 -> Node0x3102e10[label="D:20.00ns L:1",color=red];
+Node0x3102cb0[label="  %31 = getelementptr inbounds [2 x [2 x..."];
+Node0x3102cb0 -> Node0x3102cb0[label="D:0.00ns L:0",color=blue];
+Node0x3102cb0 -> Node0x3102cb0[label="D:0.00ns L:0",color=blue];
+Node0x3102cb0 -> Node0x3102cb0[label="D:0.00ns L:0",color=blue];
+Node0x3102e10 -> Node0x3102e10[label="D:0.00ns L:1",color=blue];
+Node0x3102e10 -> Node0x3102e10[label="D:0.00ns L:1",color=blue];
+Node0x3102e10 -> Node0x3102e10[label="D:0.00ns L:1",color=blue];
+Node0x3102ef0[label="  %33 = icmp eq i32 %32, 0"];
+Node0x3102ef0 -> Node0x3102ef0[label="D:2.49ns L:0",color=blue];
+}

@@ -1,0 +1,8 @@
+digraph {
+Node0x385aec0[label="  %42 = lshr i32 262125, %2"];
+Node0x385aec0 -> Node0x385aec0[label="D:3.35ns L:0",color=blue];
+Node0x385afa0[label="  %43 = and i32 %42, 1"];
+Node0x385afa0 -> Node0x385afa0[label="D:0.00ns L:0",color=blue];
+Node0x385b080[label="  %44 = icmp eq i32 %43, 0"];
+Node0x385b080 -> Node0x385b080[label="D:2.49ns L:0",color=blue];
+}

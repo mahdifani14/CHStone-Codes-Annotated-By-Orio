@@ -1,0 +1,15 @@
+Depth = 8;
+Width = 32;
+Address_radix = dec;
+Data_radix = hex;
+Content
+Begin
+0: 0000002D;	-- inPMV[0] = 45
+1: 000000CF;	-- inPMV[1] = 207
+2: 00000046;	-- inPMV[2] = 70
+3: 00000029;	-- inPMV[3] = 41
+4: 00000004;	-- inPMV[4] = 4
+5: 000000B4;	-- inPMV[5] = 180
+6: 00000078;	-- inPMV[6] = 120
+7: 000000D8;	-- inPMV[7] = 216
+End;

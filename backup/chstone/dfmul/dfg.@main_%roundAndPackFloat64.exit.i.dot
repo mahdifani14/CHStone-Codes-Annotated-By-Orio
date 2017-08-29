@@ -1,0 +1,18 @@
+digraph {
+Node0x4045040[label="  %float_exception_flags.6 = phi i32 [ %..."];
+Node0x4045040 -> Node0x4045040[label="D:0.00ns L:0",color=blue];
+Node0x4045120[label="  %.0.i = phi i64 [ %.mux, %float64_is_s..."];
+Node0x4045120 -> Node0x4045120[label="D:0.00ns L:0",color=blue];
+Node0x4045120 -> Node0x4045120[label="D:0.00ns L:0",color=blue];
+Node0x4045200[label="  %204 = load i64* %scevgep, align 8"];
+Node0x4045200 -> Node0x4045200[label="D:0.00ns L:1",color=blue];
+Node0x4045200 -> Node0x4045200[label="D:0.00ns L:1",color=blue];
+Node0x40452e0[label="  %205 = icmp eq i64 %.0.i, %204"];
+Node0x40452e0 -> Node0x40452e0[label="D:2.90ns L:0",color=blue];
+Node0x40453c0[label="  %206 = zext i1 %205 to i32"];
+Node0x40453c0 -> Node0x40453c0[label="D:0.00ns L:0",color=blue];
+Node0x40454a0[label="  %207 = add nsw i32 %main_result.0, %20..."];
+Node0x40454a0 -> Node0x40454a0[label="D:2.50ns L:0",color=blue];
+Node0x4045660[label="  %209 = add nsw i32 %2, 1"];
+Node0x4045660 -> Node0x4045660[label="D:2.50ns L:0",color=blue];
+}

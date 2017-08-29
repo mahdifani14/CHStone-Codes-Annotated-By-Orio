@@ -1,0 +1,10 @@
+digraph {
+Node0x3497060[label="  %129 = xor i32 %7, 1"];
+Node0x3497060 -> Node0x3497060[label="D:0.91ns L:0",color=blue];
+Node0x3497140[label="  %130 = zext i32 %129 to i64"];
+Node0x3497140 -> Node0x3497140[label="D:0.00ns L:0",color=blue];
+Node0x3497220[label="  %131 = shl nuw i64 %130, 63"];
+Node0x3497220 -> Node0x3497220[label="D:0.00ns L:0",color=blue];
+Node0x3497300[label="  %132 = or i64 %131, 921886843722740531..."];
+Node0x3497300 -> Node0x3497300[label="D:0.00ns L:0",color=blue];
+}

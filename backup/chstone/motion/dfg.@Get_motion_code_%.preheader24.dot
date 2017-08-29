@@ -1,0 +1,18 @@
+digraph {
+Node0x30708b0[label="  %168 = lshr i32 %161, 3"];
+Node0x30708b0 -> Node0x30708b0[label="D:0.00ns L:0",color=blue];
+Node0x30708b0 -> Node0x30708b0[label="D:0.00ns L:0",color=blue];
+Node0x3070990[label="  %169 = shl nuw i32 %168, 3"];
+Node0x3070990 -> Node0x3070990[label="D:0.00ns L:0",color=blue];
+Node0x3070a70[label="  %170 = add i32 %42, 8"];
+Node0x3070a70 -> Node0x3070a70[label="D:2.50ns L:0",color=blue];
+Node0x3070b50[label="  %171 = sext i8 %152 to i32"];
+Node0x3070b50 -> Node0x3070b50[label="D:0.00ns L:0",color=blue];
+Node0x3070b50 -> Node0x3070b50[label="D:0.00ns L:0",color=blue];
+Node0x3070c30[label="  %172 = sub i32 %170, %171"];
+Node0x3070c30 -> Node0x3070c30[label="D:2.40ns L:0",color=blue];
+Node0x3070d10[label="  %173 = add nsw i32 %171, 24"];
+Node0x3070d10 -> Node0x3070d10[label="D:2.50ns L:0",color=blue];
+Node0x3070df0[label="  %174 = sub i32 %173, %42"];
+Node0x3070df0 -> Node0x3070df0[label="D:2.40ns L:0",color=blue];
+}

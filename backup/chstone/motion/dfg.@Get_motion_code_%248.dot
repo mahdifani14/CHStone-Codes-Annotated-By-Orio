@@ -1,0 +1,8 @@
+digraph {
+Node0x307aea0[label="  %249 = add nsw i32 %46, -12"];
+Node0x307aea0 -> Node0x307aea0[label="D:2.50ns L:0",color=blue];
+Node0x307aea0 -> Node0x307aea0[label="D:2.50ns L:0",color=blue];
+Node0x307aea0 -> Node0x307aea0[label="D:2.50ns L:0",color=blue];
+Node0x307af80[label="  %250 = icmp slt i32 %249, 0"];
+Node0x307af80 -> Node0x307af80[label="D:3.36ns L:0",color=blue];
+}

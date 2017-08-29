@@ -1,0 +1,6 @@
+digraph {
+Node0x306e1e0[label="  %141 = add nuw nsw i32 %110, 1"];
+Node0x306e1e0 -> Node0x306e1e0[label="D:2.50ns L:0",color=blue];
+Node0x306e2c0[label="  %scevgep.i53 = getelementptr i8* %107,..."];
+Node0x306e2c0 -> Node0x306e2c0[label="D:20.00ns L:0",color=blue];
+}

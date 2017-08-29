@@ -1,0 +1,13 @@
+digraph {
+Node0x3109060[label="  %95 = phi i32 [ %87, %86 ], [ %., %79 ..."];
+Node0x3109060 -> Node0x3109060[label="D:0.00ns L:0",color=blue];
+Node0x3109060 -> Node0x3109060[label="D:0.00ns L:0",color=blue];
+Node0x3109220[label="  %96 = call fastcc i32 @Get_motion_code..."];
+Node0x3109140[label="  store i32 %95, i32* %31, align 4"];
+Node0x3109140 -> Node0x3109220[label="D:20.00ns L:1",color=red];
+Node0x3109220 -> Node0x3109220[label="D:0.00ns L:1",color=blue];
+Node0x3109220 -> Node0x3109220[label="D:0.00ns L:1",color=blue];
+Node0x3109220 -> Node0x3109220[label="D:0.00ns L:1",color=blue];
+Node0x3109300[label="  %97 = icmp eq i32 %96, 0"];
+Node0x3109300 -> Node0x3109300[label="D:2.49ns L:0",color=blue];
+}

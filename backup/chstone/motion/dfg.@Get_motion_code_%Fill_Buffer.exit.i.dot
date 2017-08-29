@@ -1,0 +1,21 @@
+digraph {
+Node0x3068310[label="  %.pr43 = phi i8* [ %.pr42, %.preheader..."];
+Node0x3068310 -> Node0x3068310[label="D:0.00ns L:0",color=blue];
+Node0x3068310 -> Node0x3068310[label="D:0.00ns L:0",color=blue];
+Node0x30683f0[label="  %93 = getelementptr inbounds i8* %.pr4..."];
+Node0x30683f0 -> Node0x30683f0[label="D:0.00ns L:0",color=blue];
+Node0x30683f0 -> Node0x30683f0[label="D:0.00ns L:0",color=blue];
+Node0x3068510[label="  %94 = load i8* %.pr43, align 1"];
+Node0x3068510 -> Node0x3068510[label="D:0.00ns L:2",color=blue];
+Node0x30685f0[label="  %95 = zext i8 %94 to i32"];
+Node0x30685f0 -> Node0x30685f0[label="D:0.00ns L:0",color=blue];
+Node0x30686d0[label="  %96 = shl i32 %95, %89"];
+Node0x30686d0 -> Node0x30686d0[label="D:3.33ns L:0",color=blue];
+Node0x30687b0[label="  %97 = or i32 %85, %96"];
+Node0x30687b0 -> Node0x30687b0[label="D:0.87ns L:0",color=blue];
+Node0x30687b0 -> Node0x30687b0[label="D:0.87ns L:0",color=blue];
+Node0x3068890[label="  %98 = icmp slt i32 %87, 25"];
+Node0x3068890 -> Node0x3068890[label="D:3.36ns L:0",color=blue];
+Node0x3068970[label="  %indvar.next26 = add i32 %indvar25, 1"];
+Node0x3068970 -> Node0x3068970[label="D:2.50ns L:0",color=blue];
+}

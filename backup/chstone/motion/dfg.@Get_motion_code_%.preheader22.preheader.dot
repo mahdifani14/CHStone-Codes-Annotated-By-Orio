@@ -1,0 +1,15 @@
+digraph {
+Node0x3061ed0[label="  %61 = and i32 %60, -8"];
+Node0x3061ed0 -> Node0x3061ed0[label="D:0.00ns L:0",color=blue];
+Node0x3061fb0[label="  %62 = add i32 %42, 8"];
+Node0x3061fb0 -> Node0x3061fb0[label="D:2.50ns L:0",color=blue];
+Node0x30620d0[label="  %63 = sext i8 %51 to i32"];
+Node0x30620d0 -> Node0x30620d0[label="D:0.00ns L:0",color=blue];
+Node0x30620d0 -> Node0x30620d0[label="D:0.00ns L:0",color=blue];
+Node0x30621b0[label="  %64 = sub i32 %62, %63"];
+Node0x30621b0 -> Node0x30621b0[label="D:2.40ns L:0",color=blue];
+Node0x3062290[label="  %65 = add nsw i32 %63, 24"];
+Node0x3062290 -> Node0x3062290[label="D:2.50ns L:0",color=blue];
+Node0x3062370[label="  %66 = sub i32 %65, %42"];
+Node0x3062370 -> Node0x3062370[label="D:2.40ns L:0",color=blue];
+}

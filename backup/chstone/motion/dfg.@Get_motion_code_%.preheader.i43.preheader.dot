@@ -1,0 +1,6 @@
+digraph {
+Node0x306a870[label="  %115 = add i32 %101, 7"];
+Node0x306a870 -> Node0x306a870[label="D:2.50ns L:0",color=blue];
+Node0x306a950[label="  %116 = sub i32 25, %101"];
+Node0x306a950 -> Node0x306a950[label="D:2.40ns L:0",color=blue];
+}

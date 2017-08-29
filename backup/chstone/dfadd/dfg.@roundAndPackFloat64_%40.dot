@@ -1,0 +1,12 @@
+digraph {
+Node0x345f600[label="  %41 = phi i32 [ %.pre, %.thread._crit_..."];
+Node0x345f600 -> Node0x345f600[label="D:0.00ns L:0",color=blue];
+Node0x345f6e0[label="  %.013 = phi i64 [ %zSig, %.thread._cri..."];
+Node0x345f6e0 -> Node0x345f6e0[label="D:0.00ns L:0",color=blue];
+Node0x3463bc0[label="  %roundBits.15 = phi i32 [ %1, %.thread..."];
+Node0x3463bc0 -> Node0x3463bc0[label="D:0.00ns L:0",color=blue];
+Node0x3463ca0[label="  %.13 = phi i32 [ %.1, %.thread._crit_e..."];
+Node0x3463ca0 -> Node0x3463ca0[label="D:0.00ns L:0",color=blue];
+Node0x3463d80[label="  %42 = or i32 %41, 1"];
+Node0x3463d80 -> Node0x3463d80[label="D:0.00ns L:0",color=blue];
+}

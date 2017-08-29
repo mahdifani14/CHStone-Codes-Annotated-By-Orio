@@ -1,0 +1,10 @@
+digraph {
+Node0x40360c0[label="  %18 = icmp eq i32 %11, 2047"];
+Node0x40360c0 -> Node0x40360c0[label="D:2.49ns L:0",color=blue];
+Node0x40361a0[label="  %19 = and i32 %2, -5"];
+Node0x40361a0 -> Node0x40361a0[label="D:0.00ns L:0",color=blue];
+Node0x4036280[label="  %20 = icmp eq i32 %19, 0"];
+Node0x4036280 -> Node0x4036280[label="D:2.49ns L:0",color=blue];
+Node0x4036360[label="  %or.cond = and i1 %18, %20"];
+Node0x4036360 -> Node0x4036360[label="D:0.00ns L:0",color=blue];
+}

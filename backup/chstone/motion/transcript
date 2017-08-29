@@ -1,0 +1,21 @@
+# vsim -c -do "run 7000000000000000ns; exit;" work.main_tb 
+# Start time: 15:57:48 on Apr 22,2017
+# Loading work.main_tb
+# Loading work.top
+# Loading work.memory_controller
+# Loading work.rom_dual_port
+# Loading work.ALTERA_MF_MEMORY_INITIALIZATION
+# Loading work.ram_dual_port
+# Loading work.main
+# Loading work.Get_motion_code
+# ** Warning: Design size of 11533 statements exceeds ModelSim Altera Starter recommended capacity.
+# Expect performance to be adversely affected.
+# run 7000000000000000ns
+# Result:          12
+# RESULT: PASS
+# At t=           210670000 clk=1 finish=1 return_val=        12
+# Cycles:                10531
+# ** Note: $finish    : mpeg2.v(17935)
+#    Time: 210670 ns  Iteration: 2  Instance: /main_tb
+# End time: 15:58:07 on Apr 22,2017, Elapsed time: 0:00:19
+# Errors: 0, Warnings: 1

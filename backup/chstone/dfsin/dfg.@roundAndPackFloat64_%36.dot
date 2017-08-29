@@ -1,0 +1,8 @@
+digraph {
+Node0x3cbaee0[label="  %37 = load i32* @float_exception_flags..."];
+Node0x3cbaee0 -> Node0x3cbaee0[label="D:0.00ns L:2",color=blue];
+Node0x3cbb0a0[label="  store i32 %38, i32* @float_exception_f..."];
+Node0x3cbaee0 -> Node0x3cbb0a0[label="D:0.00ns L:2",color=red];
+Node0x3cbafc0[label="  %38 = or i32 %37, 4"];
+Node0x3cbafc0 -> Node0x3cbafc0[label="D:0.00ns L:0",color=blue];
+}

@@ -1,0 +1,12 @@
+digraph {
+Node0x3eeef90[label="  %91 = add nsw i32 %i.14.i22.i.i, 1"];
+Node0x3eeef90 -> Node0x3eeef90[label="D:2.50ns L:0",color=blue];
+Node0x3eef070[label="  %.phi.trans.insert62.i.i = getelementp..."];
+Node0x3eef070 -> Node0x3eef070[label="D:20.00ns L:0",color=blue];
+Node0x3eef190[label="  %.phi.trans.insert64.i.i = getelementp..."];
+Node0x3eef190 -> Node0x3eef190[label="D:20.00ns L:0",color=blue];
+Node0x3eef270[label="  %.pre63.i.i = load i32* %.phi.trans.in..."];
+Node0x3eef270 -> Node0x3eef270[label="D:0.00ns L:1",color=blue];
+Node0x3ef5f90[label="  %.pre65.i.i = load i32* %.phi.trans.in..."];
+Node0x3ef5f90 -> Node0x3ef5f90[label="D:0.00ns L:1",color=blue];
+}

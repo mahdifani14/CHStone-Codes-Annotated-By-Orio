@@ -1,0 +1,6 @@
+digraph {
+Node0x385cba0[label="  %147 = shl i64 %85, 43"];
+Node0x385cba0 -> Node0x385cba0[label="D:0.00ns L:0",color=blue];
+Node0x385cc80[label="  %overflow_intrinsic1 = zext i64 %147 t..."];
+Node0x385cc80 -> Node0x385cc80[label="D:0.00ns L:0",color=blue];
+}

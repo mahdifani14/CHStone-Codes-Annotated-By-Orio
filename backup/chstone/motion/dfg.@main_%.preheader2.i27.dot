@@ -1,0 +1,21 @@
+digraph {
+Node0x3105820[label="  %indvar32 = phi i32 [ 0, %.preheader2...."];
+Node0x3105820 -> Node0x3105820[label="D:0.00ns L:0",color=blue];
+Node0x3105820 -> Node0x3105820[label="D:0.00ns L:0",color=blue];
+Node0x3105820 -> Node0x3105820[label="D:0.00ns L:0",color=blue];
+Node0x3105900[label="  %61 = phi i32 [ undef, %.preheader2.i2..."];
+Node0x3105900 -> Node0x3105900[label="D:0.00ns L:0",color=blue];
+Node0x31059e0[label="  %.pr8.i25 = phi i8* [ %41, %.preheader..."];
+Node0x31059e0 -> Node0x31059e0[label="D:0.00ns L:0",color=blue];
+Node0x31059e0 -> Node0x31059e0[label="D:0.00ns L:0",color=blue];
+Node0x3105ac0[label="  %62 = shl i32 %indvar32, 3"];
+Node0x3105ac0 -> Node0x3105ac0[label="D:0.00ns L:0",color=blue];
+Node0x3105ba0[label="  %63 = add i32 %47, %62"];
+Node0x3105ba0 -> Node0x3105ba0[label="D:2.50ns L:0",color=blue];
+Node0x3105c80[label="  %64 = mul i32 %indvar32, -8"];
+Node0x3105c80 -> Node0x3105c80[label="D:2.59ns L:1",color=blue];
+Node0x3105da0[label="  %65 = add i32 %48, %64"];
+Node0x3105da0 -> Node0x3105da0[label="D:2.50ns L:0",color=blue];
+Node0x3105e80[label="  %66 = icmp ult i8* %.pr8.i25, geteleme..."];
+Node0x3105e80 -> Node0x3105e80[label="D:20.00ns L:0",color=blue];
+}

@@ -1,0 +1,14 @@
+digraph {
+Node0x3eee0b0[label="  %26 = tail call fastcc i32 @encode(i32..."];
+Node0x3eee0b0 -> Node0x3eee0b0[label="D:0.00ns L:1",color=blue];
+Node0x3eee190[label="  store i32 %26, i32* getelementptr inbo..."];
+Node0x3eee0b0 -> Node0x3eee190[label="D:0.00ns L:1",color=red];
+Node0x3eee270[label="  %27 = load i32* @il, align 4, !tbaa !1"];
+Node0x3eee0b0 -> Node0x3eee270[label="D:0.00ns L:1",color=red];
+Node0x3eeb5a0[label="  %29 = load i32* %28, align 4, !tbaa !1"];
+Node0x3eee0b0 -> Node0x3eeb5a0[label="D:0.00ns L:1",color=red];
+Node0x3eee270 -> Node0x3eee270[label="D:0.00ns L:2",color=blue];
+Node0x3eeb4c0[label="  %28 = getelementptr inbounds [64 x i32..."];
+Node0x3eeb4c0 -> Node0x3eeb4c0[label="D:20.00ns L:0",color=blue];
+Node0x3eeb5a0 -> Node0x3eeb5a0[label="D:0.00ns L:1",color=blue];
+}

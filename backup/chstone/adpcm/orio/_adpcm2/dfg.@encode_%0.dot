@@ -1,0 +1,16 @@
+digraph {
+Node0x3e64f40[label="  %1 = load i32* getelementptr inbounds ..."];
+Node0x3e64f40 -> Node0x3e64f40[label="D:0.00ns L:2",color=blue];
+Node0x3e65020[label="  %2 = mul nsw i32 %1, 12"];
+Node0x3e65020 -> Node0x3e65020[label="D:2.59ns L:1",color=blue];
+Node0x3e711f0[label="  %3 = load i32* getelementptr inbounds ..."];
+Node0x3e711f0 -> Node0x3e711f0[label="D:0.00ns L:2",color=blue];
+Node0x3e712d0[label="  %4 = mul nsw i32 %3, -44"];
+Node0x3e712d0 -> Node0x3e712d0[label="D:2.59ns L:1",color=blue];
+Node0x3e713b0[label="  %5 = load i32* getelementptr inbounds ..."];
+Node0x3e713b0 -> Node0x3e713b0[label="D:0.00ns L:2",color=blue];
+Node0x3e71490[label="  %6 = mul nsw i32 %5, -44"];
+Node0x3e71490 -> Node0x3e71490[label="D:2.59ns L:1",color=blue];
+Node0x3e71570[label="  %7 = add nsw i32 %6, %2"];
+Node0x3e71570 -> Node0x3e71570[label="D:2.50ns L:0",color=blue];
+}

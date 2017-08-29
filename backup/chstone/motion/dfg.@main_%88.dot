@@ -1,0 +1,18 @@
+digraph {
+Node0x3108920[label="  %89 = or i32 %78, %36"];
+Node0x3108920 -> Node0x3108920[label="D:0.87ns L:0",color=blue];
+Node0x3108a40[label="  %90 = xor i32 %89, -256"];
+Node0x3108a40 -> Node0x3108a40[label="D:0.91ns L:0",color=blue];
+Node0x3108b20[label="  %91 = add nsw i32 %90, 1"];
+Node0x3108b20 -> Node0x3108b20[label="D:2.50ns L:0",color=blue];
+Node0x3108c00[label="  %92 = sub nsw i32 %76, %91"];
+Node0x3108c00 -> Node0x3108c00[label="D:2.40ns L:0",color=blue];
+Node0x3108c00 -> Node0x3108c00[label="D:2.40ns L:0",color=blue];
+Node0x3108c00 -> Node0x3108c00[label="D:2.40ns L:0",color=blue];
+Node0x3108ce0[label="  %93 = icmp slt i32 %92, -4096"];
+Node0x3108ce0 -> Node0x3108ce0[label="D:3.36ns L:0",color=blue];
+Node0x3108dc0[label="  %94 = add nsw i32 %92, 8192"];
+Node0x3108dc0 -> Node0x3108dc0[label="D:2.50ns L:0",color=blue];
+Node0x3108ea0[label="  %.28 = select i1 %93, i32 %94, i32 %92"];
+Node0x3108ea0 -> Node0x3108ea0[label="D:3.99ns L:0",color=blue];
+}

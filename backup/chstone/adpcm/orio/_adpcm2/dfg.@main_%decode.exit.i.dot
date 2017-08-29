@@ -1,0 +1,29 @@
+digraph {
+Node0x3ef5e40[label="  %221 = sub nsw i32 0, %191"];
+Node0x3ef5e40 -> Node0x3ef5e40[label="D:2.40ns L:0",color=blue];
+Node0x3ef5e40 -> Node0x3ef5e40[label="D:2.40ns L:0",color=blue];
+Node0x3f00150[label="  %.apl1.0.i.i.i = select i1 %212, i32 %..."];
+Node0x3f00150 -> Node0x3f00150[label="D:3.99ns L:0",color=blue];
+Node0x3f00150 -> Node0x3f00150[label="D:3.99ns L:0",color=blue];
+Node0x3f00230[label="  %222 = mul nsw i32 %213, -44"];
+Node0x3f00230 -> Node0x3f00230[label="D:2.59ns L:1",color=blue];
+Node0x3f00350[label="  %223 = mul nsw i32 %214, 12"];
+Node0x3f00350 -> Node0x3f00350[label="D:2.59ns L:1",color=blue];
+Node0x3f00430[label="  %224 = icmp slt i32 %.apl1.0.i.i.i, %2..."];
+Node0x3f00430 -> Node0x3f00430[label="D:3.36ns L:0",color=blue];
+Node0x3f00510[label="  %225 = add nsw i32 %222, %204"];
+Node0x3f00510 -> Node0x3f00510[label="D:2.50ns L:0",color=blue];
+Node0x3f005f0[label="  %226 = ashr i32 %225, 14"];
+Node0x3f005f0 -> Node0x3f005f0[label="D:0.00ns L:0",color=blue];
+Node0x3f006d0[label="  %apl1.2.i.i.i = select i1 %224, i32 %2..."];
+Node0x3f006d0 -> Node0x3f006d0[label="D:3.99ns L:0",color=blue];
+Node0x3f007b0[label="  %227 = add nsw i32 %223, %208"];
+Node0x3f007b0 -> Node0x3f007b0[label="D:2.50ns L:0",color=blue];
+Node0x3f00890[label="  %228 = ashr i32 %227, 14"];
+Node0x3f00890 -> Node0x3f00890[label="D:0.00ns L:0",color=blue];
+Node0x3f00db0[label="  %indvar.next40 = add i32 %indvar39, 1"];
+Node0x3f00db0 -> Node0x3f00db0[label="D:2.50ns L:0",color=blue];
+Node0x3f00db0 -> Node0x3f00db0[label="D:2.50ns L:0",color=blue];
+Node0x3f00e90[label="  %exitcond41 = icmp eq i32 %indvar.next..."];
+Node0x3f00e90 -> Node0x3f00e90[label="D:2.49ns L:0",color=blue];
+}

@@ -1,0 +1,36 @@
+digraph {
+Node0x3f359a0[label="  %6 = tail call fastcc i32 @encode(i32 ..."];
+Node0x3f359a0 -> Node0x3f359a0[label="D:0.00ns L:1",color=blue];
+Node0x3f35a80[label="  store i32 %6, i32* getelementptr inbou..."];
+Node0x3f359a0 -> Node0x3f35a80[label="D:0.00ns L:1",color=red];
+Node0x3f35b60[label="  %7 = tail call fastcc i32 @encode(i32 ..."];
+Node0x3f359a0 -> Node0x3f35b60[label="D:0.00ns L:1",color=red];
+Node0x3f35c40[label="  store i32 %7, i32* getelementptr inbou..."];
+Node0x3f359a0 -> Node0x3f35c40[label="D:0.00ns L:1",color=red];
+Node0x3f35d60[label="  %8 = tail call fastcc i32 @encode(i32 ..."];
+Node0x3f359a0 -> Node0x3f35d60[label="D:0.00ns L:1",color=red];
+Node0x3f35e40[label="  store i32 %8, i32* getelementptr inbou..."];
+Node0x3f359a0 -> Node0x3f35e40[label="D:0.00ns L:1",color=red];
+Node0x3f35f60[label="  %9 = tail call fastcc i32 @encode(i32 ..."];
+Node0x3f359a0 -> Node0x3f35f60[label="D:0.00ns L:1",color=red];
+Node0x3f36040[label="  store i32 %9, i32* getelementptr inbou..."];
+Node0x3f359a0 -> Node0x3f36040[label="D:0.00ns L:1",color=red];
+Node0x3f35a80 -> Node0x3f35b60[label="D:20.00ns L:1",color=red];
+Node0x3f35a80 -> Node0x3f35d60[label="D:20.00ns L:1",color=red];
+Node0x3f35a80 -> Node0x3f35f60[label="D:20.00ns L:1",color=red];
+Node0x3f35b60 -> Node0x3f35b60[label="D:0.00ns L:1",color=blue];
+Node0x3f35b60 -> Node0x3f35c40[label="D:0.00ns L:1",color=red];
+Node0x3f35b60 -> Node0x3f35d60[label="D:0.00ns L:1",color=red];
+Node0x3f35b60 -> Node0x3f35e40[label="D:0.00ns L:1",color=red];
+Node0x3f35b60 -> Node0x3f35f60[label="D:0.00ns L:1",color=red];
+Node0x3f35b60 -> Node0x3f36040[label="D:0.00ns L:1",color=red];
+Node0x3f35c40 -> Node0x3f35d60[label="D:20.00ns L:1",color=red];
+Node0x3f35c40 -> Node0x3f35f60[label="D:20.00ns L:1",color=red];
+Node0x3f35d60 -> Node0x3f35d60[label="D:0.00ns L:1",color=blue];
+Node0x3f35d60 -> Node0x3f35e40[label="D:0.00ns L:1",color=red];
+Node0x3f35d60 -> Node0x3f35f60[label="D:0.00ns L:1",color=red];
+Node0x3f35d60 -> Node0x3f36040[label="D:0.00ns L:1",color=red];
+Node0x3f35e40 -> Node0x3f35f60[label="D:20.00ns L:1",color=red];
+Node0x3f35f60 -> Node0x3f35f60[label="D:0.00ns L:1",color=blue];
+Node0x3f35f60 -> Node0x3f36040[label="D:0.00ns L:1",color=red];
+}

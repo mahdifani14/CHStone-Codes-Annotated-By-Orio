@@ -1,0 +1,6 @@
+digraph {
+Node0x3063e60[label="  %46 = lshr i32 %43, 23"];
+Node0x3063e60 -> Node0x3063e60[label="D:0.00ns L:0",color=blue];
+Node0x3063f40[label="  %47 = icmp ugt i32 %43, 536870911"];
+Node0x3063f40 -> Node0x3063f40[label="D:3.12ns L:0",color=blue];
+}

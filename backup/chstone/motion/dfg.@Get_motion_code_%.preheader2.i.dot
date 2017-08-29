@@ -1,0 +1,21 @@
+digraph {
+Node0x3061250[label="  %indvar74 = phi i32 [ 0, %.preheader2...."];
+Node0x3061250 -> Node0x3061250[label="D:0.00ns L:0",color=blue];
+Node0x3061250 -> Node0x3061250[label="D:0.00ns L:0",color=blue];
+Node0x3061250 -> Node0x3061250[label="D:0.00ns L:0",color=blue];
+Node0x3061330[label="  %27 = phi i32 [ %2, %.preheader2.i.pre..."];
+Node0x3061330 -> Node0x3061330[label="D:0.00ns L:0",color=blue];
+Node0x3061410[label="  %.pr8.i = phi i8* [ %7, %.preheader2.i..."];
+Node0x3061410 -> Node0x3061410[label="D:0.00ns L:0",color=blue];
+Node0x3061410 -> Node0x3061410[label="D:0.00ns L:0",color=blue];
+Node0x30614f0[label="  %28 = shl i32 %indvar74, 3"];
+Node0x30614f0 -> Node0x30614f0[label="D:0.00ns L:0",color=blue];
+Node0x30615d0[label="  %29 = add i32 %13, %28"];
+Node0x30615d0 -> Node0x30615d0[label="D:2.50ns L:0",color=blue];
+Node0x30616b0[label="  %30 = mul i32 %indvar74, -8"];
+Node0x30616b0 -> Node0x30616b0[label="D:2.59ns L:1",color=blue];
+Node0x30617d0[label="  %31 = add i32 %14, %30"];
+Node0x30617d0 -> Node0x30617d0[label="D:2.50ns L:0",color=blue];
+Node0x30618b0[label="  %32 = icmp ult i8* %.pr8.i, getelement..."];
+Node0x30618b0 -> Node0x30618b0[label="D:20.00ns L:0",color=blue];
+}
